@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 using TN.Domain.Model;
+using TN.Domain.Model.Manager;
 using TN.Domain.Seedwork;
 
 namespace TN.Infrastructure
@@ -26,12 +27,19 @@ namespace TN.Infrastructure
         public DbSet<RoleGroup> RoleGroups { get; set; }
         public DbSet<RoleArea> RoleAreas { get; set; }
         public DbSet<Log> Logs { get; set; }
+
+        // table app
 		public DbSet<Dish> Dishs { get; set; }
 		public DbSet<TableStatus> TableStatuss { get; set; }
 		public DbSet<DishPrice> DishPrices { get; set; }
+        public DbSet<Table> Tables { get; set; }
+        public DbSet<Bill> Bills { get; set; }
+        public DbSet<BillDetail> BillDetails { get; set; }
+        public DbSet<MLog> MLogs { get; set; }
 
 
-		protected override void OnModelCreating(ModelBuilder builder)
+
+        protected override void OnModelCreating(ModelBuilder builder)
         {
             foreach (var relationship in builder.Model.GetEntityTypes().SelectMany(e => e.GetForeignKeys()))
             {

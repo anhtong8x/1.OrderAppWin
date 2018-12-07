@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TN.Infrastructure;
 
 namespace TN.Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    partial class ApplicationContextModelSnapshot : ModelSnapshot
+    [Migration("20181207152010_v1.2")]
+    partial class v12
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -299,110 +301,6 @@ namespace TN.Infrastructure.Migrations
                     b.ToTable("Log","adm");
                 });
 
-            modelBuilder.Entity("TN.Domain.Model.Manager.Bill", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int>("CashierId");
-
-                    b.Property<string>("CashierName");
-
-                    b.Property<DateTime>("CreateDate");
-
-                    b.Property<float>("Money");
-
-                    b.Property<string>("Name");
-
-                    b.Property<string>("Note");
-
-                    b.Property<bool>("Paid");
-
-                    b.Property<int>("TableId");
-
-                    b.Property<string>("WaiterName");
-
-                    b.Property<int>("WaitersId");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("TableId");
-
-                    b.ToTable("Bills");
-                });
-
-            modelBuilder.Entity("TN.Domain.Model.Manager.BillDetail", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int>("BillId");
-
-                    b.Property<int>("DishId");
-
-                    b.Property<string>("DishName");
-
-                    b.Property<string>("Note");
-
-                    b.Property<float>("Price");
-
-                    b.Property<int>("Quanity");
-
-                    b.Property<bool>("Status");
-
-                    b.Property<int>("UserId");
-
-                    b.Property<DateTime>("dateTime");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("BillId");
-
-                    b.ToTable("BillDetails");
-                });
-
-            modelBuilder.Entity("TN.Domain.Model.Manager.MLog", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int>("Action");
-
-                    b.Property<DateTime>("CreateDate");
-
-                    b.Property<string>("Note");
-
-                    b.Property<int>("UserId");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("MLogs");
-                });
-
-            modelBuilder.Entity("TN.Domain.Model.Manager.Table", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int>("BillId");
-
-                    b.Property<string>("Name");
-
-                    b.Property<string>("Note");
-
-                    b.Property<bool>("Status");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("BillId");
-
-                    b.ToTable("Tables");
-                });
-
             modelBuilder.Entity("TN.Domain.Model.RoleAction", b =>
                 {
                     b.Property<int>("Id")
@@ -569,30 +467,6 @@ namespace TN.Infrastructure.Migrations
                     b.HasOne("TN.Domain.Model.Dish", "Dish")
                         .WithMany()
                         .HasForeignKey("DishId")
-                        .OnDelete(DeleteBehavior.Restrict);
-                });
-
-            modelBuilder.Entity("TN.Domain.Model.Manager.Bill", b =>
-                {
-                    b.HasOne("TN.Domain.Model.Manager.Table", "Table")
-                        .WithMany()
-                        .HasForeignKey("TableId")
-                        .OnDelete(DeleteBehavior.Restrict);
-                });
-
-            modelBuilder.Entity("TN.Domain.Model.Manager.BillDetail", b =>
-                {
-                    b.HasOne("TN.Domain.Model.Manager.Bill", "Bill")
-                        .WithMany()
-                        .HasForeignKey("BillId")
-                        .OnDelete(DeleteBehavior.Restrict);
-                });
-
-            modelBuilder.Entity("TN.Domain.Model.Manager.Table", b =>
-                {
-                    b.HasOne("TN.Domain.Model.Manager.Bill", "Bill")
-                        .WithMany()
-                        .HasForeignKey("BillId")
                         .OnDelete(DeleteBehavior.Restrict);
                 });
 

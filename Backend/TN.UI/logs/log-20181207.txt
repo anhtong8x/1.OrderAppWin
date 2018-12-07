@@ -1556,3 +1556,5 @@ OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY"
 2018-12-07 09:07:07.524 +07:00 [Information] Executed ViewResult - view "IndexAjax" executed in 34.8693ms.
 2018-12-07 09:07:07.524 +07:00 [Information] Executed action "TN.UI.Areas.User.Controllers.RoleManagerController.IndexPost (TN.UI)" in 172.856ms
 2018-12-07 09:07:07.524 +07:00 [Information] Request finished in 202.1775ms 200 text/html; charset=utf-8
+2018-12-07 22:26:50.758 +07:00 [Information] Request starting HTTP/1.1 DEBUG http://localhost:44396/  0
+2018-12-07 22:26:50.952 +07:00 [Information] Request finished in 204.2152ms 200 
