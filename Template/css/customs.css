@@ -1,0 +1,36 @@
+﻿.navbar-brand {
+    height: 28px !important;
+    padding: 8px 15px !important;
+    font-size: 18px;
+    line-height: 15px;
+}
+.navbar-nav > li > a {
+    margin-top: 6px;
+}
+.sidebar {
+    top: 50px;
+}
+section.content
+{
+    margin-top:68px;
+}
+.navbar .navbar-toggle {
+    margin-top: -14px;
+}
+.ls-closed .bars:after, .ls-closed .bars:before {
+    top: 8px;
+}
+@media (max-width: 767px)
+{
+    .navbar .navbar-nav {
+        margin-top: 6px;
+        margin-bottom: 1px;
+        margin-left: -7px;
+    }
+    .navbar .js-right-sidebar {
+        margin-top: -3px;
+    }
+    .navbar-nav > li > a {
+        margin-top: 0px;
+    }
+}

@@ -1,0 +1,111 @@
+﻿@model TN.Domain.Model.UserProfileModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    ViewData["Title"] = "Quản lý tài khoản quản trị";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+
+}
+<form form-edit asp-action="Profile">
+    @Html.AntiForgeryToken()
+    <div class="block-header">
+        <h2><i class="material-icons">person</i> THÔNG TIN TÀI KHOẢN <span class="label label-primary label-t">Cập nhật</span></h2>
+        <ol class="breadcrumb breadcrumb-t">
+            <li>
+                <a href="/Admin">
+                    <i class="material-icons">home</i> Trang điều khiển
+                </a>
+            </li>
+            <li class="active">
+                    Thông tin tài khoản
+            </li>
+        </ol>
+    </div>
+    <div class="row clearfix">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="card card-t">
+                <div class="body body-tab">
+                    <ul class="nav nav-tabs nav-tabs-t" role="tablist">
+                        <li role="presentation" class="active">
+                            <a>
+                                <i class="material-icons">person</i> Thông tin tài khoản
+                            </a>
+                        </li>
+                        <li>
+                            <a asp-action="ChangePassword" asp-controller="Account" asp-area="User">
+                                <i class="material-icons">refresh</i> Đổi mật khẩu
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="tab-content tab-content-t">
+                        <div role="tabpanel" class="tab-pane fade active in">
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <div class="labelinfo-t bg-info mb-10">
+                                        Ảnh đại diện
+                                    </div>
+                                    <div class="thumbnail imgfull avatar m-b-10">
+                                        <div class="image">
+                                            <img img-file alt="avatar" onerror="this.onerror=null;this.src = '/Content/Admin/images/no-avatar.jpg';" src="@(Model.Avatar??" ")" class="img-responsive imgAvatar">
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <button button-upload data-url="@Url.Action("UploadAvatar",new { id=Model.Id})" data-loading-text="<i class='material-icons icon-spin'>autorenew</i> <span>Đang xử lý...</span>" type="button" class="btn btn-primary btn-sm"><i class="material-icons">file_upload</i> <span>Chọn ảnh</span></button>
+                                        <input input-file data-id="@Model.Id" type="file" name="dbFile" id="file" class="inputfile hide" />
+                                    </div>
+                                </div>
+                                <div class="col-md-10 mb-10">
+                                    <div class="form-group">
+                                        <label class="form-label" asp-for="UserName"></label> <strong class="text-danger">*</strong> <span asp-validation-for="UserName"></span>
+                                        <div class="controls">
+                                            <input type="text" disabled="disabled" class="form-control input-sm form-control-t" placeholder="Tên tài khoản" asp-for="UserName">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" asp-for="Email"></label> <strong class="text-danger">*</strong> <span asp-validation-for="Email"></span>
+                                        <div class="controls">
+                                            <input type="text" class="form-control input-sm form-control-t" placeholder="Email dùng để thay đổi mật khẩu" asp-for="Email">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" asp-for="DisplayName"></label> <strong class="text-danger">*</strong> <span asp-validation-for="DisplayName"></span>
+                                        <div class="controls">
+                                            <input type="text" class="form-control input-sm form-control-t" placeholder="Tên hiển thị" asp-for="DisplayName">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" asp-for="PhoneNumber"></label>  <span asp-validation-for="PhoneNumber"></span>
+                                        <div class="controls">
+                                            <input type="text" class="form-control input-sm form-control-t" placeholder="Số điện thoại" asp-for="PhoneNumber">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" asp-for="Note"></label> <span asp-validation-for="Note"></span>
+                                        <div class="controls">
+                                            <textarea type="text" class="form-control input-sm form-control-t" rows="3" placeholder="Đôi nét" asp-for="Note"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 mb-0">
+                                    <div class="divbtnform">
+                                        <button button-submit data-loading-text="<i class='material-icons icon-spin'>autorenew</i> <span>Lưu thay đổi</span>" type="button" class="btn  btn-p-t  btn-icon bg-indigo waves-effect"><i class="material-icons">save</i> <span>Lưu thay đổi</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="canmotkhoang">
+    </div>
+</form>
+@section Scripts {
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+    <script>
+        $("[button-submit]").toSubmit();
+        $("[button-upload]").toUploadFile();
+    </script>
+}

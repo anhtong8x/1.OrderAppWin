@@ -1,0 +1,31 @@
+﻿@model TN.Domain.Model.RoleTypeModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    ViewData["Title"] = "Quản lý tài khoản quản trị";
+    Layout = null;
+}
+@if (Model.Type == TN.Domain.Model.RoleManagerType.TransportCompany)
+{
+    <div class="form-group">
+        <label class="form-label" asp-for="TransportCompanyIds"></label>
+        <select data-live-search="true" multiple asp-for="TransportCompanyIds" asp-items="@Model.TransportCompanySelectList" class="input-sm form-control-t show-tick">
+        </select>
+    </div>
+}
+@if (Model.Type == TN.Domain.Model.RoleManagerType.School)
+{
+    <div class="form-group">
+        <label asp-for="SchoolIds"></label>
+        <select data-live-search="true" multiple asp-for="SchoolIds" asp-items="@Model.SchoolSelectList" class="input-sm form-control-t show-tick">
+        </select>
+    </div>
+}
+@if (Model.Type == TN.Domain.Model.RoleManagerType.Parents)
+{
+    <div class="form-group">
+        <label class="form-label" asp-for="StudentCode"></label>
+        <div class="controls">
+            <input type="text" class="form-control input-sm form-control-t" placeholder="Mã học sinh" asp-for="StudentCode">
+        </div>
+    </div>
+}

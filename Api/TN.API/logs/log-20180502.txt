@@ -1,0 +1,543 @@
+2018-05-02 10:25:26.270 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:53648/api/Export/ChiTietDuaDonHocSinhTrongNgay/51B03829/2018-04-26/Tr%E1%BB%8Dng  
+2018-05-02 10:25:28.865 +07:00 [Information] Executing action method "TN.API.Controllers.ExportController.ChiTietDuaDonHocSinhTrongNgayAsync (TN.API)" with arguments (["51B03829", "2018-04-26", "Trọng"]) - ModelState is Valid
+2018-05-02 10:25:33.538 +07:00 [Information] Entity Framework Core "2.0.2-rtm-10011" initialized '"TNFingerContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-05-02 10:25:35.827 +07:00 [Information] Executed DbCommand ("223"ms) [Parameters=["@__lpn_0='?' (Size = 10)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [m].[Id], [m].[Brand], [m].[Capacity], [m].[CreatedDate], [m].[Degree], [m].[IdRoute], [m].[Lat], [m].[Lng], [m].[Lpn], [m].[Note], [m].[NumOfSeat], [m].[Organization], [m].[Speed], [m].[Status], [m].[UpdatedDate], [m].[VehicleOwner]
+FROM [Vehicle] AS [m]
+WHERE ([m].[Lpn] = @__lpn_0) AND ([m].[Status] = 1)"
+2018-05-02 10:25:36.142 +07:00 [Information] Executed DbCommand ("6"ms) [Parameters=["@___date_0='?', @__lpn_1='?' (Size = 10)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [m.IdDeviceNavigation].[IdVehicle], [m].[Id], [m].[IdStudent], [m.IdStudentNavigation].[StudentName], [m.IdStudentNavigation.IdSchoolNavigation].[Name] AS [SchoolName], [m.IdStudentNavigation.IdClassOfSchoolNavigation].[Name] AS [ClassOfSchoolName], [m].[CheckOutDate]
+FROM [StudentCheckOut] AS [m]
+LEFT JOIN [Device] AS [m.IdDeviceNavigation] ON [m].[IdDevice] = [m.IdDeviceNavigation].[Id]
+INNER JOIN [Student] AS [m.IdStudentNavigation] ON [m].[IdStudent] = [m.IdStudentNavigation].[Id]
+LEFT JOIN [School] AS [m.IdStudentNavigation.IdSchoolNavigation] ON [m.IdStudentNavigation].[IdSchool] = [m.IdStudentNavigation.IdSchoolNavigation].[Id]
+LEFT JOIN [ClassOfSchool] AS [m.IdStudentNavigation.IdClassOfSchoolNavigation] ON [m.IdStudentNavigation].[IdClassOfSchool] = [m.IdStudentNavigation.IdClassOfSchoolNavigation].[Id]
+WHERE (([m.IdStudentNavigation].[Disable] = 0) AND (CONVERT(date, [m].[CheckOutDate]) = @___date_0)) AND EXISTS (
+    SELECT 1
+    FROM [Vehicle] AS [x]
+    WHERE (([x].[Id] = [m.IdDeviceNavigation].[IdVehicle]) AND ([x].[Status] = 1)) AND ([x].[Lpn] = @__lpn_1))"
+2018-05-02 10:25:38.801 +07:00 [Information] Executing FileResult, sending file as "05baf816-20ee-40f1-8752-68f3f48ff1fa.xlsx"
+2018-05-02 10:25:38.811 +07:00 [Information] Executed action "TN.API.Controllers.ExportController.ChiTietDuaDonHocSinhTrongNgayAsync (TN.API)" in 11145.5636ms
+2018-05-02 10:25:38.823 +07:00 [Information] Request finished in 12711.2666ms 200 application/x-msdownload
+2018-05-02 10:26:29.662 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:53648/api/Export/ChiTietDuaDonHocSinhTrongNgay/51B03829/2018-04-26/Tr%E1%BB%8Dng  
+2018-05-02 10:26:29.663 +07:00 [Information] Executing action method "TN.API.Controllers.ExportController.ChiTietDuaDonHocSinhTrongNgayAsync (TN.API)" with arguments (["51B03829", "2018-04-26", "Trọng"]) - ModelState is Valid
+2018-05-02 10:26:29.724 +07:00 [Information] Entity Framework Core "2.0.2-rtm-10011" initialized '"TNFingerContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-05-02 10:26:29.728 +07:00 [Information] Executed DbCommand ("3"ms) [Parameters=["@__lpn_0='?' (Size = 10)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [m].[Id], [m].[Brand], [m].[Capacity], [m].[CreatedDate], [m].[Degree], [m].[IdRoute], [m].[Lat], [m].[Lng], [m].[Lpn], [m].[Note], [m].[NumOfSeat], [m].[Organization], [m].[Speed], [m].[Status], [m].[UpdatedDate], [m].[VehicleOwner]
+FROM [Vehicle] AS [m]
+WHERE ([m].[Lpn] = @__lpn_0) AND ([m].[Status] = 1)"
+2018-05-02 10:26:29.735 +07:00 [Information] Executed DbCommand ("5"ms) [Parameters=["@___date_0='?', @__lpn_1='?' (Size = 10)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [m.IdDeviceNavigation].[IdVehicle], [m].[Id], [m].[IdStudent], [m.IdStudentNavigation].[StudentName], [m.IdStudentNavigation.IdSchoolNavigation].[Name] AS [SchoolName], [m.IdStudentNavigation.IdClassOfSchoolNavigation].[Name] AS [ClassOfSchoolName], [m].[CheckOutDate]
+FROM [StudentCheckOut] AS [m]
+LEFT JOIN [Device] AS [m.IdDeviceNavigation] ON [m].[IdDevice] = [m.IdDeviceNavigation].[Id]
+INNER JOIN [Student] AS [m.IdStudentNavigation] ON [m].[IdStudent] = [m.IdStudentNavigation].[Id]
+LEFT JOIN [School] AS [m.IdStudentNavigation.IdSchoolNavigation] ON [m.IdStudentNavigation].[IdSchool] = [m.IdStudentNavigation.IdSchoolNavigation].[Id]
+LEFT JOIN [ClassOfSchool] AS [m.IdStudentNavigation.IdClassOfSchoolNavigation] ON [m.IdStudentNavigation].[IdClassOfSchool] = [m.IdStudentNavigation.IdClassOfSchoolNavigation].[Id]
+WHERE (([m.IdStudentNavigation].[Disable] = 0) AND (CONVERT(date, [m].[CheckOutDate]) = @___date_0)) AND EXISTS (
+    SELECT 1
+    FROM [Vehicle] AS [x]
+    WHERE (([x].[Id] = [m.IdDeviceNavigation].[IdVehicle]) AND ([x].[Status] = 1)) AND ([x].[Lpn] = @__lpn_1))"
+2018-05-02 10:26:31.010 +07:00 [Information] Executing FileResult, sending file as "b177f3aa-68a3-4e8f-88df-d669840601ec.xlsx"
+2018-05-02 10:26:31.011 +07:00 [Information] Executed action "TN.API.Controllers.ExportController.ChiTietDuaDonHocSinhTrongNgayAsync (TN.API)" in 1348.2588ms
+2018-05-02 10:26:31.011 +07:00 [Information] Request finished in 1348.9747ms 200 application/x-msdownload
+2018-05-02 10:33:30.534 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:53648/api/Export/ChiTietDuaDonHocSinhTrongNgay/51B23102/2018-04-26/1  
+2018-05-02 10:33:30.535 +07:00 [Information] Executing action method "TN.API.Controllers.ExportController.ChiTietDuaDonHocSinhTrongNgayAsync (TN.API)" with arguments (["51B23102", "2018-04-26", "1"]) - ModelState is Valid
+2018-05-02 10:33:30.779 +07:00 [Information] Executing HttpStatusCodeResult, setting HTTP status code 200
+2018-05-02 10:33:30.805 +07:00 [Information] Executed action "TN.API.Controllers.ExportController.ChiTietDuaDonHocSinhTrongNgayAsync (TN.API)" in 270.2223ms
+2018-05-02 10:33:30.906 +07:00 [Information] Request finished in 371.7142ms 200 
+2018-05-02 10:36:08.555 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:53648/api/Export/ChiTietDuaDonHocSinhTrongNgay/51B23102/2018-05-02/1  
+2018-05-02 10:36:08.555 +07:00 [Information] Executing action method "TN.API.Controllers.ExportController.ChiTietDuaDonHocSinhTrongNgayAsync (TN.API)" with arguments (["51B23102", "2018-05-02", "1"]) - ModelState is Valid
+2018-05-02 10:36:08.582 +07:00 [Information] Executing HttpStatusCodeResult, setting HTTP status code 200
+2018-05-02 10:36:08.583 +07:00 [Information] Executed action "TN.API.Controllers.ExportController.ChiTietDuaDonHocSinhTrongNgayAsync (TN.API)" in 27.463ms
+2018-05-02 10:36:08.583 +07:00 [Information] Request finished in 28.0998ms 200 
+2018-05-02 10:37:05.668 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:53648/api/Export/ChiTietDuaDonHocSinhTrongNgay/51B23102/2018-05-02/1  
+2018-05-02 10:37:05.668 +07:00 [Information] Executing action method "TN.API.Controllers.ExportController.ChiTietDuaDonHocSinhTrongNgayAsync (TN.API)" with arguments (["51B23102", "2018-05-02", "1"]) - ModelState is Valid
+2018-05-02 10:37:05.694 +07:00 [Information] Executing HttpStatusCodeResult, setting HTTP status code 200
+2018-05-02 10:37:05.694 +07:00 [Information] Executed action "TN.API.Controllers.ExportController.ChiTietDuaDonHocSinhTrongNgayAsync (TN.API)" in 26.1757ms
+2018-05-02 10:37:05.694 +07:00 [Information] Request finished in 26.7024ms 200 
+2018-05-02 10:38:13.870 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:53648/api/Export/ChiTietDuaDonHocSinhTrongNgay/51B03829/2018-04-26/Tr%E1%BB%8Dng  
+2018-05-02 10:38:13.871 +07:00 [Information] Executing action method "TN.API.Controllers.ExportController.ChiTietDuaDonHocSinhTrongNgayAsync (TN.API)" with arguments (["51B03829", "2018-04-26", "Trọng"]) - ModelState is Valid
+2018-05-02 10:38:13.935 +07:00 [Information] Entity Framework Core "2.0.2-rtm-10011" initialized '"TNFingerContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-05-02 10:38:13.970 +07:00 [Information] Executed DbCommand ("4"ms) [Parameters=["@__lpn_0='?' (Size = 10)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [m].[Id], [m].[Brand], [m].[Capacity], [m].[CreatedDate], [m].[Degree], [m].[IdRoute], [m].[Lat], [m].[Lng], [m].[Lpn], [m].[Note], [m].[NumOfSeat], [m].[Organization], [m].[Speed], [m].[Status], [m].[UpdatedDate], [m].[VehicleOwner]
+FROM [Vehicle] AS [m]
+WHERE ([m].[Lpn] = @__lpn_0) AND ([m].[Status] = 1)"
+2018-05-02 10:38:13.978 +07:00 [Information] Executed DbCommand ("7"ms) [Parameters=["@___date_0='?', @__lpn_1='?' (Size = 10)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [m.IdDeviceNavigation].[IdVehicle], [m].[Id], [m].[IdStudent], [m.IdStudentNavigation].[StudentName], [m.IdStudentNavigation.IdSchoolNavigation].[Name] AS [SchoolName], [m.IdStudentNavigation.IdClassOfSchoolNavigation].[Name] AS [ClassOfSchoolName], [m].[CheckOutDate]
+FROM [StudentCheckOut] AS [m]
+LEFT JOIN [Device] AS [m.IdDeviceNavigation] ON [m].[IdDevice] = [m.IdDeviceNavigation].[Id]
+INNER JOIN [Student] AS [m.IdStudentNavigation] ON [m].[IdStudent] = [m.IdStudentNavigation].[Id]
+LEFT JOIN [School] AS [m.IdStudentNavigation.IdSchoolNavigation] ON [m.IdStudentNavigation].[IdSchool] = [m.IdStudentNavigation.IdSchoolNavigation].[Id]
+LEFT JOIN [ClassOfSchool] AS [m.IdStudentNavigation.IdClassOfSchoolNavigation] ON [m.IdStudentNavigation].[IdClassOfSchool] = [m.IdStudentNavigation.IdClassOfSchoolNavigation].[Id]
+WHERE (([m.IdStudentNavigation].[Disable] = 0) AND (CONVERT(date, [m].[CheckOutDate]) = @___date_0)) AND EXISTS (
+    SELECT 1
+    FROM [Vehicle] AS [x]
+    WHERE (([x].[Id] = [m.IdDeviceNavigation].[IdVehicle]) AND ([x].[Status] = 1)) AND ([x].[Lpn] = @__lpn_1))"
+2018-05-02 10:38:15.725 +07:00 [Information] Executing FileResult, sending file as "412bfbe2-f2f8-4bd0-8f14-b433a08ec7b0.xlsx"
+2018-05-02 10:38:15.725 +07:00 [Information] Executed action "TN.API.Controllers.ExportController.ChiTietDuaDonHocSinhTrongNgayAsync (TN.API)" in 1854.0196ms
+2018-05-02 10:38:15.725 +07:00 [Information] Request finished in 1855.0648ms 200 application/x-msdownload
+2018-05-02 10:42:25.860 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:53648/api/values  
+2018-05-02 10:42:26.318 +07:00 [Information] Executing action method "TN.API.Controllers.ValuesController.Get (TN.API)" with arguments (null) - ModelState is Valid
+2018-05-02 10:42:26.355 +07:00 [Information] Executing ContentResult with HTTP Response ContentType of "text/plain; charset=utf-8"
+2018-05-02 10:42:26.460 +07:00 [Information] Executed action "TN.API.Controllers.ValuesController.Get (TN.API)" in 144.9076ms
+2018-05-02 10:42:26.475 +07:00 [Information] Request finished in 743.4359ms 200 text/plain; charset=utf-8
+2018-05-02 10:42:26.724 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:53648/favicon.ico  
+2018-05-02 10:42:26.731 +07:00 [Information] Request finished in 3.7107ms 404 
+2018-05-02 10:43:54.370 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:53648/api/Export/ChiTietDuaDonHocSinhTrongNgay/51B03829/2018-05-02/Tr%E1%BB%8Dng  
+2018-05-02 10:43:54.795 +07:00 [Information] Executing action method "TN.API.Controllers.ExportController.ChiTietDuaDonHocSinhTrongNgayAsync (TN.API)" with arguments (["51B03829", "2018-05-02", "Trọng"]) - ModelState is Valid
+2018-05-02 10:44:00.786 +07:00 [Information] Executing HttpStatusCodeResult, setting HTTP status code 200
+2018-05-02 10:44:00.794 +07:00 [Information] Executed action "TN.API.Controllers.ExportController.ChiTietDuaDonHocSinhTrongNgayAsync (TN.API)" in 6314.6572ms
+2018-05-02 10:44:00.799 +07:00 [Information] Request finished in 6429.8951ms 200 
+2018-05-02 10:44:05.343 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:53648/api/Export/ChiTietDuaDonHocSinhTrongNgay/51B03829/2018-05-02/Tr%E1%BB%8Dng  
+2018-05-02 10:44:05.348 +07:00 [Information] Executing action method "TN.API.Controllers.ExportController.ChiTietDuaDonHocSinhTrongNgayAsync (TN.API)" with arguments (["51B03829", "2018-05-02", "Trọng"]) - ModelState is Valid
+2018-05-02 10:45:03.200 +07:00 [Information] Executing HttpStatusCodeResult, setting HTTP status code 200
+2018-05-02 10:45:03.205 +07:00 [Information] Executed action "TN.API.Controllers.ExportController.ChiTietDuaDonHocSinhTrongNgayAsync (TN.API)" in 57857.4475ms
+2018-05-02 10:45:03.214 +07:00 [Information] Request finished in 57867.0488ms 200 
+2018-05-02 10:46:52.120 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:53648/api/Export/ChiTietDuaDonHocSinhTrongNgay/51B03829/2018-04-22/Tr%E1%BB%8Dng  
+2018-05-02 10:46:52.433 +07:00 [Information] Executing action method "TN.API.Controllers.ExportController.ChiTietDuaDonHocSinhTrongNgayAsync (TN.API)" with arguments (["51B03829", "2018-04-22", "Trọng"]) - ModelState is Valid
+2018-05-02 10:46:53.600 +07:00 [Information] Executing HttpStatusCodeResult, setting HTTP status code 200
+2018-05-02 10:46:53.605 +07:00 [Information] Executed action "TN.API.Controllers.ExportController.ChiTietDuaDonHocSinhTrongNgayAsync (TN.API)" in 1291.7167ms
+2018-05-02 10:46:53.609 +07:00 [Information] Request finished in 1507.2961ms 200 
+2018-05-02 10:46:56.453 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:53648/api/Export/ChiTietDuaDonHocSinhTrongNgay/51B03829/2018-04-22/Tr%E1%BB%8Dng  
+2018-05-02 10:46:56.454 +07:00 [Information] Executing action method "TN.API.Controllers.ExportController.ChiTietDuaDonHocSinhTrongNgayAsync (TN.API)" with arguments (["51B03829", "2018-04-22", "Trọng"]) - ModelState is Valid
+2018-05-02 10:46:56.487 +07:00 [Information] Executing HttpStatusCodeResult, setting HTTP status code 200
+2018-05-02 10:46:56.487 +07:00 [Information] Executed action "TN.API.Controllers.ExportController.ChiTietDuaDonHocSinhTrongNgayAsync (TN.API)" in 33.1053ms
+2018-05-02 10:46:56.487 +07:00 [Information] Request finished in 34.0726ms 200 
+2018-05-02 10:48:54.531 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:53648/api/Export/ChiTietDuaDonHocSinhTrongNgay/51B03829/2018-04-22/Tr%E1%BB%8Dng  
+2018-05-02 10:48:54.829 +07:00 [Information] Executing action method "TN.API.Controllers.ExportController.ChiTietDuaDonHocSinhTrongNgayAsync (TN.API)" with arguments (["51B03829", "2018-04-22", "Trọng"]) - ModelState is Valid
+2018-05-02 10:48:55.927 +07:00 [Information] Executing ContentResult with HTTP Response ContentType of "text/plain; charset=utf-8"
+2018-05-02 10:48:55.944 +07:00 [Information] Executed action "TN.API.Controllers.ExportController.ChiTietDuaDonHocSinhTrongNgayAsync (TN.API)" in 1228.6309ms
+2018-05-02 10:48:55.951 +07:00 [Information] Request finished in 1437.8061ms 200 text/plain; charset=utf-8
+2018-05-02 10:49:04.178 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:53648/api/Export/ChiTietDuaDonHocSinhTrongNgay/51B03829/2018-04-26/Tr%E1%BB%8Dng  
+2018-05-02 10:49:04.180 +07:00 [Information] Executing action method "TN.API.Controllers.ExportController.ChiTietDuaDonHocSinhTrongNgayAsync (TN.API)" with arguments (["51B03829", "2018-04-26", "Trọng"]) - ModelState is Valid
+2018-05-02 10:49:04.932 +07:00 [Information] Entity Framework Core "2.0.2-rtm-10011" initialized '"TNFingerContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-05-02 10:49:05.411 +07:00 [Information] Executed DbCommand ("90"ms) [Parameters=["@__lpn_0='?' (Size = 10)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [m].[Id], [m].[Brand], [m].[Capacity], [m].[CreatedDate], [m].[Degree], [m].[IdRoute], [m].[Lat], [m].[Lng], [m].[Lpn], [m].[Note], [m].[NumOfSeat], [m].[Organization], [m].[Speed], [m].[Status], [m].[UpdatedDate], [m].[VehicleOwner]
+FROM [Vehicle] AS [m]
+WHERE ([m].[Lpn] = @__lpn_0) AND ([m].[Status] = 1)"
+2018-05-02 10:49:05.628 +07:00 [Information] Executed DbCommand ("7"ms) [Parameters=["@___date_0='?', @__lpn_1='?' (Size = 10)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [m.IdDeviceNavigation].[IdVehicle], [m].[Id], [m].[IdStudent], [m.IdStudentNavigation].[StudentName], [m.IdStudentNavigation.IdSchoolNavigation].[Name] AS [SchoolName], [m.IdStudentNavigation.IdClassOfSchoolNavigation].[Name] AS [ClassOfSchoolName], [m].[CheckOutDate]
+FROM [StudentCheckOut] AS [m]
+LEFT JOIN [Device] AS [m.IdDeviceNavigation] ON [m].[IdDevice] = [m.IdDeviceNavigation].[Id]
+INNER JOIN [Student] AS [m.IdStudentNavigation] ON [m].[IdStudent] = [m.IdStudentNavigation].[Id]
+LEFT JOIN [School] AS [m.IdStudentNavigation.IdSchoolNavigation] ON [m.IdStudentNavigation].[IdSchool] = [m.IdStudentNavigation.IdSchoolNavigation].[Id]
+LEFT JOIN [ClassOfSchool] AS [m.IdStudentNavigation.IdClassOfSchoolNavigation] ON [m.IdStudentNavigation].[IdClassOfSchool] = [m.IdStudentNavigation.IdClassOfSchoolNavigation].[Id]
+WHERE (([m.IdStudentNavigation].[Disable] = 0) AND (CONVERT(date, [m].[CheckOutDate]) = @___date_0)) AND EXISTS (
+    SELECT 1
+    FROM [Vehicle] AS [x]
+    WHERE (([x].[Id] = [m.IdDeviceNavigation].[IdVehicle]) AND ([x].[Status] = 1)) AND ([x].[Lpn] = @__lpn_1))"
+2018-05-02 10:49:09.021 +07:00 [Information] Executing FileResult, sending file as "d1efdcb0-360a-48a7-8fe6-9ce8ec92c164.xlsx"
+2018-05-02 10:49:09.045 +07:00 [Information] Executed action "TN.API.Controllers.ExportController.ChiTietDuaDonHocSinhTrongNgayAsync (TN.API)" in 4866.6113ms
+2018-05-02 10:49:09.045 +07:00 [Information] Request finished in 4868.0155ms 200 application/x-msdownload
+2018-05-02 10:50:24.570 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:53648/api/Export/ChiTietDuaDonHocSinhTrongNgay/51B23102/2018-04-26/1  
+2018-05-02 10:50:24.571 +07:00 [Information] Executing action method "TN.API.Controllers.ExportController.ChiTietDuaDonHocSinhTrongNgayAsync (TN.API)" with arguments (["51B23102", "2018-04-26", "1"]) - ModelState is Valid
+2018-05-02 10:50:24.598 +07:00 [Information] Executing ContentResult with HTTP Response ContentType of "text/plain; charset=utf-8"
+2018-05-02 10:50:24.598 +07:00 [Information] Executed action "TN.API.Controllers.ExportController.ChiTietDuaDonHocSinhTrongNgayAsync (TN.API)" in 28.1843ms
+2018-05-02 10:50:24.599 +07:00 [Information] Request finished in 29.3145ms 200 text/plain; charset=utf-8
+2018-05-02 10:51:31.133 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:53648/api/Export/ChiTietDuaDonHocSinhTrongNgay/51B23102/2018-04-26/1  
+2018-05-02 10:51:31.134 +07:00 [Information] Executing action method "TN.API.Controllers.ExportController.ChiTietDuaDonHocSinhTrongNgayAsync (TN.API)" with arguments (["51B23102", "2018-04-26", "1"]) - ModelState is Valid
+2018-05-02 10:51:31.162 +07:00 [Information] Executing ContentResult with HTTP Response ContentType of "text/plain; charset=utf-8"
+2018-05-02 10:51:31.162 +07:00 [Information] Executed action "TN.API.Controllers.ExportController.ChiTietDuaDonHocSinhTrongNgayAsync (TN.API)" in 28.5609ms
+2018-05-02 10:51:31.162 +07:00 [Information] Request finished in 29.5853ms 200 text/plain; charset=utf-8
+2018-05-02 10:52:53.651 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:53648/api/Export/ChiTietDuaDonHocSinhTrongNgay/51B03829/2018-05-02/1  
+2018-05-02 10:52:53.651 +07:00 [Information] Executing action method "TN.API.Controllers.ExportController.ChiTietDuaDonHocSinhTrongNgayAsync (TN.API)" with arguments (["51B03829", "2018-05-02", "1"]) - ModelState is Valid
+2018-05-02 10:52:53.681 +07:00 [Information] Executing ContentResult with HTTP Response ContentType of "text/plain; charset=utf-8"
+2018-05-02 10:52:53.681 +07:00 [Information] Executed action "TN.API.Controllers.ExportController.ChiTietDuaDonHocSinhTrongNgayAsync (TN.API)" in 30.1616ms
+2018-05-02 10:52:53.681 +07:00 [Information] Request finished in 30.6944ms 200 text/plain; charset=utf-8
+2018-05-02 10:53:07.608 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:53648/api/Export/ChiTietDuaDonHocSinhTrongNgay/51B03829/2018-02-27/1  
+2018-05-02 10:53:07.608 +07:00 [Information] Executing action method "TN.API.Controllers.ExportController.ChiTietDuaDonHocSinhTrongNgayAsync (TN.API)" with arguments (["51B03829", "2018-02-27", "1"]) - ModelState is Valid
+2018-05-02 10:53:09.381 +07:00 [Information] Executing ContentResult with HTTP Response ContentType of "text/plain; charset=utf-8"
+2018-05-02 10:53:09.382 +07:00 [Information] Executed action "TN.API.Controllers.ExportController.ChiTietDuaDonHocSinhTrongNgayAsync (TN.API)" in 1773.6097ms
+2018-05-02 10:53:09.382 +07:00 [Information] Request finished in 1774.1581ms 200 text/plain; charset=utf-8
+2018-05-02 10:53:26.745 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:53648/api/Export/ChiTietDuaDonHocSinhTrongNgay/51B03829/2018-02-26/1  
+2018-05-02 10:53:26.746 +07:00 [Information] Executing action method "TN.API.Controllers.ExportController.ChiTietDuaDonHocSinhTrongNgayAsync (TN.API)" with arguments (["51B03829", "2018-02-26", "1"]) - ModelState is Valid
+2018-05-02 10:53:26.798 +07:00 [Information] Executing ContentResult with HTTP Response ContentType of "text/plain; charset=utf-8"
+2018-05-02 10:53:26.799 +07:00 [Information] Executed action "TN.API.Controllers.ExportController.ChiTietDuaDonHocSinhTrongNgayAsync (TN.API)" in 52.8592ms
+2018-05-02 10:53:26.799 +07:00 [Information] Request finished in 53.3462ms 200 text/plain; charset=utf-8
+2018-05-02 10:53:46.101 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:53648/api/Export/ChiTietDuaDonHocSinhTrongNgay/51B03829/2018-04-26/1  
+2018-05-02 10:53:46.102 +07:00 [Information] Executing action method "TN.API.Controllers.ExportController.ChiTietDuaDonHocSinhTrongNgayAsync (TN.API)" with arguments (["51B03829", "2018-04-26", "1"]) - ModelState is Valid
+2018-05-02 10:53:46.264 +07:00 [Information] Entity Framework Core "2.0.2-rtm-10011" initialized '"TNFingerContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-05-02 10:53:46.271 +07:00 [Information] Executed DbCommand ("4"ms) [Parameters=["@__lpn_0='?' (Size = 10)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [m].[Id], [m].[Brand], [m].[Capacity], [m].[CreatedDate], [m].[Degree], [m].[IdRoute], [m].[Lat], [m].[Lng], [m].[Lpn], [m].[Note], [m].[NumOfSeat], [m].[Organization], [m].[Speed], [m].[Status], [m].[UpdatedDate], [m].[VehicleOwner]
+FROM [Vehicle] AS [m]
+WHERE ([m].[Lpn] = @__lpn_0) AND ([m].[Status] = 1)"
+2018-05-02 10:53:46.278 +07:00 [Information] Executed DbCommand ("5"ms) [Parameters=["@___date_0='?', @__lpn_1='?' (Size = 10)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [m.IdDeviceNavigation].[IdVehicle], [m].[Id], [m].[IdStudent], [m.IdStudentNavigation].[StudentName], [m.IdStudentNavigation.IdSchoolNavigation].[Name] AS [SchoolName], [m.IdStudentNavigation.IdClassOfSchoolNavigation].[Name] AS [ClassOfSchoolName], [m].[CheckOutDate]
+FROM [StudentCheckOut] AS [m]
+LEFT JOIN [Device] AS [m.IdDeviceNavigation] ON [m].[IdDevice] = [m.IdDeviceNavigation].[Id]
+INNER JOIN [Student] AS [m.IdStudentNavigation] ON [m].[IdStudent] = [m.IdStudentNavigation].[Id]
+LEFT JOIN [School] AS [m.IdStudentNavigation.IdSchoolNavigation] ON [m.IdStudentNavigation].[IdSchool] = [m.IdStudentNavigation.IdSchoolNavigation].[Id]
+LEFT JOIN [ClassOfSchool] AS [m.IdStudentNavigation.IdClassOfSchoolNavigation] ON [m.IdStudentNavigation].[IdClassOfSchool] = [m.IdStudentNavigation.IdClassOfSchoolNavigation].[Id]
+WHERE (([m.IdStudentNavigation].[Disable] = 0) AND (CONVERT(date, [m].[CheckOutDate]) = @___date_0)) AND EXISTS (
+    SELECT 1
+    FROM [Vehicle] AS [x]
+    WHERE (([x].[Id] = [m.IdDeviceNavigation].[IdVehicle]) AND ([x].[Status] = 1)) AND ([x].[Lpn] = @__lpn_1))"
+2018-05-02 10:53:47.807 +07:00 [Information] Executing FileResult, sending file as "b9b7849f-ee94-4480-acd5-eda5f676f540.xlsx"
+2018-05-02 10:53:47.808 +07:00 [Information] Executed action "TN.API.Controllers.ExportController.ChiTietDuaDonHocSinhTrongNgayAsync (TN.API)" in 1706.2425ms
+2018-05-02 10:53:47.808 +07:00 [Information] Request finished in 1706.8384ms 200 application/x-msdownload
+2018-05-02 10:53:53.735 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:53648/api/Export/ChiTietDuaDonHocSinhTrongNgay/51B03829/2018-04-25/1  
+2018-05-02 10:53:53.735 +07:00 [Information] Executing action method "TN.API.Controllers.ExportController.ChiTietDuaDonHocSinhTrongNgayAsync (TN.API)" with arguments (["51B03829", "2018-04-25", "1"]) - ModelState is Valid
+2018-05-02 10:53:53.764 +07:00 [Information] Executing ContentResult with HTTP Response ContentType of "text/plain; charset=utf-8"
+2018-05-02 10:53:53.764 +07:00 [Information] Executed action "TN.API.Controllers.ExportController.ChiTietDuaDonHocSinhTrongNgayAsync (TN.API)" in 29.4105ms
+2018-05-02 10:53:53.764 +07:00 [Information] Request finished in 29.9085ms 200 text/plain; charset=utf-8
+2018-05-02 10:54:57.856 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:53648/api/Export/ChiTietDuaDonHocSinhTrongNgay/51B03829/2018-04-25/Tr%E1%BB%8Dng  
+2018-05-02 10:54:57.857 +07:00 [Information] Executing action method "TN.API.Controllers.ExportController.ChiTietDuaDonHocSinhTrongNgayAsync (TN.API)" with arguments (["51B03829", "2018-04-25", "Trọng"]) - ModelState is Valid
+2018-05-02 10:54:57.887 +07:00 [Information] Executing ContentResult with HTTP Response ContentType of "text/plain; charset=utf-8"
+2018-05-02 10:54:57.888 +07:00 [Information] Executed action "TN.API.Controllers.ExportController.ChiTietDuaDonHocSinhTrongNgayAsync (TN.API)" in 31.3565ms
+2018-05-02 10:54:57.888 +07:00 [Information] Request finished in 32.2288ms 200 text/plain; charset=utf-8
+2018-05-02 10:55:01.268 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:53648/api/Export/ChiTietDuaDonHocSinhTrongNgay/51B03829/2018-04-24/Tr%E1%BB%8Dng  
+2018-05-02 10:55:01.269 +07:00 [Information] Executing action method "TN.API.Controllers.ExportController.ChiTietDuaDonHocSinhTrongNgayAsync (TN.API)" with arguments (["51B03829", "2018-04-24", "Trọng"]) - ModelState is Valid
+2018-05-02 10:55:01.296 +07:00 [Information] Executing ContentResult with HTTP Response ContentType of "text/plain; charset=utf-8"
+2018-05-02 10:55:01.296 +07:00 [Information] Executed action "TN.API.Controllers.ExportController.ChiTietDuaDonHocSinhTrongNgayAsync (TN.API)" in 27.5613ms
+2018-05-02 10:55:01.296 +07:00 [Information] Request finished in 28.2329ms 200 text/plain; charset=utf-8
+2018-05-02 10:55:04.092 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:53648/api/Export/ChiTietDuaDonHocSinhTrongNgay/51B03829/2018-04-23/Tr%E1%BB%8Dng  
+2018-05-02 10:55:04.093 +07:00 [Information] Executing action method "TN.API.Controllers.ExportController.ChiTietDuaDonHocSinhTrongNgayAsync (TN.API)" with arguments (["51B03829", "2018-04-23", "Trọng"]) - ModelState is Valid
+2018-05-02 10:55:04.121 +07:00 [Information] Executing ContentResult with HTTP Response ContentType of "text/plain; charset=utf-8"
+2018-05-02 10:55:04.122 +07:00 [Information] Executed action "TN.API.Controllers.ExportController.ChiTietDuaDonHocSinhTrongNgayAsync (TN.API)" in 28.8432ms
+2018-05-02 10:55:04.122 +07:00 [Information] Request finished in 29.5577ms 200 text/plain; charset=utf-8
+2018-05-02 10:55:07.052 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:53648/api/Export/ChiTietDuaDonHocSinhTrongNgay/51B03829/2018-04-22/Tr%E1%BB%8Dng  
+2018-05-02 10:55:07.052 +07:00 [Information] Executing action method "TN.API.Controllers.ExportController.ChiTietDuaDonHocSinhTrongNgayAsync (TN.API)" with arguments (["51B03829", "2018-04-22", "Trọng"]) - ModelState is Valid
+2018-05-02 10:55:07.082 +07:00 [Information] Executing ContentResult with HTTP Response ContentType of "text/plain; charset=utf-8"
+2018-05-02 10:55:07.082 +07:00 [Information] Executed action "TN.API.Controllers.ExportController.ChiTietDuaDonHocSinhTrongNgayAsync (TN.API)" in 30.2233ms
+2018-05-02 10:55:07.082 +07:00 [Information] Request finished in 30.7776ms 200 text/plain; charset=utf-8
+2018-05-02 10:55:11.755 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:53648/api/Export/ChiTietDuaDonHocSinhTrongNgay/51B03829/2018-04-22/Tr%E1%BB%8Dng  
+2018-05-02 10:55:11.756 +07:00 [Information] Executing action method "TN.API.Controllers.ExportController.ChiTietDuaDonHocSinhTrongNgayAsync (TN.API)" with arguments (["51B03829", "2018-04-22", "Trọng"]) - ModelState is Valid
+2018-05-02 10:55:11.784 +07:00 [Information] Executing ContentResult with HTTP Response ContentType of "text/plain; charset=utf-8"
+2018-05-02 10:55:11.785 +07:00 [Information] Executed action "TN.API.Controllers.ExportController.ChiTietDuaDonHocSinhTrongNgayAsync (TN.API)" in 29.1344ms
+2018-05-02 10:55:11.785 +07:00 [Information] Request finished in 29.7747ms 200 text/plain; charset=utf-8
+2018-05-02 10:55:14.708 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:53648/api/Export/ChiTietDuaDonHocSinhTrongNgay/51B03829/2018-04-22/Tr%E1%BB%8Dng  
+2018-05-02 10:55:14.708 +07:00 [Information] Executing action method "TN.API.Controllers.ExportController.ChiTietDuaDonHocSinhTrongNgayAsync (TN.API)" with arguments (["51B03829", "2018-04-22", "Trọng"]) - ModelState is Valid
+2018-05-02 10:55:14.765 +07:00 [Information] Executing ContentResult with HTTP Response ContentType of "text/plain; charset=utf-8"
+2018-05-02 10:55:14.765 +07:00 [Information] Executed action "TN.API.Controllers.ExportController.ChiTietDuaDonHocSinhTrongNgayAsync (TN.API)" in 57.1491ms
+2018-05-02 10:55:14.765 +07:00 [Information] Request finished in 57.6685ms 200 text/plain; charset=utf-8
+2018-05-02 10:55:17.405 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:53648/api/Export/ChiTietDuaDonHocSinhTrongNgay/51B03829/2018-04-26/Tr%E1%BB%8Dng  
+2018-05-02 10:55:17.406 +07:00 [Information] Executing action method "TN.API.Controllers.ExportController.ChiTietDuaDonHocSinhTrongNgayAsync (TN.API)" with arguments (["51B03829", "2018-04-26", "Trọng"]) - ModelState is Valid
+2018-05-02 10:55:17.591 +07:00 [Information] Entity Framework Core "2.0.2-rtm-10011" initialized '"TNFingerContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-05-02 10:55:17.596 +07:00 [Information] Executed DbCommand ("4"ms) [Parameters=["@__lpn_0='?' (Size = 10)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [m].[Id], [m].[Brand], [m].[Capacity], [m].[CreatedDate], [m].[Degree], [m].[IdRoute], [m].[Lat], [m].[Lng], [m].[Lpn], [m].[Note], [m].[NumOfSeat], [m].[Organization], [m].[Speed], [m].[Status], [m].[UpdatedDate], [m].[VehicleOwner]
+FROM [Vehicle] AS [m]
+WHERE ([m].[Lpn] = @__lpn_0) AND ([m].[Status] = 1)"
+2018-05-02 10:55:17.603 +07:00 [Information] Executed DbCommand ("6"ms) [Parameters=["@___date_0='?', @__lpn_1='?' (Size = 10)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [m.IdDeviceNavigation].[IdVehicle], [m].[Id], [m].[IdStudent], [m.IdStudentNavigation].[StudentName], [m.IdStudentNavigation.IdSchoolNavigation].[Name] AS [SchoolName], [m.IdStudentNavigation.IdClassOfSchoolNavigation].[Name] AS [ClassOfSchoolName], [m].[CheckOutDate]
+FROM [StudentCheckOut] AS [m]
+LEFT JOIN [Device] AS [m.IdDeviceNavigation] ON [m].[IdDevice] = [m.IdDeviceNavigation].[Id]
+INNER JOIN [Student] AS [m.IdStudentNavigation] ON [m].[IdStudent] = [m.IdStudentNavigation].[Id]
+LEFT JOIN [School] AS [m.IdStudentNavigation.IdSchoolNavigation] ON [m.IdStudentNavigation].[IdSchool] = [m.IdStudentNavigation.IdSchoolNavigation].[Id]
+LEFT JOIN [ClassOfSchool] AS [m.IdStudentNavigation.IdClassOfSchoolNavigation] ON [m.IdStudentNavigation].[IdClassOfSchool] = [m.IdStudentNavigation.IdClassOfSchoolNavigation].[Id]
+WHERE (([m.IdStudentNavigation].[Disable] = 0) AND (CONVERT(date, [m].[CheckOutDate]) = @___date_0)) AND EXISTS (
+    SELECT 1
+    FROM [Vehicle] AS [x]
+    WHERE (([x].[Id] = [m.IdDeviceNavigation].[IdVehicle]) AND ([x].[Status] = 1)) AND ([x].[Lpn] = @__lpn_1))"
+2018-05-02 10:55:20.061 +07:00 [Information] Executing FileResult, sending file as "9ac062b2-60e6-48a4-a94d-9e3a86e82b1e.xlsx"
+2018-05-02 10:55:20.062 +07:00 [Information] Executed action "TN.API.Controllers.ExportController.ChiTietDuaDonHocSinhTrongNgayAsync (TN.API)" in 2656.4758ms
+2018-05-02 10:55:20.063 +07:00 [Information] Request finished in 2657.5596ms 200 application/x-msdownload
+2018-05-02 10:56:21.280 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:53648/api/Export/StudentTrip/51B03829/2018-04-22  
+2018-05-02 10:56:21.282 +07:00 [Information] Request finished in 1.9248ms 404 
+2018-05-02 10:56:33.928 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:53648/api/Export/StudentTrip/2018-04-22  
+2018-05-02 10:56:33.928 +07:00 [Information] Request finished in 0.3734ms 404 
+2018-05-02 10:56:54.423 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:53648/api/Export/StudentTrip/get/2018-04-22  
+2018-05-02 10:56:54.423 +07:00 [Information] Request finished in 0.3408ms 404 
+2018-05-02 10:57:17.858 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:53648/api/Export/StudentTrip/?date=2018-04-22  
+2018-05-02 10:57:17.858 +07:00 [Information] Request finished in 0.6022ms 404 
+2018-05-02 10:58:03.917 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:53648/api/Export/StudentTrip/getall/date=2018-04-22  
+2018-05-02 10:58:04.043 +07:00 [Information] Request finished in 155.2049ms 404 
+2018-05-02 10:58:07.120 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:53648/api/Export/StudentTrip/getall/2018-04-22  
+2018-05-02 10:58:07.120 +07:00 [Information] Request finished in 0.5385ms 404 
+2018-05-02 10:58:15.804 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:53648/api/Export/StudentTrip/all/2018-04-22  
+2018-05-02 10:58:15.804 +07:00 [Information] Request finished in 0.3062ms 404 
+2018-05-02 10:58:18.933 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:53648/api/Export/StudentTrip/all/2018-04-26  
+2018-05-02 10:58:18.933 +07:00 [Information] Request finished in 0.3644ms 404 
+2018-05-02 10:58:38.994 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:53648/api/values  
+2018-05-02 10:58:39.268 +07:00 [Information] Executing action method "TN.API.Controllers.ValuesController.Get (TN.API)" with arguments (null) - ModelState is Valid
+2018-05-02 10:58:39.276 +07:00 [Information] Executing ContentResult with HTTP Response ContentType of "text/plain; charset=utf-8"
+2018-05-02 10:58:39.323 +07:00 [Information] Executed action "TN.API.Controllers.ValuesController.Get (TN.API)" in 47.737ms
+2018-05-02 10:58:39.327 +07:00 [Information] Request finished in 388.9898ms 200 text/plain; charset=utf-8
+2018-05-02 10:58:39.366 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:53648/favicon.ico  
+2018-05-02 10:58:39.375 +07:00 [Information] Request finished in 6.1353ms 404 
+2018-05-02 10:58:40.635 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:53648/api/StudentTrip/all/2018-04-26  
+2018-05-02 10:58:41.277 +07:00 [Information] Executing action method "TN.API.Controllers.StudentTripController.Get (TN.API)" with arguments (["2018-04-26"]) - ModelState is Valid
+2018-05-02 10:58:49.463 +07:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-05-02 10:58:49.607 +07:00 [Information] Executed action "TN.API.Controllers.StudentTripController.Get (TN.API)" in 8902.4136ms
+2018-05-02 10:58:49.674 +07:00 [Information] Request finished in 8978.277ms 200 application/json; charset=utf-8
+2018-05-02 10:59:28.482 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:53648/api/StudentTrip/all/2018-04-26  
+2018-05-02 10:59:29.051 +07:00 [Information] Executing action method "TN.API.Controllers.StudentTripController.Get (TN.API)" with arguments (["2018-04-26"]) - ModelState is Valid
+2018-05-02 10:59:30.103 +07:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-05-02 10:59:30.150 +07:00 [Information] Executed action "TN.API.Controllers.StudentTripController.Get (TN.API)" in 1468.4023ms
+2018-05-02 10:59:30.152 +07:00 [Information] Request finished in 1696.2589ms 200 application/json; charset=utf-8
+2018-05-02 10:59:45.275 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:53648/api/StudentTrip/all/2018-04-26  
+2018-05-02 10:59:45.280 +07:00 [Information] Executing action method "TN.API.Controllers.StudentTripController.Get (TN.API)" with arguments (["2018-04-26"]) - ModelState is Valid
+2018-05-02 10:59:46.556 +07:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-05-02 10:59:46.557 +07:00 [Information] Executed action "TN.API.Controllers.StudentTripController.Get (TN.API)" in 1280.4345ms
+2018-05-02 10:59:46.557 +07:00 [Information] Request finished in 1281.8121ms 200 application/json; charset=utf-8
+2018-05-02 11:00:31.386 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:53648/api/StudentTrip/all/2018-04-26  
+2018-05-02 11:00:31.984 +07:00 [Information] Executing action method "TN.API.Controllers.StudentTripController.Get (TN.API)" with arguments (["2018-04-26"]) - ModelState is Valid
+2018-05-02 11:00:37.220 +07:00 [Information] Executing ContentResult with HTTP Response ContentType of "text/plain; charset=utf-8"
+2018-05-02 11:00:37.237 +07:00 [Information] Executed action "TN.API.Controllers.StudentTripController.Get (TN.API)" in 5620.4933ms
+2018-05-02 11:00:37.238 +07:00 [Information] Request finished in 5902.8523ms 200 text/plain; charset=utf-8
+2018-05-02 11:03:38.394 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:53648/api/StudentTrip/all/2018-04-26  
+2018-05-02 11:03:38.939 +07:00 [Information] Executing action method "TN.API.Controllers.StudentTripController.Get (TN.API)" with arguments (["2018-04-26"]) - ModelState is Valid
+2018-05-02 11:03:42.207 +07:00 [Information] Executing ContentResult with HTTP Response ContentType of "text/plain; charset=utf-8"
+2018-05-02 11:03:42.231 +07:00 [Information] Executed action "TN.API.Controllers.StudentTripController.Get (TN.API)" in 3638.7849ms
+2018-05-02 11:03:42.232 +07:00 [Information] Request finished in 3855.5896ms 200 text/plain; charset=utf-8
+2018-05-02 11:05:12.768 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:53648/api/StudentTrip/all/2018-04-26  
+2018-05-02 11:05:13.327 +07:00 [Information] Executing action method "TN.API.Controllers.StudentTripController.Get (TN.API)" with arguments (["2018-04-26"]) - ModelState is Valid
+2018-05-02 11:05:14.282 +07:00 [Information] Executing ContentResult with HTTP Response ContentType of "text/plain; charset=utf-8"
+2018-05-02 11:05:14.296 +07:00 [Information] Executed action "TN.API.Controllers.StudentTripController.Get (TN.API)" in 1335.5798ms
+2018-05-02 11:05:14.297 +07:00 [Information] Request finished in 1547.0382ms 200 text/plain; charset=utf-8
+2018-05-02 11:05:59.383 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:53648/api/StudentTrip/all/2018-04-24  
+2018-05-02 11:05:59.416 +07:00 [Information] Executing action method "TN.API.Controllers.StudentTripController.Get (TN.API)" with arguments (["2018-04-24"]) - ModelState is Valid
+2018-05-02 11:05:59.485 +07:00 [Information] Executing ContentResult with HTTP Response ContentType of "text/plain; charset=utf-8"
+2018-05-02 11:05:59.485 +07:00 [Information] Executed action "TN.API.Controllers.StudentTripController.Get (TN.API)" in 101.3972ms
+2018-05-02 11:05:59.485 +07:00 [Information] Request finished in 102.7476ms 200 text/plain; charset=utf-8
+2018-05-02 11:06:04.145 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:53648/api/StudentTrip/all/2018-04-22  
+2018-05-02 11:06:04.146 +07:00 [Information] Executing action method "TN.API.Controllers.StudentTripController.Get (TN.API)" with arguments (["2018-04-22"]) - ModelState is Valid
+2018-05-02 11:06:04.178 +07:00 [Information] Executing ContentResult with HTTP Response ContentType of "text/plain; charset=utf-8"
+2018-05-02 11:06:04.179 +07:00 [Information] Executed action "TN.API.Controllers.StudentTripController.Get (TN.API)" in 32.9139ms
+2018-05-02 11:06:04.180 +07:00 [Information] Request finished in 34.5942ms 200 text/plain; charset=utf-8
+2018-05-02 11:06:08.276 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:53648/api/StudentTrip/all/2018-04-25  
+2018-05-02 11:06:08.277 +07:00 [Information] Executing action method "TN.API.Controllers.StudentTripController.Get (TN.API)" with arguments (["2018-04-25"]) - ModelState is Valid
+2018-05-02 11:06:08.307 +07:00 [Information] Executing ContentResult with HTTP Response ContentType of "text/plain; charset=utf-8"
+2018-05-02 11:06:08.308 +07:00 [Information] Executed action "TN.API.Controllers.StudentTripController.Get (TN.API)" in 31.1808ms
+2018-05-02 11:06:08.308 +07:00 [Information] Request finished in 31.8854ms 200 text/plain; charset=utf-8
+2018-05-02 11:06:10.763 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:53648/api/StudentTrip/all/2018-04-26  
+2018-05-02 11:06:10.763 +07:00 [Information] Executing action method "TN.API.Controllers.StudentTripController.Get (TN.API)" with arguments (["2018-04-26"]) - ModelState is Valid
+2018-05-02 11:06:10.940 +07:00 [Information] Executing ContentResult with HTTP Response ContentType of "text/plain; charset=utf-8"
+2018-05-02 11:06:10.940 +07:00 [Information] Executed action "TN.API.Controllers.StudentTripController.Get (TN.API)" in 177.0286ms
+2018-05-02 11:06:10.940 +07:00 [Information] Request finished in 177.6952ms 200 text/plain; charset=utf-8
+2018-05-02 11:06:17.584 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:53648/api/StudentTrip/all/2018-04-27  
+2018-05-02 11:06:17.585 +07:00 [Information] Executing action method "TN.API.Controllers.StudentTripController.Get (TN.API)" with arguments (["2018-04-27"]) - ModelState is Valid
+2018-05-02 11:06:17.709 +07:00 [Information] Executing ContentResult with HTTP Response ContentType of "text/plain; charset=utf-8"
+2018-05-02 11:06:17.709 +07:00 [Information] Executed action "TN.API.Controllers.StudentTripController.Get (TN.API)" in 124.4497ms
+2018-05-02 11:06:17.709 +07:00 [Information] Request finished in 125.1262ms 200 text/plain; charset=utf-8
+2018-05-02 11:07:28.617 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:53648/api/Export/ChiTietDuaDonHocSinhTrongNgay/51B03829/2018-04-27/1  
+2018-05-02 11:07:28.922 +07:00 [Information] Executing action method "TN.API.Controllers.ExportController.ChiTietDuaDonHocSinhTrongNgayAsync (TN.API)" with arguments (["51B03829", "2018-04-27", "1"]) - ModelState is Valid
+2018-05-02 11:07:29.615 +07:00 [Information] Entity Framework Core "2.0.2-rtm-10011" initialized '"TNFingerContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-05-02 11:07:30.202 +07:00 [Information] Executed DbCommand ("50"ms) [Parameters=["@__lpn_0='?' (Size = 10)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [m].[Id], [m].[Brand], [m].[Capacity], [m].[CreatedDate], [m].[Degree], [m].[IdRoute], [m].[Lat], [m].[Lng], [m].[Lpn], [m].[Note], [m].[NumOfSeat], [m].[Organization], [m].[Speed], [m].[Status], [m].[UpdatedDate], [m].[VehicleOwner]
+FROM [Vehicle] AS [m]
+WHERE ([m].[Lpn] = @__lpn_0) AND ([m].[Status] = 1)"
+2018-05-02 11:07:30.343 +07:00 [Information] Executed DbCommand ("7"ms) [Parameters=["@___date_0='?', @__lpn_1='?' (Size = 10)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [m.IdDeviceNavigation].[IdVehicle], [m].[Id], [m].[IdStudent], [m.IdStudentNavigation].[StudentName], [m.IdStudentNavigation.IdSchoolNavigation].[Name] AS [SchoolName], [m.IdStudentNavigation.IdClassOfSchoolNavigation].[Name] AS [ClassOfSchoolName], [m].[CheckOutDate]
+FROM [StudentCheckOut] AS [m]
+LEFT JOIN [Device] AS [m.IdDeviceNavigation] ON [m].[IdDevice] = [m.IdDeviceNavigation].[Id]
+INNER JOIN [Student] AS [m.IdStudentNavigation] ON [m].[IdStudent] = [m.IdStudentNavigation].[Id]
+LEFT JOIN [School] AS [m.IdStudentNavigation.IdSchoolNavigation] ON [m.IdStudentNavigation].[IdSchool] = [m.IdStudentNavigation.IdSchoolNavigation].[Id]
+LEFT JOIN [ClassOfSchool] AS [m.IdStudentNavigation.IdClassOfSchoolNavigation] ON [m.IdStudentNavigation].[IdClassOfSchool] = [m.IdStudentNavigation.IdClassOfSchoolNavigation].[Id]
+WHERE (([m.IdStudentNavigation].[Disable] = 0) AND (CONVERT(date, [m].[CheckOutDate]) = @___date_0)) AND EXISTS (
+    SELECT 1
+    FROM [Vehicle] AS [x]
+    WHERE (([x].[Id] = [m.IdDeviceNavigation].[IdVehicle]) AND ([x].[Status] = 1)) AND ([x].[Lpn] = @__lpn_1))"
+2018-05-02 11:07:35.946 +07:00 [Information] Executing FileResult, sending file as "3a8fa4fc-8390-43ef-a6c7-7fab495c3267.xlsx"
+2018-05-02 11:07:35.979 +07:00 [Information] Executed action "TN.API.Controllers.ExportController.ChiTietDuaDonHocSinhTrongNgayAsync (TN.API)" in 7329.9676ms
+2018-05-02 11:07:35.979 +07:00 [Information] Request finished in 7363.4697ms 200 application/x-msdownload
+2018-05-02 11:13:01.006 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:53648/api/Export/ChiTietDuaDonHocSinhTrongNgay/51B03829/2018-04-27/1  
+2018-05-02 11:13:01.007 +07:00 [Information] Executing action method "TN.API.Controllers.ExportController.ChiTietDuaDonHocSinhTrongNgayAsync (TN.API)" with arguments (["51B03829", "2018-04-27", "1"]) - ModelState is Valid
+2018-05-02 11:13:01.407 +07:00 [Information] Entity Framework Core "2.0.2-rtm-10011" initialized '"TNFingerContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-05-02 11:13:01.413 +07:00 [Information] Executed DbCommand ("4"ms) [Parameters=["@__lpn_0='?' (Size = 10)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [m].[Id], [m].[Brand], [m].[Capacity], [m].[CreatedDate], [m].[Degree], [m].[IdRoute], [m].[Lat], [m].[Lng], [m].[Lpn], [m].[Note], [m].[NumOfSeat], [m].[Organization], [m].[Speed], [m].[Status], [m].[UpdatedDate], [m].[VehicleOwner]
+FROM [Vehicle] AS [m]
+WHERE ([m].[Lpn] = @__lpn_0) AND ([m].[Status] = 1)"
+2018-05-02 11:13:01.422 +07:00 [Information] Executed DbCommand ("7"ms) [Parameters=["@___date_0='?', @__lpn_1='?' (Size = 10)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [m.IdDeviceNavigation].[IdVehicle], [m].[Id], [m].[IdStudent], [m.IdStudentNavigation].[StudentName], [m.IdStudentNavigation.IdSchoolNavigation].[Name] AS [SchoolName], [m.IdStudentNavigation.IdClassOfSchoolNavigation].[Name] AS [ClassOfSchoolName], [m].[CheckOutDate]
+FROM [StudentCheckOut] AS [m]
+LEFT JOIN [Device] AS [m.IdDeviceNavigation] ON [m].[IdDevice] = [m.IdDeviceNavigation].[Id]
+INNER JOIN [Student] AS [m.IdStudentNavigation] ON [m].[IdStudent] = [m.IdStudentNavigation].[Id]
+LEFT JOIN [School] AS [m.IdStudentNavigation.IdSchoolNavigation] ON [m.IdStudentNavigation].[IdSchool] = [m.IdStudentNavigation.IdSchoolNavigation].[Id]
+LEFT JOIN [ClassOfSchool] AS [m.IdStudentNavigation.IdClassOfSchoolNavigation] ON [m.IdStudentNavigation].[IdClassOfSchool] = [m.IdStudentNavigation.IdClassOfSchoolNavigation].[Id]
+WHERE (([m.IdStudentNavigation].[Disable] = 0) AND (CONVERT(date, [m].[CheckOutDate]) = @___date_0)) AND EXISTS (
+    SELECT 1
+    FROM [Vehicle] AS [x]
+    WHERE (([x].[Id] = [m.IdDeviceNavigation].[IdVehicle]) AND ([x].[Status] = 1)) AND ([x].[Lpn] = @__lpn_1))"
+2018-05-02 11:13:07.983 +07:00 [Information] Executing FileResult, sending file as "7142f7fd-c117-4e3c-8ea2-5039a32d857a.xlsx"
+2018-05-02 11:13:07.984 +07:00 [Information] Executed action "TN.API.Controllers.ExportController.ChiTietDuaDonHocSinhTrongNgayAsync (TN.API)" in 6977.6316ms
+2018-05-02 11:13:07.984 +07:00 [Information] Request finished in 6978.3506ms 200 application/x-msdownload
+2018-05-02 12:39:29.657 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:53648/api/Export/ChiTietDuaDonHocSinhTrongNgay/51B03829/2018-04-26/Tr%E1%BB%8Dng  
+2018-05-02 12:39:29.995 +07:00 [Information] Executing action method "TN.API.Controllers.ExportController.ChiTietDuaDonHocSinhTrongNgayAsync (TN.API)" with arguments (["51B03829", "2018-04-26", "Trọng"]) - ModelState is Valid
+2018-05-02 12:40:00.563 +07:00 [Information] Executed action "TN.API.Controllers.ExportController.ChiTietDuaDonHocSinhTrongNgayAsync (TN.API)" in 30695.6224ms
+2018-05-02 12:40:00.811 +07:00 [Error] An unhandled exception has occurred while executing the request
+System.TimeoutException: A timeout occured after 30000ms selecting a server using CompositeServerSelector{ Selectors = MongoDB.Driver.MongoClient+AreSessionsSupportedServerSelector, LatencyLimitingServerSelector{ AllowedLatencyRange = 00:00:00.0150000 } }. Client view of cluster state is { ClusterId : "1", ConnectionMode : "Automatic", Type : "Unknown", State : "Disconnected", Servers : [{ ServerId: "{ ClusterId : 1, EndPoint : "27.74.249.237:27017" }", EndPoint: "27.74.249.237:27017", State: "Disconnected", Type: "Unknown" }] }.
+   at MongoDB.Driver.Core.Clusters.Cluster.ThrowTimeoutException(IServerSelector selector, ClusterDescription description)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChangedHelper.HandleCompletedTask(Task completedTask)
+   at MongoDB.Driver.Core.Clusters.Cluster.<WaitForDescriptionChangedAsync>d__50.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.Core.Clusters.Cluster.<SelectServerAsync>d__43.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.MongoClient.<AreSessionsSupportedAfterSeverSelctionAsync>d__38.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.MongoClient.<AreSessionsSupportedAsync>d__35.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.MongoClient.<StartImplicitSessionAsync>d__27.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MongoDB.Driver.MongoCollectionImpl`1.<UsingImplicitSessionAsync>d__91`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at TN.API.Services.StudentTripMongoDB.<FindByDate>d__2.MoveNext() in D:\2018\TN.StudentBus\Api\TN.API\Services\StudentTripMongoDB.cs:line 23
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at TN.API.Controllers.ExportController.<ChiTietDuaDonHocSinhTrongNgayAsync>d__7.MoveNext() in D:\2018\TN.StudentBus\Api\TN.API\Controllers\ExportController.cs:line 397
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeActionMethodAsync>d__12.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextActionFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeInnerFilterAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.<Invoke>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.<Invoke>d__7.MoveNext()
+2018-05-02 12:40:00.973 +07:00 [Information] Request finished in 31333.8422ms 500 text/html; charset=utf-8
+2018-05-02 12:54:18.080 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:53648/api/StudentTrecking/51B03829/2018-04-20%2015:59:52/2018-04-20%2018:21:56  
+2018-05-02 12:54:18.127 +07:00 [Information] Policy execution successful.
+2018-05-02 12:54:18.379 +07:00 [Information] Executing action method "TN.API.Controllers.StudentTreckingController.Get (TN.API)" with arguments (["51B03829", "2018-04-20 15:59:52", "2018-04-20 18:21:56"]) - ModelState is Valid
+2018-05-02 12:54:18.658 +07:00 [Information] Entity Framework Core "2.0.2-rtm-10011" initialized '"TNFingerContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-05-02 12:54:19.430 +07:00 [Information] Executed DbCommand ("159"ms) [Parameters=["@___startTime_0='?', @___endTime_1='?', @__8__locals1_lpn_2='?' (Size = 10)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [m].[Id], [m].[IdStudent], [m.IdStudentNavigation].[StudentName], [m.IdStudentNavigation.IdClassOfSchoolNavigation].[Name] AS [ClassOfSchool], [m.IdStudentNavigation.IdSchoolNavigation].[Name] AS [School], [m].[CheckOutDate] AS [date]
+FROM [StudentCheckOut] AS [m]
+INNER JOIN [Student] AS [m.IdStudentNavigation] ON [m].[IdStudent] = [m.IdStudentNavigation].[Id]
+LEFT JOIN [ClassOfSchool] AS [m.IdStudentNavigation.IdClassOfSchoolNavigation] ON [m.IdStudentNavigation].[IdClassOfSchool] = [m.IdStudentNavigation.IdClassOfSchoolNavigation].[Id]
+LEFT JOIN [School] AS [m.IdStudentNavigation.IdSchoolNavigation] ON [m.IdStudentNavigation].[IdSchool] = [m.IdStudentNavigation.IdSchoolNavigation].[Id]
+LEFT JOIN [Device] AS [m.IdDeviceNavigation] ON [m].[IdDevice] = [m.IdDeviceNavigation].[Id]
+LEFT JOIN [Vehicle] AS [m.IdDeviceNavigation.IdVehicleNavigation] ON [m.IdDeviceNavigation].[IdVehicle] = [m.IdDeviceNavigation.IdVehicleNavigation].[Id]
+WHERE (([m].[CheckOutDate] >= @___startTime_0) AND ([m].[CheckOutDate] <= @___endTime_1)) AND ([m.IdDeviceNavigation.IdVehicleNavigation].[Lpn] = @__8__locals1_lpn_2)"
+2018-05-02 12:54:19.476 +07:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-05-02 12:54:19.672 +07:00 [Information] Executed action "TN.API.Controllers.StudentTreckingController.Get (TN.API)" in 1416.2144ms
+2018-05-02 12:54:19.674 +07:00 [Information] Request finished in 1609.7497ms 200 application/json; charset=utf-8
+2018-05-02 12:54:37.215 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:53648/api/StudentTrecking/51B03829/2018-04-20%2015:59:52/2018-04-20%2018:21:56  
+2018-05-02 12:54:37.215 +07:00 [Information] Policy execution successful.
+2018-05-02 12:54:37.216 +07:00 [Information] Executing action method "TN.API.Controllers.StudentTreckingController.Get (TN.API)" with arguments (["51B03829", "2018-04-20 15:59:52", "2018-04-20 18:21:56"]) - ModelState is Valid
+2018-05-02 12:54:37.217 +07:00 [Information] Entity Framework Core "2.0.2-rtm-10011" initialized '"TNFingerContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-05-02 12:54:37.238 +07:00 [Information] Executed DbCommand ("18"ms) [Parameters=["@___startTime_0='?', @___endTime_1='?', @__8__locals1_lpn_2='?' (Size = 10)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [m].[Id], [m].[IdStudent], [m.IdStudentNavigation].[StudentName], [m.IdStudentNavigation.IdClassOfSchoolNavigation].[Name] AS [ClassOfSchool], [m.IdStudentNavigation.IdSchoolNavigation].[Name] AS [School], [m].[CheckOutDate] AS [date]
+FROM [StudentCheckOut] AS [m]
+INNER JOIN [Student] AS [m.IdStudentNavigation] ON [m].[IdStudent] = [m.IdStudentNavigation].[Id]
+LEFT JOIN [ClassOfSchool] AS [m.IdStudentNavigation.IdClassOfSchoolNavigation] ON [m.IdStudentNavigation].[IdClassOfSchool] = [m.IdStudentNavigation.IdClassOfSchoolNavigation].[Id]
+LEFT JOIN [School] AS [m.IdStudentNavigation.IdSchoolNavigation] ON [m.IdStudentNavigation].[IdSchool] = [m.IdStudentNavigation.IdSchoolNavigation].[Id]
+LEFT JOIN [Device] AS [m.IdDeviceNavigation] ON [m].[IdDevice] = [m.IdDeviceNavigation].[Id]
+LEFT JOIN [Vehicle] AS [m.IdDeviceNavigation.IdVehicleNavigation] ON [m.IdDeviceNavigation].[IdVehicle] = [m.IdDeviceNavigation.IdVehicleNavigation].[Id]
+WHERE (([m].[CheckOutDate] >= @___startTime_0) AND ([m].[CheckOutDate] <= @___endTime_1)) AND ([m.IdDeviceNavigation.IdVehicleNavigation].[Lpn] = @__8__locals1_lpn_2)"
+2018-05-02 12:54:37.240 +07:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-05-02 12:54:37.247 +07:00 [Information] Executed action "TN.API.Controllers.StudentTreckingController.Get (TN.API)" in 31.5638ms
+2018-05-02 12:54:37.248 +07:00 [Information] Request finished in 33.2067ms 200 application/json; charset=utf-8
+2018-05-02 12:54:51.937 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:53648/api/StudentTrecking/51B03829/2018-04-20%2015:59:52/2018-04-20%2018:21:56  
+2018-05-02 12:54:51.937 +07:00 [Information] Policy execution successful.
+2018-05-02 12:54:51.938 +07:00 [Information] Executing action method "TN.API.Controllers.StudentTreckingController.Get (TN.API)" with arguments (["51B03829", "2018-04-20 15:59:52", "2018-04-20 18:21:56"]) - ModelState is Valid
+2018-05-02 12:54:51.939 +07:00 [Information] Entity Framework Core "2.0.2-rtm-10011" initialized '"TNFingerContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-05-02 12:54:51.945 +07:00 [Information] Executed DbCommand ("5"ms) [Parameters=["@___startTime_0='?', @___endTime_1='?', @__8__locals1_lpn_2='?' (Size = 10)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [m].[Id], [m].[IdStudent], [m.IdStudentNavigation].[StudentName], [m.IdStudentNavigation.IdClassOfSchoolNavigation].[Name] AS [ClassOfSchool], [m.IdStudentNavigation.IdSchoolNavigation].[Name] AS [School], [m].[CheckOutDate] AS [date]
+FROM [StudentCheckOut] AS [m]
+INNER JOIN [Student] AS [m.IdStudentNavigation] ON [m].[IdStudent] = [m.IdStudentNavigation].[Id]
+LEFT JOIN [ClassOfSchool] AS [m.IdStudentNavigation.IdClassOfSchoolNavigation] ON [m.IdStudentNavigation].[IdClassOfSchool] = [m.IdStudentNavigation.IdClassOfSchoolNavigation].[Id]
+LEFT JOIN [School] AS [m.IdStudentNavigation.IdSchoolNavigation] ON [m.IdStudentNavigation].[IdSchool] = [m.IdStudentNavigation.IdSchoolNavigation].[Id]
+LEFT JOIN [Device] AS [m.IdDeviceNavigation] ON [m].[IdDevice] = [m.IdDeviceNavigation].[Id]
+LEFT JOIN [Vehicle] AS [m.IdDeviceNavigation.IdVehicleNavigation] ON [m.IdDeviceNavigation].[IdVehicle] = [m.IdDeviceNavigation.IdVehicleNavigation].[Id]
+WHERE (([m].[CheckOutDate] >= @___startTime_0) AND ([m].[CheckOutDate] <= @___endTime_1)) AND ([m.IdDeviceNavigation.IdVehicleNavigation].[Lpn] = @__8__locals1_lpn_2)"
+2018-05-02 12:54:51.945 +07:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-05-02 12:54:51.946 +07:00 [Information] Executed action "TN.API.Controllers.StudentTreckingController.Get (TN.API)" in 7.9046ms
+2018-05-02 12:54:51.946 +07:00 [Information] Request finished in 8.5616ms 200 application/json; charset=utf-8
+2018-05-02 12:54:53.846 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:53648/api/StudentTrecking/51B03829/2018-04-20%2015:59:52/2018-04-20%2018:21:56  
+2018-05-02 12:54:53.846 +07:00 [Information] Policy execution successful.
+2018-05-02 12:54:53.846 +07:00 [Information] Executing action method "TN.API.Controllers.StudentTreckingController.Get (TN.API)" with arguments (["51B03829", "2018-04-20 15:59:52", "2018-04-20 18:21:56"]) - ModelState is Valid
+2018-05-02 12:54:53.847 +07:00 [Information] Entity Framework Core "2.0.2-rtm-10011" initialized '"TNFingerContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-05-02 12:54:53.856 +07:00 [Information] Executed DbCommand ("8"ms) [Parameters=["@___startTime_0='?', @___endTime_1='?', @__8__locals1_lpn_2='?' (Size = 10)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [m].[Id], [m].[IdStudent], [m.IdStudentNavigation].[StudentName], [m.IdStudentNavigation.IdClassOfSchoolNavigation].[Name] AS [ClassOfSchool], [m.IdStudentNavigation.IdSchoolNavigation].[Name] AS [School], [m].[CheckOutDate] AS [date]
+FROM [StudentCheckOut] AS [m]
+INNER JOIN [Student] AS [m.IdStudentNavigation] ON [m].[IdStudent] = [m.IdStudentNavigation].[Id]
+LEFT JOIN [ClassOfSchool] AS [m.IdStudentNavigation.IdClassOfSchoolNavigation] ON [m.IdStudentNavigation].[IdClassOfSchool] = [m.IdStudentNavigation.IdClassOfSchoolNavigation].[Id]
+LEFT JOIN [School] AS [m.IdStudentNavigation.IdSchoolNavigation] ON [m.IdStudentNavigation].[IdSchool] = [m.IdStudentNavigation.IdSchoolNavigation].[Id]
+LEFT JOIN [Device] AS [m.IdDeviceNavigation] ON [m].[IdDevice] = [m.IdDeviceNavigation].[Id]
+LEFT JOIN [Vehicle] AS [m.IdDeviceNavigation.IdVehicleNavigation] ON [m.IdDeviceNavigation].[IdVehicle] = [m.IdDeviceNavigation.IdVehicleNavigation].[Id]
+WHERE (([m].[CheckOutDate] >= @___startTime_0) AND ([m].[CheckOutDate] <= @___endTime_1)) AND ([m.IdDeviceNavigation.IdVehicleNavigation].[Lpn] = @__8__locals1_lpn_2)"
+2018-05-02 12:54:53.857 +07:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-05-02 12:54:53.857 +07:00 [Information] Executed action "TN.API.Controllers.StudentTreckingController.Get (TN.API)" in 10.7139ms
+2018-05-02 12:54:53.857 +07:00 [Information] Request finished in 11.3648ms 200 application/json; charset=utf-8
+2018-05-02 12:56:28.574 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:53648/api/StudentTrecking/51B03829/2018-04-20%2015:59:52/2018-04-20%2018:21:56  
+2018-05-02 12:56:28.625 +07:00 [Information] Policy execution failed.
+2018-05-02 12:56:28.626 +07:00 [Information] Request origin "http://localhost:8050" does not have permission to access the resource.
+2018-05-02 12:56:28.860 +07:00 [Information] Executing action method "TN.API.Controllers.StudentTreckingController.Get (TN.API)" with arguments (["51B03829", "2018-04-20 15:59:52", "2018-04-20 18:21:56"]) - ModelState is Valid
+2018-05-02 12:56:29.066 +07:00 [Information] Entity Framework Core "2.0.2-rtm-10011" initialized '"TNFingerContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-05-02 12:56:29.374 +07:00 [Information] Executed DbCommand ("51"ms) [Parameters=["@___startTime_0='?', @___endTime_1='?', @__8__locals1_lpn_2='?' (Size = 10)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [m].[Id], [m].[IdStudent], [m.IdStudentNavigation].[StudentName], [m.IdStudentNavigation.IdClassOfSchoolNavigation].[Name] AS [ClassOfSchool], [m.IdStudentNavigation.IdSchoolNavigation].[Name] AS [School], [m].[CheckOutDate] AS [date]
+FROM [StudentCheckOut] AS [m]
+INNER JOIN [Student] AS [m.IdStudentNavigation] ON [m].[IdStudent] = [m.IdStudentNavigation].[Id]
+LEFT JOIN [ClassOfSchool] AS [m.IdStudentNavigation.IdClassOfSchoolNavigation] ON [m.IdStudentNavigation].[IdClassOfSchool] = [m.IdStudentNavigation.IdClassOfSchoolNavigation].[Id]
+LEFT JOIN [School] AS [m.IdStudentNavigation.IdSchoolNavigation] ON [m.IdStudentNavigation].[IdSchool] = [m.IdStudentNavigation.IdSchoolNavigation].[Id]
+LEFT JOIN [Device] AS [m.IdDeviceNavigation] ON [m].[IdDevice] = [m.IdDeviceNavigation].[Id]
+LEFT JOIN [Vehicle] AS [m.IdDeviceNavigation.IdVehicleNavigation] ON [m.IdDeviceNavigation].[IdVehicle] = [m.IdDeviceNavigation.IdVehicleNavigation].[Id]
+WHERE (([m].[CheckOutDate] >= @___startTime_0) AND ([m].[CheckOutDate] <= @___endTime_1)) AND ([m.IdDeviceNavigation.IdVehicleNavigation].[Lpn] = @__8__locals1_lpn_2)"
+2018-05-02 12:56:29.403 +07:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-05-02 12:56:29.473 +07:00 [Information] Executed action "TN.API.Controllers.StudentTreckingController.Get (TN.API)" in 725.3965ms
+2018-05-02 12:56:29.475 +07:00 [Information] Request finished in 917.6962ms 200 application/json; charset=utf-8
+2018-05-02 12:58:10.079 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:53648/api/StudentTrecking/51B03829/2018-04-20%2015:59:52/2018-04-20%2018:21:56  
+2018-05-02 12:58:10.145 +07:00 [Information] Policy execution successful.
+2018-05-02 12:58:10.406 +07:00 [Information] Executing action method "TN.API.Controllers.StudentTreckingController.Get (TN.API)" with arguments (["51B03829", "2018-04-20 15:59:52", "2018-04-20 18:21:56"]) - ModelState is Valid
+2018-05-02 12:58:10.607 +07:00 [Information] Entity Framework Core "2.0.2-rtm-10011" initialized '"TNFingerContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-05-02 12:58:10.932 +07:00 [Information] Executed DbCommand ("57"ms) [Parameters=["@___startTime_0='?', @___endTime_1='?', @__8__locals1_lpn_2='?' (Size = 10)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [m].[Id], [m].[IdStudent], [m.IdStudentNavigation].[StudentName], [m.IdStudentNavigation.IdClassOfSchoolNavigation].[Name] AS [ClassOfSchool], [m.IdStudentNavigation.IdSchoolNavigation].[Name] AS [School], [m].[CheckOutDate] AS [date]
+FROM [StudentCheckOut] AS [m]
+INNER JOIN [Student] AS [m.IdStudentNavigation] ON [m].[IdStudent] = [m.IdStudentNavigation].[Id]
+LEFT JOIN [ClassOfSchool] AS [m.IdStudentNavigation.IdClassOfSchoolNavigation] ON [m.IdStudentNavigation].[IdClassOfSchool] = [m.IdStudentNavigation.IdClassOfSchoolNavigation].[Id]
+LEFT JOIN [School] AS [m.IdStudentNavigation.IdSchoolNavigation] ON [m.IdStudentNavigation].[IdSchool] = [m.IdStudentNavigation.IdSchoolNavigation].[Id]
+LEFT JOIN [Device] AS [m.IdDeviceNavigation] ON [m].[IdDevice] = [m.IdDeviceNavigation].[Id]
+LEFT JOIN [Vehicle] AS [m.IdDeviceNavigation.IdVehicleNavigation] ON [m.IdDeviceNavigation].[IdVehicle] = [m.IdDeviceNavigation.IdVehicleNavigation].[Id]
+WHERE (([m].[CheckOutDate] >= @___startTime_0) AND ([m].[CheckOutDate] <= @___endTime_1)) AND ([m.IdDeviceNavigation.IdVehicleNavigation].[Lpn] = @__8__locals1_lpn_2)"
+2018-05-02 12:58:11.000 +07:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-05-02 12:58:11.089 +07:00 [Information] Executed action "TN.API.Controllers.StudentTreckingController.Get (TN.API)" in 799.4462ms
+2018-05-02 12:58:11.091 +07:00 [Information] Request finished in 1040.2109ms 200 application/json; charset=utf-8
+2018-05-02 12:58:21.687 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:53648/api/StudentTrecking/51B03829/2018-04-20%2015:59:52/2018-04-20%2018:21:56  
+2018-05-02 12:58:21.688 +07:00 [Information] Policy execution successful.
+2018-05-02 12:58:21.690 +07:00 [Information] Executing action method "TN.API.Controllers.StudentTreckingController.Get (TN.API)" with arguments (["51B03829", "2018-04-20 15:59:52", "2018-04-20 18:21:56"]) - ModelState is Valid
+2018-05-02 12:58:21.692 +07:00 [Information] Entity Framework Core "2.0.2-rtm-10011" initialized '"TNFingerContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-05-02 12:58:21.716 +07:00 [Information] Executed DbCommand ("20"ms) [Parameters=["@___startTime_0='?', @___endTime_1='?', @__8__locals1_lpn_2='?' (Size = 10)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [m].[Id], [m].[IdStudent], [m.IdStudentNavigation].[StudentName], [m.IdStudentNavigation.IdClassOfSchoolNavigation].[Name] AS [ClassOfSchool], [m.IdStudentNavigation.IdSchoolNavigation].[Name] AS [School], [m].[CheckOutDate] AS [date]
+FROM [StudentCheckOut] AS [m]
+INNER JOIN [Student] AS [m.IdStudentNavigation] ON [m].[IdStudent] = [m.IdStudentNavigation].[Id]
+LEFT JOIN [ClassOfSchool] AS [m.IdStudentNavigation.IdClassOfSchoolNavigation] ON [m.IdStudentNavigation].[IdClassOfSchool] = [m.IdStudentNavigation.IdClassOfSchoolNavigation].[Id]
+LEFT JOIN [School] AS [m.IdStudentNavigation.IdSchoolNavigation] ON [m.IdStudentNavigation].[IdSchool] = [m.IdStudentNavigation.IdSchoolNavigation].[Id]
+LEFT JOIN [Device] AS [m.IdDeviceNavigation] ON [m].[IdDevice] = [m.IdDeviceNavigation].[Id]
+LEFT JOIN [Vehicle] AS [m.IdDeviceNavigation.IdVehicleNavigation] ON [m.IdDeviceNavigation].[IdVehicle] = [m.IdDeviceNavigation.IdVehicleNavigation].[Id]
+WHERE (([m].[CheckOutDate] >= @___startTime_0) AND ([m].[CheckOutDate] <= @___endTime_1)) AND ([m.IdDeviceNavigation.IdVehicleNavigation].[Lpn] = @__8__locals1_lpn_2)"
+2018-05-02 12:58:21.717 +07:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-05-02 12:58:21.718 +07:00 [Information] Executed action "TN.API.Controllers.StudentTreckingController.Get (TN.API)" in 29.3296ms
+2018-05-02 12:58:21.718 +07:00 [Information] Request finished in 31.3744ms 200 application/json; charset=utf-8

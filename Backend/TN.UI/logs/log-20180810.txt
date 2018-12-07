@@ -1,0 +1,1032 @@
+2018-08-10 14:17:25.301 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44396/  
+2018-08-10 14:17:27.753 +07:00 [Information] Entity Framework Core "2.1.1-rtm-30846" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-08-10 14:17:28.382 +07:00 [Information] Executed DbCommand ("29"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[Avatar], [e].[ConcurrencyStamp], [e].[CreatedDate], [e].[CreatedUserId], [e].[DisplayName], [e].[Email], [e].[EmailConfirmed], [e].[IsLock], [e].[IsReLogin], [e].[IsSuperAdmin], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[Note], [e].[NoteLock], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[RoleParents], [e].[RoleSchool], [e].[RoleTransportCompany], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UpdatedDate], [e].[UpdatedUserId], [e].[UserName]
+FROM [adm].[User] AS [e]
+WHERE [e].[Id] = @__get_Item_0"
+2018-08-10 14:17:28.491 +07:00 [Information] Executed DbCommand ("3"ms) [Parameters=["@__user_Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [adm].[UserClaim] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0"
+2018-08-10 14:17:28.547 +07:00 [Information] Executed DbCommand ("11"ms) [Parameters=["@__userId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [x].[Id], [x].[ConcurrencyStamp], [x].[Description], [x].[Name], [x].[NormalizedName], [x].[Type]
+FROM [adm].[Role] AS [x]
+WHERE EXISTS (
+    SELECT 1
+    FROM [adm].[UserRole] AS [m]
+    WHERE ([m].[UserId] = @__userId_0) AND ([m].[RoleId] = [x].[Id]))"
+2018-08-10 14:17:28.905 +07:00 [Information] Route matched with "{action = \"Index\", controller = \"Home\", area = \"\"}". Executing action "TN.UI.Controllers.HomeController.Index (TN.UI)"
+2018-08-10 14:17:29.001 +07:00 [Information] Executing action method "TN.UI.Controllers.HomeController.Index (TN.UI)" - Validation state: Valid
+2018-08-10 14:17:29.003 +07:00 [Information] Executed action method "TN.UI.Controllers.HomeController.Index (TN.UI)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 1.3043ms.
+2018-08-10 14:17:29.708 +07:00 [Information] Executing ViewResult, running view "Index".
+2018-08-10 14:17:30.820 +07:00 [Information] Executed ViewResult - view "Index" executed in 1738.7157ms.
+2018-08-10 14:17:30.820 +07:00 [Information] Executed action "TN.UI.Controllers.HomeController.Index (TN.UI)" in 1914.937ms
+2018-08-10 14:17:30.888 +07:00 [Information] Request finished in 5755.6154ms 200 text/html; charset=utf-8
+2018-08-10 14:17:30.931 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44396/Content/Admin/site.min.js  
+2018-08-10 14:17:30.948 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44396/Content/Admin/site.min.css?v=jW89cCi60i6h6mXSm6FblqHAQ9b_Ws0NOy1F8uGIlYc  
+2018-08-10 14:17:30.977 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44396/Content/Admin/js/script.js  
+2018-08-10 14:17:31.058 +07:00 [Information] Sending file. Request path: '"/Content/Admin/js/script.js"'. Physical path: '"D:\2018\1.BusStudent\Sources\Code\Backend\TN.UI\wwwroot\Content\Admin\js\script.js"'
+2018-08-10 14:17:31.058 +07:00 [Information] Request finished in 80.8077ms 200 application/javascript
+2018-08-10 14:17:31.265 +07:00 [Information] Sending file. Request path: '"/Content/Admin/site.min.js"'. Physical path: '"D:\2018\1.BusStudent\Sources\Code\Backend\TN.UI\wwwroot\Content\Admin\site.min.js"'
+2018-08-10 14:17:31.265 +07:00 [Information] Request finished in 334.9457ms 200 application/javascript
+2018-08-10 14:17:31.340 +07:00 [Information] Sending file. Request path: '"/Content/Admin/site.min.css"'. Physical path: '"D:\2018\1.BusStudent\Sources\Code\Backend\TN.UI\wwwroot\Content\Admin\site.min.css"'
+2018-08-10 14:17:31.340 +07:00 [Information] Request finished in 392.2708ms 200 text/css
+2018-08-10 14:18:24.970 +07:00 [Information] Request starting HTTP/1.1 POST http://127.0.0.1:5485/iisintegration  0
+2018-08-10 14:18:24.972 +07:00 [Information] Request finished in 2.2999ms 202 
+2018-08-10 15:53:27.604 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44396/  
+2018-08-10 15:53:27.747 +07:00 [Information] "Identity.Application" was not authenticated. Failure message: "Unprotect ticket failed"
+2018-08-10 15:53:34.964 +07:00 [Information] Route matched with "{action = \"Index\", controller = \"Home\", area = \"\"}". Executing action "TN.UI.Controllers.HomeController.Index (TN.UI)"
+2018-08-10 15:53:35.485 +07:00 [Information] Entity Framework Core "2.1.1-rtm-30846" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-08-10 15:53:35.940 +07:00 [Information] Executed DbCommand ("19"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[Avatar], [e].[ConcurrencyStamp], [e].[CreatedDate], [e].[CreatedUserId], [e].[DisplayName], [e].[Email], [e].[EmailConfirmed], [e].[IsLock], [e].[IsReLogin], [e].[IsSuperAdmin], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[Note], [e].[NoteLock], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[RoleParents], [e].[RoleSchool], [e].[RoleTransportCompany], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UpdatedDate], [e].[UpdatedUserId], [e].[UserName]
+FROM [adm].[User] AS [e]
+WHERE [e].[Id] = @__get_Item_0"
+2018-08-10 15:53:35.979 +07:00 [Information] AuthenticationScheme: "Identity.Application" signed out.
+2018-08-10 15:53:35.980 +07:00 [Information] AuthenticationScheme: "Identity.External" signed out.
+2018-08-10 15:53:35.980 +07:00 [Information] AuthenticationScheme: "Identity.TwoFactorUserId" signed out.
+2018-08-10 15:53:35.982 +07:00 [Information] Authorization failed for the request at filter '"TN.UI.Extensions.PermissionFilter"'.
+2018-08-10 15:53:35.985 +07:00 [Information] Executing RedirectResult, redirecting to "/Login?ReturnUrl=%2F".
+2018-08-10 15:53:35.990 +07:00 [Information] Executed action "TN.UI.Controllers.HomeController.Index (TN.UI)" in 1021.8114ms
+2018-08-10 15:53:36.012 +07:00 [Information] Request finished in 8413.4974ms 302 
+2018-08-10 15:53:36.021 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44396/Login?ReturnUrl=%2F  
+2018-08-10 15:53:36.042 +07:00 [Information] Route matched with "{area = \"User\", action = \"Login\", controller = \"Account\"}". Executing action "TN.UI.Areas.User.Controllers.AccountController.Login (TN.UI)"
+2018-08-10 15:53:36.073 +07:00 [Information] Executing action method "TN.UI.Areas.User.Controllers.AccountController.Login (TN.UI)" with arguments (["/"]) - Validation state: Valid
+2018-08-10 15:53:36.076 +07:00 [Information] AuthenticationScheme: "Identity.External" signed out.
+2018-08-10 15:53:36.080 +07:00 [Information] Executed action method "TN.UI.Areas.User.Controllers.AccountController.Login (TN.UI)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 3.1845ms.
+2018-08-10 15:53:36.157 +07:00 [Information] Executing ViewResult, running view "Login".
+2018-08-10 15:53:38.494 +07:00 [Information] Executed ViewResult - view "Login" executed in 2408.5731ms.
+2018-08-10 15:53:38.494 +07:00 [Information] Executed action "TN.UI.Areas.User.Controllers.AccountController.Login (TN.UI)" in 2452.1069ms
+2018-08-10 15:53:38.498 +07:00 [Information] Request finished in 2477.0317ms 200 text/html; charset=utf-8
+2018-08-10 15:53:38.625 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44396/Content/Admin/js/script.js  
+2018-08-10 15:53:38.628 +07:00 [Information] The file "/Content/Admin/js/script.js" was not modified
+2018-08-10 15:53:38.628 +07:00 [Information] Request finished in 3.4422ms 304 application/javascript
+2018-08-10 15:53:38.684 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44396/Content/Admin/site.min.js?v=uGEmHVBVwqSwceRoffkJ4JsqPQI9uYkMXT592pcUwAs  
+2018-08-10 15:53:38.698 +07:00 [Information] Sending file. Request path: '"/Content/Admin/site.min.js"'. Physical path: '"D:\2018\1.BusStudent\Sources\Code\Backend\TN.UI\wwwroot\Content\Admin\site.min.js"'
+2018-08-10 15:53:38.698 +07:00 [Information] Request finished in 13.8991ms 200 application/javascript
+2018-08-10 15:53:43.966 +07:00 [Information] Request starting HTTP/1.1 POST http://localhost:44396/Login?ReturnUrl=%2F application/x-www-form-urlencoded 275
+2018-08-10 15:53:43.975 +07:00 [Information] Route matched with "{area = \"User\", action = \"Login\", controller = \"Account\"}". Executing action "TN.UI.Areas.User.Controllers.AccountController.Login (TN.UI)"
+2018-08-10 15:53:44.007 +07:00 [Information] Executing action method "TN.UI.Areas.User.Controllers.AccountController.Login (TN.UI)" with arguments (["TN.Domain.Model.LoginViewModel", "/"]) - Validation state: Valid
+2018-08-10 15:53:44.013 +07:00 [Information] Entity Framework Core "2.1.1-rtm-30846" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-08-10 15:53:44.037 +07:00 [Information] Executed DbCommand ("5"ms) [Parameters=["@__model_Username_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [m].[Id], [m].[AccessFailedCount], [m].[Avatar], [m].[ConcurrencyStamp], [m].[CreatedDate], [m].[CreatedUserId], [m].[DisplayName], [m].[Email], [m].[EmailConfirmed], [m].[IsLock], [m].[IsReLogin], [m].[IsSuperAdmin], [m].[LockoutEnabled], [m].[LockoutEnd], [m].[NormalizedEmail], [m].[NormalizedUserName], [m].[Note], [m].[NoteLock], [m].[PasswordHash], [m].[PhoneNumber], [m].[PhoneNumberConfirmed], [m].[RoleParents], [m].[RoleSchool], [m].[RoleTransportCompany], [m].[SecurityStamp], [m].[TwoFactorEnabled], [m].[UpdatedDate], [m].[UpdatedUserId], [m].[UserName]
+FROM [adm].[User] AS [m]
+WHERE [m].[UserName] = @__model_Username_0"
+2018-08-10 15:53:44.042 +07:00 [Information] Executed action method "TN.UI.Areas.User.Controllers.AccountController.Login (TN.UI)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 34.2906ms.
+2018-08-10 15:53:44.053 +07:00 [Information] Executing ViewResult, running view "Login".
+2018-08-10 15:53:44.056 +07:00 [Information] Executed ViewResult - view "Login" executed in 2.8415ms.
+2018-08-10 15:53:44.056 +07:00 [Information] Executed action "TN.UI.Areas.User.Controllers.AccountController.Login (TN.UI)" in 80.7147ms
+2018-08-10 15:53:44.056 +07:00 [Information] Request finished in 92.5482ms 200 text/html; charset=utf-8
+2018-08-10 15:53:48.410 +07:00 [Information] Request starting HTTP/1.1 POST http://localhost:44396/Login?ReturnUrl=%2F application/x-www-form-urlencoded 261
+2018-08-10 15:53:48.412 +07:00 [Information] Route matched with "{area = \"User\", action = \"Login\", controller = \"Account\"}". Executing action "TN.UI.Areas.User.Controllers.AccountController.Login (TN.UI)"
+2018-08-10 15:53:48.414 +07:00 [Information] Executing action method "TN.UI.Areas.User.Controllers.AccountController.Login (TN.UI)" with arguments (["TN.Domain.Model.LoginViewModel", "/"]) - Validation state: Valid
+2018-08-10 15:53:48.415 +07:00 [Information] Entity Framework Core "2.1.1-rtm-30846" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-08-10 15:53:48.420 +07:00 [Information] Executed DbCommand ("4"ms) [Parameters=["@__model_Username_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [m].[Id], [m].[AccessFailedCount], [m].[Avatar], [m].[ConcurrencyStamp], [m].[CreatedDate], [m].[CreatedUserId], [m].[DisplayName], [m].[Email], [m].[EmailConfirmed], [m].[IsLock], [m].[IsReLogin], [m].[IsSuperAdmin], [m].[LockoutEnabled], [m].[LockoutEnd], [m].[NormalizedEmail], [m].[NormalizedUserName], [m].[Note], [m].[NoteLock], [m].[PasswordHash], [m].[PhoneNumber], [m].[PhoneNumberConfirmed], [m].[RoleParents], [m].[RoleSchool], [m].[RoleTransportCompany], [m].[SecurityStamp], [m].[TwoFactorEnabled], [m].[UpdatedDate], [m].[UpdatedUserId], [m].[UserName]
+FROM [adm].[User] AS [m]
+WHERE [m].[UserName] = @__model_Username_0"
+2018-08-10 15:53:48.506 +07:00 [Information] Executed DbCommand ("10"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[Avatar], [u].[ConcurrencyStamp], [u].[CreatedDate], [u].[CreatedUserId], [u].[DisplayName], [u].[Email], [u].[EmailConfirmed], [u].[IsLock], [u].[IsReLogin], [u].[IsSuperAdmin], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[Note], [u].[NoteLock], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[RoleParents], [u].[RoleSchool], [u].[RoleTransportCompany], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UpdatedDate], [u].[UpdatedUserId], [u].[UserName]
+FROM [adm].[User] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0"
+2018-08-10 15:53:48.631 +07:00 [Information] Executed DbCommand ("6"ms) [Parameters=["@__user_Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [adm].[UserClaim] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0"
+2018-08-10 15:53:48.677 +07:00 [Information] Executed DbCommand ("7"ms) [Parameters=["@__userId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [x].[Id], [x].[ConcurrencyStamp], [x].[Description], [x].[Name], [x].[NormalizedName], [x].[Type]
+FROM [adm].[Role] AS [x]
+WHERE EXISTS (
+    SELECT 1
+    FROM [adm].[UserRole] AS [m]
+    WHERE ([m].[UserId] = @__userId_0) AND ([m].[RoleId] = [x].[Id]))"
+2018-08-10 15:53:48.692 +07:00 [Information] AuthenticationScheme: "Identity.Application" signed in.
+2018-08-10 15:53:48.830 +07:00 [Information] Executed DbCommand ("3"ms) [Parameters=["@p28='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p29='?' (Size = 4000), @p3='?' (DbType = DateTime2), @p4='?' (DbType = Int32), @p5='?' (Size = 100), @p6='?' (Size = 256), @p7='?' (DbType = Boolean), @p8='?' (DbType = Boolean), @p9='?' (DbType = Boolean), @p10='?' (DbType = Boolean), @p11='?' (DbType = Boolean), @p12='?' (DbType = DateTimeOffset), @p13='?' (Size = 256), @p14='?' (Size = 256), @p15='?' (Size = 4000), @p16='?' (Size = 1000), @p17='?' (Size = 4000), @p18='?' (Size = 4000), @p19='?' (DbType = Boolean), @p20='?' (Size = 4000), @p21='?' (Size = 4000), @p22='?' (Size = 4000), @p23='?' (Size = 4000), @p24='?' (DbType = Boolean), @p25='?' (DbType = DateTime2), @p26='?' (DbType = Int32), @p27='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+UPDATE [adm].[User] SET [AccessFailedCount] = @p0, [Avatar] = @p1, [ConcurrencyStamp] = @p2, [CreatedDate] = @p3, [CreatedUserId] = @p4, [DisplayName] = @p5, [Email] = @p6, [EmailConfirmed] = @p7, [IsLock] = @p8, [IsReLogin] = @p9, [IsSuperAdmin] = @p10, [LockoutEnabled] = @p11, [LockoutEnd] = @p12, [NormalizedEmail] = @p13, [NormalizedUserName] = @p14, [Note] = @p15, [NoteLock] = @p16, [PasswordHash] = @p17, [PhoneNumber] = @p18, [PhoneNumberConfirmed] = @p19, [RoleParents] = @p20, [RoleSchool] = @p21, [RoleTransportCompany] = @p22, [SecurityStamp] = @p23, [TwoFactorEnabled] = @p24, [UpdatedDate] = @p25, [UpdatedUserId] = @p26, [UserName] = @p27
+WHERE [Id] = @p28 AND [ConcurrencyStamp] = @p29;
+SELECT @@ROWCOUNT;"
+2018-08-10 15:53:48.863 +07:00 [Information] Executed action method "TN.UI.Areas.User.Controllers.AccountController.Login (TN.UI)", returned result "Microsoft.AspNetCore.Mvc.RedirectResult" in 448.4711ms.
+2018-08-10 15:53:48.863 +07:00 [Information] Executing RedirectResult, redirecting to "/".
+2018-08-10 15:53:48.863 +07:00 [Information] Executed action "TN.UI.Areas.User.Controllers.AccountController.Login (TN.UI)" in 451.4314ms
+2018-08-10 15:53:48.863 +07:00 [Information] Request finished in 453.9872ms 302 
+2018-08-10 15:53:48.873 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44396/  
+2018-08-10 15:53:48.877 +07:00 [Information] Route matched with "{action = \"Index\", controller = \"Home\", area = \"\"}". Executing action "TN.UI.Controllers.HomeController.Index (TN.UI)"
+2018-08-10 15:53:48.878 +07:00 [Information] Entity Framework Core "2.1.1-rtm-30846" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-08-10 15:53:48.889 +07:00 [Information] Executed DbCommand ("10"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[Avatar], [e].[ConcurrencyStamp], [e].[CreatedDate], [e].[CreatedUserId], [e].[DisplayName], [e].[Email], [e].[EmailConfirmed], [e].[IsLock], [e].[IsReLogin], [e].[IsSuperAdmin], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[Note], [e].[NoteLock], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[RoleParents], [e].[RoleSchool], [e].[RoleTransportCompany], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UpdatedDate], [e].[UpdatedUserId], [e].[UserName]
+FROM [adm].[User] AS [e]
+WHERE [e].[Id] = @__get_Item_0"
+2018-08-10 15:53:48.904 +07:00 [Information] Executing action method "TN.UI.Controllers.HomeController.Index (TN.UI)" - Validation state: Valid
+2018-08-10 15:53:48.905 +07:00 [Information] Executed action method "TN.UI.Controllers.HomeController.Index (TN.UI)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 0.8115ms.
+2018-08-10 15:53:48.912 +07:00 [Information] Executing ViewResult, running view "Index".
+2018-08-10 15:53:49.050 +07:00 [Information] Executed ViewResult - view "Index" executed in 143.8676ms.
+2018-08-10 15:53:49.052 +07:00 [Information] Executed action "TN.UI.Controllers.HomeController.Index (TN.UI)" in 173.9793ms
+2018-08-10 15:53:49.052 +07:00 [Information] Request finished in 179.6352ms 200 text/html; charset=utf-8
+2018-08-10 15:53:51.511 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44396/Admin/Report/TripsReport  
+2018-08-10 15:53:51.522 +07:00 [Information] Route matched with "{area = \"Report\", action = \"Index\", controller = \"TripsReport\"}". Executing action "TN.UI.Areas.Report.Controllers.TripsReportController.Index (TN.UI)"
+2018-08-10 15:53:51.522 +07:00 [Information] Entity Framework Core "2.1.1-rtm-30846" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-08-10 15:53:51.528 +07:00 [Information] Executed DbCommand ("4"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[Avatar], [e].[ConcurrencyStamp], [e].[CreatedDate], [e].[CreatedUserId], [e].[DisplayName], [e].[Email], [e].[EmailConfirmed], [e].[IsLock], [e].[IsReLogin], [e].[IsSuperAdmin], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[Note], [e].[NoteLock], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[RoleParents], [e].[RoleSchool], [e].[RoleTransportCompany], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UpdatedDate], [e].[UpdatedUserId], [e].[UserName]
+FROM [adm].[User] AS [e]
+WHERE [e].[Id] = @__get_Item_0"
+2018-08-10 15:53:51.529 +07:00 [Information] Executing action method "TN.UI.Areas.Report.Controllers.TripsReportController.Index (TN.UI)" - Validation state: Valid
+2018-08-10 15:53:51.530 +07:00 [Information] Executed action method "TN.UI.Areas.Report.Controllers.TripsReportController.Index (TN.UI)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 0.2437ms.
+2018-08-10 15:53:51.552 +07:00 [Information] Executing ViewResult, running view "Index".
+2018-08-10 15:53:51.571 +07:00 [Information] Executed ViewResult - view "Index" executed in 40.9702ms.
+2018-08-10 15:53:51.571 +07:00 [Information] Executed action "TN.UI.Areas.Report.Controllers.TripsReportController.Index (TN.UI)" in 49.1173ms
+2018-08-10 15:53:51.571 +07:00 [Information] Request finished in 59.6445ms 200 text/html; charset=utf-8
+2018-08-10 15:53:51.763 +07:00 [Information] Request starting HTTP/1.1 POST http://localhost:44396/Admin/Report/TripsReport/DetailTotalTripsByMonth application/x-www-form-urlencoded; charset=UTF-8 6
+2018-08-10 15:53:51.782 +07:00 [Information] Route matched with "{area = \"Report\", action = \"DetailTotalTripsByMonth\", controller = \"TripsReport\"}". Executing action "TN.UI.Areas.Report.Controllers.TripsReportController.DetailTotalTripsByMonth (TN.UI)"
+2018-08-10 15:53:51.784 +07:00 [Information] Entity Framework Core "2.1.1-rtm-30846" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-08-10 15:53:51.789 +07:00 [Information] Executed DbCommand ("4"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[Avatar], [e].[ConcurrencyStamp], [e].[CreatedDate], [e].[CreatedUserId], [e].[DisplayName], [e].[Email], [e].[EmailConfirmed], [e].[IsLock], [e].[IsReLogin], [e].[IsSuperAdmin], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[Note], [e].[NoteLock], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[RoleParents], [e].[RoleSchool], [e].[RoleTransportCompany], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UpdatedDate], [e].[UpdatedUserId], [e].[UserName]
+FROM [adm].[User] AS [e]
+WHERE [e].[Id] = @__get_Item_0"
+2018-08-10 15:53:51.796 +07:00 [Information] Executing action method "TN.UI.Areas.Report.Controllers.TripsReportController.DetailTotalTripsByMonth (TN.UI)" with arguments (["0", "0", "", ""]) - Validation state: Valid
+2018-08-10 15:53:51.839 +07:00 [Information] Executed action "TN.UI.Areas.Report.Controllers.TripsReportController.DetailTotalTripsByMonth (TN.UI)" in 55.8607ms
+2018-08-10 15:53:51.966 +07:00 [Error] An unhandled exception has occurred while executing the request.
+System.ArgumentOutOfRangeException: Month must be between one and twelve.
+Parameter name: month
+   at System.DateTime.DaysInMonth(Int32 year, Int32 month)
+   at TN.UI.Areas.Report.Controllers.TripsReportController.DetailTotalTripsByMonth(Int32 month, Int32 year, Nullable`1 transportCompanyId, Nullable`1 schoolId) in D:\2018\1.BusStudent\Sources\Code\Backend\TN.UI\Areas\Report\Controllers\TripsReportController.cs:line 301
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.ResponseCompression.ResponseCompressionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2018-08-10 15:53:52.048 +07:00 [Information] Request finished in 285.6591ms 500 text/html; charset=utf-8
+2018-08-10 15:53:52.646 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44396/Admin/Report/TripsReport/TripsByDate?date=09%2F04%2F2018&transportCompanyId=31  
+2018-08-10 15:53:52.654 +07:00 [Information] Route matched with "{area = \"Report\", action = \"TripsByDate\", controller = \"TripsReport\"}". Executing action "TN.UI.Areas.Report.Controllers.TripsReportController.TripsByDate (TN.UI)"
+2018-08-10 15:53:52.654 +07:00 [Information] Entity Framework Core "2.1.1-rtm-30846" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-08-10 15:53:52.659 +07:00 [Information] Executed DbCommand ("4"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[Avatar], [e].[ConcurrencyStamp], [e].[CreatedDate], [e].[CreatedUserId], [e].[DisplayName], [e].[Email], [e].[EmailConfirmed], [e].[IsLock], [e].[IsReLogin], [e].[IsSuperAdmin], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[Note], [e].[NoteLock], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[RoleParents], [e].[RoleSchool], [e].[RoleTransportCompany], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UpdatedDate], [e].[UpdatedUserId], [e].[UserName]
+FROM [adm].[User] AS [e]
+WHERE [e].[Id] = @__get_Item_0"
+2018-08-10 15:53:52.659 +07:00 [Information] Executing action method "TN.UI.Areas.Report.Controllers.TripsReportController.TripsByDate (TN.UI)" - Validation state: Valid
+2018-08-10 15:53:52.680 +07:00 [Information] Executed DbCommand ("5"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[Id], [x].[Address], [x].[Code], [x].[CreatedDate], [x].[CreatedUser], [x].[DateIssued], [x].[Email], [x].[IsDelete], [x].[Name], [x].[Note], [x].[PhoneFax], [x].[Status], [x].[UpdatedDate], [x].[UpdatedUser]
+FROM [TransportCompany] AS [x]
+WHERE ([x].[Status] = 1) AND ([x].[IsDelete] = 0)"
+2018-08-10 15:53:53.330 +07:00 [Information] Executed DbCommand ("17"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[Id], [x].[Address], [x].[Code], [x].[CreatedDate], [x].[CreatedUser], [x].[DistrictId], [x].[Image], [x].[IsDelete], [x].[Lat], [x].[Lng], [x].[Name], [x].[Note], [x].[Status], [x].[Trips], [x].[UpdatedDate], [x].[UpdatedUser]
+FROM [School] AS [x]
+WHERE ([x].[Status] = 1) AND ([x].[IsDelete] = 0)"
+2018-08-10 15:53:53.364 +07:00 [Information] Executed action method "TN.UI.Areas.Report.Controllers.TripsReportController.TripsByDate (TN.UI)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 704.8509ms.
+2018-08-10 15:53:53.367 +07:00 [Information] Executing ViewResult, running view "TripsByDate".
+2018-08-10 15:53:53.418 +07:00 [Information] Executed ViewResult - view "TripsByDate" executed in 53.0166ms.
+2018-08-10 15:53:53.418 +07:00 [Information] Executed action "TN.UI.Areas.Report.Controllers.TripsReportController.TripsByDate (TN.UI)" in 764.4682ms
+2018-08-10 15:53:53.418 +07:00 [Information] Request finished in 775.5344ms 200 text/html; charset=utf-8
+2018-08-10 15:53:53.641 +07:00 [Information] Request starting HTTP/1.1 POST http://localhost:44396/Admin/Report/TripsReport/TripsByDate application/x-www-form-urlencoded; charset=UTF-8 284
+2018-08-10 15:53:53.650 +07:00 [Information] Route matched with "{area = \"Report\", action = \"TripsByDate\", controller = \"TripsReport\"}". Executing action "TN.UI.Areas.Report.Controllers.TripsReportController.TripsByDatePost (TN.UI)"
+2018-08-10 15:53:53.651 +07:00 [Information] Entity Framework Core "2.1.1-rtm-30846" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-08-10 15:53:53.657 +07:00 [Information] Executed DbCommand ("4"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[Avatar], [e].[ConcurrencyStamp], [e].[CreatedDate], [e].[CreatedUserId], [e].[DisplayName], [e].[Email], [e].[EmailConfirmed], [e].[IsLock], [e].[IsReLogin], [e].[IsSuperAdmin], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[Note], [e].[NoteLock], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[RoleParents], [e].[RoleSchool], [e].[RoleTransportCompany], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UpdatedDate], [e].[UpdatedUserId], [e].[UserName]
+FROM [adm].[User] AS [e]
+WHERE [e].[Id] = @__get_Item_0"
+2018-08-10 15:53:53.658 +07:00 [Information] Executing action method "TN.UI.Areas.Report.Controllers.TripsReportController.TripsByDatePost (TN.UI)" with arguments (["09/04/2018", "31", ""]) - Validation state: Valid
+2018-08-10 15:53:53.728 +07:00 [Information] Executed DbCommand ("5"ms) [Parameters=["@__transportCompanyId_0='?' (DbType = Int32), @__date_Date_1='?' (DbType = DateTime2)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[Id], [x].[ConfimCenterUser], [x].[ConfirmCenterTime], [x].[CreatedDate], [x].[CreatedUser], [x].[Date], [x].[GPSString], [x].[IsConfirmCenter], [x].[IsDelete], [x].[IsNotification], [x].[IsSendEmailCenter], [x].[IsSendEmailTransportCompany], [x].[RouteId], [x].[SendEmailDateCenter], [x].[SendEmailDateTransportCompany], [x].[TimeTable], [x].[TransportCompanyId], [x].[UpdatedDate], [x].[UpdatedUser], [x].[VehicleId]
+FROM [ConfirmationTrips] AS [x]
+WHERE (([x].[TransportCompanyId] = @__transportCompanyId_0) AND (CONVERT(date, [x].[Date]) = @__date_Date_1)) AND ([x].[IsConfirmCenter] = 1)"
+2018-08-10 15:53:54.124 +07:00 [Information] Executed DbCommand ("352"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [m].[Id], [m].[Aircon], [m].[Capacity], [m].[ContractEndDate], [m].[CreatedDate], [m].[CreatedUser], [m].[DeviceGPSId], [m].[DoorDown], [m].[DoorUp], [m].[DriverCode], [m].[Fuel], [m].[Heading], [m].[Ignition], [m].[IsAirConditioner], [m].[IsDelete], [m].[IsWorking], [m].[Lat], [m].[Lng], [m].[Lpn], [m].[Note], [m].[NumOfSeat], [m].[RegistryEndDate], [m].[SOS], [m].[Speed], [m].[Status], [m].[TrackingTime], [m].[TransportCompanyId], [m].[TransportCompanyStartDate], [m].[Type], [m].[UnderwriteEndDate], [m].[UpdatedDate], [m].[UpdatedUser], [m].[VehicleBrandId], [m].[VehicleFloorboardsTypeId], [m].[VehicleGroupId], [m].[YearOfManufacture]
+FROM [Vehicle] AS [m]
+WHERE [m].[Id] IN (4068, 4174, 4175)"
+2018-08-10 15:53:54.243 +07:00 [Information] Executed DbCommand ("49"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [m].[Id], [m].[CheckOutEndTime], [m].[CheckOutStartTime], [m].[ConfirmationTripsId], [m].[CreatedDate], [m].[EndStationId], [m].[EndTime], [m].[GPSString], [m].[IsCheckOutEndStation], [m].[IsCheckOutStartStation], [m].[LatEndStation], [m].[LatGPSEndStation], [m].[LatGPSStartStation], [m].[LatStartStation], [m].[LngStartStation], [m].[LngtEndStation], [m].[LngtGPSEndStation], [m].[LngtGPSStartStation], [m].[RouteId], [m].[StartStationId], [m].[StartTime], [m].[Status], [m].[TimeTable]
+FROM [ConfirmationTripsDetail] AS [m]
+WHERE [m].[ConfirmationTripsId] IN (2275, 2320, 2365)"
+2018-08-10 15:53:54.328 +07:00 [Information] Executed DbCommand ("4"ms) [Parameters=["@__isCheckerCenter_2='?' (DbType = Boolean)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [m].[Id] AS [CheckOutId], [m].[StudentId], [student].[FullName] AS [StudentName], [classOfSchool].[Name] AS [ClassOfSchoolName], [school].[Name] AS [SchoolName], [m].[CheckOutDate], [m].[City], [m].[ConfirmationTripsDetailId], [m].[District], [m].[IsCheckerCenter], [m].[IsCheckerComputer] AS [IsScan], [m].[Location], [m].[NoteCheckerComputer], [m].[Street], [m].[StreetNum], [m].[Ward], [m].[VehicleId], [m].[Lat], [m].[Lng]
+FROM [ConfirmationTripsConfirm] AS [m]
+LEFT JOIN [Student] AS [student] ON [m].[StudentId] = [student].[Id]
+LEFT JOIN [ClassOfSchool] AS [classOfSchool] ON [m].[ClassOfSchoolId] = [classOfSchool].[Id]
+LEFT JOIN [School] AS [school] ON [m].[SchoolId] = [school].[Id]
+WHERE [m].[ConfirmationTripsId] IN (2275, 2320, 2365) AND ([m].[IsCheckerCenter] = @__isCheckerCenter_2)"
+2018-08-10 15:53:54.354 +07:00 [Information] Executed DbCommand ("3"ms) [Parameters=["@__transportCompanyId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [x].[Id], [x].[Address], [x].[Code], [x].[CreatedDate], [x].[CreatedUser], [x].[DateIssued], [x].[Email], [x].[IsDelete], [x].[Name], [x].[Note], [x].[PhoneFax], [x].[Status], [x].[UpdatedDate], [x].[UpdatedUser]
+FROM [TransportCompany] AS [x]
+WHERE [x].[Id] = @__transportCompanyId_0"
+2018-08-10 15:53:54.360 +07:00 [Information] Executed action method "TN.UI.Areas.Report.Controllers.TripsReportController.TripsByDatePost (TN.UI)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 702.0728ms.
+2018-08-10 15:53:54.362 +07:00 [Information] Executing ViewResult, running view "TripsByDateAjax".
+2018-08-10 15:53:54.369 +07:00 [Information] Executed ViewResult - view "TripsByDateAjax" executed in 7.8126ms.
+2018-08-10 15:53:54.369 +07:00 [Information] Executed action "TN.UI.Areas.Report.Controllers.TripsReportController.TripsByDatePost (TN.UI)" in 718.5806ms
+2018-08-10 15:53:54.369 +07:00 [Information] Request finished in 728.0105ms 200 text/html; charset=utf-8
+2018-08-10 15:53:59.308 +07:00 [Information] Request starting HTTP/1.1 POST http://localhost:44396/Admin/Report/TripsReport/TripsByDateExport application/x-www-form-urlencoded 277
+2018-08-10 15:53:59.319 +07:00 [Information] Route matched with "{area = \"Report\", action = \"TripsByDateExport\", controller = \"TripsReport\"}". Executing action "TN.UI.Areas.Report.Controllers.TripsReportController.TripsByDateExportPost (TN.UI)"
+2018-08-10 15:53:59.320 +07:00 [Information] Entity Framework Core "2.1.1-rtm-30846" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-08-10 15:53:59.326 +07:00 [Information] Executed DbCommand ("4"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[Avatar], [e].[ConcurrencyStamp], [e].[CreatedDate], [e].[CreatedUserId], [e].[DisplayName], [e].[Email], [e].[EmailConfirmed], [e].[IsLock], [e].[IsReLogin], [e].[IsSuperAdmin], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[Note], [e].[NoteLock], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[RoleParents], [e].[RoleSchool], [e].[RoleTransportCompany], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UpdatedDate], [e].[UpdatedUserId], [e].[UserName]
+FROM [adm].[User] AS [e]
+WHERE [e].[Id] = @__get_Item_0"
+2018-08-10 15:53:59.327 +07:00 [Information] Executing action method "TN.UI.Areas.Report.Controllers.TripsReportController.TripsByDateExportPost (TN.UI)" with arguments (["09/04/2018", "31", ""]) - Validation state: Valid
+2018-08-10 15:54:01.234 +07:00 [Information] Executed DbCommand ("4"ms) [Parameters=["@__transportCompanyId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [x].[Id], [x].[Address], [x].[Code], [x].[CreatedDate], [x].[CreatedUser], [x].[DateIssued], [x].[Email], [x].[IsDelete], [x].[Name], [x].[Note], [x].[PhoneFax], [x].[Status], [x].[UpdatedDate], [x].[UpdatedUser]
+FROM [TransportCompany] AS [x]
+WHERE [x].[Id] = @__transportCompanyId_0"
+2018-08-10 15:54:01.256 +07:00 [Information] Executed DbCommand ("2"ms) [Parameters=["@__transportCompanyId_0='?' (DbType = Int32), @__date_Date_1='?' (DbType = DateTime2)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[Id], [x].[ConfimCenterUser], [x].[ConfirmCenterTime], [x].[CreatedDate], [x].[CreatedUser], [x].[Date], [x].[GPSString], [x].[IsConfirmCenter], [x].[IsDelete], [x].[IsNotification], [x].[IsSendEmailCenter], [x].[IsSendEmailTransportCompany], [x].[RouteId], [x].[SendEmailDateCenter], [x].[SendEmailDateTransportCompany], [x].[TimeTable], [x].[TransportCompanyId], [x].[UpdatedDate], [x].[UpdatedUser], [x].[VehicleId]
+FROM [ConfirmationTrips] AS [x]
+WHERE (([x].[TransportCompanyId] = @__transportCompanyId_0) AND (CONVERT(date, [x].[Date]) = @__date_Date_1)) AND ([x].[IsConfirmCenter] = 1)"
+2018-08-10 15:54:01.261 +07:00 [Information] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [m].[Id], [m].[Aircon], [m].[Capacity], [m].[ContractEndDate], [m].[CreatedDate], [m].[CreatedUser], [m].[DeviceGPSId], [m].[DoorDown], [m].[DoorUp], [m].[DriverCode], [m].[Fuel], [m].[Heading], [m].[Ignition], [m].[IsAirConditioner], [m].[IsDelete], [m].[IsWorking], [m].[Lat], [m].[Lng], [m].[Lpn], [m].[Note], [m].[NumOfSeat], [m].[RegistryEndDate], [m].[SOS], [m].[Speed], [m].[Status], [m].[TrackingTime], [m].[TransportCompanyId], [m].[TransportCompanyStartDate], [m].[Type], [m].[UnderwriteEndDate], [m].[UpdatedDate], [m].[UpdatedUser], [m].[VehicleBrandId], [m].[VehicleFloorboardsTypeId], [m].[VehicleGroupId], [m].[YearOfManufacture]
+FROM [Vehicle] AS [m]
+WHERE [m].[Id] IN (4068, 4174, 4175)"
+2018-08-10 15:54:01.267 +07:00 [Information] Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [m].[Id], [m].[CheckOutEndTime], [m].[CheckOutStartTime], [m].[ConfirmationTripsId], [m].[CreatedDate], [m].[EndStationId], [m].[EndTime], [m].[GPSString], [m].[IsCheckOutEndStation], [m].[IsCheckOutStartStation], [m].[LatEndStation], [m].[LatGPSEndStation], [m].[LatGPSStartStation], [m].[LatStartStation], [m].[LngStartStation], [m].[LngtEndStation], [m].[LngtGPSEndStation], [m].[LngtGPSStartStation], [m].[RouteId], [m].[StartStationId], [m].[StartTime], [m].[Status], [m].[TimeTable]
+FROM [ConfirmationTripsDetail] AS [m]
+WHERE [m].[ConfirmationTripsId] IN (2275, 2320, 2365)"
+2018-08-10 15:54:01.281 +07:00 [Information] Executed DbCommand ("3"ms) [Parameters=["@__isCheckerCenter_2='?' (DbType = Boolean)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [m].[Id] AS [CheckOutId], [m].[StudentId], [student].[FullName] AS [StudentName], [classOfSchool].[Name] AS [ClassOfSchoolName], [school].[Name] AS [SchoolName], [m].[CheckOutDate], [m].[City], [m].[ConfirmationTripsDetailId], [m].[District], [m].[IsCheckerCenter], [m].[IsCheckerComputer] AS [IsScan], [m].[Location], [m].[NoteCheckerComputer], [m].[Street], [m].[StreetNum], [m].[Ward], [m].[VehicleId], [m].[Lat], [m].[Lng]
+FROM [ConfirmationTripsConfirm] AS [m]
+LEFT JOIN [Student] AS [student] ON [m].[StudentId] = [student].[Id]
+LEFT JOIN [ClassOfSchool] AS [classOfSchool] ON [m].[ClassOfSchoolId] = [classOfSchool].[Id]
+LEFT JOIN [School] AS [school] ON [m].[SchoolId] = [school].[Id]
+WHERE [m].[ConfirmationTripsId] IN (2275, 2320, 2365) AND ([m].[IsCheckerCenter] = @__isCheckerCenter_2)"
+2018-08-10 15:54:01.802 +07:00 [Information] Executed action method "TN.UI.Areas.Report.Controllers.TripsReportController.TripsByDateExportPost (TN.UI)", returned result "Microsoft.AspNetCore.Mvc.FileStreamResult" in 2474.9036ms.
+2018-08-10 15:54:01.805 +07:00 [Information] Executing "Microsoft.AspNetCore.Mvc.FileStreamResult", sending file with download name '"0747b166-5c92-4165-88d3-d43e38769aba.xlsx"' ...
+2018-08-10 15:54:01.807 +07:00 [Information] Executed action "TN.UI.Areas.Report.Controllers.TripsReportController.TripsByDateExportPost (TN.UI)" in 2487.3676ms
+2018-08-10 15:54:01.807 +07:00 [Information] Request finished in 2498.5345ms 200 application/x-msdownload
+2018-08-10 15:54:04.918 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44396/Admin/Report/TripsReport  
+2018-08-10 15:54:04.919 +07:00 [Information] Route matched with "{area = \"Report\", action = \"Index\", controller = \"TripsReport\"}". Executing action "TN.UI.Areas.Report.Controllers.TripsReportController.Index (TN.UI)"
+2018-08-10 15:54:04.920 +07:00 [Information] Entity Framework Core "2.1.1-rtm-30846" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-08-10 15:54:04.926 +07:00 [Information] Executed DbCommand ("3"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[Avatar], [e].[ConcurrencyStamp], [e].[CreatedDate], [e].[CreatedUserId], [e].[DisplayName], [e].[Email], [e].[EmailConfirmed], [e].[IsLock], [e].[IsReLogin], [e].[IsSuperAdmin], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[Note], [e].[NoteLock], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[RoleParents], [e].[RoleSchool], [e].[RoleTransportCompany], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UpdatedDate], [e].[UpdatedUserId], [e].[UserName]
+FROM [adm].[User] AS [e]
+WHERE [e].[Id] = @__get_Item_0"
+2018-08-10 15:54:04.927 +07:00 [Information] Executing action method "TN.UI.Areas.Report.Controllers.TripsReportController.Index (TN.UI)" - Validation state: Valid
+2018-08-10 15:54:04.927 +07:00 [Information] Executed action method "TN.UI.Areas.Report.Controllers.TripsReportController.Index (TN.UI)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 0.0259ms.
+2018-08-10 15:54:04.927 +07:00 [Information] Executing ViewResult, running view "Index".
+2018-08-10 15:54:04.929 +07:00 [Information] Executed ViewResult - view "Index" executed in 2.0739ms.
+2018-08-10 15:54:04.929 +07:00 [Information] Executed action "TN.UI.Areas.Report.Controllers.TripsReportController.Index (TN.UI)" in 9.9798ms
+2018-08-10 15:54:04.930 +07:00 [Information] Request finished in 11.5771ms 200 text/html; charset=utf-8
+2018-08-10 15:54:05.144 +07:00 [Information] Request starting HTTP/1.1 POST http://localhost:44396/Admin/Report/TripsReport/DetailTotalTripsByMonth application/x-www-form-urlencoded; charset=UTF-8 6
+2018-08-10 15:54:05.146 +07:00 [Information] Route matched with "{area = \"Report\", action = \"DetailTotalTripsByMonth\", controller = \"TripsReport\"}". Executing action "TN.UI.Areas.Report.Controllers.TripsReportController.DetailTotalTripsByMonth (TN.UI)"
+2018-08-10 15:54:05.146 +07:00 [Information] Entity Framework Core "2.1.1-rtm-30846" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-08-10 15:54:05.157 +07:00 [Information] Executed DbCommand ("6"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[Avatar], [e].[ConcurrencyStamp], [e].[CreatedDate], [e].[CreatedUserId], [e].[DisplayName], [e].[Email], [e].[EmailConfirmed], [e].[IsLock], [e].[IsReLogin], [e].[IsSuperAdmin], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[Note], [e].[NoteLock], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[RoleParents], [e].[RoleSchool], [e].[RoleTransportCompany], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UpdatedDate], [e].[UpdatedUserId], [e].[UserName]
+FROM [adm].[User] AS [e]
+WHERE [e].[Id] = @__get_Item_0"
+2018-08-10 15:54:05.159 +07:00 [Information] Executing action method "TN.UI.Areas.Report.Controllers.TripsReportController.DetailTotalTripsByMonth (TN.UI)" with arguments (["0", "0", "", ""]) - Validation state: Valid
+2018-08-10 15:54:05.161 +07:00 [Information] Executed action "TN.UI.Areas.Report.Controllers.TripsReportController.DetailTotalTripsByMonth (TN.UI)" in 15.5355ms
+2018-08-10 15:54:05.167 +07:00 [Error] An unhandled exception has occurred while executing the request.
+System.ArgumentOutOfRangeException: Month must be between one and twelve.
+Parameter name: month
+   at System.DateTime.DaysInMonth(Int32 year, Int32 month)
+   at TN.UI.Areas.Report.Controllers.TripsReportController.DetailTotalTripsByMonth(Int32 month, Int32 year, Nullable`1 transportCompanyId, Nullable`1 schoolId) in D:\2018\1.BusStudent\Sources\Code\Backend\TN.UI\Areas\Report\Controllers\TripsReportController.cs:line 301
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.ResponseCompression.ResponseCompressionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2018-08-10 15:54:05.183 +07:00 [Information] Request finished in 39.4015ms 500 text/html; charset=utf-8
+2018-08-10 15:54:06.725 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44396/Admin/Report/TripsReport/TotalTripsByMonth?month=4&year=2018&transportCompanyId=31  
+2018-08-10 15:54:06.737 +07:00 [Information] Route matched with "{area = \"Report\", action = \"TotalTripsByMonth\", controller = \"TripsReport\"}". Executing action "TN.UI.Areas.Report.Controllers.TripsReportController.TotalTripsByMonth (TN.UI)"
+2018-08-10 15:54:06.737 +07:00 [Information] Entity Framework Core "2.1.1-rtm-30846" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-08-10 15:54:06.744 +07:00 [Information] Executed DbCommand ("5"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[Avatar], [e].[ConcurrencyStamp], [e].[CreatedDate], [e].[CreatedUserId], [e].[DisplayName], [e].[Email], [e].[EmailConfirmed], [e].[IsLock], [e].[IsReLogin], [e].[IsSuperAdmin], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[Note], [e].[NoteLock], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[RoleParents], [e].[RoleSchool], [e].[RoleTransportCompany], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UpdatedDate], [e].[UpdatedUserId], [e].[UserName]
+FROM [adm].[User] AS [e]
+WHERE [e].[Id] = @__get_Item_0"
+2018-08-10 15:54:06.745 +07:00 [Information] Executing action method "TN.UI.Areas.Report.Controllers.TripsReportController.TotalTripsByMonth (TN.UI)" - Validation state: Valid
+2018-08-10 15:54:06.754 +07:00 [Information] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[Id], [x].[Address], [x].[Code], [x].[CreatedDate], [x].[CreatedUser], [x].[DateIssued], [x].[Email], [x].[IsDelete], [x].[Name], [x].[Note], [x].[PhoneFax], [x].[Status], [x].[UpdatedDate], [x].[UpdatedUser]
+FROM [TransportCompany] AS [x]
+WHERE ([x].[Status] = 1) AND ([x].[IsDelete] = 0)"
+2018-08-10 15:54:06.763 +07:00 [Information] Executed DbCommand ("6"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[Id], [x].[Address], [x].[Code], [x].[CreatedDate], [x].[CreatedUser], [x].[DistrictId], [x].[Image], [x].[IsDelete], [x].[Lat], [x].[Lng], [x].[Name], [x].[Note], [x].[Status], [x].[Trips], [x].[UpdatedDate], [x].[UpdatedUser]
+FROM [School] AS [x]
+WHERE ([x].[Status] = 1) AND ([x].[IsDelete] = 0)"
+2018-08-10 15:54:06.768 +07:00 [Information] Executed action method "TN.UI.Areas.Report.Controllers.TripsReportController.TotalTripsByMonth (TN.UI)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 22.2263ms.
+2018-08-10 15:54:06.770 +07:00 [Information] Executing ViewResult, running view "TotalTripsByMonth".
+2018-08-10 15:54:06.789 +07:00 [Information] Executed ViewResult - view "TotalTripsByMonth" executed in 20.7638ms.
+2018-08-10 15:54:06.789 +07:00 [Information] Executed action "TN.UI.Areas.Report.Controllers.TripsReportController.TotalTripsByMonth (TN.UI)" in 51.9294ms
+2018-08-10 15:54:06.789 +07:00 [Information] Request finished in 63.8699ms 200 text/html; charset=utf-8
+2018-08-10 15:54:07.027 +07:00 [Information] Request starting HTTP/1.1 POST http://localhost:44396/Admin/Report/TripsReport/TotalTripsByMonth application/x-www-form-urlencoded; charset=UTF-8 282
+2018-08-10 15:54:07.041 +07:00 [Information] Route matched with "{area = \"Report\", action = \"TotalTripsByMonth\", controller = \"TripsReport\"}". Executing action "TN.UI.Areas.Report.Controllers.TripsReportController.TotalTripsByMonth (TN.UI)"
+2018-08-10 15:54:07.044 +07:00 [Information] Entity Framework Core "2.1.1-rtm-30846" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-08-10 15:54:07.051 +07:00 [Information] Executed DbCommand ("4"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[Avatar], [e].[ConcurrencyStamp], [e].[CreatedDate], [e].[CreatedUserId], [e].[DisplayName], [e].[Email], [e].[EmailConfirmed], [e].[IsLock], [e].[IsReLogin], [e].[IsSuperAdmin], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[Note], [e].[NoteLock], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[RoleParents], [e].[RoleSchool], [e].[RoleTransportCompany], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UpdatedDate], [e].[UpdatedUserId], [e].[UserName]
+FROM [adm].[User] AS [e]
+WHERE [e].[Id] = @__get_Item_0"
+2018-08-10 15:54:07.052 +07:00 [Information] Executing action method "TN.UI.Areas.Report.Controllers.TripsReportController.TotalTripsByMonth (TN.UI)" with arguments (["4", "2018", "31", ""]) - Validation state: Valid
+2018-08-10 15:54:07.082 +07:00 [Information] Executed DbCommand ("7"ms) [Parameters=["@__transportCompanyId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[Id], [x].[Aircon], [x].[Capacity], [x].[ContractEndDate], [x].[CreatedDate], [x].[CreatedUser], [x].[DeviceGPSId], [x].[DoorDown], [x].[DoorUp], [x].[DriverCode], [x].[Fuel], [x].[Heading], [x].[Ignition], [x].[IsAirConditioner], [x].[IsDelete], [x].[IsWorking], [x].[Lat], [x].[Lng], [x].[Lpn], [x].[Note], [x].[NumOfSeat], [x].[RegistryEndDate], [x].[SOS], [x].[Speed], [x].[Status], [x].[TrackingTime], [x].[TransportCompanyId], [x].[TransportCompanyStartDate], [x].[Type], [x].[UnderwriteEndDate], [x].[UpdatedDate], [x].[UpdatedUser], [x].[VehicleBrandId], [x].[VehicleFloorboardsTypeId], [x].[VehicleGroupId], [x].[YearOfManufacture]
+FROM [Vehicle] AS [x]
+WHERE [x].[TransportCompanyId] = @__transportCompanyId_0"
+2018-08-10 15:54:07.119 +07:00 [Information] Executed DbCommand ("24"ms) [Parameters=["@__transportCompanyId_0='?' (DbType = Int32), @__month_1='?' (DbType = Int32), @__year_2='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[VehicleId] AS [Key], COUNT(*) AS [Count]
+FROM [ConfirmationTripsConfirm] AS [x]
+WHERE (([x].[TransportCompanyId] = @__transportCompanyId_0) AND (DATEPART(month, [x].[CheckOutDate]) = @__month_1)) AND (DATEPART(year, [x].[CheckOutDate]) = @__year_2)
+GROUP BY [x].[VehicleId]"
+2018-08-10 15:54:07.143 +07:00 [Information] Executed DbCommand ("6"ms) [Parameters=["@__transportCompanyId_0='?' (DbType = Int32), @__month_1='?' (DbType = Int32), @__year_2='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [t].[VehicleId] AS [Key], COUNT(*) AS [Count]
+FROM (
+    SELECT DISTINCT [x].[VehicleId], [x].[StudentId]
+    FROM [ConfirmationTripsConfirm] AS [x]
+    WHERE (([x].[TransportCompanyId] = @__transportCompanyId_0) AND (DATEPART(month, [x].[CheckOutDate]) = @__month_1)) AND (DATEPART(year, [x].[CheckOutDate]) = @__year_2)
+) AS [t]
+GROUP BY [t].[VehicleId]"
+2018-08-10 15:54:07.153 +07:00 [Information] Executed DbCommand ("4"ms) [Parameters=["@__transportCompanyId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [x].[Id], [x].[Address], [x].[Code], [x].[CreatedDate], [x].[CreatedUser], [x].[DateIssued], [x].[Email], [x].[IsDelete], [x].[Name], [x].[Note], [x].[PhoneFax], [x].[Status], [x].[UpdatedDate], [x].[UpdatedUser]
+FROM [TransportCompany] AS [x]
+WHERE [x].[Id] = @__transportCompanyId_0"
+2018-08-10 15:54:07.153 +07:00 [Information] Executed action method "TN.UI.Areas.Report.Controllers.TripsReportController.TotalTripsByMonth (TN.UI)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 101.4818ms.
+2018-08-10 15:54:07.155 +07:00 [Information] Executing ViewResult, running view "TotalTripsByMonthAjax".
+2018-08-10 15:54:07.168 +07:00 [Information] Executed ViewResult - view "TotalTripsByMonthAjax" executed in 11.1669ms.
+2018-08-10 15:54:07.168 +07:00 [Information] Executed action "TN.UI.Areas.Report.Controllers.TripsReportController.TotalTripsByMonth (TN.UI)" in 126.6594ms
+2018-08-10 15:54:07.168 +07:00 [Information] Request finished in 142.7224ms 200 text/html; charset=utf-8
+2018-08-10 15:54:17.457 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44396/Admin/Report/TripsReport  
+2018-08-10 15:54:17.459 +07:00 [Information] Route matched with "{area = \"Report\", action = \"Index\", controller = \"TripsReport\"}". Executing action "TN.UI.Areas.Report.Controllers.TripsReportController.Index (TN.UI)"
+2018-08-10 15:54:17.460 +07:00 [Information] Entity Framework Core "2.1.1-rtm-30846" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-08-10 15:54:17.466 +07:00 [Information] Executed DbCommand ("4"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[Avatar], [e].[ConcurrencyStamp], [e].[CreatedDate], [e].[CreatedUserId], [e].[DisplayName], [e].[Email], [e].[EmailConfirmed], [e].[IsLock], [e].[IsReLogin], [e].[IsSuperAdmin], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[Note], [e].[NoteLock], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[RoleParents], [e].[RoleSchool], [e].[RoleTransportCompany], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UpdatedDate], [e].[UpdatedUserId], [e].[UserName]
+FROM [adm].[User] AS [e]
+WHERE [e].[Id] = @__get_Item_0"
+2018-08-10 15:54:17.468 +07:00 [Information] Executing action method "TN.UI.Areas.Report.Controllers.TripsReportController.Index (TN.UI)" - Validation state: Valid
+2018-08-10 15:54:17.468 +07:00 [Information] Executed action method "TN.UI.Areas.Report.Controllers.TripsReportController.Index (TN.UI)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 0.0735ms.
+2018-08-10 15:54:17.468 +07:00 [Information] Executing ViewResult, running view "Index".
+2018-08-10 15:54:17.470 +07:00 [Information] Executed ViewResult - view "Index" executed in 1.561ms.
+2018-08-10 15:54:17.470 +07:00 [Information] Executed action "TN.UI.Areas.Report.Controllers.TripsReportController.Index (TN.UI)" in 10.3029ms
+2018-08-10 15:54:17.470 +07:00 [Information] Request finished in 13.3229ms 200 text/html; charset=utf-8
+2018-08-10 15:54:17.678 +07:00 [Information] Request starting HTTP/1.1 POST http://localhost:44396/Admin/Report/TripsReport/DetailTotalTripsByMonth application/x-www-form-urlencoded; charset=UTF-8 6
+2018-08-10 15:54:17.679 +07:00 [Information] Route matched with "{area = \"Report\", action = \"DetailTotalTripsByMonth\", controller = \"TripsReport\"}". Executing action "TN.UI.Areas.Report.Controllers.TripsReportController.DetailTotalTripsByMonth (TN.UI)"
+2018-08-10 15:54:17.680 +07:00 [Information] Entity Framework Core "2.1.1-rtm-30846" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-08-10 15:54:17.686 +07:00 [Information] Executed DbCommand ("5"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[Avatar], [e].[ConcurrencyStamp], [e].[CreatedDate], [e].[CreatedUserId], [e].[DisplayName], [e].[Email], [e].[EmailConfirmed], [e].[IsLock], [e].[IsReLogin], [e].[IsSuperAdmin], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[Note], [e].[NoteLock], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[RoleParents], [e].[RoleSchool], [e].[RoleTransportCompany], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UpdatedDate], [e].[UpdatedUserId], [e].[UserName]
+FROM [adm].[User] AS [e]
+WHERE [e].[Id] = @__get_Item_0"
+2018-08-10 15:54:17.687 +07:00 [Information] Executing action method "TN.UI.Areas.Report.Controllers.TripsReportController.DetailTotalTripsByMonth (TN.UI)" with arguments (["0", "0", "", ""]) - Validation state: Valid
+2018-08-10 15:54:17.689 +07:00 [Information] Executed action "TN.UI.Areas.Report.Controllers.TripsReportController.DetailTotalTripsByMonth (TN.UI)" in 9.7145ms
+2018-08-10 15:54:17.702 +07:00 [Error] An unhandled exception has occurred while executing the request.
+System.ArgumentOutOfRangeException: Month must be between one and twelve.
+Parameter name: month
+   at System.DateTime.DaysInMonth(Int32 year, Int32 month)
+   at TN.UI.Areas.Report.Controllers.TripsReportController.DetailTotalTripsByMonth(Int32 month, Int32 year, Nullable`1 transportCompanyId, Nullable`1 schoolId) in D:\2018\1.BusStudent\Sources\Code\Backend\TN.UI\Areas\Report\Controllers\TripsReportController.cs:line 301
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.ResponseCompression.ResponseCompressionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2018-08-10 15:54:17.714 +07:00 [Information] Request finished in 35.5424ms 500 text/html; charset=utf-8
+2018-08-10 15:54:18.437 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44396/Admin/Report/TripsReport/DetailTripsByDate?date=09%2F04%2F2018&transportCompanyId=31  
+2018-08-10 15:54:18.444 +07:00 [Information] Route matched with "{area = \"Report\", action = \"DetailTripsByDate\", controller = \"TripsReport\"}". Executing action "TN.UI.Areas.Report.Controllers.TripsReportController.DetailTripsByDate (TN.UI)"
+2018-08-10 15:54:18.445 +07:00 [Information] Entity Framework Core "2.1.1-rtm-30846" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-08-10 15:54:18.450 +07:00 [Information] Executed DbCommand ("4"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[Avatar], [e].[ConcurrencyStamp], [e].[CreatedDate], [e].[CreatedUserId], [e].[DisplayName], [e].[Email], [e].[EmailConfirmed], [e].[IsLock], [e].[IsReLogin], [e].[IsSuperAdmin], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[Note], [e].[NoteLock], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[RoleParents], [e].[RoleSchool], [e].[RoleTransportCompany], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UpdatedDate], [e].[UpdatedUserId], [e].[UserName]
+FROM [adm].[User] AS [e]
+WHERE [e].[Id] = @__get_Item_0"
+2018-08-10 15:54:18.450 +07:00 [Information] Executing action method "TN.UI.Areas.Report.Controllers.TripsReportController.DetailTripsByDate (TN.UI)" - Validation state: Valid
+2018-08-10 15:54:18.459 +07:00 [Information] Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[Id], [x].[Address], [x].[Code], [x].[CreatedDate], [x].[CreatedUser], [x].[DateIssued], [x].[Email], [x].[IsDelete], [x].[Name], [x].[Note], [x].[PhoneFax], [x].[Status], [x].[UpdatedDate], [x].[UpdatedUser]
+FROM [TransportCompany] AS [x]
+WHERE ([x].[Status] = 1) AND ([x].[IsDelete] = 0)"
+2018-08-10 15:54:18.465 +07:00 [Information] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[Id], [x].[Address], [x].[Code], [x].[CreatedDate], [x].[CreatedUser], [x].[DistrictId], [x].[Image], [x].[IsDelete], [x].[Lat], [x].[Lng], [x].[Name], [x].[Note], [x].[Status], [x].[Trips], [x].[UpdatedDate], [x].[UpdatedUser]
+FROM [School] AS [x]
+WHERE ([x].[Status] = 1) AND ([x].[IsDelete] = 0)"
+2018-08-10 15:54:18.471 +07:00 [Information] Executed action method "TN.UI.Areas.Report.Controllers.TripsReportController.DetailTripsByDate (TN.UI)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 20.3949ms.
+2018-08-10 15:54:18.475 +07:00 [Information] Executing ViewResult, running view "DetailTripsByDate".
+2018-08-10 15:54:18.517 +07:00 [Information] Executed ViewResult - view "DetailTripsByDate" executed in 46.0568ms.
+2018-08-10 15:54:18.517 +07:00 [Information] Executed action "TN.UI.Areas.Report.Controllers.TripsReportController.DetailTripsByDate (TN.UI)" in 72.3909ms
+2018-08-10 15:54:18.517 +07:00 [Information] Request finished in 80.0802ms 200 text/html; charset=utf-8
+2018-08-10 15:54:18.772 +07:00 [Information] Request starting HTTP/1.1 POST http://localhost:44396/Admin/Report/TripsReport/DetailTripsByDate application/x-www-form-urlencoded; charset=UTF-8 284
+2018-08-10 15:54:18.797 +07:00 [Information] Route matched with "{area = \"Report\", action = \"DetailTripsByDate\", controller = \"TripsReport\"}". Executing action "TN.UI.Areas.Report.Controllers.TripsReportController.DetailTripsByDatePost (TN.UI)"
+2018-08-10 15:54:18.797 +07:00 [Information] Entity Framework Core "2.1.1-rtm-30846" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-08-10 15:54:18.804 +07:00 [Information] Executed DbCommand ("4"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[Avatar], [e].[ConcurrencyStamp], [e].[CreatedDate], [e].[CreatedUserId], [e].[DisplayName], [e].[Email], [e].[EmailConfirmed], [e].[IsLock], [e].[IsReLogin], [e].[IsSuperAdmin], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[Note], [e].[NoteLock], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[RoleParents], [e].[RoleSchool], [e].[RoleTransportCompany], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UpdatedDate], [e].[UpdatedUserId], [e].[UserName]
+FROM [adm].[User] AS [e]
+WHERE [e].[Id] = @__get_Item_0"
+2018-08-10 15:54:18.805 +07:00 [Information] Executing action method "TN.UI.Areas.Report.Controllers.TripsReportController.DetailTripsByDatePost (TN.UI)" with arguments (["09/04/2018", "31", ""]) - Validation state: Valid
+2018-08-10 15:54:18.812 +07:00 [Information] Executed DbCommand ("2"ms) [Parameters=["@__transportCompanyId_0='?' (DbType = Int32), @__date_Date_1='?' (DbType = DateTime2)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[Id], [x].[ConfimCenterUser], [x].[ConfirmCenterTime], [x].[CreatedDate], [x].[CreatedUser], [x].[Date], [x].[GPSString], [x].[IsConfirmCenter], [x].[IsDelete], [x].[IsNotification], [x].[IsSendEmailCenter], [x].[IsSendEmailTransportCompany], [x].[RouteId], [x].[SendEmailDateCenter], [x].[SendEmailDateTransportCompany], [x].[TimeTable], [x].[TransportCompanyId], [x].[UpdatedDate], [x].[UpdatedUser], [x].[VehicleId]
+FROM [ConfirmationTrips] AS [x]
+WHERE (([x].[TransportCompanyId] = @__transportCompanyId_0) AND (CONVERT(date, [x].[Date]) = @__date_Date_1)) AND ([x].[IsConfirmCenter] = 1)"
+2018-08-10 15:54:18.817 +07:00 [Information] Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [m].[Id], [m].[Aircon], [m].[Capacity], [m].[ContractEndDate], [m].[CreatedDate], [m].[CreatedUser], [m].[DeviceGPSId], [m].[DoorDown], [m].[DoorUp], [m].[DriverCode], [m].[Fuel], [m].[Heading], [m].[Ignition], [m].[IsAirConditioner], [m].[IsDelete], [m].[IsWorking], [m].[Lat], [m].[Lng], [m].[Lpn], [m].[Note], [m].[NumOfSeat], [m].[RegistryEndDate], [m].[SOS], [m].[Speed], [m].[Status], [m].[TrackingTime], [m].[TransportCompanyId], [m].[TransportCompanyStartDate], [m].[Type], [m].[UnderwriteEndDate], [m].[UpdatedDate], [m].[UpdatedUser], [m].[VehicleBrandId], [m].[VehicleFloorboardsTypeId], [m].[VehicleGroupId], [m].[YearOfManufacture]
+FROM [Vehicle] AS [m]
+WHERE [m].[Id] IN (4068, 4174, 4175)"
+2018-08-10 15:54:18.826 +07:00 [Information] Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [m].[Id], [m].[CheckOutEndTime], [m].[CheckOutStartTime], [m].[ConfirmationTripsId], [m].[CreatedDate], [m].[EndStationId], [m].[EndTime], [m].[GPSString], [m].[IsCheckOutEndStation], [m].[IsCheckOutStartStation], [m].[LatEndStation], [m].[LatGPSEndStation], [m].[LatGPSStartStation], [m].[LatStartStation], [m].[LngStartStation], [m].[LngtEndStation], [m].[LngtGPSEndStation], [m].[LngtGPSStartStation], [m].[RouteId], [m].[StartStationId], [m].[StartTime], [m].[Status], [m].[TimeTable]
+FROM [ConfirmationTripsDetail] AS [m]
+WHERE [m].[ConfirmationTripsId] IN (2275, 2320, 2365)"
+2018-08-10 15:54:18.855 +07:00 [Information] Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [m].[Id] AS [CheckOutId], [m].[StudentId], [student].[FullName] AS [StudentName], [classOfSchool].[Name] AS [ClassOfSchoolName], [school].[Name] AS [SchoolName], [m].[CheckOutDate], [m].[City], [m].[ConfirmationTripsDetailId], [m].[District], [m].[IsCheckerCenter], [m].[IsCheckerComputer] AS [IsScan], [m].[Location], [m].[NoteCheckerComputer], [m].[Street], [m].[StreetNum], [m].[Ward], [m].[VehicleId], [m].[Lat], [m].[Lng]
+FROM [ConfirmationTripsConfirm] AS [m]
+LEFT JOIN [Student] AS [student] ON [m].[StudentId] = [student].[Id]
+LEFT JOIN [ClassOfSchool] AS [classOfSchool] ON [m].[ClassOfSchoolId] = [classOfSchool].[Id]
+LEFT JOIN [School] AS [school] ON [m].[SchoolId] = [school].[Id]
+WHERE [m].[ConfirmationTripsId] IN (2275, 2320, 2365)"
+2018-08-10 15:54:18.863 +07:00 [Information] Executed DbCommand ("3"ms) [Parameters=["@__transportCompanyId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [x].[Id], [x].[Address], [x].[Code], [x].[CreatedDate], [x].[CreatedUser], [x].[DateIssued], [x].[Email], [x].[IsDelete], [x].[Name], [x].[Note], [x].[PhoneFax], [x].[Status], [x].[UpdatedDate], [x].[UpdatedUser]
+FROM [TransportCompany] AS [x]
+WHERE [x].[Id] = @__transportCompanyId_0"
+2018-08-10 15:54:18.864 +07:00 [Information] Executed action method "TN.UI.Areas.Report.Controllers.TripsReportController.DetailTripsByDatePost (TN.UI)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 58.8604ms.
+2018-08-10 15:54:18.865 +07:00 [Information] Executing ViewResult, running view "DetailTripsByDateAjax".
+2018-08-10 15:54:18.875 +07:00 [Information] Executed ViewResult - view "DetailTripsByDateAjax" executed in 7.4498ms.
+2018-08-10 15:54:18.875 +07:00 [Information] Executed action "TN.UI.Areas.Report.Controllers.TripsReportController.DetailTripsByDatePost (TN.UI)" in 78.2398ms
+2018-08-10 15:54:18.875 +07:00 [Information] Request finished in 103.717ms 200 text/html; charset=utf-8
+2018-08-10 15:57:02.265 +07:00 [Information] Request starting HTTP/1.1 POST http://localhost:44396/Admin/Report/TripsReport/DetailTripsByDate application/x-www-form-urlencoded; charset=UTF-8 284
+2018-08-10 15:57:02.266 +07:00 [Information] Route matched with "{area = \"Report\", action = \"DetailTripsByDate\", controller = \"TripsReport\"}". Executing action "TN.UI.Areas.Report.Controllers.TripsReportController.DetailTripsByDatePost (TN.UI)"
+2018-08-10 15:57:02.267 +07:00 [Information] Entity Framework Core "2.1.1-rtm-30846" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-08-10 15:57:02.274 +07:00 [Information] Executed DbCommand ("4"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[Avatar], [e].[ConcurrencyStamp], [e].[CreatedDate], [e].[CreatedUserId], [e].[DisplayName], [e].[Email], [e].[EmailConfirmed], [e].[IsLock], [e].[IsReLogin], [e].[IsSuperAdmin], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[Note], [e].[NoteLock], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[RoleParents], [e].[RoleSchool], [e].[RoleTransportCompany], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UpdatedDate], [e].[UpdatedUserId], [e].[UserName]
+FROM [adm].[User] AS [e]
+WHERE [e].[Id] = @__get_Item_0"
+2018-08-10 15:57:02.276 +07:00 [Information] Executing action method "TN.UI.Areas.Report.Controllers.TripsReportController.DetailTripsByDatePost (TN.UI)" with arguments (["09/04/2018", "31", ""]) - Validation state: Valid
+2018-08-10 15:57:02.281 +07:00 [Information] Executed DbCommand ("4"ms) [Parameters=["@__transportCompanyId_0='?' (DbType = Int32), @__date_Date_1='?' (DbType = DateTime2)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[Id], [x].[ConfimCenterUser], [x].[ConfirmCenterTime], [x].[CreatedDate], [x].[CreatedUser], [x].[Date], [x].[GPSString], [x].[IsConfirmCenter], [x].[IsDelete], [x].[IsNotification], [x].[IsSendEmailCenter], [x].[IsSendEmailTransportCompany], [x].[RouteId], [x].[SendEmailDateCenter], [x].[SendEmailDateTransportCompany], [x].[TimeTable], [x].[TransportCompanyId], [x].[UpdatedDate], [x].[UpdatedUser], [x].[VehicleId]
+FROM [ConfirmationTrips] AS [x]
+WHERE (([x].[TransportCompanyId] = @__transportCompanyId_0) AND (CONVERT(date, [x].[Date]) = @__date_Date_1)) AND ([x].[IsConfirmCenter] = 1)"
+2018-08-10 15:57:02.287 +07:00 [Information] Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [m].[Id], [m].[Aircon], [m].[Capacity], [m].[ContractEndDate], [m].[CreatedDate], [m].[CreatedUser], [m].[DeviceGPSId], [m].[DoorDown], [m].[DoorUp], [m].[DriverCode], [m].[Fuel], [m].[Heading], [m].[Ignition], [m].[IsAirConditioner], [m].[IsDelete], [m].[IsWorking], [m].[Lat], [m].[Lng], [m].[Lpn], [m].[Note], [m].[NumOfSeat], [m].[RegistryEndDate], [m].[SOS], [m].[Speed], [m].[Status], [m].[TrackingTime], [m].[TransportCompanyId], [m].[TransportCompanyStartDate], [m].[Type], [m].[UnderwriteEndDate], [m].[UpdatedDate], [m].[UpdatedUser], [m].[VehicleBrandId], [m].[VehicleFloorboardsTypeId], [m].[VehicleGroupId], [m].[YearOfManufacture]
+FROM [Vehicle] AS [m]
+WHERE [m].[Id] IN (4068, 4174, 4175)"
+2018-08-10 15:57:02.296 +07:00 [Information] Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [m].[Id], [m].[CheckOutEndTime], [m].[CheckOutStartTime], [m].[ConfirmationTripsId], [m].[CreatedDate], [m].[EndStationId], [m].[EndTime], [m].[GPSString], [m].[IsCheckOutEndStation], [m].[IsCheckOutStartStation], [m].[LatEndStation], [m].[LatGPSEndStation], [m].[LatGPSStartStation], [m].[LatStartStation], [m].[LngStartStation], [m].[LngtEndStation], [m].[LngtGPSEndStation], [m].[LngtGPSStartStation], [m].[RouteId], [m].[StartStationId], [m].[StartTime], [m].[Status], [m].[TimeTable]
+FROM [ConfirmationTripsDetail] AS [m]
+WHERE [m].[ConfirmationTripsId] IN (2275, 2320, 2365)"
+2018-08-10 15:57:02.309 +07:00 [Information] Executed DbCommand ("5"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [m].[Id] AS [CheckOutId], [m].[StudentId], [student].[FullName] AS [StudentName], [classOfSchool].[Name] AS [ClassOfSchoolName], [school].[Name] AS [SchoolName], [m].[CheckOutDate], [m].[City], [m].[ConfirmationTripsDetailId], [m].[District], [m].[IsCheckerCenter], [m].[IsCheckerComputer] AS [IsScan], [m].[Location], [m].[NoteCheckerComputer], [m].[Street], [m].[StreetNum], [m].[Ward], [m].[VehicleId], [m].[Lat], [m].[Lng]
+FROM [ConfirmationTripsConfirm] AS [m]
+LEFT JOIN [Student] AS [student] ON [m].[StudentId] = [student].[Id]
+LEFT JOIN [ClassOfSchool] AS [classOfSchool] ON [m].[ClassOfSchoolId] = [classOfSchool].[Id]
+LEFT JOIN [School] AS [school] ON [m].[SchoolId] = [school].[Id]
+WHERE [m].[ConfirmationTripsId] IN (2275, 2320, 2365)"
+2018-08-10 15:57:02.313 +07:00 [Information] Executed DbCommand ("2"ms) [Parameters=["@__transportCompanyId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [x].[Id], [x].[Address], [x].[Code], [x].[CreatedDate], [x].[CreatedUser], [x].[DateIssued], [x].[Email], [x].[IsDelete], [x].[Name], [x].[Note], [x].[PhoneFax], [x].[Status], [x].[UpdatedDate], [x].[UpdatedUser]
+FROM [TransportCompany] AS [x]
+WHERE [x].[Id] = @__transportCompanyId_0"
+2018-08-10 15:57:02.313 +07:00 [Information] Executed action method "TN.UI.Areas.Report.Controllers.TripsReportController.DetailTripsByDatePost (TN.UI)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 37.3492ms.
+2018-08-10 15:57:02.313 +07:00 [Information] Executing ViewResult, running view "DetailTripsByDateAjax".
+2018-08-10 15:57:02.314 +07:00 [Information] Executed ViewResult - view "DetailTripsByDateAjax" executed in 0.3892ms.
+2018-08-10 15:57:02.314 +07:00 [Information] Executed action "TN.UI.Areas.Report.Controllers.TripsReportController.DetailTripsByDatePost (TN.UI)" in 47.4801ms
+2018-08-10 15:57:02.314 +07:00 [Information] Request finished in 49.6428ms 200 text/html; charset=utf-8
+2018-08-10 16:06:40.006 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44396/Admin/Report/TripsReport/DetailTripsByDate?page=1&date=09%2F04%2F2018&__RequestVerificationToken=CfDJ8JOj5I5192pEpD18VNpUHl22OsYXBD4Zp1YVe2-TapaleVn8d7t8y0qJN0ZvEpFG-fdt0ThdHdPon6XtWF0CWplX962M4PFTMQeIitgUY_t-KSHnkbQkVgaLdSuoU3EiGvogPInJHyJrofLEoemZ32xawOJCXXX6k-ylB0byE0rHBEyWwvbMN6QaBu3wPOeEGQ&transportCompanyId=31&schoolId=  
+2018-08-10 16:06:40.562 +07:00 [Information] Route matched with "{area = \"Report\", action = \"DetailTripsByDate\", controller = \"TripsReport\"}". Executing action "TN.UI.Areas.Report.Controllers.TripsReportController.DetailTripsByDate (TN.UI)"
+2018-08-10 16:06:41.088 +07:00 [Information] Entity Framework Core "2.1.1-rtm-30846" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-08-10 16:06:41.278 +07:00 [Information] Executed DbCommand ("18"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[Avatar], [e].[ConcurrencyStamp], [e].[CreatedDate], [e].[CreatedUserId], [e].[DisplayName], [e].[Email], [e].[EmailConfirmed], [e].[IsLock], [e].[IsReLogin], [e].[IsSuperAdmin], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[Note], [e].[NoteLock], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[RoleParents], [e].[RoleSchool], [e].[RoleTransportCompany], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UpdatedDate], [e].[UpdatedUserId], [e].[UserName]
+FROM [adm].[User] AS [e]
+WHERE [e].[Id] = @__get_Item_0"
+2018-08-10 16:06:41.376 +07:00 [Information] Executing action method "TN.UI.Areas.Report.Controllers.TripsReportController.DetailTripsByDate (TN.UI)" - Validation state: Valid
+2018-08-10 16:06:41.400 +07:00 [Information] Executed DbCommand ("5"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[Id], [x].[Address], [x].[Code], [x].[CreatedDate], [x].[CreatedUser], [x].[DateIssued], [x].[Email], [x].[IsDelete], [x].[Name], [x].[Note], [x].[PhoneFax], [x].[Status], [x].[UpdatedDate], [x].[UpdatedUser]
+FROM [TransportCompany] AS [x]
+WHERE ([x].[Status] = 1) AND ([x].[IsDelete] = 0)"
+2018-08-10 16:06:41.450 +07:00 [Information] Executed DbCommand ("9"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[Id], [x].[Address], [x].[Code], [x].[CreatedDate], [x].[CreatedUser], [x].[DistrictId], [x].[Image], [x].[IsDelete], [x].[Lat], [x].[Lng], [x].[Name], [x].[Note], [x].[Status], [x].[Trips], [x].[UpdatedDate], [x].[UpdatedUser]
+FROM [School] AS [x]
+WHERE ([x].[Status] = 1) AND ([x].[IsDelete] = 0)"
+2018-08-10 16:06:41.485 +07:00 [Information] Executed action method "TN.UI.Areas.Report.Controllers.TripsReportController.DetailTripsByDate (TN.UI)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 105.8042ms.
+2018-08-10 16:06:41.506 +07:00 [Information] Executing ViewResult, running view "DetailTripsByDate".
+2018-08-10 16:06:41.666 +07:00 [Information] Executed ViewResult - view "DetailTripsByDate" executed in 165.9464ms.
+2018-08-10 16:06:41.667 +07:00 [Information] Executed action "TN.UI.Areas.Report.Controllers.TripsReportController.DetailTripsByDate (TN.UI)" in 1104.8595ms
+2018-08-10 16:06:41.709 +07:00 [Information] Request finished in 1709.2156ms 200 text/html; charset=utf-8
+2018-08-10 16:06:41.714 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44396/Content/Admin/js/script.js  
+2018-08-10 16:06:41.719 +07:00 [Information] The file "/Content/Admin/js/script.js" was not modified
+2018-08-10 16:06:41.722 +07:00 [Information] Request finished in 8.0122ms 304 application/javascript
+2018-08-10 16:06:41.969 +07:00 [Information] Request starting HTTP/1.1 POST http://localhost:44396/Admin/Report/TripsReport/DetailTripsByDate application/x-www-form-urlencoded; charset=UTF-8 284
+2018-08-10 16:06:41.995 +07:00 [Information] Route matched with "{area = \"Report\", action = \"DetailTripsByDate\", controller = \"TripsReport\"}". Executing action "TN.UI.Areas.Report.Controllers.TripsReportController.DetailTripsByDatePost (TN.UI)"
+2018-08-10 16:06:41.996 +07:00 [Information] Entity Framework Core "2.1.1-rtm-30846" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-08-10 16:06:42.004 +07:00 [Information] Executed DbCommand ("5"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[Avatar], [e].[ConcurrencyStamp], [e].[CreatedDate], [e].[CreatedUserId], [e].[DisplayName], [e].[Email], [e].[EmailConfirmed], [e].[IsLock], [e].[IsReLogin], [e].[IsSuperAdmin], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[Note], [e].[NoteLock], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[RoleParents], [e].[RoleSchool], [e].[RoleTransportCompany], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UpdatedDate], [e].[UpdatedUserId], [e].[UserName]
+FROM [adm].[User] AS [e]
+WHERE [e].[Id] = @__get_Item_0"
+2018-08-10 16:06:42.019 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44396/favicon.ico  
+2018-08-10 16:06:42.041 +07:00 [Information] Sending file. Request path: '"/favicon.ico"'. Physical path: '"D:\2018\1.BusStudent\Sources\Code\Backend\TN.UI\wwwroot\favicon.ico"'
+2018-08-10 16:06:42.041 +07:00 [Information] Request finished in 22.6053ms 200 image/x-icon
+2018-08-10 16:06:42.074 +07:00 [Information] Executing action method "TN.UI.Areas.Report.Controllers.TripsReportController.DetailTripsByDatePost (TN.UI)" with arguments (["09/04/2018", "31", ""]) - Validation state: Valid
+2018-08-10 16:06:42.130 +07:00 [Information] Executed DbCommand ("6"ms) [Parameters=["@__transportCompanyId_0='?' (DbType = Int32), @__date_Date_1='?' (DbType = DateTime2)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[Id], [x].[ConfimCenterUser], [x].[ConfirmCenterTime], [x].[CreatedDate], [x].[CreatedUser], [x].[Date], [x].[GPSString], [x].[IsConfirmCenter], [x].[IsDelete], [x].[IsNotification], [x].[IsSendEmailCenter], [x].[IsSendEmailTransportCompany], [x].[RouteId], [x].[SendEmailDateCenter], [x].[SendEmailDateTransportCompany], [x].[TimeTable], [x].[TransportCompanyId], [x].[UpdatedDate], [x].[UpdatedUser], [x].[VehicleId]
+FROM [ConfirmationTrips] AS [x]
+WHERE (([x].[TransportCompanyId] = @__transportCompanyId_0) AND (CONVERT(date, [x].[Date]) = @__date_Date_1)) AND ([x].[IsConfirmCenter] = 1)"
+2018-08-10 16:06:42.187 +07:00 [Information] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [m].[Id], [m].[Aircon], [m].[Capacity], [m].[ContractEndDate], [m].[CreatedDate], [m].[CreatedUser], [m].[DeviceGPSId], [m].[DoorDown], [m].[DoorUp], [m].[DriverCode], [m].[Fuel], [m].[Heading], [m].[Ignition], [m].[IsAirConditioner], [m].[IsDelete], [m].[IsWorking], [m].[Lat], [m].[Lng], [m].[Lpn], [m].[Note], [m].[NumOfSeat], [m].[RegistryEndDate], [m].[SOS], [m].[Speed], [m].[Status], [m].[TrackingTime], [m].[TransportCompanyId], [m].[TransportCompanyStartDate], [m].[Type], [m].[UnderwriteEndDate], [m].[UpdatedDate], [m].[UpdatedUser], [m].[VehicleBrandId], [m].[VehicleFloorboardsTypeId], [m].[VehicleGroupId], [m].[YearOfManufacture]
+FROM [Vehicle] AS [m]
+WHERE [m].[Id] IN (4068, 4174, 4175)"
+2018-08-10 16:06:42.282 +07:00 [Information] Executed DbCommand ("7"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [m].[Id], [m].[CheckOutEndTime], [m].[CheckOutStartTime], [m].[ConfirmationTripsId], [m].[CreatedDate], [m].[EndStationId], [m].[EndTime], [m].[GPSString], [m].[IsCheckOutEndStation], [m].[IsCheckOutStartStation], [m].[LatEndStation], [m].[LatGPSEndStation], [m].[LatGPSStartStation], [m].[LatStartStation], [m].[LngStartStation], [m].[LngtEndStation], [m].[LngtGPSEndStation], [m].[LngtGPSStartStation], [m].[RouteId], [m].[StartStationId], [m].[StartTime], [m].[Status], [m].[TimeTable]
+FROM [ConfirmationTripsDetail] AS [m]
+WHERE [m].[ConfirmationTripsId] IN (2275, 2320, 2365)"
+2018-08-10 16:06:42.395 +07:00 [Information] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [m].[Id] AS [CheckOutId], [m].[StudentId], [student].[FullName] AS [StudentName], [classOfSchool].[Name] AS [ClassOfSchoolName], [school].[Name] AS [SchoolName], [m].[CheckOutDate], [m].[City], [m].[ConfirmationTripsDetailId], [m].[District], [m].[IsCheckerCenter], [m].[IsCheckerComputer] AS [IsScan], [m].[Location], [m].[NoteCheckerComputer], [m].[Street], [m].[StreetNum], [m].[Ward], [m].[VehicleId], [m].[Lat], [m].[Lng]
+FROM [ConfirmationTripsConfirm] AS [m]
+LEFT JOIN [Student] AS [student] ON [m].[StudentId] = [student].[Id]
+LEFT JOIN [ClassOfSchool] AS [classOfSchool] ON [m].[ClassOfSchoolId] = [classOfSchool].[Id]
+LEFT JOIN [School] AS [school] ON [m].[SchoolId] = [school].[Id]
+WHERE [m].[ConfirmationTripsId] IN (2275, 2320, 2365)"
+2018-08-10 16:06:42.442 +07:00 [Information] Executed DbCommand ("3"ms) [Parameters=["@__transportCompanyId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [x].[Id], [x].[Address], [x].[Code], [x].[CreatedDate], [x].[CreatedUser], [x].[DateIssued], [x].[Email], [x].[IsDelete], [x].[Name], [x].[Note], [x].[PhoneFax], [x].[Status], [x].[UpdatedDate], [x].[UpdatedUser]
+FROM [TransportCompany] AS [x]
+WHERE [x].[Id] = @__transportCompanyId_0"
+2018-08-10 16:06:42.454 +07:00 [Information] Executed action method "TN.UI.Areas.Report.Controllers.TripsReportController.DetailTripsByDatePost (TN.UI)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 376.0584ms.
+2018-08-10 16:06:42.455 +07:00 [Information] Executing ViewResult, running view "DetailTripsByDateAjax".
+2018-08-10 16:06:42.464 +07:00 [Information] Executed ViewResult - view "DetailTripsByDateAjax" executed in 10.5275ms.
+2018-08-10 16:06:42.465 +07:00 [Information] Executed action "TN.UI.Areas.Report.Controllers.TripsReportController.DetailTripsByDatePost (TN.UI)" in 469.3325ms
+2018-08-10 16:06:42.465 +07:00 [Information] Request finished in 496.7312ms 200 text/html; charset=utf-8
+2018-08-10 16:08:42.503 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44396/Admin/Report/TripsReport/DetailTripsByDate?page=1&date=09%2F04%2F2018&__RequestVerificationToken=CfDJ8JOj5I5192pEpD18VNpUHl22OsYXBD4Zp1YVe2-TapaleVn8d7t8y0qJN0ZvEpFG-fdt0ThdHdPon6XtWF0CWplX962M4PFTMQeIitgUY_t-KSHnkbQkVgaLdSuoU3EiGvogPInJHyJrofLEoemZ32xawOJCXXX6k-ylB0byE0rHBEyWwvbMN6QaBu3wPOeEGQ&transportCompanyId=31&schoolId=  
+2018-08-10 16:08:43.047 +07:00 [Information] Route matched with "{area = \"Report\", action = \"DetailTripsByDate\", controller = \"TripsReport\"}". Executing action "TN.UI.Areas.Report.Controllers.TripsReportController.DetailTripsByDate (TN.UI)"
+2018-08-10 16:08:43.546 +07:00 [Information] Entity Framework Core "2.1.1-rtm-30846" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-08-10 16:08:43.733 +07:00 [Information] Executed DbCommand ("12"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[Avatar], [e].[ConcurrencyStamp], [e].[CreatedDate], [e].[CreatedUserId], [e].[DisplayName], [e].[Email], [e].[EmailConfirmed], [e].[IsLock], [e].[IsReLogin], [e].[IsSuperAdmin], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[Note], [e].[NoteLock], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[RoleParents], [e].[RoleSchool], [e].[RoleTransportCompany], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UpdatedDate], [e].[UpdatedUserId], [e].[UserName]
+FROM [adm].[User] AS [e]
+WHERE [e].[Id] = @__get_Item_0"
+2018-08-10 16:08:43.832 +07:00 [Information] Executing action method "TN.UI.Areas.Report.Controllers.TripsReportController.DetailTripsByDate (TN.UI)" - Validation state: Valid
+2018-08-10 16:08:43.857 +07:00 [Information] Executed DbCommand ("5"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[Id], [x].[Address], [x].[Code], [x].[CreatedDate], [x].[CreatedUser], [x].[DateIssued], [x].[Email], [x].[IsDelete], [x].[Name], [x].[Note], [x].[PhoneFax], [x].[Status], [x].[UpdatedDate], [x].[UpdatedUser]
+FROM [TransportCompany] AS [x]
+WHERE ([x].[Status] = 1) AND ([x].[IsDelete] = 0)"
+2018-08-10 16:08:43.907 +07:00 [Information] Executed DbCommand ("8"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[Id], [x].[Address], [x].[Code], [x].[CreatedDate], [x].[CreatedUser], [x].[DistrictId], [x].[Image], [x].[IsDelete], [x].[Lat], [x].[Lng], [x].[Name], [x].[Note], [x].[Status], [x].[Trips], [x].[UpdatedDate], [x].[UpdatedUser]
+FROM [School] AS [x]
+WHERE ([x].[Status] = 1) AND ([x].[IsDelete] = 0)"
+2018-08-10 16:08:43.941 +07:00 [Information] Executed action method "TN.UI.Areas.Report.Controllers.TripsReportController.DetailTripsByDate (TN.UI)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 104.6859ms.
+2018-08-10 16:08:43.960 +07:00 [Information] Executing ViewResult, running view "DetailTripsByDate".
+2018-08-10 16:08:44.121 +07:00 [Information] Executed ViewResult - view "DetailTripsByDate" executed in 166.1223ms.
+2018-08-10 16:08:44.122 +07:00 [Information] Executed action "TN.UI.Areas.Report.Controllers.TripsReportController.DetailTripsByDate (TN.UI)" in 1074.3727ms
+2018-08-10 16:08:44.172 +07:00 [Information] Request finished in 1673.9968ms 200 text/html; charset=utf-8
+2018-08-10 16:08:44.436 +07:00 [Information] Request starting HTTP/1.1 POST http://localhost:44396/Admin/Report/TripsReport/DetailTripsByDate application/x-www-form-urlencoded; charset=UTF-8 284
+2018-08-10 16:08:44.465 +07:00 [Information] Route matched with "{area = \"Report\", action = \"DetailTripsByDate\", controller = \"TripsReport\"}". Executing action "TN.UI.Areas.Report.Controllers.TripsReportController.DetailTripsByDatePost (TN.UI)"
+2018-08-10 16:08:44.470 +07:00 [Information] Entity Framework Core "2.1.1-rtm-30846" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-08-10 16:08:44.479 +07:00 [Information] Executed DbCommand ("5"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[Avatar], [e].[ConcurrencyStamp], [e].[CreatedDate], [e].[CreatedUserId], [e].[DisplayName], [e].[Email], [e].[EmailConfirmed], [e].[IsLock], [e].[IsReLogin], [e].[IsSuperAdmin], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[Note], [e].[NoteLock], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[RoleParents], [e].[RoleSchool], [e].[RoleTransportCompany], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UpdatedDate], [e].[UpdatedUserId], [e].[UserName]
+FROM [adm].[User] AS [e]
+WHERE [e].[Id] = @__get_Item_0"
+2018-08-10 16:08:44.486 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44396/favicon.ico  
+2018-08-10 16:08:44.492 +07:00 [Information] Sending file. Request path: '"/favicon.ico"'. Physical path: '"D:\2018\1.BusStudent\Sources\Code\Backend\TN.UI\wwwroot\favicon.ico"'
+2018-08-10 16:08:44.493 +07:00 [Information] Request finished in 7.1066ms 200 image/x-icon
+2018-08-10 16:08:44.550 +07:00 [Information] Executing action method "TN.UI.Areas.Report.Controllers.TripsReportController.DetailTripsByDatePost (TN.UI)" with arguments (["09/04/2018", "31", ""]) - Validation state: Valid
+2018-08-10 16:08:44.596 +07:00 [Information] Executed DbCommand ("5"ms) [Parameters=["@__transportCompanyId_0='?' (DbType = Int32), @__date_Date_1='?' (DbType = DateTime2)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[Id], [x].[ConfimCenterUser], [x].[ConfirmCenterTime], [x].[CreatedDate], [x].[CreatedUser], [x].[Date], [x].[GPSString], [x].[IsConfirmCenter], [x].[IsDelete], [x].[IsNotification], [x].[IsSendEmailCenter], [x].[IsSendEmailTransportCompany], [x].[RouteId], [x].[SendEmailDateCenter], [x].[SendEmailDateTransportCompany], [x].[TimeTable], [x].[TransportCompanyId], [x].[UpdatedDate], [x].[UpdatedUser], [x].[VehicleId]
+FROM [ConfirmationTrips] AS [x]
+WHERE (([x].[TransportCompanyId] = @__transportCompanyId_0) AND (CONVERT(date, [x].[Date]) = @__date_Date_1)) AND ([x].[IsConfirmCenter] = 1)"
+2018-08-10 16:08:44.648 +07:00 [Information] Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [m].[Id], [m].[Aircon], [m].[Capacity], [m].[ContractEndDate], [m].[CreatedDate], [m].[CreatedUser], [m].[DeviceGPSId], [m].[DoorDown], [m].[DoorUp], [m].[DriverCode], [m].[Fuel], [m].[Heading], [m].[Ignition], [m].[IsAirConditioner], [m].[IsDelete], [m].[IsWorking], [m].[Lat], [m].[Lng], [m].[Lpn], [m].[Note], [m].[NumOfSeat], [m].[RegistryEndDate], [m].[SOS], [m].[Speed], [m].[Status], [m].[TrackingTime], [m].[TransportCompanyId], [m].[TransportCompanyStartDate], [m].[Type], [m].[UnderwriteEndDate], [m].[UpdatedDate], [m].[UpdatedUser], [m].[VehicleBrandId], [m].[VehicleFloorboardsTypeId], [m].[VehicleGroupId], [m].[YearOfManufacture]
+FROM [Vehicle] AS [m]
+WHERE [m].[Id] IN (4068, 4174, 4175)"
+2018-08-10 16:08:44.734 +07:00 [Information] Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [m].[Id], [m].[CheckOutEndTime], [m].[CheckOutStartTime], [m].[ConfirmationTripsId], [m].[CreatedDate], [m].[EndStationId], [m].[EndTime], [m].[GPSString], [m].[IsCheckOutEndStation], [m].[IsCheckOutStartStation], [m].[LatEndStation], [m].[LatGPSEndStation], [m].[LatGPSStartStation], [m].[LatStartStation], [m].[LngStartStation], [m].[LngtEndStation], [m].[LngtGPSEndStation], [m].[LngtGPSStartStation], [m].[RouteId], [m].[StartStationId], [m].[StartTime], [m].[Status], [m].[TimeTable]
+FROM [ConfirmationTripsDetail] AS [m]
+WHERE [m].[ConfirmationTripsId] IN (2275, 2320, 2365)"
+2018-08-10 16:08:44.839 +07:00 [Information] Executed DbCommand ("5"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [m].[Id] AS [CheckOutId], [m].[StudentId], [student].[FullName] AS [StudentName], [classOfSchool].[Name] AS [ClassOfSchoolName], [school].[Name] AS [SchoolName], [m].[CheckOutDate], [m].[City], [m].[ConfirmationTripsDetailId], [m].[District], [m].[IsCheckerCenter], [m].[IsCheckerComputer] AS [IsScan], [m].[Location], [m].[NoteCheckerComputer], [m].[Street], [m].[StreetNum], [m].[Ward], [m].[VehicleId], [m].[Lat], [m].[Lng]
+FROM [ConfirmationTripsConfirm] AS [m]
+LEFT JOIN [Student] AS [student] ON [m].[StudentId] = [student].[Id]
+LEFT JOIN [ClassOfSchool] AS [classOfSchool] ON [m].[ClassOfSchoolId] = [classOfSchool].[Id]
+LEFT JOIN [School] AS [school] ON [m].[SchoolId] = [school].[Id]
+WHERE [m].[ConfirmationTripsId] IN (2275, 2320, 2365)"
+2018-08-10 16:08:44.878 +07:00 [Information] Executed DbCommand ("3"ms) [Parameters=["@__transportCompanyId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [x].[Id], [x].[Address], [x].[Code], [x].[CreatedDate], [x].[CreatedUser], [x].[DateIssued], [x].[Email], [x].[IsDelete], [x].[Name], [x].[Note], [x].[PhoneFax], [x].[Status], [x].[UpdatedDate], [x].[UpdatedUser]
+FROM [TransportCompany] AS [x]
+WHERE [x].[Id] = @__transportCompanyId_0"
+2018-08-10 16:08:44.886 +07:00 [Information] Executed action method "TN.UI.Areas.Report.Controllers.TripsReportController.DetailTripsByDatePost (TN.UI)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 335.1381ms.
+2018-08-10 16:08:44.894 +07:00 [Information] Executing ViewResult, running view "DetailTripsByDateAjax".
+2018-08-10 16:08:44.900 +07:00 [Information] Executed ViewResult - view "DetailTripsByDateAjax" executed in 11.2742ms.
+2018-08-10 16:08:44.900 +07:00 [Information] Executed action "TN.UI.Areas.Report.Controllers.TripsReportController.DetailTripsByDatePost (TN.UI)" in 435.226ms
+2018-08-10 16:08:44.900 +07:00 [Information] Request finished in 464.0476ms 200 text/html; charset=utf-8
+2018-08-10 16:09:07.981 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44396/Admin/Company/TransportCompanyManager  
+2018-08-10 16:09:07.991 +07:00 [Information] Route matched with "{area = \"Company\", action = \"Index\", controller = \"TransportCompanyManager\"}". Executing action "TN.UI.Areas.Manager.Controllers.TransportCompanyManagerController.Index (TN.UI)"
+2018-08-10 16:09:07.992 +07:00 [Information] Entity Framework Core "2.1.1-rtm-30846" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-08-10 16:09:08.003 +07:00 [Information] Executed DbCommand ("7"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[Avatar], [e].[ConcurrencyStamp], [e].[CreatedDate], [e].[CreatedUserId], [e].[DisplayName], [e].[Email], [e].[EmailConfirmed], [e].[IsLock], [e].[IsReLogin], [e].[IsSuperAdmin], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[Note], [e].[NoteLock], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[RoleParents], [e].[RoleSchool], [e].[RoleTransportCompany], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UpdatedDate], [e].[UpdatedUserId], [e].[UserName]
+FROM [adm].[User] AS [e]
+WHERE [e].[Id] = @__get_Item_0"
+2018-08-10 16:09:08.013 +07:00 [Information] Executing action method "TN.UI.Areas.Manager.Controllers.TransportCompanyManagerController.Index (TN.UI)" - Validation state: Valid
+2018-08-10 16:09:08.014 +07:00 [Information] Executed action method "TN.UI.Areas.Manager.Controllers.TransportCompanyManagerController.Index (TN.UI)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 0.7781ms.
+2018-08-10 16:09:08.019 +07:00 [Information] Executing ViewResult, running view "Index".
+2018-08-10 16:09:08.065 +07:00 [Information] Executed ViewResult - view "Index" executed in 51.0769ms.
+2018-08-10 16:09:08.069 +07:00 [Information] Executed action "TN.UI.Areas.Manager.Controllers.TransportCompanyManagerController.Index (TN.UI)" in 77.1754ms
+2018-08-10 16:09:08.069 +07:00 [Information] Request finished in 88.4515ms 200 text/html; charset=utf-8
+2018-08-10 16:09:08.423 +07:00 [Information] Request starting HTTP/1.1 POST http://localhost:44396/Admin/Company/TransportCompanyManager application/x-www-form-urlencoded; charset=UTF-8 55
+2018-08-10 16:09:08.430 +07:00 [Information] Route matched with "{area = \"Company\", action = \"Index\", controller = \"TransportCompanyManager\"}". Executing action "TN.UI.Areas.Manager.Controllers.TransportCompanyManagerController.IndexPost (TN.UI)"
+2018-08-10 16:09:08.432 +07:00 [Information] Entity Framework Core "2.1.1-rtm-30846" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-08-10 16:09:08.438 +07:00 [Information] Executed DbCommand ("4"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[Avatar], [e].[ConcurrencyStamp], [e].[CreatedDate], [e].[CreatedUserId], [e].[DisplayName], [e].[Email], [e].[EmailConfirmed], [e].[IsLock], [e].[IsReLogin], [e].[IsSuperAdmin], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[Note], [e].[NoteLock], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[RoleParents], [e].[RoleSchool], [e].[RoleTransportCompany], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UpdatedDate], [e].[UpdatedUserId], [e].[UserName]
+FROM [adm].[User] AS [e]
+WHERE [e].[Id] = @__get_Item_0"
+2018-08-10 16:09:08.440 +07:00 [Information] Executing action method "TN.UI.Areas.Manager.Controllers.TransportCompanyManagerController.IndexPost (TN.UI)" with arguments (["1", "10", "", "", "asc", "name"]) - Validation state: Valid
+2018-08-10 16:09:08.475 +07:00 [Information] Executed DbCommand ("4"ms) [Parameters=["@__p_5='?' (DbType = Int32), @__p_6='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [m].[Id], [m].[Address], [m].[Code], [m].[CreatedDate], [m].[CreatedUser], [m].[DateIssued], [m].[Email], [m].[IsDelete], [m].[Name], [m].[Note], [m].[PhoneFax], [m].[Status], [m].[UpdatedDate], [m].[UpdatedUser]
+FROM [TransportCompany] AS [m]
+WHERE [m].[IsDelete] = 0
+ORDER BY [m].[Name]
+OFFSET @__p_5 ROWS FETCH NEXT @__p_6 ROWS ONLY"
+2018-08-10 16:09:08.508 +07:00 [Information] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [TransportCompany] AS [m]
+WHERE [m].[IsDelete] = 0"
+2018-08-10 16:09:08.523 +07:00 [Information] Executed action method "TN.UI.Areas.Manager.Controllers.TransportCompanyManagerController.IndexPost (TN.UI)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 82.1424ms.
+2018-08-10 16:09:08.524 +07:00 [Information] Executing ViewResult, running view "IndexAjax".
+2018-08-10 16:09:08.533 +07:00 [Information] Executed ViewResult - view "IndexAjax" executed in 10.2797ms.
+2018-08-10 16:09:08.533 +07:00 [Information] Executed action "TN.UI.Areas.Manager.Controllers.TransportCompanyManagerController.IndexPost (TN.UI)" in 102.6113ms
+2018-08-10 16:09:08.534 +07:00 [Information] Request finished in 110.4388ms 200 text/html; charset=utf-8
+2018-08-10 16:09:11.621 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44396/Admin/User/Account/Profile  
+2018-08-10 16:09:11.636 +07:00 [Information] Route matched with "{area = \"User\", action = \"Profile\", controller = \"Account\"}". Executing action "TN.UI.Areas.User.Controllers.AccountController.Profile (TN.UI)"
+2018-08-10 16:09:11.653 +07:00 [Information] Authorization was successful.
+2018-08-10 16:09:11.655 +07:00 [Information] Executing action method "TN.UI.Areas.User.Controllers.AccountController.Profile (TN.UI)" - Validation state: Valid
+2018-08-10 16:09:11.658 +07:00 [Information] Entity Framework Core "2.1.1-rtm-30846" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-08-10 16:09:11.668 +07:00 [Information] Executed DbCommand ("5"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[Avatar], [e].[ConcurrencyStamp], [e].[CreatedDate], [e].[CreatedUserId], [e].[DisplayName], [e].[Email], [e].[EmailConfirmed], [e].[IsLock], [e].[IsReLogin], [e].[IsSuperAdmin], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[Note], [e].[NoteLock], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[RoleParents], [e].[RoleSchool], [e].[RoleTransportCompany], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UpdatedDate], [e].[UpdatedUserId], [e].[UserName]
+FROM [adm].[User] AS [e]
+WHERE [e].[Id] = @__get_Item_0"
+2018-08-10 16:09:11.671 +07:00 [Information] Executed action method "TN.UI.Areas.User.Controllers.AccountController.Profile (TN.UI)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 15.1409ms.
+2018-08-10 16:09:11.673 +07:00 [Information] Executing ViewResult, running view "Profile".
+2018-08-10 16:09:11.747 +07:00 [Information] Executed ViewResult - view "Profile" executed in 75.7283ms.
+2018-08-10 16:09:11.748 +07:00 [Information] Executed action "TN.UI.Areas.User.Controllers.AccountController.Profile (TN.UI)" in 111.5627ms
+2018-08-10 16:09:11.748 +07:00 [Information] Request finished in 127.3199ms 200 text/html; charset=utf-8
+2018-08-10 16:09:34.720 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44396/Admin/Report/TripsReport  
+2018-08-10 16:09:34.725 +07:00 [Information] Route matched with "{area = \"Report\", action = \"Index\", controller = \"TripsReport\"}". Executing action "TN.UI.Areas.Report.Controllers.TripsReportController.Index (TN.UI)"
+2018-08-10 16:09:34.726 +07:00 [Information] Entity Framework Core "2.1.1-rtm-30846" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-08-10 16:09:34.730 +07:00 [Information] Executed DbCommand ("3"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[Avatar], [e].[ConcurrencyStamp], [e].[CreatedDate], [e].[CreatedUserId], [e].[DisplayName], [e].[Email], [e].[EmailConfirmed], [e].[IsLock], [e].[IsReLogin], [e].[IsSuperAdmin], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[Note], [e].[NoteLock], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[RoleParents], [e].[RoleSchool], [e].[RoleTransportCompany], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UpdatedDate], [e].[UpdatedUserId], [e].[UserName]
+FROM [adm].[User] AS [e]
+WHERE [e].[Id] = @__get_Item_0"
+2018-08-10 16:09:34.731 +07:00 [Information] Executing action method "TN.UI.Areas.Report.Controllers.TripsReportController.Index (TN.UI)" - Validation state: Valid
+2018-08-10 16:09:34.731 +07:00 [Information] Executed action method "TN.UI.Areas.Report.Controllers.TripsReportController.Index (TN.UI)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 0.4139ms.
+2018-08-10 16:09:34.733 +07:00 [Information] Executing ViewResult, running view "Index".
+2018-08-10 16:09:34.750 +07:00 [Information] Executed ViewResult - view "Index" executed in 19.0187ms.
+2018-08-10 16:09:34.751 +07:00 [Information] Executed action "TN.UI.Areas.Report.Controllers.TripsReportController.Index (TN.UI)" in 25.0555ms
+2018-08-10 16:09:34.751 +07:00 [Information] Request finished in 31.2038ms 200 text/html; charset=utf-8
+2018-08-10 16:09:34.998 +07:00 [Information] Request starting HTTP/1.1 POST http://localhost:44396/Admin/Report/TripsReport/DetailTotalTripsByMonth application/x-www-form-urlencoded; charset=UTF-8 6
+2018-08-10 16:09:35.006 +07:00 [Information] Route matched with "{area = \"Report\", action = \"DetailTotalTripsByMonth\", controller = \"TripsReport\"}". Executing action "TN.UI.Areas.Report.Controllers.TripsReportController.DetailTotalTripsByMonth (TN.UI)"
+2018-08-10 16:09:35.007 +07:00 [Information] Entity Framework Core "2.1.1-rtm-30846" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-08-10 16:09:35.012 +07:00 [Information] Executed DbCommand ("4"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[Avatar], [e].[ConcurrencyStamp], [e].[CreatedDate], [e].[CreatedUserId], [e].[DisplayName], [e].[Email], [e].[EmailConfirmed], [e].[IsLock], [e].[IsReLogin], [e].[IsSuperAdmin], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[Note], [e].[NoteLock], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[RoleParents], [e].[RoleSchool], [e].[RoleTransportCompany], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UpdatedDate], [e].[UpdatedUserId], [e].[UserName]
+FROM [adm].[User] AS [e]
+WHERE [e].[Id] = @__get_Item_0"
+2018-08-10 16:09:35.015 +07:00 [Information] Executing action method "TN.UI.Areas.Report.Controllers.TripsReportController.DetailTotalTripsByMonth (TN.UI)" with arguments (["0", "0", "", ""]) - Validation state: Valid
+2018-08-10 16:09:35.021 +07:00 [Information] Executed action "TN.UI.Areas.Report.Controllers.TripsReportController.DetailTotalTripsByMonth (TN.UI)" in 14.2193ms
+2018-08-10 16:09:35.074 +07:00 [Error] An unhandled exception has occurred while executing the request.
+System.ArgumentOutOfRangeException: Month must be between one and twelve.
+Parameter name: month
+   at System.DateTime.DaysInMonth(Int32 year, Int32 month)
+   at TN.UI.Areas.Report.Controllers.TripsReportController.DetailTotalTripsByMonth(Int32 month, Int32 year, Nullable`1 transportCompanyId, Nullable`1 schoolId) in D:\2018\1.BusStudent\Sources\Code\Backend\TN.UI\Areas\Report\Controllers\TripsReportController.cs:line 301
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.ResponseCompression.ResponseCompressionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2018-08-10 16:09:35.114 +07:00 [Information] Request finished in 115.9074ms 500 text/html; charset=utf-8
+2018-08-10 16:09:35.807 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44396/Admin/Report/TripsReport/DetailTripsByDate?date=09%2F04%2F2018&transportCompanyId=31  
+2018-08-10 16:09:35.817 +07:00 [Information] Route matched with "{area = \"Report\", action = \"DetailTripsByDate\", controller = \"TripsReport\"}". Executing action "TN.UI.Areas.Report.Controllers.TripsReportController.DetailTripsByDate (TN.UI)"
+2018-08-10 16:09:35.817 +07:00 [Information] Entity Framework Core "2.1.1-rtm-30846" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-08-10 16:09:35.822 +07:00 [Information] Executed DbCommand ("3"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[Avatar], [e].[ConcurrencyStamp], [e].[CreatedDate], [e].[CreatedUserId], [e].[DisplayName], [e].[Email], [e].[EmailConfirmed], [e].[IsLock], [e].[IsReLogin], [e].[IsSuperAdmin], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[Note], [e].[NoteLock], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[RoleParents], [e].[RoleSchool], [e].[RoleTransportCompany], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UpdatedDate], [e].[UpdatedUserId], [e].[UserName]
+FROM [adm].[User] AS [e]
+WHERE [e].[Id] = @__get_Item_0"
+2018-08-10 16:09:35.822 +07:00 [Information] Executing action method "TN.UI.Areas.Report.Controllers.TripsReportController.DetailTripsByDate (TN.UI)" - Validation state: Valid
+2018-08-10 16:09:35.825 +07:00 [Information] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[Id], [x].[Address], [x].[Code], [x].[CreatedDate], [x].[CreatedUser], [x].[DateIssued], [x].[Email], [x].[IsDelete], [x].[Name], [x].[Note], [x].[PhoneFax], [x].[Status], [x].[UpdatedDate], [x].[UpdatedUser]
+FROM [TransportCompany] AS [x]
+WHERE ([x].[Status] = 1) AND ([x].[IsDelete] = 0)"
+2018-08-10 16:09:35.830 +07:00 [Information] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[Id], [x].[Address], [x].[Code], [x].[CreatedDate], [x].[CreatedUser], [x].[DistrictId], [x].[Image], [x].[IsDelete], [x].[Lat], [x].[Lng], [x].[Name], [x].[Note], [x].[Status], [x].[Trips], [x].[UpdatedDate], [x].[UpdatedUser]
+FROM [School] AS [x]
+WHERE ([x].[Status] = 1) AND ([x].[IsDelete] = 0)"
+2018-08-10 16:09:35.834 +07:00 [Information] Executed action method "TN.UI.Areas.Report.Controllers.TripsReportController.DetailTripsByDate (TN.UI)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 11.959ms.
+2018-08-10 16:09:35.834 +07:00 [Information] Executing ViewResult, running view "DetailTripsByDate".
+2018-08-10 16:09:35.836 +07:00 [Information] Executed ViewResult - view "DetailTripsByDate" executed in 2.1488ms.
+2018-08-10 16:09:35.837 +07:00 [Information] Executed action "TN.UI.Areas.Report.Controllers.TripsReportController.DetailTripsByDate (TN.UI)" in 19.7506ms
+2018-08-10 16:09:35.837 +07:00 [Information] Request finished in 30.3524ms 200 text/html; charset=utf-8
+2018-08-10 16:09:36.050 +07:00 [Information] Request starting HTTP/1.1 POST http://localhost:44396/Admin/Report/TripsReport/DetailTripsByDate application/x-www-form-urlencoded; charset=UTF-8 284
+2018-08-10 16:09:36.066 +07:00 [Information] Route matched with "{area = \"Report\", action = \"DetailTripsByDate\", controller = \"TripsReport\"}". Executing action "TN.UI.Areas.Report.Controllers.TripsReportController.DetailTripsByDatePost (TN.UI)"
+2018-08-10 16:09:36.067 +07:00 [Information] Entity Framework Core "2.1.1-rtm-30846" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-08-10 16:09:36.074 +07:00 [Information] Executed DbCommand ("5"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[Avatar], [e].[ConcurrencyStamp], [e].[CreatedDate], [e].[CreatedUserId], [e].[DisplayName], [e].[Email], [e].[EmailConfirmed], [e].[IsLock], [e].[IsReLogin], [e].[IsSuperAdmin], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[Note], [e].[NoteLock], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[RoleParents], [e].[RoleSchool], [e].[RoleTransportCompany], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UpdatedDate], [e].[UpdatedUserId], [e].[UserName]
+FROM [adm].[User] AS [e]
+WHERE [e].[Id] = @__get_Item_0"
+2018-08-10 16:09:36.075 +07:00 [Information] Executing action method "TN.UI.Areas.Report.Controllers.TripsReportController.DetailTripsByDatePost (TN.UI)" with arguments (["09/04/2018", "31", ""]) - Validation state: Valid
+2018-08-10 16:09:36.081 +07:00 [Information] Executed DbCommand ("4"ms) [Parameters=["@__transportCompanyId_0='?' (DbType = Int32), @__date_Date_1='?' (DbType = DateTime2)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[Id], [x].[ConfimCenterUser], [x].[ConfirmCenterTime], [x].[CreatedDate], [x].[CreatedUser], [x].[Date], [x].[GPSString], [x].[IsConfirmCenter], [x].[IsDelete], [x].[IsNotification], [x].[IsSendEmailCenter], [x].[IsSendEmailTransportCompany], [x].[RouteId], [x].[SendEmailDateCenter], [x].[SendEmailDateTransportCompany], [x].[TimeTable], [x].[TransportCompanyId], [x].[UpdatedDate], [x].[UpdatedUser], [x].[VehicleId]
+FROM [ConfirmationTrips] AS [x]
+WHERE (([x].[TransportCompanyId] = @__transportCompanyId_0) AND (CONVERT(date, [x].[Date]) = @__date_Date_1)) AND ([x].[IsConfirmCenter] = 1)"
+2018-08-10 16:09:36.089 +07:00 [Information] Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [m].[Id], [m].[Aircon], [m].[Capacity], [m].[ContractEndDate], [m].[CreatedDate], [m].[CreatedUser], [m].[DeviceGPSId], [m].[DoorDown], [m].[DoorUp], [m].[DriverCode], [m].[Fuel], [m].[Heading], [m].[Ignition], [m].[IsAirConditioner], [m].[IsDelete], [m].[IsWorking], [m].[Lat], [m].[Lng], [m].[Lpn], [m].[Note], [m].[NumOfSeat], [m].[RegistryEndDate], [m].[SOS], [m].[Speed], [m].[Status], [m].[TrackingTime], [m].[TransportCompanyId], [m].[TransportCompanyStartDate], [m].[Type], [m].[UnderwriteEndDate], [m].[UpdatedDate], [m].[UpdatedUser], [m].[VehicleBrandId], [m].[VehicleFloorboardsTypeId], [m].[VehicleGroupId], [m].[YearOfManufacture]
+FROM [Vehicle] AS [m]
+WHERE [m].[Id] IN (4068, 4174, 4175)"
+2018-08-10 16:09:36.095 +07:00 [Information] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [m].[Id], [m].[CheckOutEndTime], [m].[CheckOutStartTime], [m].[ConfirmationTripsId], [m].[CreatedDate], [m].[EndStationId], [m].[EndTime], [m].[GPSString], [m].[IsCheckOutEndStation], [m].[IsCheckOutStartStation], [m].[LatEndStation], [m].[LatGPSEndStation], [m].[LatGPSStartStation], [m].[LatStartStation], [m].[LngStartStation], [m].[LngtEndStation], [m].[LngtGPSEndStation], [m].[LngtGPSStartStation], [m].[RouteId], [m].[StartStationId], [m].[StartTime], [m].[Status], [m].[TimeTable]
+FROM [ConfirmationTripsDetail] AS [m]
+WHERE [m].[ConfirmationTripsId] IN (2275, 2320, 2365)"
+2018-08-10 16:09:36.109 +07:00 [Information] Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [m].[Id] AS [CheckOutId], [m].[StudentId], [student].[FullName] AS [StudentName], [classOfSchool].[Name] AS [ClassOfSchoolName], [school].[Name] AS [SchoolName], [m].[CheckOutDate], [m].[City], [m].[ConfirmationTripsDetailId], [m].[District], [m].[IsCheckerCenter], [m].[IsCheckerComputer] AS [IsScan], [m].[Location], [m].[NoteCheckerComputer], [m].[Street], [m].[StreetNum], [m].[Ward], [m].[VehicleId], [m].[Lat], [m].[Lng]
+FROM [ConfirmationTripsConfirm] AS [m]
+LEFT JOIN [Student] AS [student] ON [m].[StudentId] = [student].[Id]
+LEFT JOIN [ClassOfSchool] AS [classOfSchool] ON [m].[ClassOfSchoolId] = [classOfSchool].[Id]
+LEFT JOIN [School] AS [school] ON [m].[SchoolId] = [school].[Id]
+WHERE [m].[ConfirmationTripsId] IN (2275, 2320, 2365)"
+2018-08-10 16:09:36.113 +07:00 [Information] Executed DbCommand ("2"ms) [Parameters=["@__transportCompanyId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [x].[Id], [x].[Address], [x].[Code], [x].[CreatedDate], [x].[CreatedUser], [x].[DateIssued], [x].[Email], [x].[IsDelete], [x].[Name], [x].[Note], [x].[PhoneFax], [x].[Status], [x].[UpdatedDate], [x].[UpdatedUser]
+FROM [TransportCompany] AS [x]
+WHERE [x].[Id] = @__transportCompanyId_0"
+2018-08-10 16:09:36.116 +07:00 [Information] Executed action method "TN.UI.Areas.Report.Controllers.TripsReportController.DetailTripsByDatePost (TN.UI)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 39.385ms.
+2018-08-10 16:09:37.628 +07:00 [Information] Executing ViewResult, running view "DetailTripsByDateAjax".
+2018-08-10 16:09:37.633 +07:00 [Information] Executed ViewResult - view "DetailTripsByDateAjax" executed in 1515.8667ms.
+2018-08-10 16:09:37.633 +07:00 [Information] Executed action "TN.UI.Areas.Report.Controllers.TripsReportController.DetailTripsByDatePost (TN.UI)" in 1566.664ms
+2018-08-10 16:09:37.633 +07:00 [Information] Request finished in 1583.8586ms 200 text/html; charset=utf-8
+2018-08-10 16:09:54.723 +07:00 [Information] Request starting HTTP/1.1 POST http://localhost:44396/Admin/Report/TripsReport/TripsByDateExport application/x-www-form-urlencoded 277
+2018-08-10 16:09:54.734 +07:00 [Information] Route matched with "{area = \"Report\", action = \"TripsByDateExport\", controller = \"TripsReport\"}". Executing action "TN.UI.Areas.Report.Controllers.TripsReportController.TripsByDateExportPost (TN.UI)"
+2018-08-10 16:09:54.735 +07:00 [Information] Entity Framework Core "2.1.1-rtm-30846" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-08-10 16:09:54.738 +07:00 [Information] Executed DbCommand ("2"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[Avatar], [e].[ConcurrencyStamp], [e].[CreatedDate], [e].[CreatedUserId], [e].[DisplayName], [e].[Email], [e].[EmailConfirmed], [e].[IsLock], [e].[IsReLogin], [e].[IsSuperAdmin], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[Note], [e].[NoteLock], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[RoleParents], [e].[RoleSchool], [e].[RoleTransportCompany], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UpdatedDate], [e].[UpdatedUserId], [e].[UserName]
+FROM [adm].[User] AS [e]
+WHERE [e].[Id] = @__get_Item_0"
+2018-08-10 16:09:54.739 +07:00 [Information] Executing action method "TN.UI.Areas.Report.Controllers.TripsReportController.TripsByDateExportPost (TN.UI)" with arguments (["09/04/2018", "31", ""]) - Validation state: Valid
+2018-08-10 16:09:55.140 +07:00 [Information] Executed DbCommand ("6"ms) [Parameters=["@__transportCompanyId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [x].[Id], [x].[Address], [x].[Code], [x].[CreatedDate], [x].[CreatedUser], [x].[DateIssued], [x].[Email], [x].[IsDelete], [x].[Name], [x].[Note], [x].[PhoneFax], [x].[Status], [x].[UpdatedDate], [x].[UpdatedUser]
+FROM [TransportCompany] AS [x]
+WHERE [x].[Id] = @__transportCompanyId_0"
+2018-08-10 16:09:55.149 +07:00 [Information] Executed DbCommand ("5"ms) [Parameters=["@__transportCompanyId_0='?' (DbType = Int32), @__date_Date_1='?' (DbType = DateTime2)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[Id], [x].[ConfimCenterUser], [x].[ConfirmCenterTime], [x].[CreatedDate], [x].[CreatedUser], [x].[Date], [x].[GPSString], [x].[IsConfirmCenter], [x].[IsDelete], [x].[IsNotification], [x].[IsSendEmailCenter], [x].[IsSendEmailTransportCompany], [x].[RouteId], [x].[SendEmailDateCenter], [x].[SendEmailDateTransportCompany], [x].[TimeTable], [x].[TransportCompanyId], [x].[UpdatedDate], [x].[UpdatedUser], [x].[VehicleId]
+FROM [ConfirmationTrips] AS [x]
+WHERE (([x].[TransportCompanyId] = @__transportCompanyId_0) AND (CONVERT(date, [x].[Date]) = @__date_Date_1)) AND ([x].[IsConfirmCenter] = 1)"
+2018-08-10 16:09:55.157 +07:00 [Information] Executed DbCommand ("5"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [m].[Id], [m].[Aircon], [m].[Capacity], [m].[ContractEndDate], [m].[CreatedDate], [m].[CreatedUser], [m].[DeviceGPSId], [m].[DoorDown], [m].[DoorUp], [m].[DriverCode], [m].[Fuel], [m].[Heading], [m].[Ignition], [m].[IsAirConditioner], [m].[IsDelete], [m].[IsWorking], [m].[Lat], [m].[Lng], [m].[Lpn], [m].[Note], [m].[NumOfSeat], [m].[RegistryEndDate], [m].[SOS], [m].[Speed], [m].[Status], [m].[TrackingTime], [m].[TransportCompanyId], [m].[TransportCompanyStartDate], [m].[Type], [m].[UnderwriteEndDate], [m].[UpdatedDate], [m].[UpdatedUser], [m].[VehicleBrandId], [m].[VehicleFloorboardsTypeId], [m].[VehicleGroupId], [m].[YearOfManufacture]
+FROM [Vehicle] AS [m]
+WHERE [m].[Id] IN (4068, 4174, 4175)"
+2018-08-10 16:09:55.165 +07:00 [Information] Executed DbCommand ("7"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [m].[Id], [m].[CheckOutEndTime], [m].[CheckOutStartTime], [m].[ConfirmationTripsId], [m].[CreatedDate], [m].[EndStationId], [m].[EndTime], [m].[GPSString], [m].[IsCheckOutEndStation], [m].[IsCheckOutStartStation], [m].[LatEndStation], [m].[LatGPSEndStation], [m].[LatGPSStartStation], [m].[LatStartStation], [m].[LngStartStation], [m].[LngtEndStation], [m].[LngtGPSEndStation], [m].[LngtGPSStartStation], [m].[RouteId], [m].[StartStationId], [m].[StartTime], [m].[Status], [m].[TimeTable]
+FROM [ConfirmationTripsDetail] AS [m]
+WHERE [m].[ConfirmationTripsId] IN (2275, 2320, 2365)"
+2018-08-10 16:09:55.193 +07:00 [Information] Executed DbCommand ("5"ms) [Parameters=["@__isCheckerCenter_2='?' (DbType = Boolean)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [m].[Id] AS [CheckOutId], [m].[StudentId], [student].[FullName] AS [StudentName], [classOfSchool].[Name] AS [ClassOfSchoolName], [school].[Name] AS [SchoolName], [m].[CheckOutDate], [m].[City], [m].[ConfirmationTripsDetailId], [m].[District], [m].[IsCheckerCenter], [m].[IsCheckerComputer] AS [IsScan], [m].[Location], [m].[NoteCheckerComputer], [m].[Street], [m].[StreetNum], [m].[Ward], [m].[VehicleId], [m].[Lat], [m].[Lng]
+FROM [ConfirmationTripsConfirm] AS [m]
+LEFT JOIN [Student] AS [student] ON [m].[StudentId] = [student].[Id]
+LEFT JOIN [ClassOfSchool] AS [classOfSchool] ON [m].[ClassOfSchoolId] = [classOfSchool].[Id]
+LEFT JOIN [School] AS [school] ON [m].[SchoolId] = [school].[Id]
+WHERE [m].[ConfirmationTripsId] IN (2275, 2320, 2365) AND ([m].[IsCheckerCenter] = @__isCheckerCenter_2)"
+2018-08-10 16:09:55.507 +07:00 [Information] Executed action method "TN.UI.Areas.Report.Controllers.TripsReportController.TripsByDateExportPost (TN.UI)", returned result "Microsoft.AspNetCore.Mvc.FileStreamResult" in 767.3412ms.
+2018-08-10 16:09:55.510 +07:00 [Information] Executing "Microsoft.AspNetCore.Mvc.FileStreamResult", sending file with download name '"25bef3dd-f3ec-4eb6-89da-81ea61d67504.xlsx"' ...
+2018-08-10 16:09:55.512 +07:00 [Information] Executed action "TN.UI.Areas.Report.Controllers.TripsReportController.TripsByDateExportPost (TN.UI)" in 777.9774ms
+2018-08-10 16:09:55.513 +07:00 [Information] Request finished in 789.4961ms 200 application/x-msdownload
+2018-08-10 17:54:24.406 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44396/Admin/Company/TransportCompanyManager  
+2018-08-10 17:54:24.687 +07:00 [Information] Entity Framework Core "2.1.1-rtm-30846" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-08-10 17:54:24.829 +07:00 [Information] Executed DbCommand ("5"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[Avatar], [e].[ConcurrencyStamp], [e].[CreatedDate], [e].[CreatedUserId], [e].[DisplayName], [e].[Email], [e].[EmailConfirmed], [e].[IsLock], [e].[IsReLogin], [e].[IsSuperAdmin], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[Note], [e].[NoteLock], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[RoleParents], [e].[RoleSchool], [e].[RoleTransportCompany], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UpdatedDate], [e].[UpdatedUserId], [e].[UserName]
+FROM [adm].[User] AS [e]
+WHERE [e].[Id] = @__get_Item_0"
+2018-08-10 17:54:25.004 +07:00 [Information] Executed DbCommand ("18"ms) [Parameters=["@__user_Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [adm].[UserClaim] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0"
+2018-08-10 17:54:25.098 +07:00 [Information] Executed DbCommand ("3"ms) [Parameters=["@__userId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [x].[Id], [x].[ConcurrencyStamp], [x].[Description], [x].[Name], [x].[NormalizedName], [x].[Type]
+FROM [adm].[Role] AS [x]
+WHERE EXISTS (
+    SELECT 1
+    FROM [adm].[UserRole] AS [m]
+    WHERE ([m].[UserId] = @__userId_0) AND ([m].[RoleId] = [x].[Id]))"
+2018-08-10 17:54:25.173 +07:00 [Information] Route matched with "{area = \"Company\", action = \"Index\", controller = \"TransportCompanyManager\"}". Executing action "TN.UI.Areas.Manager.Controllers.TransportCompanyManagerController.Index (TN.UI)"
+2018-08-10 17:54:25.175 +07:00 [Information] Executing action method "TN.UI.Areas.Manager.Controllers.TransportCompanyManagerController.Index (TN.UI)" - Validation state: Valid
+2018-08-10 17:54:25.175 +07:00 [Information] Executed action method "TN.UI.Areas.Manager.Controllers.TransportCompanyManagerController.Index (TN.UI)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 0.4266ms.
+2018-08-10 17:54:25.177 +07:00 [Information] Executing ViewResult, running view "Index".
+2018-08-10 17:54:25.229 +07:00 [Information] Executed ViewResult - view "Index" executed in 53.946ms.
+2018-08-10 17:54:25.230 +07:00 [Information] Executed action "TN.UI.Areas.Manager.Controllers.TransportCompanyManagerController.Index (TN.UI)" in 56.1589ms
+2018-08-10 17:54:25.230 +07:00 [Information] Request finished in 848.8567ms 200 text/html; charset=utf-8
+2018-08-10 17:54:25.410 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44396/Content/Admin/site.min.css?v=jW89cCi60i6h6mXSm6FblqHAQ9b_Ws0NOy1F8uGIlYc  
+2018-08-10 17:54:25.411 +07:00 [Information] The file "/Content/Admin/site.min.css" was not modified
+2018-08-10 17:54:25.414 +07:00 [Information] Request finished in 3.8517ms 304 text/css
+2018-08-10 17:54:25.414 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44396/Content/Admin/site.min.js  
+2018-08-10 17:54:25.414 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44396/Data/Avatar/ecaba803-2c0c-4ec3-bcc1-93ede84c93cc.jpeg  
+2018-08-10 17:54:25.414 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44396/Content/Admin/js/script.js  
+2018-08-10 17:54:25.415 +07:00 [Information] The file "/Content/Admin/js/script.js" was not modified
+2018-08-10 17:54:25.415 +07:00 [Information] Request finished in 1.0344ms 304 application/javascript
+2018-08-10 17:54:25.550 +07:00 [Information] The file "/Content/Admin/site.min.js" was not modified
+2018-08-10 17:54:25.550 +07:00 [Information] Request finished in 136.1664ms 304 application/javascript
+2018-08-10 17:54:25.678 +07:00 [Information] The file "/Data/Avatar/ecaba803-2c0c-4ec3-bcc1-93ede84c93cc.jpeg" was not modified
+2018-08-10 17:54:25.678 +07:00 [Information] Request finished in 264.2042ms 304 image/jpeg
+2018-08-10 17:54:26.223 +07:00 [Information] Request starting HTTP/1.1 POST http://localhost:44396/Admin/Company/TransportCompanyManager application/x-www-form-urlencoded; charset=UTF-8 55
+2018-08-10 17:54:26.275 +07:00 [Information] Route matched with "{area = \"Company\", action = \"Index\", controller = \"TransportCompanyManager\"}". Executing action "TN.UI.Areas.Manager.Controllers.TransportCompanyManagerController.IndexPost (TN.UI)"
+2018-08-10 17:54:26.275 +07:00 [Information] Entity Framework Core "2.1.1-rtm-30846" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-08-10 17:54:26.290 +07:00 [Information] Executed DbCommand ("3"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[Avatar], [e].[ConcurrencyStamp], [e].[CreatedDate], [e].[CreatedUserId], [e].[DisplayName], [e].[Email], [e].[EmailConfirmed], [e].[IsLock], [e].[IsReLogin], [e].[IsSuperAdmin], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[Note], [e].[NoteLock], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[RoleParents], [e].[RoleSchool], [e].[RoleTransportCompany], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UpdatedDate], [e].[UpdatedUserId], [e].[UserName]
+FROM [adm].[User] AS [e]
+WHERE [e].[Id] = @__get_Item_0"
+2018-08-10 17:54:26.292 +07:00 [Information] Executing action method "TN.UI.Areas.Manager.Controllers.TransportCompanyManagerController.IndexPost (TN.UI)" with arguments (["1", "10", "", "", "asc", "name"]) - Validation state: Valid
+2018-08-10 17:54:26.308 +07:00 [Information] Executed DbCommand ("8"ms) [Parameters=["@__p_5='?' (DbType = Int32), @__p_6='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [m].[Id], [m].[Address], [m].[Code], [m].[CreatedDate], [m].[CreatedUser], [m].[DateIssued], [m].[Email], [m].[IsDelete], [m].[Name], [m].[Note], [m].[PhoneFax], [m].[Status], [m].[UpdatedDate], [m].[UpdatedUser]
+FROM [TransportCompany] AS [m]
+WHERE [m].[IsDelete] = 0
+ORDER BY [m].[Name]
+OFFSET @__p_5 ROWS FETCH NEXT @__p_6 ROWS ONLY"
+2018-08-10 17:54:26.321 +07:00 [Information] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [TransportCompany] AS [m]
+WHERE [m].[IsDelete] = 0"
+2018-08-10 17:54:26.323 +07:00 [Information] Executed action method "TN.UI.Areas.Manager.Controllers.TransportCompanyManagerController.IndexPost (TN.UI)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 30.5693ms.
+2018-08-10 17:54:26.325 +07:00 [Information] Executing ViewResult, running view "IndexAjax".
+2018-08-10 17:54:26.346 +07:00 [Information] Executed ViewResult - view "IndexAjax" executed in 22.4618ms.
+2018-08-10 17:54:26.346 +07:00 [Information] Executed action "TN.UI.Areas.Manager.Controllers.TransportCompanyManagerController.IndexPost (TN.UI)" in 70.7777ms
+2018-08-10 17:54:26.346 +07:00 [Information] Request finished in 124.7175ms 200 text/html; charset=utf-8
+2018-08-10 17:54:29.462 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44396/Admin/Company/VehicleManager  
+2018-08-10 17:54:29.501 +07:00 [Information] Route matched with "{area = \"Company\", action = \"Index\", controller = \"VehicleManager\"}". Executing action "TN.UI.Areas.Manager.Controllers.VehicleManagerController.Index (TN.UI)"
+2018-08-10 17:54:29.502 +07:00 [Information] Entity Framework Core "2.1.1-rtm-30846" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-08-10 17:54:29.507 +07:00 [Information] Executed DbCommand ("4"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[Avatar], [e].[ConcurrencyStamp], [e].[CreatedDate], [e].[CreatedUserId], [e].[DisplayName], [e].[Email], [e].[EmailConfirmed], [e].[IsLock], [e].[IsReLogin], [e].[IsSuperAdmin], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[Note], [e].[NoteLock], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[RoleParents], [e].[RoleSchool], [e].[RoleTransportCompany], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UpdatedDate], [e].[UpdatedUserId], [e].[UserName]
+FROM [adm].[User] AS [e]
+WHERE [e].[Id] = @__get_Item_0"
+2018-08-10 17:54:29.510 +07:00 [Information] Executing action method "TN.UI.Areas.Manager.Controllers.VehicleManagerController.Index (TN.UI)" - Validation state: Valid
+2018-08-10 17:54:29.533 +07:00 [Information] Executed DbCommand ("6"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[Id], [x].[Name], [x].[IsDelete]
+FROM [TransportCompany] AS [x]
+WHERE [x].[IsDelete] = 0
+ORDER BY [x].[Name]"
+2018-08-10 17:54:29.558 +07:00 [Information] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[Id], [x].[Name]
+FROM [VehicleBrand] AS [x]
+ORDER BY [x].[Name]"
+2018-08-10 17:54:29.594 +07:00 [Information] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[Id], [x].[Name]
+FROM [Provider] AS [x]
+ORDER BY [x].[Name]"
+2018-08-10 17:54:29.595 +07:00 [Information] Executed action method "TN.UI.Areas.Manager.Controllers.VehicleManagerController.Index (TN.UI)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 85.6987ms.
+2018-08-10 17:54:29.669 +07:00 [Information] Executing ViewResult, running view "Index".
+2018-08-10 17:54:29.764 +07:00 [Information] Executed ViewResult - view "Index" executed in 167.9323ms.
+2018-08-10 17:54:29.764 +07:00 [Information] Executed action "TN.UI.Areas.Manager.Controllers.VehicleManagerController.Index (TN.UI)" in 262.5126ms
+2018-08-10 17:54:29.764 +07:00 [Information] Request finished in 302.0171ms 200 text/html; charset=utf-8
+2018-08-10 17:54:30.080 +07:00 [Information] Request starting HTTP/1.1 POST http://localhost:44396/Admin/Company/VehicleManager application/x-www-form-urlencoded; charset=UTF-8 295
+2018-08-10 17:54:30.116 +07:00 [Information] Route matched with "{area = \"Company\", action = \"Index\", controller = \"VehicleManager\"}". Executing action "TN.UI.Areas.Manager.Controllers.VehicleManagerController.IndexPost (TN.UI)"
+2018-08-10 17:54:30.116 +07:00 [Information] Entity Framework Core "2.1.1-rtm-30846" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-08-10 17:54:30.125 +07:00 [Information] Executed DbCommand ("5"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[Avatar], [e].[ConcurrencyStamp], [e].[CreatedDate], [e].[CreatedUserId], [e].[DisplayName], [e].[Email], [e].[EmailConfirmed], [e].[IsLock], [e].[IsReLogin], [e].[IsSuperAdmin], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[Note], [e].[NoteLock], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[RoleParents], [e].[RoleSchool], [e].[RoleTransportCompany], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UpdatedDate], [e].[UpdatedUserId], [e].[UserName]
+FROM [adm].[User] AS [e]
+WHERE [e].[Id] = @__get_Item_0"
+2018-08-10 17:54:30.128 +07:00 [Information] Executing action method "TN.UI.Areas.Manager.Controllers.VehicleManagerController.IndexPost (TN.UI)" with arguments (["1", "10", "", "", "asc", "name", "", "", "", "", "", "", "", "", "", "False", "False", "False", "False"]) - Validation state: Valid
+2018-08-10 17:54:30.287 +07:00 [Warning] The Include operation for navigation '"[m].TransportCompany"' is unnecessary and was ignored because the navigation is not reachable in the final query results. See https://go.microsoft.com/fwlink/?linkid=850303 for more information.
+2018-08-10 17:54:30.288 +07:00 [Warning] The Include operation for navigation '"[m].VehicleBrand"' is unnecessary and was ignored because the navigation is not reachable in the final query results. See https://go.microsoft.com/fwlink/?linkid=850303 for more information.
+2018-08-10 17:54:30.501 +07:00 [Information] Executed DbCommand ("30"ms) [Parameters=["@__p_11='?' (DbType = Int32), @__p_12='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [m.VehicleGroup].[Id], [m.VehicleGroup].[Name], [m.VehicleFloorboardsType].[Id], [m.VehicleFloorboardsType].[Name], [m.VehicleBrand].[Id], [m.VehicleBrand].[Name], [m].[Id] AS [Id1], [m].[Aircon], [m].[Capacity], [m].[ContractEndDate], [m].[DeviceGPSId], [m].[DoorDown], [m].[DoorUp], [m].[DriverCode], [m].[Heading], [m].[Ignition], [m].[IsDelete], [m].[IsWorking], [m].[Lat], [m].[IsAirConditioner], [m].[Fuel], [m].[Note], [m].[Lng], [m].[NumOfSeat], [m].[Lpn], [m].[RegistryEndDate], [m].[SOS], [m].[Speed], [m].[Status], [m].[TrackingTime], [m].[TransportCompanyId] AS [Id0], [m.TransportCompany].[Name] AS [Name0], [m].[YearOfManufacture], [m].[TransportCompanyId], [m].[TransportCompanyStartDate], [m].[UnderwriteEndDate], [m].[Type], [m].[VehicleBrandId], [m].[VehicleFloorboardsTypeId], [m].[VehicleGroupId]
+FROM [Vehicle] AS [m]
+LEFT JOIN [VehicleGroup] AS [m.VehicleGroup] ON [m].[VehicleGroupId] = [m.VehicleGroup].[Id]
+LEFT JOIN [VehicleFloorboardsType] AS [m.VehicleFloorboardsType] ON [m].[VehicleFloorboardsTypeId] = [m.VehicleFloorboardsType].[Id]
+LEFT JOIN [VehicleBrand] AS [m.VehicleBrand] ON [m].[VehicleBrandId] = [m.VehicleBrand].[Id]
+LEFT JOIN [TransportCompany] AS [m.TransportCompany] ON [m].[TransportCompanyId] = [m.TransportCompany].[Id]
+WHERE [m].[IsDelete] = 0
+ORDER BY [m].[Lpn]
+OFFSET @__p_11 ROWS FETCH NEXT @__p_12 ROWS ONLY"
+2018-08-10 17:54:30.583 +07:00 [Warning] The Include operation for navigation '"[m].TransportCompany"' is unnecessary and was ignored because the navigation is not reachable in the final query results. See https://go.microsoft.com/fwlink/?linkid=850303 for more information.
+2018-08-10 17:54:30.584 +07:00 [Warning] The Include operation for navigation '"[m].VehicleBrand"' is unnecessary and was ignored because the navigation is not reachable in the final query results. See https://go.microsoft.com/fwlink/?linkid=850303 for more information.
+2018-08-10 17:54:30.597 +07:00 [Information] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Vehicle] AS [m]
+WHERE [m].[IsDelete] = 0"
+2018-08-10 17:54:30.602 +07:00 [Information] Executed action method "TN.UI.Areas.Manager.Controllers.VehicleManagerController.IndexPost (TN.UI)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 473.8375ms.
+2018-08-10 17:54:30.613 +07:00 [Information] Executing ViewResult, running view "IndexAjax".
+2018-08-10 17:54:30.635 +07:00 [Information] Executed ViewResult - view "IndexAjax" executed in 32.1203ms.
+2018-08-10 17:54:30.635 +07:00 [Information] Executed action "TN.UI.Areas.Manager.Controllers.VehicleManagerController.IndexPost (TN.UI)" in 518.9797ms
+2018-08-10 17:54:30.635 +07:00 [Information] Request finished in 555.2069ms 200 text/html; charset=utf-8
+2018-08-10 17:54:37.008 +07:00 [Information] Request starting HTTP/1.1 POST http://localhost:44396/Admin/Company/VehicleManager application/x-www-form-urlencoded; charset=UTF-8 295
+2018-08-10 17:54:37.011 +07:00 [Information] Route matched with "{area = \"Company\", action = \"Index\", controller = \"VehicleManager\"}". Executing action "TN.UI.Areas.Manager.Controllers.VehicleManagerController.IndexPost (TN.UI)"
+2018-08-10 17:54:37.011 +07:00 [Information] Entity Framework Core "2.1.1-rtm-30846" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-08-10 17:54:37.015 +07:00 [Information] Executed DbCommand ("2"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[Avatar], [e].[ConcurrencyStamp], [e].[CreatedDate], [e].[CreatedUserId], [e].[DisplayName], [e].[Email], [e].[EmailConfirmed], [e].[IsLock], [e].[IsReLogin], [e].[IsSuperAdmin], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[Note], [e].[NoteLock], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[RoleParents], [e].[RoleSchool], [e].[RoleTransportCompany], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UpdatedDate], [e].[UpdatedUserId], [e].[UserName]
+FROM [adm].[User] AS [e]
+WHERE [e].[Id] = @__get_Item_0"
+2018-08-10 17:54:37.025 +07:00 [Information] Executing action method "TN.UI.Areas.Manager.Controllers.VehicleManagerController.IndexPost (TN.UI)" with arguments (["2", "10", "", "", "asc", "name", "", "", "", "", "", "", "", "", "", "False", "False", "False", "False"]) - Validation state: Valid
+2018-08-10 17:54:37.095 +07:00 [Information] Executed DbCommand ("56"ms) [Parameters=["@__p_11='?' (DbType = Int32), @__p_12='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [m.VehicleGroup].[Id], [m.VehicleGroup].[Name], [m.VehicleFloorboardsType].[Id], [m.VehicleFloorboardsType].[Name], [m.VehicleBrand].[Id], [m.VehicleBrand].[Name], [m].[Id] AS [Id1], [m].[Aircon], [m].[Capacity], [m].[ContractEndDate], [m].[DeviceGPSId], [m].[DoorDown], [m].[DoorUp], [m].[DriverCode], [m].[Heading], [m].[Ignition], [m].[IsDelete], [m].[IsWorking], [m].[Lat], [m].[IsAirConditioner], [m].[Fuel], [m].[Note], [m].[Lng], [m].[NumOfSeat], [m].[Lpn], [m].[RegistryEndDate], [m].[SOS], [m].[Speed], [m].[Status], [m].[TrackingTime], [m].[TransportCompanyId] AS [Id0], [m.TransportCompany].[Name] AS [Name0], [m].[YearOfManufacture], [m].[TransportCompanyId], [m].[TransportCompanyStartDate], [m].[UnderwriteEndDate], [m].[Type], [m].[VehicleBrandId], [m].[VehicleFloorboardsTypeId], [m].[VehicleGroupId]
+FROM [Vehicle] AS [m]
+LEFT JOIN [VehicleGroup] AS [m.VehicleGroup] ON [m].[VehicleGroupId] = [m.VehicleGroup].[Id]
+LEFT JOIN [VehicleFloorboardsType] AS [m.VehicleFloorboardsType] ON [m].[VehicleFloorboardsTypeId] = [m.VehicleFloorboardsType].[Id]
+LEFT JOIN [VehicleBrand] AS [m.VehicleBrand] ON [m].[VehicleBrandId] = [m.VehicleBrand].[Id]
+LEFT JOIN [TransportCompany] AS [m.TransportCompany] ON [m].[TransportCompanyId] = [m.TransportCompany].[Id]
+WHERE [m].[IsDelete] = 0
+ORDER BY [m].[Lpn]
+OFFSET @__p_11 ROWS FETCH NEXT @__p_12 ROWS ONLY"
+2018-08-10 17:54:37.120 +07:00 [Information] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Vehicle] AS [m]
+WHERE [m].[IsDelete] = 0"
+2018-08-10 17:54:37.121 +07:00 [Information] Executed action method "TN.UI.Areas.Manager.Controllers.VehicleManagerController.IndexPost (TN.UI)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 95.2378ms.
+2018-08-10 17:54:37.121 +07:00 [Information] Executing ViewResult, running view "IndexAjax".
+2018-08-10 17:54:37.122 +07:00 [Information] Executed ViewResult - view "IndexAjax" executed in 0.9591ms.
+2018-08-10 17:54:37.122 +07:00 [Information] Executed action "TN.UI.Areas.Manager.Controllers.VehicleManagerController.IndexPost (TN.UI)" in 111.0734ms
+2018-08-10 17:54:37.122 +07:00 [Information] Request finished in 113.7392ms 200 text/html; charset=utf-8
+2018-08-10 17:54:37.750 +07:00 [Information] Request starting HTTP/1.1 POST http://localhost:44396/Admin/Company/VehicleManager application/x-www-form-urlencoded; charset=UTF-8 295
+2018-08-10 17:54:37.753 +07:00 [Information] Route matched with "{area = \"Company\", action = \"Index\", controller = \"VehicleManager\"}". Executing action "TN.UI.Areas.Manager.Controllers.VehicleManagerController.IndexPost (TN.UI)"
+2018-08-10 17:54:37.753 +07:00 [Information] Entity Framework Core "2.1.1-rtm-30846" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-08-10 17:54:37.758 +07:00 [Information] Executed DbCommand ("4"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[Avatar], [e].[ConcurrencyStamp], [e].[CreatedDate], [e].[CreatedUserId], [e].[DisplayName], [e].[Email], [e].[EmailConfirmed], [e].[IsLock], [e].[IsReLogin], [e].[IsSuperAdmin], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[Note], [e].[NoteLock], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[RoleParents], [e].[RoleSchool], [e].[RoleTransportCompany], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UpdatedDate], [e].[UpdatedUserId], [e].[UserName]
+FROM [adm].[User] AS [e]
+WHERE [e].[Id] = @__get_Item_0"
+2018-08-10 17:54:37.763 +07:00 [Information] Executing action method "TN.UI.Areas.Manager.Controllers.VehicleManagerController.IndexPost (TN.UI)" with arguments (["3", "10", "", "", "asc", "name", "", "", "", "", "", "", "", "", "", "False", "False", "False", "False"]) - Validation state: Valid
+2018-08-10 17:54:37.799 +07:00 [Information] Executed DbCommand ("23"ms) [Parameters=["@__p_11='?' (DbType = Int32), @__p_12='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [m.VehicleGroup].[Id], [m.VehicleGroup].[Name], [m.VehicleFloorboardsType].[Id], [m.VehicleFloorboardsType].[Name], [m.VehicleBrand].[Id], [m.VehicleBrand].[Name], [m].[Id] AS [Id1], [m].[Aircon], [m].[Capacity], [m].[ContractEndDate], [m].[DeviceGPSId], [m].[DoorDown], [m].[DoorUp], [m].[DriverCode], [m].[Heading], [m].[Ignition], [m].[IsDelete], [m].[IsWorking], [m].[Lat], [m].[IsAirConditioner], [m].[Fuel], [m].[Note], [m].[Lng], [m].[NumOfSeat], [m].[Lpn], [m].[RegistryEndDate], [m].[SOS], [m].[Speed], [m].[Status], [m].[TrackingTime], [m].[TransportCompanyId] AS [Id0], [m.TransportCompany].[Name] AS [Name0], [m].[YearOfManufacture], [m].[TransportCompanyId], [m].[TransportCompanyStartDate], [m].[UnderwriteEndDate], [m].[Type], [m].[VehicleBrandId], [m].[VehicleFloorboardsTypeId], [m].[VehicleGroupId]
+FROM [Vehicle] AS [m]
+LEFT JOIN [VehicleGroup] AS [m.VehicleGroup] ON [m].[VehicleGroupId] = [m.VehicleGroup].[Id]
+LEFT JOIN [VehicleFloorboardsType] AS [m.VehicleFloorboardsType] ON [m].[VehicleFloorboardsTypeId] = [m.VehicleFloorboardsType].[Id]
+LEFT JOIN [VehicleBrand] AS [m.VehicleBrand] ON [m].[VehicleBrandId] = [m.VehicleBrand].[Id]
+LEFT JOIN [TransportCompany] AS [m.TransportCompany] ON [m].[TransportCompanyId] = [m.TransportCompany].[Id]
+WHERE [m].[IsDelete] = 0
+ORDER BY [m].[Lpn]
+OFFSET @__p_11 ROWS FETCH NEXT @__p_12 ROWS ONLY"
+2018-08-10 17:54:37.810 +07:00 [Information] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Vehicle] AS [m]
+WHERE [m].[IsDelete] = 0"
+2018-08-10 17:54:37.813 +07:00 [Information] Executed action method "TN.UI.Areas.Manager.Controllers.VehicleManagerController.IndexPost (TN.UI)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 49.0182ms.
+2018-08-10 17:54:37.813 +07:00 [Information] Executing ViewResult, running view "IndexAjax".
+2018-08-10 17:54:37.825 +07:00 [Information] Executed ViewResult - view "IndexAjax" executed in 12.0102ms.
+2018-08-10 17:54:37.825 +07:00 [Information] Executed action "TN.UI.Areas.Manager.Controllers.VehicleManagerController.IndexPost (TN.UI)" in 72.3679ms
+2018-08-10 17:54:37.825 +07:00 [Information] Request finished in 76.5123ms 200 text/html; charset=utf-8
+2018-08-10 17:54:38.377 +07:00 [Information] Request starting HTTP/1.1 POST http://localhost:44396/Admin/Company/VehicleManager application/x-www-form-urlencoded; charset=UTF-8 295
+2018-08-10 17:54:38.379 +07:00 [Information] Route matched with "{area = \"Company\", action = \"Index\", controller = \"VehicleManager\"}". Executing action "TN.UI.Areas.Manager.Controllers.VehicleManagerController.IndexPost (TN.UI)"
+2018-08-10 17:54:38.380 +07:00 [Information] Entity Framework Core "2.1.1-rtm-30846" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-08-10 17:54:38.396 +07:00 [Information] Executed DbCommand ("3"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[Avatar], [e].[ConcurrencyStamp], [e].[CreatedDate], [e].[CreatedUserId], [e].[DisplayName], [e].[Email], [e].[EmailConfirmed], [e].[IsLock], [e].[IsReLogin], [e].[IsSuperAdmin], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[Note], [e].[NoteLock], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[RoleParents], [e].[RoleSchool], [e].[RoleTransportCompany], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UpdatedDate], [e].[UpdatedUserId], [e].[UserName]
+FROM [adm].[User] AS [e]
+WHERE [e].[Id] = @__get_Item_0"
+2018-08-10 17:54:38.399 +07:00 [Information] Executing action method "TN.UI.Areas.Manager.Controllers.VehicleManagerController.IndexPost (TN.UI)" with arguments (["5", "10", "", "", "asc", "name", "", "", "", "", "", "", "", "", "", "False", "False", "False", "False"]) - Validation state: Valid
+2018-08-10 17:54:38.458 +07:00 [Information] Executed DbCommand ("45"ms) [Parameters=["@__p_11='?' (DbType = Int32), @__p_12='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [m.VehicleGroup].[Id], [m.VehicleGroup].[Name], [m.VehicleFloorboardsType].[Id], [m.VehicleFloorboardsType].[Name], [m.VehicleBrand].[Id], [m.VehicleBrand].[Name], [m].[Id] AS [Id1], [m].[Aircon], [m].[Capacity], [m].[ContractEndDate], [m].[DeviceGPSId], [m].[DoorDown], [m].[DoorUp], [m].[DriverCode], [m].[Heading], [m].[Ignition], [m].[IsDelete], [m].[IsWorking], [m].[Lat], [m].[IsAirConditioner], [m].[Fuel], [m].[Note], [m].[Lng], [m].[NumOfSeat], [m].[Lpn], [m].[RegistryEndDate], [m].[SOS], [m].[Speed], [m].[Status], [m].[TrackingTime], [m].[TransportCompanyId] AS [Id0], [m.TransportCompany].[Name] AS [Name0], [m].[YearOfManufacture], [m].[TransportCompanyId], [m].[TransportCompanyStartDate], [m].[UnderwriteEndDate], [m].[Type], [m].[VehicleBrandId], [m].[VehicleFloorboardsTypeId], [m].[VehicleGroupId]
+FROM [Vehicle] AS [m]
+LEFT JOIN [VehicleGroup] AS [m.VehicleGroup] ON [m].[VehicleGroupId] = [m.VehicleGroup].[Id]
+LEFT JOIN [VehicleFloorboardsType] AS [m.VehicleFloorboardsType] ON [m].[VehicleFloorboardsTypeId] = [m.VehicleFloorboardsType].[Id]
+LEFT JOIN [VehicleBrand] AS [m.VehicleBrand] ON [m].[VehicleBrandId] = [m.VehicleBrand].[Id]
+LEFT JOIN [TransportCompany] AS [m.TransportCompany] ON [m].[TransportCompanyId] = [m.TransportCompany].[Id]
+WHERE [m].[IsDelete] = 0
+ORDER BY [m].[Lpn]
+OFFSET @__p_11 ROWS FETCH NEXT @__p_12 ROWS ONLY"
+2018-08-10 17:54:38.469 +07:00 [Information] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Vehicle] AS [m]
+WHERE [m].[IsDelete] = 0"
+2018-08-10 17:54:38.470 +07:00 [Information] Executed action method "TN.UI.Areas.Manager.Controllers.VehicleManagerController.IndexPost (TN.UI)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 71.1635ms.
+2018-08-10 17:54:38.470 +07:00 [Information] Executing ViewResult, running view "IndexAjax".
+2018-08-10 17:54:38.471 +07:00 [Information] Executed ViewResult - view "IndexAjax" executed in 0.8542ms.
+2018-08-10 17:54:38.471 +07:00 [Information] Executed action "TN.UI.Areas.Manager.Controllers.VehicleManagerController.IndexPost (TN.UI)" in 92.1324ms
+2018-08-10 17:54:38.471 +07:00 [Information] Request finished in 94.1688ms 200 text/html; charset=utf-8
+2018-08-10 20:52:51.081 +07:00 [Information] Request starting HTTP/1.1 POST http://127.0.0.1:15922/iisintegration  0
+2018-08-10 20:52:51.082 +07:00 [Information] Request finished in 1.5273ms 202 

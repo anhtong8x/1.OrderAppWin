@@ -1,0 +1,167 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <UserSecretsId>aspnet-PT.UI-0CEBEBD1-8FBA-4312-BD3F-A7553373BA9C</UserSecretsId>
+    <AssemblyName>TN.UI</AssemblyName>
+    <RootNamespace>TN.UI</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Areas\Category\**" />
+    <Compile Remove="Backe1nd\**" />
+    <Compile Remove="logs\**" />
+    <Compile Remove="wwwroot\Content\Admin\css\themes\**" />
+    <Compile Remove="wwwroot\Content\Admin\plugins\**" />
+    <Compile Remove="wwwroot\Content\Admin\scss\**" />
+    <Content Remove="Areas\Category\**" />
+    <Content Remove="Backe1nd\**" />
+    <Content Remove="logs\**" />
+    <Content Remove="wwwroot\Content\Admin\css\themes\**" />
+    <Content Remove="wwwroot\Content\Admin\plugins\**" />
+    <Content Remove="wwwroot\Content\Admin\scss\**" />
+    <EmbeddedResource Remove="Areas\Category\**" />
+    <EmbeddedResource Remove="Backe1nd\**" />
+    <EmbeddedResource Remove="logs\**" />
+    <EmbeddedResource Remove="wwwroot\Content\Admin\css\themes\**" />
+    <EmbeddedResource Remove="wwwroot\Content\Admin\plugins\**" />
+    <EmbeddedResource Remove="wwwroot\Content\Admin\scss\**" />
+    <None Remove="Areas\Category\**" />
+    <None Remove="Backe1nd\**" />
+    <None Remove="logs\**" />
+    <None Remove="wwwroot\Content\Admin\css\themes\**" />
+    <None Remove="wwwroot\Content\Admin\plugins\**" />
+    <None Remove="wwwroot\Content\Admin\scss\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\Content\Admin\css\materialize.css" />
+    <Content Remove="wwwroot\Content\Admin\css\style.css" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="wwwroot\Content\Admin\plugins\bootstrap\fonts\glyphicons-halflings-regular.eot">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="wwwroot\Content\Admin\plugins\bootstrap\fonts\glyphicons-halflings-regular.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="wwwroot\Content\Admin\plugins\bootstrap\fonts\glyphicons-halflings-regular.woff">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="wwwroot\Content\Admin\plugins\jstree\themes\default-dark\32px.png" />
+    <Content Include="wwwroot\Content\Admin\plugins\jstree\themes\default-dark\40px.png" />
+    <Content Include="wwwroot\Content\Admin\plugins\jstree\themes\default-dark\style.css" />
+    <Content Include="wwwroot\Content\Admin\plugins\jstree\themes\default-dark\style.min.css" />
+    <Content Include="wwwroot\Content\Admin\plugins\jstree\themes\default-dark\throbber.gif" />
+    <Content Include="wwwroot\Content\Admin\plugins\jstree\themes\default\32px.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="wwwroot\Content\Admin\plugins\jstree\themes\default\40px.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="wwwroot\Content\Admin\plugins\jstree\themes\default\style.css">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Content>
+    <Content Include="wwwroot\Content\Admin\plugins\jstree\themes\default\style.min.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="wwwroot\Content\Admin\plugins\jstree\themes\default\throbber.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="wwwroot\Content\Admin\plugins\jstree\themes\default\treeaction.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="wwwroot\Content\Admin\plugins\jstree\themes\default\treecontroller.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="wwwroot\Content\Admin\plugins\jstree\themes\default\treegroup.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <PackageReference Include="BuildBundlerMinifier" Version="2.8.391" />
+    <PackageReference Include="EPPlus.Core" Version="1.5.4" />
+    <PackageReference Include="Microsoft.AspNetCore.App" Version="2.1.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
+    <PackageReference Include="Serilog.Extensions.Logging" Version="2.0.2" />
+    <PackageReference Include="Serilog.Sinks.RollingFile" Version="3.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.1" />
+    <DotNetCliToolReference Include="Microsoft.Extensions.SecretManager.Tools" Version="2.0.0" />
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Export\Files\" />
+    <Folder Include="wwwroot\Data\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Areas\Base\Views\Dashboard\AccessDenied.cshtml" />
+    <None Include="Areas\Base\Views\Dashboard\Index.cshtml" />
+    <None Include="Areas\User\Views\Account\ChangePassword.cshtml" />
+    <None Include="Areas\User\Views\Account\Login.cshtml" />
+    <None Include="Areas\User\Views\Account\Profile.cshtml" />
+    <None Include="Areas\User\Views\Account\_False.cshtml" />
+    <None Include="Areas\User\Views\RoleAreaManager\Create.cshtml" />
+    <None Include="Areas\User\Views\RoleAreaManager\Edit.cshtml" />
+    <None Include="Areas\User\Views\RoleAreaManager\Index.cshtml" />
+    <None Include="Areas\User\Views\RoleAreaManager\IndexAjax.cshtml" />
+    <None Include="Areas\User\Views\RoleGroupManager\Create.cshtml" />
+    <None Include="Areas\User\Views\RoleGroupManager\Edit.cshtml" />
+    <None Include="Areas\User\Views\RoleGroupManager\Index.cshtml" />
+    <None Include="Areas\User\Views\RoleGroupManager\IndexAjax.cshtml" />
+    <None Include="Areas\User\Views\RoleManager\Create.cshtml" />
+    <None Include="Areas\User\Views\RoleManager\Edit.cshtml" />
+    <None Include="Areas\User\Views\RoleManager\Index.cshtml" />
+    <None Include="Areas\User\Views\RoleManager\IndexAjax.cshtml" />
+    <None Include="Areas\User\Views\UserManager\Create.cshtml" />
+    <None Include="Areas\User\Views\UserManager\Edit.cshtml" />
+    <None Include="Areas\User\Views\UserManager\Index.cshtml" />
+    <None Include="Areas\User\Views\UserManager\IndexAjax.cshtml" />
+    <None Include="Views\Home\Index.cshtml" />
+    <None Include="Views\Shared\404.cshtml" />
+    <None Include="Views\Shared\Error.cshtml" />
+    <None Include="Views\Shared\_Admin.cshtml" />
+    <None Include="Views\Shared\_Login.cshtml" />
+    <None Include="Views\Shared\_LoginPartial.cshtml" />
+    <None Include="Views\Shared\_MenuAdmin.cshtml" />
+    <None Include="Views\Shared\_ValidationScriptsPartial.cshtml" />
+    <None Include="wwwroot\Content\Admin\plugins\bootstrap\fonts\glyphicons-halflings-regular.svg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="wwwroot\Content\Admin\plugins\bootstrap\fonts\glyphicons-halflings-regular.woff2">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="wwwroot\Content\Admin\plugins\jstree\jstree.js" />
+    <None Include="wwwroot\Content\Admin\plugins\jstree\jstree.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Shared\TN.Domain\TN.Domain.csproj" />
+    <ProjectReference Include="..\TN.Infrastructure\TN.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="Areas\User\Views\RoleGroupManager\Create.cshtml">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="Areas\User\Views\RoleGroupManager\Edit.cshtml">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="Areas\User\Views\RoleGroupManager\Index.cshtml">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="Areas\User\Views\RoleGroupManager\IndexAjax.cshtml">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>

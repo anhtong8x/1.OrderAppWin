@@ -1,0 +1,127 @@
+﻿<div class="menu">
+    <ul class="list" id="menuleftadmin">
+        <li class="header">ĐIỀU KHIỂN</li>
+        <li data-checked data-role-10 class="cap1 isDasb">
+            <a href="/Admin">
+                <i class="material-icons">home</i>
+                <span>Trang điều khiển</span>
+            </a>
+        </li>
+        <li data-checked data-role-120 data-role-130 data-role-140 data-role-150 class="cap1">
+            <a href="javascript:void(0);" class="menu-toggle">
+                <i class="material-icons">local_convenience_store</i>
+                <span>Quản lý đơn vị vận tải</span>
+            </a>
+            <ul class="ml-menu">
+                <li data-checked data-role-120 class="cap2">
+                    <a asp-action="Index" asp-area="Company" asp-controller="TransportCompanyManager">Đơn vị vận tải</a>
+                </li>
+                <li data-checked data-role-130 class="cap2">
+                    <a asp-action="Index" asp-area="Company" asp-controller="VehicleManager">Phương tiện</a>
+                </li>
+                <li data-checked data-role-150 class="cap2">
+                    <a asp-action="Index" asp-area="Company" asp-controller="TransportCompanyEmployeeManager">Lái xe, tiếp viên</a>
+                </li>
+                <li data-checked data-role-140 class="cap2">
+                    <a asp-action="Index" asp-area="Company" asp-controller="TransportCompanyMistakeManager">Danh mục vi phạm</a>
+                </li>
+            </ul>
+        </li>
+        <li data-checked data-role-100 data-role-110 class="cap1">
+            <a href="javascript:void(0);" class="menu-toggle">
+                <i class="material-icons">business</i>
+                <span>Quản lý trường, học sinh</span>
+            </a>
+            <ul class="ml-menu">
+                <li data-checked data-role-100 class="cap2">
+                    <a asp-action="Index" asp-area="School" asp-controller="SchoolManager">Quản lý trường, lớp</a>
+                </li>
+                <li data-checked data-role-110 class="cap2">
+                    <a asp-action="Index" asp-area="School" asp-controller="StudentManager">Quản lý học sinh</a>
+                </li>
+            </ul>
+        </li>
+        <li data-checked data-role-155 data-role-151 data-role-159 data-role-167 class="cap1">
+            <a href="javascript:void(0);" class="menu-toggle">
+                <i class="material-icons">directions_car</i>
+                <span>Quản lý CTDD học sinh</span>
+            </a>
+            <ul class="ml-menu">
+                <li data-checked data-role-155 class="cap2">
+                    <a asp-action="Index" asp-area="Route" asp-controller="StationManager">Quản lý danh mục trạm</a>
+                </li>
+                <li data-checked data-role-151 class="cap2">
+                    <a asp-action="Index" asp-area="Route" asp-controller="StudentGroupManager">Lên danh sách học sinh đi xe</a>
+                </li>
+                <li data-checked data-role-159 class="cap2">
+                    <a asp-action="Index" asp-area="Route" asp-controller="RouteManager">Lên lộ trình tuyền</a>
+                </li>
+            </ul>
+        </li>
+        <li class="cap2" data-checked data-role-167>
+            <a asp-action="Index" asp-area="Route" asp-controller="ConfirmationTripsManager">
+                <i class="material-icons">check</i>
+                <span>Xác nhận chuyến đi</span>
+            </a>
+        </li>
+        <li class="cap2" data-checked data-role-185>
+            <a asp-action="Index" asp-area="Report" asp-controller="TripsReport">
+                <i class="material-icons">content_paste</i>
+                <span>Báo cáo thống kê</span>
+            </a>
+        </li>
+        <li class="header" data-checked data-role-5 data-role-1 data-role-181>HỆ THỐNG</li>
+        <li class="cap2" data-checked data-role-181>
+            <a asp-action="Index" asp-controller="DeviceManager" asp-area="Manager">
+                <i class="material-icons">nfc</i>
+                <span>Quản lý thiết bị vân tay</span>
+            </a>
+        </li>
+        <li class="cap1" data-checked data-role-5 data-role-1>
+            <a href="javascript:void(0);" class="menu-toggle">
+                <i class="material-icons">person_outline</i>
+                <span>Quản trị tài khoản</span>
+            </a>
+            <ul class="ml-menu">
+                <li class="cap2" data-checked data-role-5>
+                    <a asp-action="Index" asp-controller="UserManager" asp-area="User">Quản lý tài khoản</a>
+                </li>
+                <li class="cap2" data-checked data-role-1>
+                    <a asp-action="Index" asp-controller="RoleManager" asp-area="User">Quyền tài khoản</a>
+                </li>
+            </ul>
+        </li>
+        <li data-checked data-role-27 class="cap2">
+            <a asp-action="Index" asp-controller="LogManager" asp-area="Log">
+                <i class="material-icons">update</i>
+                <span>Log người dùng</span>
+            </a>
+        </li>
+        <li class="cap2">
+            <a asp-action="Index" asp-controller="Settings" asp-area="Base">
+                <i class="material-icons">settings</i>
+                <span>Cấu hình hệ thống</span>
+            </a>
+        </li>
+        <li isSupperadmin class="cap1">
+            <a href="javascript:void(0);" class="menu-toggle">
+                <i class="material-icons">brightness_low</i>
+                <span>Cấu hình quyền</span>
+            </a>
+            <ul class="ml-menu">
+                <li class="cap2">
+                    <a asp-action="Index" asp-controller="RoleGroupManager" asp-area="User">Quản lý nhóm</a>
+                </li>
+                <li class="cap2">
+                    <a asp-action="Index" asp-controller="RoleAreaManager" asp-area="User">Quản lý Area</a>
+                </li>
+                <li class="cap2">
+                    <a asp-action="Index" asp-controller="RoleControllerManager" asp-area="User">Quản lý controller</a>
+                </li>
+                <li class="cap2">
+                    <a asp-action="Index" asp-controller="RoleActionManager" asp-area="User">Quản lý Action</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>

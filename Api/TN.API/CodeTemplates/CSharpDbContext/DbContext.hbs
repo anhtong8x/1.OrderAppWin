@@ -1,0 +1,35 @@
+﻿{{> dbimports}}
+
+namespace {{namespace}}
+{
+    public partial class {{class}} : DbContext
+    {
+        private readonly string _connectionString;
+        public DBContext(DbContextOptions<DBContext>
+    options) : base(options)
+    { }
+
+    public DBContext(string connectionString)
+    {
+    _connectionString = connectionString;
+    }
+
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    {
+    if (!optionsBuilder.IsConfigured)
+    {
+    optionsBuilder.UseSqlServer(_connectionString);
+    }
+    }
+
+    {{> dbsets}}
+    {{#if entity-type-errors}}
+    {{#each entity-type-errors}}
+    {{spaces 8}}{{{entity-type-error}}}
+    {{/each}}
+
+    {{/if}}
+     
+    {{{on-model-creating}}}
+    }
+    }

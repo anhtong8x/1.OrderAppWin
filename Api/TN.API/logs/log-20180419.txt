@@ -1,0 +1,947 @@
+2018-04-19 08:12:35.556 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:53648/api/StudentTrecking/51B03829/2018-04-16%2006:00:00/2018-04-16%2007:00:00  
+2018-04-19 08:12:35.560 +07:00 [Information] Policy execution successful.
+2018-04-19 08:12:35.561 +07:00 [Information] Executing action method "TN.API.Controllers.StudentTreckingController.Get (TN.API)" with arguments (["51B03829", "2018-04-16 06:00:00", "2018-04-16 07:00:00"]) - ModelState is Valid
+2018-04-19 08:12:35.563 +07:00 [Information] Entity Framework Core "2.0.2-rtm-10011" initialized '"TNFingerContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-04-19 08:12:35.647 +07:00 [Information] Executed DbCommand ("23"ms) [Parameters=["@___startTime_0='?', @___endTime_1='?', @__8__locals1_lpn_2='?' (Size = 10)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [m].[Id], [m].[IdStudent], [m.IdStudentNavigation].[StudentName], [m.IdStudentNavigation.IdClassOfSchoolNavigation].[Name] AS [ClassOfSchool], [m.IdStudentNavigation.IdSchoolNavigation].[Name] AS [School], [m].[CheckOutDate] AS [date]
+FROM [StudentCheckOut] AS [m]
+INNER JOIN [Student] AS [m.IdStudentNavigation] ON [m].[IdStudent] = [m.IdStudentNavigation].[Id]
+LEFT JOIN [ClassOfSchool] AS [m.IdStudentNavigation.IdClassOfSchoolNavigation] ON [m.IdStudentNavigation].[IdClassOfSchool] = [m.IdStudentNavigation.IdClassOfSchoolNavigation].[Id]
+LEFT JOIN [School] AS [m.IdStudentNavigation.IdSchoolNavigation] ON [m.IdStudentNavigation].[IdSchool] = [m.IdStudentNavigation.IdSchoolNavigation].[Id]
+WHERE (([m].[CheckOutDate] >= @___startTime_0) AND ([m].[CheckOutDate] <= @___endTime_1)) AND EXISTS (
+    SELECT 1
+    FROM [Device] AS [x]
+    INNER JOIN [Vehicle] AS [x.IdVehicleNavigation] ON [x].[IdVehicle] = [x.IdVehicleNavigation].[Id]
+    WHERE [x.IdVehicleNavigation].[Lpn] = @__8__locals1_lpn_2)"
+2018-04-19 08:12:35.648 +07:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-04-19 08:12:35.649 +07:00 [Information] Executed action "TN.API.Controllers.StudentTreckingController.Get (TN.API)" in 88.0884ms
+2018-04-19 08:12:35.649 +07:00 [Information] Request finished in 93.0237ms 200 application/json; charset=utf-8
+2018-04-19 08:15:24.160 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:53648/api/StudentTrecking/51B03829/2018-04-16%2006:00:00/2018-04-16%2007:00:00  
+2018-04-19 08:15:24.161 +07:00 [Information] Policy execution successful.
+2018-04-19 08:15:24.162 +07:00 [Information] Executing action method "TN.API.Controllers.StudentTreckingController.Get (TN.API)" with arguments (["51B03829", "2018-04-16 06:00:00", "2018-04-16 07:00:00"]) - ModelState is Valid
+2018-04-19 08:15:24.163 +07:00 [Information] Entity Framework Core "2.0.2-rtm-10011" initialized '"TNFingerContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-04-19 08:15:24.173 +07:00 [Information] Executed DbCommand ("9"ms) [Parameters=["@___startTime_0='?', @___endTime_1='?', @__8__locals1_lpn_2='?' (Size = 10)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [m].[Id], [m].[IdStudent], [m.IdStudentNavigation].[StudentName], [m.IdStudentNavigation.IdClassOfSchoolNavigation].[Name] AS [ClassOfSchool], [m.IdStudentNavigation.IdSchoolNavigation].[Name] AS [School], [m].[CheckOutDate] AS [date]
+FROM [StudentCheckOut] AS [m]
+INNER JOIN [Student] AS [m.IdStudentNavigation] ON [m].[IdStudent] = [m.IdStudentNavigation].[Id]
+LEFT JOIN [ClassOfSchool] AS [m.IdStudentNavigation.IdClassOfSchoolNavigation] ON [m.IdStudentNavigation].[IdClassOfSchool] = [m.IdStudentNavigation.IdClassOfSchoolNavigation].[Id]
+LEFT JOIN [School] AS [m.IdStudentNavigation.IdSchoolNavigation] ON [m.IdStudentNavigation].[IdSchool] = [m.IdStudentNavigation.IdSchoolNavigation].[Id]
+WHERE (([m].[CheckOutDate] >= @___startTime_0) AND ([m].[CheckOutDate] <= @___endTime_1)) AND EXISTS (
+    SELECT 1
+    FROM [Device] AS [x]
+    INNER JOIN [Vehicle] AS [x.IdVehicleNavigation] ON [x].[IdVehicle] = [x.IdVehicleNavigation].[Id]
+    WHERE [x.IdVehicleNavigation].[Lpn] = @__8__locals1_lpn_2)"
+2018-04-19 08:15:24.174 +07:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-04-19 08:15:24.175 +07:00 [Information] Executed action "TN.API.Controllers.StudentTreckingController.Get (TN.API)" in 13.1049ms
+2018-04-19 08:15:24.175 +07:00 [Information] Request finished in 14.9468ms 200 application/json; charset=utf-8
+2018-04-19 08:15:24.774 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:53648/api/StudentTrecking/51B03829/2018-04-16%2006:00:00/2018-04-16%2007:00:00  
+2018-04-19 08:15:24.774 +07:00 [Information] Policy execution successful.
+2018-04-19 08:15:24.774 +07:00 [Information] Executing action method "TN.API.Controllers.StudentTreckingController.Get (TN.API)" with arguments (["51B03829", "2018-04-16 06:00:00", "2018-04-16 07:00:00"]) - ModelState is Valid
+2018-04-19 08:15:24.775 +07:00 [Information] Entity Framework Core "2.0.2-rtm-10011" initialized '"TNFingerContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-04-19 08:15:24.782 +07:00 [Information] Executed DbCommand ("5"ms) [Parameters=["@___startTime_0='?', @___endTime_1='?', @__8__locals1_lpn_2='?' (Size = 10)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [m].[Id], [m].[IdStudent], [m.IdStudentNavigation].[StudentName], [m.IdStudentNavigation.IdClassOfSchoolNavigation].[Name] AS [ClassOfSchool], [m.IdStudentNavigation.IdSchoolNavigation].[Name] AS [School], [m].[CheckOutDate] AS [date]
+FROM [StudentCheckOut] AS [m]
+INNER JOIN [Student] AS [m.IdStudentNavigation] ON [m].[IdStudent] = [m.IdStudentNavigation].[Id]
+LEFT JOIN [ClassOfSchool] AS [m.IdStudentNavigation.IdClassOfSchoolNavigation] ON [m.IdStudentNavigation].[IdClassOfSchool] = [m.IdStudentNavigation.IdClassOfSchoolNavigation].[Id]
+LEFT JOIN [School] AS [m.IdStudentNavigation.IdSchoolNavigation] ON [m.IdStudentNavigation].[IdSchool] = [m.IdStudentNavigation.IdSchoolNavigation].[Id]
+WHERE (([m].[CheckOutDate] >= @___startTime_0) AND ([m].[CheckOutDate] <= @___endTime_1)) AND EXISTS (
+    SELECT 1
+    FROM [Device] AS [x]
+    INNER JOIN [Vehicle] AS [x.IdVehicleNavigation] ON [x].[IdVehicle] = [x.IdVehicleNavigation].[Id]
+    WHERE [x.IdVehicleNavigation].[Lpn] = @__8__locals1_lpn_2)"
+2018-04-19 08:15:24.782 +07:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-04-19 08:15:24.782 +07:00 [Information] Executed action "TN.API.Controllers.StudentTreckingController.Get (TN.API)" in 8.3372ms
+2018-04-19 08:15:24.783 +07:00 [Information] Request finished in 9.1171ms 200 application/json; charset=utf-8
+2018-04-19 08:16:55.596 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:53648/api/StudentTrecking/51B03829/2018-04-16%2006:00:00/2018-04-16%2007:00:00  
+2018-04-19 08:16:55.596 +07:00 [Information] Policy execution successful.
+2018-04-19 08:16:55.597 +07:00 [Information] Executing action method "TN.API.Controllers.StudentTreckingController.Get (TN.API)" with arguments (["51B03829", "2018-04-16 06:00:00", "2018-04-16 07:00:00"]) - ModelState is Valid
+2018-04-19 08:16:55.598 +07:00 [Information] Entity Framework Core "2.0.2-rtm-10011" initialized '"TNFingerContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-04-19 08:16:55.609 +07:00 [Information] Executed DbCommand ("10"ms) [Parameters=["@___startTime_0='?', @___endTime_1='?', @__8__locals1_lpn_2='?' (Size = 10)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [m].[Id], [m].[IdStudent], [m.IdStudentNavigation].[StudentName], [m.IdStudentNavigation.IdClassOfSchoolNavigation].[Name] AS [ClassOfSchool], [m.IdStudentNavigation.IdSchoolNavigation].[Name] AS [School], [m].[CheckOutDate] AS [date]
+FROM [StudentCheckOut] AS [m]
+INNER JOIN [Student] AS [m.IdStudentNavigation] ON [m].[IdStudent] = [m.IdStudentNavigation].[Id]
+LEFT JOIN [ClassOfSchool] AS [m.IdStudentNavigation.IdClassOfSchoolNavigation] ON [m.IdStudentNavigation].[IdClassOfSchool] = [m.IdStudentNavigation.IdClassOfSchoolNavigation].[Id]
+LEFT JOIN [School] AS [m.IdStudentNavigation.IdSchoolNavigation] ON [m.IdStudentNavigation].[IdSchool] = [m.IdStudentNavigation.IdSchoolNavigation].[Id]
+WHERE (([m].[CheckOutDate] >= @___startTime_0) AND ([m].[CheckOutDate] <= @___endTime_1)) AND EXISTS (
+    SELECT 1
+    FROM [Device] AS [x]
+    INNER JOIN [Vehicle] AS [x.IdVehicleNavigation] ON [x].[IdVehicle] = [x.IdVehicleNavigation].[Id]
+    WHERE [x.IdVehicleNavigation].[Lpn] = @__8__locals1_lpn_2)"
+2018-04-19 08:16:55.610 +07:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-04-19 08:16:55.611 +07:00 [Information] Executed action "TN.API.Controllers.StudentTreckingController.Get (TN.API)" in 14.0316ms
+2018-04-19 08:16:55.611 +07:00 [Information] Request finished in 14.8806ms 200 application/json; charset=utf-8
+2018-04-19 08:17:29.746 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:53648/api/StudentTrecking/51B03829/2018-04-16%2006:00:00/2018-04-16%2007:00:00  
+2018-04-19 08:17:29.746 +07:00 [Information] Policy execution successful.
+2018-04-19 08:17:29.747 +07:00 [Information] Executing action method "TN.API.Controllers.StudentTreckingController.Get (TN.API)" with arguments (["51B03829", "2018-04-16 06:00:00", "2018-04-16 07:00:00"]) - ModelState is Valid
+2018-04-19 08:17:29.748 +07:00 [Information] Entity Framework Core "2.0.2-rtm-10011" initialized '"TNFingerContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-04-19 08:17:29.756 +07:00 [Information] Executed DbCommand ("6"ms) [Parameters=["@___startTime_0='?', @___endTime_1='?', @__8__locals1_lpn_2='?' (Size = 10)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [m].[Id], [m].[IdStudent], [m.IdStudentNavigation].[StudentName], [m.IdStudentNavigation.IdClassOfSchoolNavigation].[Name] AS [ClassOfSchool], [m.IdStudentNavigation.IdSchoolNavigation].[Name] AS [School], [m].[CheckOutDate] AS [date]
+FROM [StudentCheckOut] AS [m]
+INNER JOIN [Student] AS [m.IdStudentNavigation] ON [m].[IdStudent] = [m.IdStudentNavigation].[Id]
+LEFT JOIN [ClassOfSchool] AS [m.IdStudentNavigation.IdClassOfSchoolNavigation] ON [m.IdStudentNavigation].[IdClassOfSchool] = [m.IdStudentNavigation.IdClassOfSchoolNavigation].[Id]
+LEFT JOIN [School] AS [m.IdStudentNavigation.IdSchoolNavigation] ON [m.IdStudentNavigation].[IdSchool] = [m.IdStudentNavigation.IdSchoolNavigation].[Id]
+WHERE (([m].[CheckOutDate] >= @___startTime_0) AND ([m].[CheckOutDate] <= @___endTime_1)) AND EXISTS (
+    SELECT 1
+    FROM [Device] AS [x]
+    INNER JOIN [Vehicle] AS [x.IdVehicleNavigation] ON [x].[IdVehicle] = [x.IdVehicleNavigation].[Id]
+    WHERE [x.IdVehicleNavigation].[Lpn] = @__8__locals1_lpn_2)"
+2018-04-19 08:17:29.757 +07:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-04-19 08:17:29.757 +07:00 [Information] Executed action "TN.API.Controllers.StudentTreckingController.Get (TN.API)" in 10.5456ms
+2018-04-19 08:17:29.757 +07:00 [Information] Request finished in 11.3628ms 200 application/json; charset=utf-8
+2018-04-19 08:17:58.066 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:53648/api/StudentTrecking/51B03829/2018-04-16%2006:00:00/2018-04-16%2007:00:00  
+2018-04-19 08:17:58.066 +07:00 [Information] Policy execution successful.
+2018-04-19 08:17:58.067 +07:00 [Information] Executing action method "TN.API.Controllers.StudentTreckingController.Get (TN.API)" with arguments (["51B03829", "2018-04-16 06:00:00", "2018-04-16 07:00:00"]) - ModelState is Valid
+2018-04-19 08:17:58.067 +07:00 [Information] Entity Framework Core "2.0.2-rtm-10011" initialized '"TNFingerContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-04-19 08:17:58.077 +07:00 [Information] Executed DbCommand ("7"ms) [Parameters=["@___startTime_0='?', @___endTime_1='?', @__8__locals1_lpn_2='?' (Size = 10)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [m].[Id], [m].[IdStudent], [m.IdStudentNavigation].[StudentName], [m.IdStudentNavigation.IdClassOfSchoolNavigation].[Name] AS [ClassOfSchool], [m.IdStudentNavigation.IdSchoolNavigation].[Name] AS [School], [m].[CheckOutDate] AS [date]
+FROM [StudentCheckOut] AS [m]
+INNER JOIN [Student] AS [m.IdStudentNavigation] ON [m].[IdStudent] = [m.IdStudentNavigation].[Id]
+LEFT JOIN [ClassOfSchool] AS [m.IdStudentNavigation.IdClassOfSchoolNavigation] ON [m.IdStudentNavigation].[IdClassOfSchool] = [m.IdStudentNavigation.IdClassOfSchoolNavigation].[Id]
+LEFT JOIN [School] AS [m.IdStudentNavigation.IdSchoolNavigation] ON [m.IdStudentNavigation].[IdSchool] = [m.IdStudentNavigation.IdSchoolNavigation].[Id]
+WHERE (([m].[CheckOutDate] >= @___startTime_0) AND ([m].[CheckOutDate] <= @___endTime_1)) AND EXISTS (
+    SELECT 1
+    FROM [Device] AS [x]
+    INNER JOIN [Vehicle] AS [x.IdVehicleNavigation] ON [x].[IdVehicle] = [x.IdVehicleNavigation].[Id]
+    WHERE [x.IdVehicleNavigation].[Lpn] = @__8__locals1_lpn_2)"
+2018-04-19 08:17:58.078 +07:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-04-19 08:17:58.079 +07:00 [Information] Executed action "TN.API.Controllers.StudentTreckingController.Get (TN.API)" in 12.3952ms
+2018-04-19 08:17:58.079 +07:00 [Information] Request finished in 13.0812ms 200 application/json; charset=utf-8
+2018-04-19 08:23:04.363 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:53648/api/StudentTrecking/51B03829/2018-04-16%2006:00:00/2018-04-16%2007:00:00  
+2018-04-19 08:23:04.363 +07:00 [Information] Policy execution successful.
+2018-04-19 08:23:04.364 +07:00 [Information] Executing action method "TN.API.Controllers.StudentTreckingController.Get (TN.API)" with arguments (["51B03829", "2018-04-16 06:00:00", "2018-04-16 07:00:00"]) - ModelState is Valid
+2018-04-19 08:23:04.369 +07:00 [Information] Entity Framework Core "2.0.2-rtm-10011" initialized '"TNFingerContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-04-19 08:23:04.407 +07:00 [Information] Executed DbCommand ("8"ms) [Parameters=["@___startTime_0='?', @___endTime_1='?', @__8__locals1_lpn_2='?' (Size = 10)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [m].[Id], [m].[IdStudent], [m.IdStudentNavigation].[StudentName], [m.IdStudentNavigation.IdClassOfSchoolNavigation].[Name] AS [ClassOfSchool], [m.IdStudentNavigation.IdSchoolNavigation].[Name] AS [School], [m].[CheckOutDate] AS [date]
+FROM [StudentCheckOut] AS [m]
+INNER JOIN [Student] AS [m.IdStudentNavigation] ON [m].[IdStudent] = [m.IdStudentNavigation].[Id]
+LEFT JOIN [ClassOfSchool] AS [m.IdStudentNavigation.IdClassOfSchoolNavigation] ON [m.IdStudentNavigation].[IdClassOfSchool] = [m.IdStudentNavigation.IdClassOfSchoolNavigation].[Id]
+LEFT JOIN [School] AS [m.IdStudentNavigation.IdSchoolNavigation] ON [m.IdStudentNavigation].[IdSchool] = [m.IdStudentNavigation.IdSchoolNavigation].[Id]
+WHERE (([m].[CheckOutDate] >= @___startTime_0) AND ([m].[CheckOutDate] <= @___endTime_1)) AND EXISTS (
+    SELECT 1
+    FROM [Device] AS [x]
+    INNER JOIN [Vehicle] AS [x.IdVehicleNavigation] ON [x].[IdVehicle] = [x.IdVehicleNavigation].[Id]
+    WHERE [x.IdVehicleNavigation].[Lpn] = @__8__locals1_lpn_2)"
+2018-04-19 08:23:04.407 +07:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-04-19 08:23:04.408 +07:00 [Information] Executed action "TN.API.Controllers.StudentTreckingController.Get (TN.API)" in 44.008ms
+2018-04-19 08:23:04.408 +07:00 [Information] Request finished in 44.832ms 200 application/json; charset=utf-8
+2018-04-19 08:23:40.434 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:53648/api/StudentTrecking/51B03829/2018-04-16%2006:00:00/2018-04-16%2007:00:00  
+2018-04-19 08:23:40.435 +07:00 [Information] Policy execution successful.
+2018-04-19 08:23:40.435 +07:00 [Information] Executing action method "TN.API.Controllers.StudentTreckingController.Get (TN.API)" with arguments (["51B03829", "2018-04-16 06:00:00", "2018-04-16 07:00:00"]) - ModelState is Valid
+2018-04-19 08:23:40.436 +07:00 [Information] Entity Framework Core "2.0.2-rtm-10011" initialized '"TNFingerContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-04-19 08:23:40.444 +07:00 [Information] Executed DbCommand ("6"ms) [Parameters=["@___startTime_0='?', @___endTime_1='?', @__8__locals1_lpn_2='?' (Size = 10)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [m].[Id], [m].[IdStudent], [m.IdStudentNavigation].[StudentName], [m.IdStudentNavigation.IdClassOfSchoolNavigation].[Name] AS [ClassOfSchool], [m.IdStudentNavigation.IdSchoolNavigation].[Name] AS [School], [m].[CheckOutDate] AS [date]
+FROM [StudentCheckOut] AS [m]
+INNER JOIN [Student] AS [m.IdStudentNavigation] ON [m].[IdStudent] = [m.IdStudentNavigation].[Id]
+LEFT JOIN [ClassOfSchool] AS [m.IdStudentNavigation.IdClassOfSchoolNavigation] ON [m.IdStudentNavigation].[IdClassOfSchool] = [m.IdStudentNavigation.IdClassOfSchoolNavigation].[Id]
+LEFT JOIN [School] AS [m.IdStudentNavigation.IdSchoolNavigation] ON [m.IdStudentNavigation].[IdSchool] = [m.IdStudentNavigation.IdSchoolNavigation].[Id]
+WHERE (([m].[CheckOutDate] >= @___startTime_0) AND ([m].[CheckOutDate] <= @___endTime_1)) AND EXISTS (
+    SELECT 1
+    FROM [Device] AS [x]
+    INNER JOIN [Vehicle] AS [x.IdVehicleNavigation] ON [x].[IdVehicle] = [x.IdVehicleNavigation].[Id]
+    WHERE [x.IdVehicleNavigation].[Lpn] = @__8__locals1_lpn_2)"
+2018-04-19 08:23:40.447 +07:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-04-19 08:23:40.448 +07:00 [Information] Executed action "TN.API.Controllers.StudentTreckingController.Get (TN.API)" in 13.0361ms
+2018-04-19 08:23:40.448 +07:00 [Information] Request finished in 13.7955ms 200 application/json; charset=utf-8
+2018-04-19 08:24:29.110 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:53648/api/StudentTrecking/51B03829/2018-04-16%2006:00:00/2018-04-16%2007:00:00  
+2018-04-19 08:24:29.110 +07:00 [Information] Policy execution successful.
+2018-04-19 08:24:29.111 +07:00 [Information] Executing action method "TN.API.Controllers.StudentTreckingController.Get (TN.API)" with arguments (["51B03829", "2018-04-16 06:00:00", "2018-04-16 07:00:00"]) - ModelState is Valid
+2018-04-19 08:24:29.111 +07:00 [Information] Entity Framework Core "2.0.2-rtm-10011" initialized '"TNFingerContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-04-19 08:24:29.118 +07:00 [Information] Executed DbCommand ("5"ms) [Parameters=["@___startTime_0='?', @___endTime_1='?', @__8__locals1_lpn_2='?' (Size = 10)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [m].[Id], [m].[IdStudent], [m.IdStudentNavigation].[StudentName], [m.IdStudentNavigation.IdClassOfSchoolNavigation].[Name] AS [ClassOfSchool], [m.IdStudentNavigation.IdSchoolNavigation].[Name] AS [School], [m].[CheckOutDate] AS [date]
+FROM [StudentCheckOut] AS [m]
+INNER JOIN [Student] AS [m.IdStudentNavigation] ON [m].[IdStudent] = [m.IdStudentNavigation].[Id]
+LEFT JOIN [ClassOfSchool] AS [m.IdStudentNavigation.IdClassOfSchoolNavigation] ON [m.IdStudentNavigation].[IdClassOfSchool] = [m.IdStudentNavigation.IdClassOfSchoolNavigation].[Id]
+LEFT JOIN [School] AS [m.IdStudentNavigation.IdSchoolNavigation] ON [m.IdStudentNavigation].[IdSchool] = [m.IdStudentNavigation.IdSchoolNavigation].[Id]
+WHERE (([m].[CheckOutDate] >= @___startTime_0) AND ([m].[CheckOutDate] <= @___endTime_1)) AND EXISTS (
+    SELECT 1
+    FROM [Device] AS [x]
+    INNER JOIN [Vehicle] AS [x.IdVehicleNavigation] ON [x].[IdVehicle] = [x.IdVehicleNavigation].[Id]
+    WHERE [x.IdVehicleNavigation].[Lpn] = @__8__locals1_lpn_2)"
+2018-04-19 08:24:29.119 +07:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-04-19 08:24:29.119 +07:00 [Information] Executed action "TN.API.Controllers.StudentTreckingController.Get (TN.API)" in 8.7465ms
+2018-04-19 08:24:29.119 +07:00 [Information] Request finished in 9.48ms 200 application/json; charset=utf-8
+2018-04-19 08:26:00.359 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:53648/api/StudentTrecking/51B03829/2018-04-16%2006:00:00/2018-04-16%2007:00:00  
+2018-04-19 08:26:00.360 +07:00 [Information] Policy execution successful.
+2018-04-19 08:26:00.360 +07:00 [Information] Executing action method "TN.API.Controllers.StudentTreckingController.Get (TN.API)" with arguments (["51B03829", "2018-04-16 06:00:00", "2018-04-16 07:00:00"]) - ModelState is Valid
+2018-04-19 08:26:00.361 +07:00 [Information] Entity Framework Core "2.0.2-rtm-10011" initialized '"TNFingerContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-04-19 08:26:00.373 +07:00 [Information] Executed DbCommand ("10"ms) [Parameters=["@___startTime_0='?', @___endTime_1='?', @__8__locals1_lpn_2='?' (Size = 10)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [m].[Id], [m].[IdStudent], [m.IdStudentNavigation].[StudentName], [m.IdStudentNavigation.IdClassOfSchoolNavigation].[Name] AS [ClassOfSchool], [m.IdStudentNavigation.IdSchoolNavigation].[Name] AS [School], [m].[CheckOutDate] AS [date]
+FROM [StudentCheckOut] AS [m]
+INNER JOIN [Student] AS [m.IdStudentNavigation] ON [m].[IdStudent] = [m.IdStudentNavigation].[Id]
+LEFT JOIN [ClassOfSchool] AS [m.IdStudentNavigation.IdClassOfSchoolNavigation] ON [m.IdStudentNavigation].[IdClassOfSchool] = [m.IdStudentNavigation.IdClassOfSchoolNavigation].[Id]
+LEFT JOIN [School] AS [m.IdStudentNavigation.IdSchoolNavigation] ON [m.IdStudentNavigation].[IdSchool] = [m.IdStudentNavigation.IdSchoolNavigation].[Id]
+WHERE (([m].[CheckOutDate] >= @___startTime_0) AND ([m].[CheckOutDate] <= @___endTime_1)) AND EXISTS (
+    SELECT 1
+    FROM [Device] AS [x]
+    INNER JOIN [Vehicle] AS [x.IdVehicleNavigation] ON [x].[IdVehicle] = [x.IdVehicleNavigation].[Id]
+    WHERE [x.IdVehicleNavigation].[Lpn] = @__8__locals1_lpn_2)"
+2018-04-19 08:26:00.373 +07:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-04-19 08:26:00.374 +07:00 [Information] Executed action "TN.API.Controllers.StudentTreckingController.Get (TN.API)" in 14.0963ms
+2018-04-19 08:26:00.374 +07:00 [Information] Request finished in 15.0876ms 200 application/json; charset=utf-8
+2018-04-19 08:33:05.032 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:53648/api/StudentTrecking/51B03829/2018-04-16%2006:00:00/2018-04-16%2007:00:00  
+2018-04-19 08:33:05.033 +07:00 [Information] Policy execution successful.
+2018-04-19 08:33:05.033 +07:00 [Information] Executing action method "TN.API.Controllers.StudentTreckingController.Get (TN.API)" with arguments (["51B03829", "2018-04-16 06:00:00", "2018-04-16 07:00:00"]) - ModelState is Valid
+2018-04-19 08:33:05.034 +07:00 [Information] Entity Framework Core "2.0.2-rtm-10011" initialized '"TNFingerContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-04-19 08:33:05.067 +07:00 [Information] Executed DbCommand ("8"ms) [Parameters=["@___startTime_0='?', @___endTime_1='?', @__8__locals1_lpn_2='?' (Size = 10)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [m].[Id], [m].[IdStudent], [m.IdStudentNavigation].[StudentName], [m.IdStudentNavigation.IdClassOfSchoolNavigation].[Name] AS [ClassOfSchool], [m.IdStudentNavigation.IdSchoolNavigation].[Name] AS [School], [m].[CheckOutDate] AS [date]
+FROM [StudentCheckOut] AS [m]
+INNER JOIN [Student] AS [m.IdStudentNavigation] ON [m].[IdStudent] = [m.IdStudentNavigation].[Id]
+LEFT JOIN [ClassOfSchool] AS [m.IdStudentNavigation.IdClassOfSchoolNavigation] ON [m.IdStudentNavigation].[IdClassOfSchool] = [m.IdStudentNavigation.IdClassOfSchoolNavigation].[Id]
+LEFT JOIN [School] AS [m.IdStudentNavigation.IdSchoolNavigation] ON [m.IdStudentNavigation].[IdSchool] = [m.IdStudentNavigation.IdSchoolNavigation].[Id]
+WHERE (([m].[CheckOutDate] >= @___startTime_0) AND ([m].[CheckOutDate] <= @___endTime_1)) AND EXISTS (
+    SELECT 1
+    FROM [Device] AS [x]
+    INNER JOIN [Vehicle] AS [x.IdVehicleNavigation] ON [x].[IdVehicle] = [x.IdVehicleNavigation].[Id]
+    WHERE [x.IdVehicleNavigation].[Lpn] = @__8__locals1_lpn_2)"
+2018-04-19 08:33:05.068 +07:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-04-19 08:33:05.069 +07:00 [Information] Executed action "TN.API.Controllers.StudentTreckingController.Get (TN.API)" in 35.6102ms
+2018-04-19 08:33:05.069 +07:00 [Information] Request finished in 36.4512ms 200 application/json; charset=utf-8
+2018-04-19 08:33:42.828 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:53648/api/StudentTrecking/51B03829/2018-04-16%2006:00:00/2018-04-16%2007:00:00  
+2018-04-19 08:33:42.828 +07:00 [Information] Policy execution successful.
+2018-04-19 08:33:42.828 +07:00 [Information] Executing action method "TN.API.Controllers.StudentTreckingController.Get (TN.API)" with arguments (["51B03829", "2018-04-16 06:00:00", "2018-04-16 07:00:00"]) - ModelState is Valid
+2018-04-19 08:33:42.829 +07:00 [Information] Entity Framework Core "2.0.2-rtm-10011" initialized '"TNFingerContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-04-19 08:33:42.849 +07:00 [Information] Executed DbCommand ("19"ms) [Parameters=["@___startTime_0='?', @___endTime_1='?', @__8__locals1_lpn_2='?' (Size = 10)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [m].[Id], [m].[IdStudent], [m.IdStudentNavigation].[StudentName], [m.IdStudentNavigation.IdClassOfSchoolNavigation].[Name] AS [ClassOfSchool], [m.IdStudentNavigation.IdSchoolNavigation].[Name] AS [School], [m].[CheckOutDate] AS [date]
+FROM [StudentCheckOut] AS [m]
+INNER JOIN [Student] AS [m.IdStudentNavigation] ON [m].[IdStudent] = [m.IdStudentNavigation].[Id]
+LEFT JOIN [ClassOfSchool] AS [m.IdStudentNavigation.IdClassOfSchoolNavigation] ON [m.IdStudentNavigation].[IdClassOfSchool] = [m.IdStudentNavigation.IdClassOfSchoolNavigation].[Id]
+LEFT JOIN [School] AS [m.IdStudentNavigation.IdSchoolNavigation] ON [m.IdStudentNavigation].[IdSchool] = [m.IdStudentNavigation.IdSchoolNavigation].[Id]
+WHERE (([m].[CheckOutDate] >= @___startTime_0) AND ([m].[CheckOutDate] <= @___endTime_1)) AND EXISTS (
+    SELECT 1
+    FROM [Device] AS [x]
+    INNER JOIN [Vehicle] AS [x.IdVehicleNavigation] ON [x].[IdVehicle] = [x.IdVehicleNavigation].[Id]
+    WHERE [x.IdVehicleNavigation].[Lpn] = @__8__locals1_lpn_2)"
+2018-04-19 08:33:42.850 +07:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-04-19 08:33:42.850 +07:00 [Information] Executed action "TN.API.Controllers.StudentTreckingController.Get (TN.API)" in 21.9318ms
+2018-04-19 08:33:42.850 +07:00 [Information] Request finished in 22.8355ms 200 application/json; charset=utf-8
+2018-04-19 08:48:02.846 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:53648/api/StudentTrecking/51B23102/06/04/2018%2006:03:00/06/04/2018%2007:02:00  
+2018-04-19 08:48:02.846 +07:00 [Information] Policy execution successful.
+2018-04-19 08:48:02.846 +07:00 [Information] Request finished in 0.4937ms 404 
+2018-04-19 08:48:32.297 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:53648/api/StudentTrecking/51B23102/06/04/2018%2006:03:00/06/04/2018%2007:02:00  
+2018-04-19 08:48:32.298 +07:00 [Information] Request finished in 0.3808ms 404 
+2018-04-19 08:49:06.956 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:53648/api/StudentTrecking/51B23102/06-04-2018%2006:03:00/06-04-2018%2007:02:00  
+2018-04-19 08:49:06.956 +07:00 [Information] Policy execution successful.
+2018-04-19 08:49:06.957 +07:00 [Information] Executing action method "TN.API.Controllers.StudentTreckingController.Get (TN.API)" with arguments (["51B23102", "06-04-2018 06:03:00", "06-04-2018 07:02:00"]) - ModelState is Valid
+2018-04-19 08:49:06.958 +07:00 [Information] Entity Framework Core "2.0.2-rtm-10011" initialized '"TNFingerContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-04-19 08:49:07.052 +07:00 [Information] Executed DbCommand ("20"ms) [Parameters=["@___startTime_0='?', @___endTime_1='?', @__8__locals1_lpn_2='?' (Size = 10)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [m].[Id], [m].[IdStudent], [m.IdStudentNavigation].[StudentName], [m.IdStudentNavigation.IdClassOfSchoolNavigation].[Name] AS [ClassOfSchool], [m.IdStudentNavigation.IdSchoolNavigation].[Name] AS [School], [m].[CheckOutDate] AS [date]
+FROM [StudentCheckOut] AS [m]
+INNER JOIN [Student] AS [m.IdStudentNavigation] ON [m].[IdStudent] = [m.IdStudentNavigation].[Id]
+LEFT JOIN [ClassOfSchool] AS [m.IdStudentNavigation.IdClassOfSchoolNavigation] ON [m.IdStudentNavigation].[IdClassOfSchool] = [m.IdStudentNavigation.IdClassOfSchoolNavigation].[Id]
+LEFT JOIN [School] AS [m.IdStudentNavigation.IdSchoolNavigation] ON [m.IdStudentNavigation].[IdSchool] = [m.IdStudentNavigation.IdSchoolNavigation].[Id]
+WHERE (([m].[CheckOutDate] >= @___startTime_0) AND ([m].[CheckOutDate] <= @___endTime_1)) AND EXISTS (
+    SELECT 1
+    FROM [Device] AS [x]
+    INNER JOIN [Vehicle] AS [x.IdVehicleNavigation] ON [x].[IdVehicle] = [x.IdVehicleNavigation].[Id]
+    WHERE [x.IdVehicleNavigation].[Lpn] = @__8__locals1_lpn_2)"
+2018-04-19 08:49:07.078 +07:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-04-19 08:49:07.078 +07:00 [Information] Executed action "TN.API.Controllers.StudentTreckingController.Get (TN.API)" in 121.7191ms
+2018-04-19 08:49:07.078 +07:00 [Information] Request finished in 122.6036ms 200 application/json; charset=utf-8
+2018-04-19 09:23:24.519 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:53648/api/Export/BangChamCongHocSinh/1/1/2017/C%C3%B4ng%20ty%20TNHH%20MTV%20D%E1%BB%8Bch%20v%E1%BB%A5%20c%C3%B4ng%20%C3%ADch%20Thanh%20ni%C3%AAn%20xung%20phong  
+2018-04-19 09:23:24.524 +07:00 [Information] Executing action method "TN.API.Controllers.ExportController.BangChamCongHocSinh (TN.API)" with arguments (["1", "2017", "1", "Công ty TNHH MTV Dịch vụ công ích Thanh niên xung phong"]) - ModelState is Valid
+2018-04-19 09:23:24.528 +07:00 [Information] Entity Framework Core "2.0.2-rtm-10011" initialized '"TNFingerContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-04-19 09:23:24.569 +07:00 [Information] Executed DbCommand ("6"ms) [Parameters=["@__schoolId_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [m].[Id], [m].[Address], [m].[Name], [m].[Note]
+FROM [School] AS [m]
+WHERE [m].[Id] = @__schoolId_0"
+2018-04-19 09:23:24.586 +07:00 [Information] Executed DbCommand ("13"ms) [Parameters=["@__schoolId_0='?', @__year_1='?', @__month_2='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT [m].[Id], [m].[CheckOutDate], [m].[CreatedDate], [m].[IdDevice], [m].[IdFinger], [m].[IdStudent]
+FROM [StudentCheckOut] AS [m]
+INNER JOIN [Student] AS [m.IdStudentNavigation] ON [m].[IdStudent] = [m.IdStudentNavigation].[Id]
+WHERE ((([m.IdStudentNavigation].[IdSchool] = @__schoolId_0) AND (DATEPART(year, [m].[CheckOutDate]) = @__year_1)) AND (DATEPART(month, [m].[CheckOutDate]) = @__month_2)) AND ([m.IdStudentNavigation].[Disable] = 0)"
+2018-04-19 09:23:24.598 +07:00 [Information] Executed DbCommand ("11"ms) [Parameters=["@__schoolId_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT [m].[Id], [m].[Address], [m].[Birthday], [m].[CreatedDate], [m].[CreatedUser], [m].[Disable], [m].[EndDate], [m].[Finger1UpdatedDate], [m].[Finger1UpdatedUser], [m].[Finger2UpdatedDate], [m].[Finger2UpdatedUser], [m].[FingerTemplate1], [m].[FingerTemplate2], [m].[IdClassOfSchool], [m].[IdFinger1], [m].[IdFinger2], [m].[IdRouter], [m].[IdSchool], [m].[Phone], [m].[Sex], [m].[StartDate], [m].[StudentName], [m].[Unlimited], [m].[UpdatedDate], [m].[UpdatedUser]
+FROM [Student] AS [m]
+WHERE ([m].[IdSchool] = @__schoolId_0) AND ([m].[Disable] = 0)"
+2018-04-19 09:23:25.086 +07:00 [Information] Executing FileResult, sending file as "07fc6a16-25d6-459a-8520-be6bde42b2aa.xlsx"
+2018-04-19 09:23:25.087 +07:00 [Information] Executed action "TN.API.Controllers.ExportController.BangChamCongHocSinh (TN.API)" in 565.3173ms
+2018-04-19 09:23:25.087 +07:00 [Information] Request finished in 569.7077ms 200 application/x-msdownload
+2018-04-19 09:23:57.180 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:53648/api/Export/BangChamCongHocSinh/1/4/2018/C%C3%B4ng%20ty%20TNHH%20MTV%20D%E1%BB%8Bch%20v%E1%BB%A5%20c%C3%B4ng%20%C3%ADch%20Thanh%20ni%C3%AAn%20xung%20phong  
+2018-04-19 09:23:57.180 +07:00 [Information] Executing action method "TN.API.Controllers.ExportController.BangChamCongHocSinh (TN.API)" with arguments (["1", "2018", "4", "Công ty TNHH MTV Dịch vụ công ích Thanh niên xung phong"]) - ModelState is Valid
+2018-04-19 09:23:57.181 +07:00 [Information] Entity Framework Core "2.0.2-rtm-10011" initialized '"TNFingerContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-04-19 09:23:57.186 +07:00 [Information] Executed DbCommand ("3"ms) [Parameters=["@__schoolId_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [m].[Id], [m].[Address], [m].[Name], [m].[Note]
+FROM [School] AS [m]
+WHERE [m].[Id] = @__schoolId_0"
+2018-04-19 09:23:57.194 +07:00 [Information] Executed DbCommand ("6"ms) [Parameters=["@__schoolId_0='?', @__year_1='?', @__month_2='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT [m].[Id], [m].[CheckOutDate], [m].[CreatedDate], [m].[IdDevice], [m].[IdFinger], [m].[IdStudent]
+FROM [StudentCheckOut] AS [m]
+INNER JOIN [Student] AS [m.IdStudentNavigation] ON [m].[IdStudent] = [m.IdStudentNavigation].[Id]
+WHERE ((([m.IdStudentNavigation].[IdSchool] = @__schoolId_0) AND (DATEPART(year, [m].[CheckOutDate]) = @__year_1)) AND (DATEPART(month, [m].[CheckOutDate]) = @__month_2)) AND ([m.IdStudentNavigation].[Disable] = 0)"
+2018-04-19 09:23:57.203 +07:00 [Information] Executed DbCommand ("5"ms) [Parameters=["@__schoolId_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT [m].[Id], [m].[Address], [m].[Birthday], [m].[CreatedDate], [m].[CreatedUser], [m].[Disable], [m].[EndDate], [m].[Finger1UpdatedDate], [m].[Finger1UpdatedUser], [m].[Finger2UpdatedDate], [m].[Finger2UpdatedUser], [m].[FingerTemplate1], [m].[FingerTemplate2], [m].[IdClassOfSchool], [m].[IdFinger1], [m].[IdFinger2], [m].[IdRouter], [m].[IdSchool], [m].[Phone], [m].[Sex], [m].[StartDate], [m].[StudentName], [m].[Unlimited], [m].[UpdatedDate], [m].[UpdatedUser]
+FROM [Student] AS [m]
+WHERE ([m].[IdSchool] = @__schoolId_0) AND ([m].[Disable] = 0)"
+2018-04-19 09:23:57.553 +07:00 [Information] Executing FileResult, sending file as "18e470df-89ab-4d60-ab66-092602e76873.xlsx"
+2018-04-19 09:23:57.553 +07:00 [Information] Executed action "TN.API.Controllers.ExportController.BangChamCongHocSinh (TN.API)" in 373.2528ms
+2018-04-19 09:23:57.554 +07:00 [Information] Request finished in 374.0131ms 200 application/x-msdownload
+2018-04-19 09:26:37.776 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:53648/api/Export/BangChamCongHocSinh/1/1/2018/C%C3%B4ng%20ty%20TNHH%20MTV%20D%E1%BB%8Bch%20v%E1%BB%A5%20c%C3%B4ng%20%C3%ADch%20Thanh%20ni%C3%AAn%20xung%20phong  
+2018-04-19 09:26:37.777 +07:00 [Information] Executing action method "TN.API.Controllers.ExportController.BangChamCongHocSinh (TN.API)" with arguments (["1", "2018", "1", "Công ty TNHH MTV Dịch vụ công ích Thanh niên xung phong"]) - ModelState is Valid
+2018-04-19 09:26:37.778 +07:00 [Information] Entity Framework Core "2.0.2-rtm-10011" initialized '"TNFingerContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-04-19 09:26:37.782 +07:00 [Information] Executed DbCommand ("3"ms) [Parameters=["@__schoolId_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [m].[Id], [m].[Address], [m].[Name], [m].[Note]
+FROM [School] AS [m]
+WHERE [m].[Id] = @__schoolId_0"
+2018-04-19 09:26:37.788 +07:00 [Information] Executed DbCommand ("5"ms) [Parameters=["@__schoolId_0='?', @__year_1='?', @__month_2='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT [m].[Id], [m].[CheckOutDate], [m].[CreatedDate], [m].[IdDevice], [m].[IdFinger], [m].[IdStudent]
+FROM [StudentCheckOut] AS [m]
+INNER JOIN [Student] AS [m.IdStudentNavigation] ON [m].[IdStudent] = [m.IdStudentNavigation].[Id]
+WHERE ((([m.IdStudentNavigation].[IdSchool] = @__schoolId_0) AND (DATEPART(year, [m].[CheckOutDate]) = @__year_1)) AND (DATEPART(month, [m].[CheckOutDate]) = @__month_2)) AND ([m.IdStudentNavigation].[Disable] = 0)"
+2018-04-19 09:26:37.794 +07:00 [Information] Executed DbCommand ("5"ms) [Parameters=["@__schoolId_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT [m].[Id], [m].[Address], [m].[Birthday], [m].[CreatedDate], [m].[CreatedUser], [m].[Disable], [m].[EndDate], [m].[Finger1UpdatedDate], [m].[Finger1UpdatedUser], [m].[Finger2UpdatedDate], [m].[Finger2UpdatedUser], [m].[FingerTemplate1], [m].[FingerTemplate2], [m].[IdClassOfSchool], [m].[IdFinger1], [m].[IdFinger2], [m].[IdRouter], [m].[IdSchool], [m].[Phone], [m].[Sex], [m].[StartDate], [m].[StudentName], [m].[Unlimited], [m].[UpdatedDate], [m].[UpdatedUser]
+FROM [Student] AS [m]
+WHERE ([m].[IdSchool] = @__schoolId_0) AND ([m].[Disable] = 0)"
+2018-04-19 09:26:38.136 +07:00 [Information] Executing FileResult, sending file as "2da32b89-0c5d-4e33-be0b-374d221fa046.xlsx"
+2018-04-19 09:26:38.136 +07:00 [Information] Executed action "TN.API.Controllers.ExportController.BangChamCongHocSinh (TN.API)" in 359.3357ms
+2018-04-19 09:26:38.136 +07:00 [Information] Request finished in 360.0672ms 200 application/x-msdownload
+2018-04-19 09:26:52.757 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:53648/api/Export/BangChamCongHocSinh/1/4/2018/C%C3%B4ng%20ty%20TNHH%20MTV%20D%E1%BB%8Bch%20v%E1%BB%A5%20c%C3%B4ng%20%C3%ADch%20Thanh%20ni%C3%AAn%20xung%20phong  
+2018-04-19 09:26:52.758 +07:00 [Information] Executing action method "TN.API.Controllers.ExportController.BangChamCongHocSinh (TN.API)" with arguments (["1", "2018", "4", "Công ty TNHH MTV Dịch vụ công ích Thanh niên xung phong"]) - ModelState is Valid
+2018-04-19 09:26:52.758 +07:00 [Information] Entity Framework Core "2.0.2-rtm-10011" initialized '"TNFingerContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-04-19 09:26:52.775 +07:00 [Information] Executed DbCommand ("16"ms) [Parameters=["@__schoolId_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [m].[Id], [m].[Address], [m].[Name], [m].[Note]
+FROM [School] AS [m]
+WHERE [m].[Id] = @__schoolId_0"
+2018-04-19 09:26:52.797 +07:00 [Information] Executed DbCommand ("21"ms) [Parameters=["@__schoolId_0='?', @__year_1='?', @__month_2='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT [m].[Id], [m].[CheckOutDate], [m].[CreatedDate], [m].[IdDevice], [m].[IdFinger], [m].[IdStudent]
+FROM [StudentCheckOut] AS [m]
+INNER JOIN [Student] AS [m.IdStudentNavigation] ON [m].[IdStudent] = [m.IdStudentNavigation].[Id]
+WHERE ((([m.IdStudentNavigation].[IdSchool] = @__schoolId_0) AND (DATEPART(year, [m].[CheckOutDate]) = @__year_1)) AND (DATEPART(month, [m].[CheckOutDate]) = @__month_2)) AND ([m.IdStudentNavigation].[Disable] = 0)"
+2018-04-19 09:26:52.823 +07:00 [Information] Executed DbCommand ("23"ms) [Parameters=["@__schoolId_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT [m].[Id], [m].[Address], [m].[Birthday], [m].[CreatedDate], [m].[CreatedUser], [m].[Disable], [m].[EndDate], [m].[Finger1UpdatedDate], [m].[Finger1UpdatedUser], [m].[Finger2UpdatedDate], [m].[Finger2UpdatedUser], [m].[FingerTemplate1], [m].[FingerTemplate2], [m].[IdClassOfSchool], [m].[IdFinger1], [m].[IdFinger2], [m].[IdRouter], [m].[IdSchool], [m].[Phone], [m].[Sex], [m].[StartDate], [m].[StudentName], [m].[Unlimited], [m].[UpdatedDate], [m].[UpdatedUser]
+FROM [Student] AS [m]
+WHERE ([m].[IdSchool] = @__schoolId_0) AND ([m].[Disable] = 0)"
+2018-04-19 09:26:53.200 +07:00 [Information] Executing FileResult, sending file as "73bc61e9-c003-42d6-bd24-055c7fbb66e3.xlsx"
+2018-04-19 09:26:53.200 +07:00 [Information] Executed action "TN.API.Controllers.ExportController.BangChamCongHocSinh (TN.API)" in 443.2621ms
+2018-04-19 09:26:53.201 +07:00 [Information] Request finished in 443.9085ms 200 application/x-msdownload
+2018-04-19 09:28:06.556 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:53648/api/Export/TongHopTroGiaDuaDonHocSinh/1/4/2018/C%C3%B4ng%20ty%20TNHH%20MTV%20D%E1%BB%8Bch%20v%E1%BB%A5%20c%C3%B4ng%20%C3%ADch%20Thanh%20ni%C3%AAn%20xung%20phong  
+2018-04-19 09:28:06.556 +07:00 [Information] Executing action method "TN.API.Controllers.ExportController.TongHopTroGiaDuaDonHocSinhAsync (TN.API)" with arguments (["1", "2018", "4", "Công ty TNHH MTV Dịch vụ công ích Thanh niên xung phong"]) - ModelState is Valid
+2018-04-19 09:28:06.557 +07:00 [Information] Entity Framework Core "2.0.2-rtm-10011" initialized '"TNFingerContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-04-19 09:28:06.561 +07:00 [Information] Executed DbCommand ("3"ms) [Parameters=["@__schoolId_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [m].[Id], [m].[Address], [m].[Name], [m].[Note]
+FROM [School] AS [m]
+WHERE [m].[Id] = @__schoolId_0"
+2018-04-19 09:28:06.566 +07:00 [Information] Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [m].[Id], [m].[Brand], [m].[Capacity], [m].[CreatedDate], [m].[Degree], [m].[IdRoute], [m].[Lat], [m].[Lng], [m].[Lpn], [m].[Note], [m].[NumOfSeat], [m].[Organization], [m].[Speed], [m].[Status], [m].[UpdatedDate], [m].[VehicleOwner]
+FROM [Vehicle] AS [m]
+WHERE [m].[Status] = 1"
+2018-04-19 09:28:06.583 +07:00 [Information] Executed DbCommand ("16"ms) [Parameters=["@__item_Id_0='?', @__8__locals1_year_1='?', @__8__locals1_month_2='?', @__8__locals1_schoolId_3='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT [m].[Id], [m].[CheckOutDate], [m].[IdStudent]
+FROM [StudentCheckOut] AS [m]
+INNER JOIN [Student] AS [m.IdStudentNavigation] ON [m].[IdStudent] = [m.IdStudentNavigation].[Id]
+LEFT JOIN [Device] AS [m.IdDeviceNavigation] ON [m].[IdDevice] = [m.IdDeviceNavigation].[Id]
+WHERE (((([m.IdDeviceNavigation].[IdVehicle] = @__item_Id_0) AND (DATEPART(year, [m].[CheckOutDate]) = @__8__locals1_year_1)) AND (DATEPART(month, [m].[CheckOutDate]) = @__8__locals1_month_2)) AND ([m.IdStudentNavigation].[IdSchool] = @__8__locals1_schoolId_3)) AND ([m.IdStudentNavigation].[Disable] = 0)"
+2018-04-19 09:28:06.626 +07:00 [Information] Executed DbCommand ("32"ms) [Parameters=["@__item_Id_0='?', @__8__locals1_year_1='?', @__8__locals1_month_2='?', @__8__locals1_schoolId_3='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT [m].[Id], [m].[CheckOutDate], [m].[IdStudent]
+FROM [StudentCheckOut] AS [m]
+INNER JOIN [Student] AS [m.IdStudentNavigation] ON [m].[IdStudent] = [m.IdStudentNavigation].[Id]
+LEFT JOIN [Device] AS [m.IdDeviceNavigation] ON [m].[IdDevice] = [m.IdDeviceNavigation].[Id]
+WHERE (((([m.IdDeviceNavigation].[IdVehicle] = @__item_Id_0) AND (DATEPART(year, [m].[CheckOutDate]) = @__8__locals1_year_1)) AND (DATEPART(month, [m].[CheckOutDate]) = @__8__locals1_month_2)) AND ([m.IdStudentNavigation].[IdSchool] = @__8__locals1_schoolId_3)) AND ([m.IdStudentNavigation].[Disable] = 0)"
+2018-04-19 09:28:06.648 +07:00 [Information] Executed DbCommand ("17"ms) [Parameters=["@__item_Id_0='?', @__8__locals1_year_1='?', @__8__locals1_month_2='?', @__8__locals1_schoolId_3='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT [m].[Id], [m].[CheckOutDate], [m].[IdStudent]
+FROM [StudentCheckOut] AS [m]
+INNER JOIN [Student] AS [m.IdStudentNavigation] ON [m].[IdStudent] = [m.IdStudentNavigation].[Id]
+LEFT JOIN [Device] AS [m.IdDeviceNavigation] ON [m].[IdDevice] = [m.IdDeviceNavigation].[Id]
+WHERE (((([m.IdDeviceNavigation].[IdVehicle] = @__item_Id_0) AND (DATEPART(year, [m].[CheckOutDate]) = @__8__locals1_year_1)) AND (DATEPART(month, [m].[CheckOutDate]) = @__8__locals1_month_2)) AND ([m.IdStudentNavigation].[IdSchool] = @__8__locals1_schoolId_3)) AND ([m.IdStudentNavigation].[Disable] = 0)"
+2018-04-19 09:28:06.669 +07:00 [Information] Executed DbCommand ("17"ms) [Parameters=["@__item_Id_0='?', @__8__locals1_year_1='?', @__8__locals1_month_2='?', @__8__locals1_schoolId_3='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT [m].[Id], [m].[CheckOutDate], [m].[IdStudent]
+FROM [StudentCheckOut] AS [m]
+INNER JOIN [Student] AS [m.IdStudentNavigation] ON [m].[IdStudent] = [m.IdStudentNavigation].[Id]
+LEFT JOIN [Device] AS [m.IdDeviceNavigation] ON [m].[IdDevice] = [m.IdDeviceNavigation].[Id]
+WHERE (((([m.IdDeviceNavigation].[IdVehicle] = @__item_Id_0) AND (DATEPART(year, [m].[CheckOutDate]) = @__8__locals1_year_1)) AND (DATEPART(month, [m].[CheckOutDate]) = @__8__locals1_month_2)) AND ([m.IdStudentNavigation].[IdSchool] = @__8__locals1_schoolId_3)) AND ([m.IdStudentNavigation].[Disable] = 0)"
+2018-04-19 09:28:06.702 +07:00 [Information] Executing FileResult, sending file as "198d0082-84dc-402f-b0e7-067b4a048ca8.xlsx"
+2018-04-19 09:28:06.702 +07:00 [Information] Executed action "TN.API.Controllers.ExportController.TongHopTroGiaDuaDonHocSinhAsync (TN.API)" in 145.9326ms
+2018-04-19 09:28:06.702 +07:00 [Information] Request finished in 146.6161ms 200 application/x-msdownload
+2018-04-19 09:40:11.382 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:53648/api/Export/BangChamCongHocSinh/1/4/2018/abc  
+2018-04-19 09:40:11.656 +07:00 [Information] Executing action method "TN.API.Controllers.ExportController.BangChamCongHocSinh (TN.API)" with arguments (["1", "2018", "4", "abc"]) - ModelState is Valid
+2018-04-19 09:40:11.847 +07:00 [Information] Entity Framework Core "2.0.2-rtm-10011" initialized '"TNFingerContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-04-19 09:40:12.051 +07:00 [Information] Executed DbCommand ("26"ms) [Parameters=["@__schoolId_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [m].[Id], [m].[Address], [m].[Name], [m].[Note]
+FROM [School] AS [m]
+WHERE [m].[Id] = @__schoolId_0"
+2018-04-19 09:40:12.128 +07:00 [Information] Executed DbCommand ("10"ms) [Parameters=["@__schoolId_0='?', @__year_1='?', @__month_2='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT [m].[Id], [m].[CheckOutDate], [m].[CreatedDate], [m].[IdDevice], [m].[IdFinger], [m].[IdStudent]
+FROM [StudentCheckOut] AS [m]
+INNER JOIN [Student] AS [m.IdStudentNavigation] ON [m].[IdStudent] = [m.IdStudentNavigation].[Id]
+WHERE ((([m.IdStudentNavigation].[IdSchool] = @__schoolId_0) AND (DATEPART(year, [m].[CheckOutDate]) = @__year_1)) AND (DATEPART(month, [m].[CheckOutDate]) = @__month_2)) AND ([m.IdStudentNavigation].[Disable] = 0)"
+2018-04-19 09:40:12.158 +07:00 [Information] Executed DbCommand ("4"ms) [Parameters=["@__schoolId_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT [m].[Id], [m].[Address], [m].[Birthday], [m].[CreatedDate], [m].[CreatedUser], [m].[Disable], [m].[EndDate], [m].[Finger1UpdatedDate], [m].[Finger1UpdatedUser], [m].[Finger2UpdatedDate], [m].[Finger2UpdatedUser], [m].[FingerTemplate1], [m].[FingerTemplate2], [m].[IdClassOfSchool], [m].[IdFinger1], [m].[IdFinger2], [m].[IdRouter], [m].[IdSchool], [m].[Phone], [m].[Sex], [m].[StartDate], [m].[StudentName], [m].[Unlimited], [m].[UpdatedDate], [m].[UpdatedUser]
+FROM [Student] AS [m]
+WHERE ([m].[IdSchool] = @__schoolId_0) AND ([m].[Disable] = 0)"
+2018-04-19 09:40:13.374 +07:00 [Information] Executing FileResult, sending file as "159f9e77-f30f-45fe-a0fb-19df4a826790.xlsx"
+2018-04-19 09:40:13.501 +07:00 [Information] Executed action "TN.API.Controllers.ExportController.BangChamCongHocSinh (TN.API)" in 1946.1951ms
+2018-04-19 09:40:13.501 +07:00 [Information] Request finished in 2134.8244ms 200 application/x-msdownload
+2018-04-19 09:40:33.850 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:53648/api/Export/TongHopTroGiaDuaDonHocSinh/1/1/2018/1  
+2018-04-19 09:40:33.858 +07:00 [Information] Executing action method "TN.API.Controllers.ExportController.TongHopTroGiaDuaDonHocSinhAsync (TN.API)" with arguments (["1", "2018", "1", "1"]) - ModelState is Valid
+2018-04-19 09:40:33.871 +07:00 [Information] Entity Framework Core "2.0.2-rtm-10011" initialized '"TNFingerContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-04-19 09:40:33.876 +07:00 [Information] Executed DbCommand ("3"ms) [Parameters=["@__schoolId_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [m].[Id], [m].[Address], [m].[Name], [m].[Note]
+FROM [School] AS [m]
+WHERE [m].[Id] = @__schoolId_0"
+2018-04-19 09:40:33.891 +07:00 [Information] Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [m].[Id], [m].[Brand], [m].[Capacity], [m].[CreatedDate], [m].[Degree], [m].[IdRoute], [m].[Lat], [m].[Lng], [m].[Lpn], [m].[Note], [m].[NumOfSeat], [m].[Organization], [m].[Speed], [m].[Status], [m].[UpdatedDate], [m].[VehicleOwner]
+FROM [Vehicle] AS [m]
+WHERE [m].[Status] = 1"
+2018-04-19 09:40:33.929 +07:00 [Information] Executed DbCommand ("5"ms) [Parameters=["@__item_Id_0='?', @__8__locals1_year_1='?', @__8__locals1_month_2='?', @__8__locals1_schoolId_3='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT [m].[Id], [m].[CheckOutDate], [m].[IdStudent]
+FROM [StudentCheckOut] AS [m]
+INNER JOIN [Student] AS [m.IdStudentNavigation] ON [m].[IdStudent] = [m.IdStudentNavigation].[Id]
+LEFT JOIN [Device] AS [m.IdDeviceNavigation] ON [m].[IdDevice] = [m.IdDeviceNavigation].[Id]
+WHERE (((([m.IdDeviceNavigation].[IdVehicle] = @__item_Id_0) AND (DATEPART(year, [m].[CheckOutDate]) = @__8__locals1_year_1)) AND (DATEPART(month, [m].[CheckOutDate]) = @__8__locals1_month_2)) AND ([m.IdStudentNavigation].[IdSchool] = @__8__locals1_schoolId_3)) AND ([m.IdStudentNavigation].[Disable] = 0)"
+2018-04-19 09:40:33.940 +07:00 [Information] Executed DbCommand ("4"ms) [Parameters=["@__item_Id_0='?', @__8__locals1_year_1='?', @__8__locals1_month_2='?', @__8__locals1_schoolId_3='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT [m].[Id], [m].[CheckOutDate], [m].[IdStudent]
+FROM [StudentCheckOut] AS [m]
+INNER JOIN [Student] AS [m.IdStudentNavigation] ON [m].[IdStudent] = [m.IdStudentNavigation].[Id]
+LEFT JOIN [Device] AS [m.IdDeviceNavigation] ON [m].[IdDevice] = [m.IdDeviceNavigation].[Id]
+WHERE (((([m.IdDeviceNavigation].[IdVehicle] = @__item_Id_0) AND (DATEPART(year, [m].[CheckOutDate]) = @__8__locals1_year_1)) AND (DATEPART(month, [m].[CheckOutDate]) = @__8__locals1_month_2)) AND ([m.IdStudentNavigation].[IdSchool] = @__8__locals1_schoolId_3)) AND ([m.IdStudentNavigation].[Disable] = 0)"
+2018-04-19 09:40:33.946 +07:00 [Information] Executed DbCommand ("4"ms) [Parameters=["@__item_Id_0='?', @__8__locals1_year_1='?', @__8__locals1_month_2='?', @__8__locals1_schoolId_3='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT [m].[Id], [m].[CheckOutDate], [m].[IdStudent]
+FROM [StudentCheckOut] AS [m]
+INNER JOIN [Student] AS [m.IdStudentNavigation] ON [m].[IdStudent] = [m.IdStudentNavigation].[Id]
+LEFT JOIN [Device] AS [m.IdDeviceNavigation] ON [m].[IdDevice] = [m.IdDeviceNavigation].[Id]
+WHERE (((([m.IdDeviceNavigation].[IdVehicle] = @__item_Id_0) AND (DATEPART(year, [m].[CheckOutDate]) = @__8__locals1_year_1)) AND (DATEPART(month, [m].[CheckOutDate]) = @__8__locals1_month_2)) AND ([m.IdStudentNavigation].[IdSchool] = @__8__locals1_schoolId_3)) AND ([m.IdStudentNavigation].[Disable] = 0)"
+2018-04-19 09:40:33.951 +07:00 [Information] Executed DbCommand ("4"ms) [Parameters=["@__item_Id_0='?', @__8__locals1_year_1='?', @__8__locals1_month_2='?', @__8__locals1_schoolId_3='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT [m].[Id], [m].[CheckOutDate], [m].[IdStudent]
+FROM [StudentCheckOut] AS [m]
+INNER JOIN [Student] AS [m.IdStudentNavigation] ON [m].[IdStudent] = [m.IdStudentNavigation].[Id]
+LEFT JOIN [Device] AS [m.IdDeviceNavigation] ON [m].[IdDevice] = [m.IdDeviceNavigation].[Id]
+WHERE (((([m.IdDeviceNavigation].[IdVehicle] = @__item_Id_0) AND (DATEPART(year, [m].[CheckOutDate]) = @__8__locals1_year_1)) AND (DATEPART(month, [m].[CheckOutDate]) = @__8__locals1_month_2)) AND ([m.IdStudentNavigation].[IdSchool] = @__8__locals1_schoolId_3)) AND ([m.IdStudentNavigation].[Disable] = 0)"
+2018-04-19 09:40:33.989 +07:00 [Information] Executing FileResult, sending file as "9ad87be3-2856-406b-af91-f7dc69a649b9.xlsx"
+2018-04-19 09:40:33.990 +07:00 [Information] Executed action "TN.API.Controllers.ExportController.TongHopTroGiaDuaDonHocSinhAsync (TN.API)" in 133.9726ms
+2018-04-19 09:40:33.991 +07:00 [Information] Request finished in 140.7767ms 200 application/x-msdownload
+2018-04-19 10:43:55.381 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:53648/api/Export/DanhSachHocSinhDiTheoNgay/1/2018-04-19/abc  0
+2018-04-19 10:43:55.632 +07:00 [Information] Executing action method "TN.API.Controllers.ExportController.DanhSachHocSinhDiTheoNgayAsync (TN.API)" with arguments (["1", "2018-04-19", "abc"]) - ModelState is Valid
+2018-04-19 10:43:55.815 +07:00 [Information] Entity Framework Core "2.0.2-rtm-10011" initialized '"TNFingerContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-04-19 10:43:56.063 +07:00 [Information] Executed DbCommand ("34"ms) [Parameters=["@__schoolId_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [m].[Id], [m].[Address], [m].[Name], [m].[Note]
+FROM [School] AS [m]
+WHERE [m].[Id] = @__schoolId_0"
+2018-04-19 10:43:56.138 +07:00 [Information] Executed DbCommand ("10"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [m].[Id], [m].[Brand], [m].[Capacity], [m].[CreatedDate], [m].[Degree], [m].[IdRoute], [m].[Lat], [m].[Lng], [m].[Lpn], [m].[Note], [m].[NumOfSeat], [m].[Organization], [m].[Speed], [m].[Status], [m].[UpdatedDate], [m].[VehicleOwner]
+FROM [Vehicle] AS [m]
+WHERE [m].[Status] = 1"
+2018-04-19 10:43:56.224 +07:00 [Information] Executed DbCommand ("19"ms) [Parameters=["@___date_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT [m.IdDeviceNavigation].[IdVehicle], [m].[IdStudent], [m.IdStudentNavigation].[StudentName], [m.IdStudentNavigation.IdSchoolNavigation].[Name] AS [SchoolName], [m.IdStudentNavigation.IdClassOfSchoolNavigation].[Name] AS [ClassOfSchoolName], [m].[CheckOutDate]
+FROM [StudentCheckOut] AS [m]
+LEFT JOIN [Device] AS [m.IdDeviceNavigation] ON [m].[IdDevice] = [m.IdDeviceNavigation].[Id]
+INNER JOIN [Student] AS [m.IdStudentNavigation] ON [m].[IdStudent] = [m.IdStudentNavigation].[Id]
+LEFT JOIN [School] AS [m.IdStudentNavigation.IdSchoolNavigation] ON [m.IdStudentNavigation].[IdSchool] = [m.IdStudentNavigation.IdSchoolNavigation].[Id]
+LEFT JOIN [ClassOfSchool] AS [m.IdStudentNavigation.IdClassOfSchoolNavigation] ON [m.IdStudentNavigation].[IdClassOfSchool] = [m.IdStudentNavigation.IdClassOfSchoolNavigation].[Id]
+WHERE (([m.IdStudentNavigation].[Disable] = 0) AND (CONVERT(date, [m].[CheckOutDate]) = @___date_0)) AND EXISTS (
+    SELECT 1
+    FROM [Vehicle] AS [x]
+    WHERE ([x].[Id] = [m.IdDeviceNavigation].[IdVehicle]) AND ([x].[Status] = 1))"
+2018-04-19 10:43:56.795 +07:00 [Information] Executed action "TN.API.Controllers.ExportController.DanhSachHocSinhDiTheoNgayAsync (TN.API)" in 1254.6706ms
+2018-04-19 10:43:56.914 +07:00 [Error] An unhandled exception has occurred while executing the request
+System.IO.FileNotFoundException: Could not find file 'D:\2018\TN.StudentBus\Api\TN.API\Export\Files\16e7b831-5acc-4b55-8dd0-cf4725af408d.xlsx'.
+File name: 'D:\2018\TN.StudentBus\Api\TN.API\Export\Files\16e7b831-5acc-4b55-8dd0-cf4725af408d.xlsx'
+   at System.IO.FileStream.OpenHandle(FileMode mode, FileShare share, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode)
+   at TN.API.Controllers.ExportController.<DanhSachHocSinhDiTheoNgayAsync>d__5.MoveNext() in D:\2018\TN.StudentBus\Api\TN.API\Controllers\ExportController.cs:line 331
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeActionMethodAsync>d__12.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextActionFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeInnerFilterAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.<Invoke>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.<Invoke>d__7.MoveNext()
+2018-04-19 10:43:57.037 +07:00 [Information] Request finished in 1673.0332ms 500 text/html; charset=utf-8
+2018-04-19 10:43:57.234 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:53648/favicon.ico  
+2018-04-19 10:43:57.236 +07:00 [Information] Request finished in 1.7644ms 404 
+2018-04-19 10:44:50.233 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:53648/api/Export/DanhSachHocSinhDiTheoNgay/1/2018-04-19/abc  
+2018-04-19 10:44:50.235 +07:00 [Information] Executing action method "TN.API.Controllers.ExportController.DanhSachHocSinhDiTheoNgayAsync (TN.API)" with arguments (["1", "2018-04-19", "abc"]) - ModelState is Valid
+2018-04-19 10:44:50.236 +07:00 [Information] Entity Framework Core "2.0.2-rtm-10011" initialized '"TNFingerContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-04-19 10:44:50.243 +07:00 [Information] Executed DbCommand ("5"ms) [Parameters=["@__schoolId_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [m].[Id], [m].[Address], [m].[Name], [m].[Note]
+FROM [School] AS [m]
+WHERE [m].[Id] = @__schoolId_0"
+2018-04-19 10:44:50.248 +07:00 [Information] Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [m].[Id], [m].[Brand], [m].[Capacity], [m].[CreatedDate], [m].[Degree], [m].[IdRoute], [m].[Lat], [m].[Lng], [m].[Lpn], [m].[Note], [m].[NumOfSeat], [m].[Organization], [m].[Speed], [m].[Status], [m].[UpdatedDate], [m].[VehicleOwner]
+FROM [Vehicle] AS [m]
+WHERE [m].[Status] = 1"
+2018-04-19 10:44:50.257 +07:00 [Information] Executed DbCommand ("7"ms) [Parameters=["@___date_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT [m.IdDeviceNavigation].[IdVehicle], [m].[IdStudent], [m.IdStudentNavigation].[StudentName], [m.IdStudentNavigation.IdSchoolNavigation].[Name] AS [SchoolName], [m.IdStudentNavigation.IdClassOfSchoolNavigation].[Name] AS [ClassOfSchoolName], [m].[CheckOutDate]
+FROM [StudentCheckOut] AS [m]
+LEFT JOIN [Device] AS [m.IdDeviceNavigation] ON [m].[IdDevice] = [m.IdDeviceNavigation].[Id]
+INNER JOIN [Student] AS [m.IdStudentNavigation] ON [m].[IdStudent] = [m.IdStudentNavigation].[Id]
+LEFT JOIN [School] AS [m.IdStudentNavigation.IdSchoolNavigation] ON [m.IdStudentNavigation].[IdSchool] = [m.IdStudentNavigation.IdSchoolNavigation].[Id]
+LEFT JOIN [ClassOfSchool] AS [m.IdStudentNavigation.IdClassOfSchoolNavigation] ON [m.IdStudentNavigation].[IdClassOfSchool] = [m.IdStudentNavigation.IdClassOfSchoolNavigation].[Id]
+WHERE (([m.IdStudentNavigation].[Disable] = 0) AND (CONVERT(date, [m].[CheckOutDate]) = @___date_0)) AND EXISTS (
+    SELECT 1
+    FROM [Vehicle] AS [x]
+    WHERE ([x].[Id] = [m.IdDeviceNavigation].[IdVehicle]) AND ([x].[Status] = 1))"
+2018-04-19 10:44:50.285 +07:00 [Information] Executed action "TN.API.Controllers.ExportController.DanhSachHocSinhDiTheoNgayAsync (TN.API)" in 50.1533ms
+2018-04-19 10:44:50.306 +07:00 [Error] An unhandled exception has occurred while executing the request
+System.IO.FileNotFoundException: Could not find file 'D:\2018\TN.StudentBus\Api\TN.API\Export\Files\eb5060b8-8e2b-446e-957d-af04ea9c7493.xlsx'.
+File name: 'D:\2018\TN.StudentBus\Api\TN.API\Export\Files\eb5060b8-8e2b-446e-957d-af04ea9c7493.xlsx'
+   at System.IO.FileStream.OpenHandle(FileMode mode, FileShare share, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode)
+   at TN.API.Controllers.ExportController.<DanhSachHocSinhDiTheoNgayAsync>d__5.MoveNext() in D:\2018\TN.StudentBus\Api\TN.API\Controllers\ExportController.cs:line 331
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeActionMethodAsync>d__12.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextActionFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeInnerFilterAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.<Invoke>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.<Invoke>d__7.MoveNext()
+2018-04-19 10:44:50.351 +07:00 [Information] Request finished in 117.9716ms 500 text/html; charset=utf-8
+2018-04-19 10:44:52.586 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:53648/api/Export/DanhSachHocSinhDiTheoNgay/1/2018-04-19/abc  
+2018-04-19 10:44:52.586 +07:00 [Information] Executing action method "TN.API.Controllers.ExportController.DanhSachHocSinhDiTheoNgayAsync (TN.API)" with arguments (["1", "2018-04-19", "abc"]) - ModelState is Valid
+2018-04-19 10:44:52.587 +07:00 [Information] Entity Framework Core "2.0.2-rtm-10011" initialized '"TNFingerContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-04-19 10:44:52.590 +07:00 [Information] Executed DbCommand ("2"ms) [Parameters=["@__schoolId_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [m].[Id], [m].[Address], [m].[Name], [m].[Note]
+FROM [School] AS [m]
+WHERE [m].[Id] = @__schoolId_0"
+2018-04-19 10:44:52.596 +07:00 [Information] Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [m].[Id], [m].[Brand], [m].[Capacity], [m].[CreatedDate], [m].[Degree], [m].[IdRoute], [m].[Lat], [m].[Lng], [m].[Lpn], [m].[Note], [m].[NumOfSeat], [m].[Organization], [m].[Speed], [m].[Status], [m].[UpdatedDate], [m].[VehicleOwner]
+FROM [Vehicle] AS [m]
+WHERE [m].[Status] = 1"
+2018-04-19 10:44:52.604 +07:00 [Information] Executed DbCommand ("6"ms) [Parameters=["@___date_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT [m.IdDeviceNavigation].[IdVehicle], [m].[IdStudent], [m.IdStudentNavigation].[StudentName], [m.IdStudentNavigation.IdSchoolNavigation].[Name] AS [SchoolName], [m.IdStudentNavigation.IdClassOfSchoolNavigation].[Name] AS [ClassOfSchoolName], [m].[CheckOutDate]
+FROM [StudentCheckOut] AS [m]
+LEFT JOIN [Device] AS [m.IdDeviceNavigation] ON [m].[IdDevice] = [m.IdDeviceNavigation].[Id]
+INNER JOIN [Student] AS [m.IdStudentNavigation] ON [m].[IdStudent] = [m.IdStudentNavigation].[Id]
+LEFT JOIN [School] AS [m.IdStudentNavigation.IdSchoolNavigation] ON [m.IdStudentNavigation].[IdSchool] = [m.IdStudentNavigation.IdSchoolNavigation].[Id]
+LEFT JOIN [ClassOfSchool] AS [m.IdStudentNavigation.IdClassOfSchoolNavigation] ON [m.IdStudentNavigation].[IdClassOfSchool] = [m.IdStudentNavigation.IdClassOfSchoolNavigation].[Id]
+WHERE (([m.IdStudentNavigation].[Disable] = 0) AND (CONVERT(date, [m].[CheckOutDate]) = @___date_0)) AND EXISTS (
+    SELECT 1
+    FROM [Vehicle] AS [x]
+    WHERE ([x].[Id] = [m.IdDeviceNavigation].[IdVehicle]) AND ([x].[Status] = 1))"
+2018-04-19 10:44:52.628 +07:00 [Information] Executed action "TN.API.Controllers.ExportController.DanhSachHocSinhDiTheoNgayAsync (TN.API)" in 42.087ms
+2018-04-19 10:44:52.648 +07:00 [Error] An unhandled exception has occurred while executing the request
+System.IO.FileNotFoundException: Could not find file 'D:\2018\TN.StudentBus\Api\TN.API\Export\Files\cef714fc-c440-4567-84d7-89f88b08bb9b.xlsx'.
+File name: 'D:\2018\TN.StudentBus\Api\TN.API\Export\Files\cef714fc-c440-4567-84d7-89f88b08bb9b.xlsx'
+   at System.IO.FileStream.OpenHandle(FileMode mode, FileShare share, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode)
+   at TN.API.Controllers.ExportController.<DanhSachHocSinhDiTheoNgayAsync>d__5.MoveNext() in D:\2018\TN.StudentBus\Api\TN.API\Controllers\ExportController.cs:line 331
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeActionMethodAsync>d__12.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextActionFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeInnerFilterAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.<Invoke>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.<Invoke>d__7.MoveNext()
+2018-04-19 10:44:52.681 +07:00 [Information] Request finished in 95.2487ms 500 text/html; charset=utf-8
+2018-04-19 10:45:30.437 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:53648/api/Export/DanhSachHocSinhDiTheoNgay/1/2018-04-19/abc  
+2018-04-19 10:45:30.710 +07:00 [Information] Executing action method "TN.API.Controllers.ExportController.DanhSachHocSinhDiTheoNgayAsync (TN.API)" with arguments (["1", "2018-04-19", "abc"]) - ModelState is Valid
+2018-04-19 10:45:30.949 +07:00 [Information] Entity Framework Core "2.0.2-rtm-10011" initialized '"TNFingerContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-04-19 10:45:31.253 +07:00 [Information] Executed DbCommand ("50"ms) [Parameters=["@__schoolId_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [m].[Id], [m].[Address], [m].[Name], [m].[Note]
+FROM [School] AS [m]
+WHERE [m].[Id] = @__schoolId_0"
+2018-04-19 10:45:31.330 +07:00 [Information] Executed DbCommand ("8"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [m].[Id], [m].[Brand], [m].[Capacity], [m].[CreatedDate], [m].[Degree], [m].[IdRoute], [m].[Lat], [m].[Lng], [m].[Lpn], [m].[Note], [m].[NumOfSeat], [m].[Organization], [m].[Speed], [m].[Status], [m].[UpdatedDate], [m].[VehicleOwner]
+FROM [Vehicle] AS [m]
+WHERE [m].[Status] = 1"
+2018-04-19 10:45:31.405 +07:00 [Information] Executed DbCommand ("8"ms) [Parameters=["@___date_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT [m.IdDeviceNavigation].[IdVehicle], [m].[IdStudent], [m.IdStudentNavigation].[StudentName], [m.IdStudentNavigation.IdSchoolNavigation].[Name] AS [SchoolName], [m.IdStudentNavigation.IdClassOfSchoolNavigation].[Name] AS [ClassOfSchoolName], [m].[CheckOutDate]
+FROM [StudentCheckOut] AS [m]
+LEFT JOIN [Device] AS [m.IdDeviceNavigation] ON [m].[IdDevice] = [m.IdDeviceNavigation].[Id]
+INNER JOIN [Student] AS [m.IdStudentNavigation] ON [m].[IdStudent] = [m.IdStudentNavigation].[Id]
+LEFT JOIN [School] AS [m.IdStudentNavigation.IdSchoolNavigation] ON [m.IdStudentNavigation].[IdSchool] = [m.IdStudentNavigation.IdSchoolNavigation].[Id]
+LEFT JOIN [ClassOfSchool] AS [m.IdStudentNavigation.IdClassOfSchoolNavigation] ON [m.IdStudentNavigation].[IdClassOfSchool] = [m.IdStudentNavigation.IdClassOfSchoolNavigation].[Id]
+WHERE (([m.IdStudentNavigation].[Disable] = 0) AND (CONVERT(date, [m].[CheckOutDate]) = @___date_0)) AND EXISTS (
+    SELECT 1
+    FROM [Vehicle] AS [x]
+    WHERE ([x].[Id] = [m.IdDeviceNavigation].[IdVehicle]) AND ([x].[Status] = 1))"
+2018-04-19 10:45:32.204 +07:00 [Information] Executing FileResult, sending file as "e382204f-c4fd-46e0-a7d3-180dcb7d8a4e.xlsx"
+2018-04-19 10:45:32.227 +07:00 [Information] Executed action "TN.API.Controllers.ExportController.DanhSachHocSinhDiTheoNgayAsync (TN.API)" in 1615.9807ms
+2018-04-19 10:45:32.227 +07:00 [Information] Request finished in 1815.7841ms 200 application/x-msdownload
+2018-04-19 10:46:51.653 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:53648/api/Export/DanhSachHocSinhDiTheoNgay/1/2018-04-19/abc  
+2018-04-19 10:46:51.921 +07:00 [Information] Executing action method "TN.API.Controllers.ExportController.DanhSachHocSinhDiTheoNgayAsync (TN.API)" with arguments (["1", "2018-04-19", "abc"]) - ModelState is Valid
+2018-04-19 10:46:52.107 +07:00 [Information] Entity Framework Core "2.0.2-rtm-10011" initialized '"TNFingerContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-04-19 10:46:52.304 +07:00 [Information] Executed DbCommand ("28"ms) [Parameters=["@__schoolId_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [m].[Id], [m].[Address], [m].[Name], [m].[Note]
+FROM [School] AS [m]
+WHERE [m].[Id] = @__schoolId_0"
+2018-04-19 10:46:52.360 +07:00 [Information] Executed DbCommand ("5"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [m].[Id], [m].[Brand], [m].[Capacity], [m].[CreatedDate], [m].[Degree], [m].[IdRoute], [m].[Lat], [m].[Lng], [m].[Lpn], [m].[Note], [m].[NumOfSeat], [m].[Organization], [m].[Speed], [m].[Status], [m].[UpdatedDate], [m].[VehicleOwner]
+FROM [Vehicle] AS [m]
+WHERE [m].[Status] = 1"
+2018-04-19 10:46:52.431 +07:00 [Information] Executed DbCommand ("6"ms) [Parameters=["@___date_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT [m.IdDeviceNavigation].[IdVehicle], [m].[IdStudent], [m.IdStudentNavigation].[StudentName], [m.IdStudentNavigation.IdSchoolNavigation].[Name] AS [SchoolName], [m.IdStudentNavigation.IdClassOfSchoolNavigation].[Name] AS [ClassOfSchoolName], [m].[CheckOutDate]
+FROM [StudentCheckOut] AS [m]
+LEFT JOIN [Device] AS [m.IdDeviceNavigation] ON [m].[IdDevice] = [m.IdDeviceNavigation].[Id]
+INNER JOIN [Student] AS [m.IdStudentNavigation] ON [m].[IdStudent] = [m.IdStudentNavigation].[Id]
+LEFT JOIN [School] AS [m.IdStudentNavigation.IdSchoolNavigation] ON [m.IdStudentNavigation].[IdSchool] = [m.IdStudentNavigation.IdSchoolNavigation].[Id]
+LEFT JOIN [ClassOfSchool] AS [m.IdStudentNavigation.IdClassOfSchoolNavigation] ON [m.IdStudentNavigation].[IdClassOfSchool] = [m.IdStudentNavigation.IdClassOfSchoolNavigation].[Id]
+WHERE (([m.IdStudentNavigation].[Disable] = 0) AND (CONVERT(date, [m].[CheckOutDate]) = @___date_0)) AND EXISTS (
+    SELECT 1
+    FROM [Vehicle] AS [x]
+    WHERE ([x].[Id] = [m.IdDeviceNavigation].[IdVehicle]) AND ([x].[Status] = 1))"
+2018-04-19 10:46:53.149 +07:00 [Information] Executing FileResult, sending file as "20e74911-a620-4c55-8af5-c2ba6eb44f18.xlsx"
+2018-04-19 10:46:53.171 +07:00 [Information] Executed action "TN.API.Controllers.ExportController.DanhSachHocSinhDiTheoNgayAsync (TN.API)" in 1355.0029ms
+2018-04-19 10:46:53.172 +07:00 [Information] Request finished in 1535.7592ms 200 application/x-msdownload
+2018-04-19 10:50:01.669 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:53648/api/Export/DanhSachHocSinhDiTheoNgay/1/2018-04-19/abc  
+2018-04-19 10:50:01.927 +07:00 [Information] Executing action method "TN.API.Controllers.ExportController.DanhSachHocSinhDiTheoNgayAsync (TN.API)" with arguments (["1", "2018-04-19", "abc"]) - ModelState is Valid
+2018-04-19 10:50:02.131 +07:00 [Information] Entity Framework Core "2.0.2-rtm-10011" initialized '"TNFingerContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-04-19 10:50:02.360 +07:00 [Information] Executed DbCommand ("36"ms) [Parameters=["@__schoolId_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [m].[Id], [m].[Address], [m].[Name], [m].[Note]
+FROM [School] AS [m]
+WHERE [m].[Id] = @__schoolId_0"
+2018-04-19 10:50:02.427 +07:00 [Information] Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [m].[Id], [m].[Brand], [m].[Capacity], [m].[CreatedDate], [m].[Degree], [m].[IdRoute], [m].[Lat], [m].[Lng], [m].[Lpn], [m].[Note], [m].[NumOfSeat], [m].[Organization], [m].[Speed], [m].[Status], [m].[UpdatedDate], [m].[VehicleOwner]
+FROM [Vehicle] AS [m]
+WHERE [m].[Status] = 1"
+2018-04-19 10:50:02.496 +07:00 [Information] Executed DbCommand ("6"ms) [Parameters=["@___date_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT [m.IdDeviceNavigation].[IdVehicle], [m].[IdStudent], [m.IdStudentNavigation].[StudentName], [m.IdStudentNavigation.IdSchoolNavigation].[Name] AS [SchoolName], [m.IdStudentNavigation.IdClassOfSchoolNavigation].[Name] AS [ClassOfSchoolName], [m].[CheckOutDate]
+FROM [StudentCheckOut] AS [m]
+LEFT JOIN [Device] AS [m.IdDeviceNavigation] ON [m].[IdDevice] = [m.IdDeviceNavigation].[Id]
+INNER JOIN [Student] AS [m.IdStudentNavigation] ON [m].[IdStudent] = [m.IdStudentNavigation].[Id]
+LEFT JOIN [School] AS [m.IdStudentNavigation.IdSchoolNavigation] ON [m.IdStudentNavigation].[IdSchool] = [m.IdStudentNavigation.IdSchoolNavigation].[Id]
+LEFT JOIN [ClassOfSchool] AS [m.IdStudentNavigation.IdClassOfSchoolNavigation] ON [m.IdStudentNavigation].[IdClassOfSchool] = [m.IdStudentNavigation.IdClassOfSchoolNavigation].[Id]
+WHERE (([m.IdStudentNavigation].[Disable] = 0) AND (CONVERT(date, [m].[CheckOutDate]) = @___date_0)) AND EXISTS (
+    SELECT 1
+    FROM [Vehicle] AS [x]
+    WHERE ([x].[Id] = [m.IdDeviceNavigation].[IdVehicle]) AND ([x].[Status] = 1))"
+2018-04-19 10:50:03.244 +07:00 [Information] Executing FileResult, sending file as "a5ba9213-5553-4740-93bd-aa0313f14c80.xlsx"
+2018-04-19 10:50:03.263 +07:00 [Information] Executed action "TN.API.Controllers.ExportController.DanhSachHocSinhDiTheoNgayAsync (TN.API)" in 1430.6192ms
+2018-04-19 10:50:03.264 +07:00 [Information] Request finished in 1612.7452ms 200 application/x-msdownload
+2018-04-19 10:52:31.343 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:53648/api/Export/DanhSachHocSinhDiTheoNgay/1/2018-04-19/abc  
+2018-04-19 10:52:31.607 +07:00 [Information] Executing action method "TN.API.Controllers.ExportController.DanhSachHocSinhDiTheoNgayAsync (TN.API)" with arguments (["1", "2018-04-19", "abc"]) - ModelState is Valid
+2018-04-19 10:52:31.795 +07:00 [Information] Entity Framework Core "2.0.2-rtm-10011" initialized '"TNFingerContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-04-19 10:52:31.990 +07:00 [Information] Executed DbCommand ("29"ms) [Parameters=["@__schoolId_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [m].[Id], [m].[Address], [m].[Name], [m].[Note]
+FROM [School] AS [m]
+WHERE [m].[Id] = @__schoolId_0"
+2018-04-19 10:52:32.344 +07:00 [Information] Executed DbCommand ("305"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [m].[Id], [m].[Brand], [m].[Capacity], [m].[CreatedDate], [m].[Degree], [m].[IdRoute], [m].[Lat], [m].[Lng], [m].[Lpn], [m].[Note], [m].[NumOfSeat], [m].[Organization], [m].[Speed], [m].[Status], [m].[UpdatedDate], [m].[VehicleOwner]
+FROM [Vehicle] AS [m]
+WHERE [m].[Status] = 1"
+2018-04-19 10:52:32.596 +07:00 [Information] Executed DbCommand ("191"ms) [Parameters=["@___date_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT [m.IdDeviceNavigation].[IdVehicle], [m].[IdStudent], [m.IdStudentNavigation].[StudentName], [m.IdStudentNavigation.IdSchoolNavigation].[Name] AS [SchoolName], [m.IdStudentNavigation.IdClassOfSchoolNavigation].[Name] AS [ClassOfSchoolName], [m].[CheckOutDate]
+FROM [StudentCheckOut] AS [m]
+LEFT JOIN [Device] AS [m.IdDeviceNavigation] ON [m].[IdDevice] = [m.IdDeviceNavigation].[Id]
+INNER JOIN [Student] AS [m.IdStudentNavigation] ON [m].[IdStudent] = [m.IdStudentNavigation].[Id]
+LEFT JOIN [School] AS [m.IdStudentNavigation.IdSchoolNavigation] ON [m.IdStudentNavigation].[IdSchool] = [m.IdStudentNavigation.IdSchoolNavigation].[Id]
+LEFT JOIN [ClassOfSchool] AS [m.IdStudentNavigation.IdClassOfSchoolNavigation] ON [m.IdStudentNavigation].[IdClassOfSchool] = [m.IdStudentNavigation.IdClassOfSchoolNavigation].[Id]
+WHERE (([m.IdStudentNavigation].[Disable] = 0) AND (CONVERT(date, [m].[CheckOutDate]) = @___date_0)) AND EXISTS (
+    SELECT 1
+    FROM [Vehicle] AS [x]
+    WHERE ([x].[Id] = [m.IdDeviceNavigation].[IdVehicle]) AND ([x].[Status] = 1))"
+2018-04-19 10:52:33.277 +07:00 [Information] Executing FileResult, sending file as "581ec75b-e33d-4b2d-b979-97869c5f7a42.xlsx"
+2018-04-19 10:52:33.291 +07:00 [Information] Executed action "TN.API.Controllers.ExportController.DanhSachHocSinhDiTheoNgayAsync (TN.API)" in 1776.6116ms
+2018-04-19 10:52:33.293 +07:00 [Information] Request finished in 1965.1154ms 200 application/x-msdownload
+2018-04-19 10:53:41.755 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:53648/api/Export/DanhSachHocSinhDiTheoNgay/1/2018-04-19/abc  
+2018-04-19 10:53:42.008 +07:00 [Information] Executing action method "TN.API.Controllers.ExportController.DanhSachHocSinhDiTheoNgayAsync (TN.API)" with arguments (["1", "2018-04-19", "abc"]) - ModelState is Valid
+2018-04-19 10:53:42.195 +07:00 [Information] Entity Framework Core "2.0.2-rtm-10011" initialized '"TNFingerContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-04-19 10:53:42.393 +07:00 [Information] Executed DbCommand ("30"ms) [Parameters=["@__schoolId_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [m].[Id], [m].[Address], [m].[Name], [m].[Note]
+FROM [School] AS [m]
+WHERE [m].[Id] = @__schoolId_0"
+2018-04-19 10:53:42.453 +07:00 [Information] Executed DbCommand ("5"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [m].[Id], [m].[Brand], [m].[Capacity], [m].[CreatedDate], [m].[Degree], [m].[IdRoute], [m].[Lat], [m].[Lng], [m].[Lpn], [m].[Note], [m].[NumOfSeat], [m].[Organization], [m].[Speed], [m].[Status], [m].[UpdatedDate], [m].[VehicleOwner]
+FROM [Vehicle] AS [m]
+WHERE [m].[Status] = 1"
+2018-04-19 10:53:42.527 +07:00 [Information] Executed DbCommand ("6"ms) [Parameters=["@___date_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT [m.IdDeviceNavigation].[IdVehicle], [m].[IdStudent], [m.IdStudentNavigation].[StudentName], [m.IdStudentNavigation.IdSchoolNavigation].[Name] AS [SchoolName], [m.IdStudentNavigation.IdClassOfSchoolNavigation].[Name] AS [ClassOfSchoolName], [m].[CheckOutDate]
+FROM [StudentCheckOut] AS [m]
+LEFT JOIN [Device] AS [m.IdDeviceNavigation] ON [m].[IdDevice] = [m.IdDeviceNavigation].[Id]
+INNER JOIN [Student] AS [m.IdStudentNavigation] ON [m].[IdStudent] = [m.IdStudentNavigation].[Id]
+LEFT JOIN [School] AS [m.IdStudentNavigation.IdSchoolNavigation] ON [m.IdStudentNavigation].[IdSchool] = [m.IdStudentNavigation.IdSchoolNavigation].[Id]
+LEFT JOIN [ClassOfSchool] AS [m.IdStudentNavigation.IdClassOfSchoolNavigation] ON [m.IdStudentNavigation].[IdClassOfSchool] = [m.IdStudentNavigation.IdClassOfSchoolNavigation].[Id]
+WHERE (([m.IdStudentNavigation].[Disable] = 0) AND (CONVERT(date, [m].[CheckOutDate]) = @___date_0)) AND EXISTS (
+    SELECT 1
+    FROM [Vehicle] AS [x]
+    WHERE ([x].[Id] = [m.IdDeviceNavigation].[IdVehicle]) AND ([x].[Status] = 1))"
+2018-04-19 10:53:43.296 +07:00 [Information] Executing FileResult, sending file as "8678351f-c4d1-4207-8f3c-349e69cde722.xlsx"
+2018-04-19 10:53:43.310 +07:00 [Information] Executed action "TN.API.Controllers.ExportController.DanhSachHocSinhDiTheoNgayAsync (TN.API)" in 1393.2397ms
+2018-04-19 10:53:43.311 +07:00 [Information] Request finished in 1572.8175ms 200 application/x-msdownload
+2018-04-19 10:54:14.390 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:53648/api/Export/DanhSachHocSinhDiTheoNgay/1/2018-04-19/abc  
+2018-04-19 10:54:14.666 +07:00 [Information] Executing action method "TN.API.Controllers.ExportController.DanhSachHocSinhDiTheoNgayAsync (TN.API)" with arguments (["1", "2018-04-19", "abc"]) - ModelState is Valid
+2018-04-19 10:54:14.875 +07:00 [Information] Entity Framework Core "2.0.2-rtm-10011" initialized '"TNFingerContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-04-19 10:54:15.123 +07:00 [Information] Executed DbCommand ("41"ms) [Parameters=["@__schoolId_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [m].[Id], [m].[Address], [m].[Name], [m].[Note]
+FROM [School] AS [m]
+WHERE [m].[Id] = @__schoolId_0"
+2018-04-19 10:54:15.182 +07:00 [Information] Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [m].[Id], [m].[Brand], [m].[Capacity], [m].[CreatedDate], [m].[Degree], [m].[IdRoute], [m].[Lat], [m].[Lng], [m].[Lpn], [m].[Note], [m].[NumOfSeat], [m].[Organization], [m].[Speed], [m].[Status], [m].[UpdatedDate], [m].[VehicleOwner]
+FROM [Vehicle] AS [m]
+WHERE [m].[Status] = 1"
+2018-04-19 10:54:15.256 +07:00 [Information] Executed DbCommand ("6"ms) [Parameters=["@___date_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT [m.IdDeviceNavigation].[IdVehicle], [m].[IdStudent], [m.IdStudentNavigation].[StudentName], [m.IdStudentNavigation.IdSchoolNavigation].[Name] AS [SchoolName], [m.IdStudentNavigation.IdClassOfSchoolNavigation].[Name] AS [ClassOfSchoolName], [m].[CheckOutDate]
+FROM [StudentCheckOut] AS [m]
+LEFT JOIN [Device] AS [m.IdDeviceNavigation] ON [m].[IdDevice] = [m.IdDeviceNavigation].[Id]
+INNER JOIN [Student] AS [m.IdStudentNavigation] ON [m].[IdStudent] = [m.IdStudentNavigation].[Id]
+LEFT JOIN [School] AS [m.IdStudentNavigation.IdSchoolNavigation] ON [m.IdStudentNavigation].[IdSchool] = [m.IdStudentNavigation.IdSchoolNavigation].[Id]
+LEFT JOIN [ClassOfSchool] AS [m.IdStudentNavigation.IdClassOfSchoolNavigation] ON [m.IdStudentNavigation].[IdClassOfSchool] = [m.IdStudentNavigation.IdClassOfSchoolNavigation].[Id]
+WHERE (([m.IdStudentNavigation].[Disable] = 0) AND (CONVERT(date, [m].[CheckOutDate]) = @___date_0)) AND EXISTS (
+    SELECT 1
+    FROM [Vehicle] AS [x]
+    WHERE ([x].[Id] = [m.IdDeviceNavigation].[IdVehicle]) AND ([x].[Status] = 1))"
+2018-04-19 10:54:15.957 +07:00 [Information] Executing FileResult, sending file as "8af20383-0c3d-4cd5-b52a-8aec39679118.xlsx"
+2018-04-19 10:54:15.974 +07:00 [Information] Executed action "TN.API.Controllers.ExportController.DanhSachHocSinhDiTheoNgayAsync (TN.API)" in 1411.4743ms
+2018-04-19 10:54:15.975 +07:00 [Information] Request finished in 1602.9096ms 200 application/x-msdownload
+2018-04-19 10:55:17.457 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:53648/api/Export/DanhSachHocSinhDiTheoNgay/1/2018-04-19/abc  
+2018-04-19 10:55:17.710 +07:00 [Information] Executing action method "TN.API.Controllers.ExportController.DanhSachHocSinhDiTheoNgayAsync (TN.API)" with arguments (["1", "2018-04-19", "abc"]) - ModelState is Valid
+2018-04-19 10:55:17.901 +07:00 [Information] Entity Framework Core "2.0.2-rtm-10011" initialized '"TNFingerContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-04-19 10:55:18.105 +07:00 [Information] Executed DbCommand ("30"ms) [Parameters=["@__schoolId_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [m].[Id], [m].[Address], [m].[Name], [m].[Note]
+FROM [School] AS [m]
+WHERE [m].[Id] = @__schoolId_0"
+2018-04-19 10:55:18.174 +07:00 [Information] Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [m].[Id], [m].[Brand], [m].[Capacity], [m].[CreatedDate], [m].[Degree], [m].[IdRoute], [m].[Lat], [m].[Lng], [m].[Lpn], [m].[Note], [m].[NumOfSeat], [m].[Organization], [m].[Speed], [m].[Status], [m].[UpdatedDate], [m].[VehicleOwner]
+FROM [Vehicle] AS [m]
+WHERE [m].[Status] = 1"
+2018-04-19 10:55:18.245 +07:00 [Information] Executed DbCommand ("6"ms) [Parameters=["@___date_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT [m.IdDeviceNavigation].[IdVehicle], [m].[IdStudent], [m.IdStudentNavigation].[StudentName], [m.IdStudentNavigation.IdSchoolNavigation].[Name] AS [SchoolName], [m.IdStudentNavigation.IdClassOfSchoolNavigation].[Name] AS [ClassOfSchoolName], [m].[CheckOutDate]
+FROM [StudentCheckOut] AS [m]
+LEFT JOIN [Device] AS [m.IdDeviceNavigation] ON [m].[IdDevice] = [m.IdDeviceNavigation].[Id]
+INNER JOIN [Student] AS [m.IdStudentNavigation] ON [m].[IdStudent] = [m.IdStudentNavigation].[Id]
+LEFT JOIN [School] AS [m.IdStudentNavigation.IdSchoolNavigation] ON [m.IdStudentNavigation].[IdSchool] = [m.IdStudentNavigation.IdSchoolNavigation].[Id]
+LEFT JOIN [ClassOfSchool] AS [m.IdStudentNavigation.IdClassOfSchoolNavigation] ON [m.IdStudentNavigation].[IdClassOfSchool] = [m.IdStudentNavigation.IdClassOfSchoolNavigation].[Id]
+WHERE (([m.IdStudentNavigation].[Disable] = 0) AND (CONVERT(date, [m].[CheckOutDate]) = @___date_0)) AND EXISTS (
+    SELECT 1
+    FROM [Vehicle] AS [x]
+    WHERE ([x].[Id] = [m.IdDeviceNavigation].[IdVehicle]) AND ([x].[Status] = 1))"
+2018-04-19 10:55:19.096 +07:00 [Information] Executing FileResult, sending file as "0cc0b034-ea26-4584-9bb3-cd461d06bfe6.xlsx"
+2018-04-19 10:55:19.117 +07:00 [Information] Executed action "TN.API.Controllers.ExportController.DanhSachHocSinhDiTheoNgayAsync (TN.API)" in 1500.7473ms
+2018-04-19 10:55:19.117 +07:00 [Information] Request finished in 1675.8ms 200 application/x-msdownload
+2018-04-19 11:04:57.656 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:53648/api/Export/DanhSachHocSinhDiTheoNgay/1/2018-04-19/abc  
+2018-04-19 11:04:57.917 +07:00 [Information] Executing action method "TN.API.Controllers.ExportController.DanhSachHocSinhDiTheoNgayAsync (TN.API)" with arguments (["1", "2018-04-19", "abc"]) - ModelState is Valid
+2018-04-19 11:04:58.115 +07:00 [Information] Entity Framework Core "2.0.2-rtm-10011" initialized '"TNFingerContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-04-19 11:04:58.311 +07:00 [Information] Executed DbCommand ("30"ms) [Parameters=["@__schoolId_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [m].[Id], [m].[Address], [m].[Name], [m].[Note]
+FROM [School] AS [m]
+WHERE [m].[Id] = @__schoolId_0"
+2018-04-19 11:04:58.366 +07:00 [Information] Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [m].[Id], [m].[Brand], [m].[Capacity], [m].[CreatedDate], [m].[Degree], [m].[IdRoute], [m].[Lat], [m].[Lng], [m].[Lpn], [m].[Note], [m].[NumOfSeat], [m].[Organization], [m].[Speed], [m].[Status], [m].[UpdatedDate], [m].[VehicleOwner]
+FROM [Vehicle] AS [m]
+WHERE [m].[Status] = 1"
+2018-04-19 11:04:58.440 +07:00 [Information] Executed DbCommand ("6"ms) [Parameters=["@___date_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT [m.IdDeviceNavigation].[IdVehicle], [m].[IdStudent], [m.IdStudentNavigation].[StudentName], [m.IdStudentNavigation.IdSchoolNavigation].[Name] AS [SchoolName], [m.IdStudentNavigation.IdClassOfSchoolNavigation].[Name] AS [ClassOfSchoolName], [m].[CheckOutDate]
+FROM [StudentCheckOut] AS [m]
+LEFT JOIN [Device] AS [m.IdDeviceNavigation] ON [m].[IdDevice] = [m.IdDeviceNavigation].[Id]
+INNER JOIN [Student] AS [m.IdStudentNavigation] ON [m].[IdStudent] = [m.IdStudentNavigation].[Id]
+LEFT JOIN [School] AS [m.IdStudentNavigation.IdSchoolNavigation] ON [m.IdStudentNavigation].[IdSchool] = [m.IdStudentNavigation.IdSchoolNavigation].[Id]
+LEFT JOIN [ClassOfSchool] AS [m.IdStudentNavigation.IdClassOfSchoolNavigation] ON [m.IdStudentNavigation].[IdClassOfSchool] = [m.IdStudentNavigation.IdClassOfSchoolNavigation].[Id]
+WHERE (([m.IdStudentNavigation].[Disable] = 0) AND (CONVERT(date, [m].[CheckOutDate]) = @___date_0)) AND EXISTS (
+    SELECT 1
+    FROM [Vehicle] AS [x]
+    WHERE ([x].[Id] = [m.IdDeviceNavigation].[IdVehicle]) AND ([x].[Status] = 1))"
+2018-04-19 11:04:59.231 +07:00 [Information] Executing FileResult, sending file as "9ebd9a67-99ce-4d79-ab2a-77efd451062d.xlsx"
+2018-04-19 11:04:59.246 +07:00 [Information] Executed action "TN.API.Controllers.ExportController.DanhSachHocSinhDiTheoNgayAsync (TN.API)" in 1426.5047ms
+2018-04-19 11:04:59.247 +07:00 [Information] Request finished in 1609.4412ms 200 application/x-msdownload
+2018-04-19 11:07:00.112 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:53648/api/Export/DanhSachHocSinhDiTheoNgay/1/2018-04-19/abc  
+2018-04-19 11:07:00.378 +07:00 [Information] Executing action method "TN.API.Controllers.ExportController.DanhSachHocSinhDiTheoNgayAsync (TN.API)" with arguments (["1", "2018-04-19", "abc"]) - ModelState is Valid
+2018-04-19 11:07:00.564 +07:00 [Information] Entity Framework Core "2.0.2-rtm-10011" initialized '"TNFingerContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-04-19 11:07:00.758 +07:00 [Information] Executed DbCommand ("29"ms) [Parameters=["@__schoolId_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [m].[Id], [m].[Address], [m].[Name], [m].[Note]
+FROM [School] AS [m]
+WHERE [m].[Id] = @__schoolId_0"
+2018-04-19 11:07:00.811 +07:00 [Information] Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [m].[Id], [m].[Brand], [m].[Capacity], [m].[CreatedDate], [m].[Degree], [m].[IdRoute], [m].[Lat], [m].[Lng], [m].[Lpn], [m].[Note], [m].[NumOfSeat], [m].[Organization], [m].[Speed], [m].[Status], [m].[UpdatedDate], [m].[VehicleOwner]
+FROM [Vehicle] AS [m]
+WHERE [m].[Status] = 1"
+2018-04-19 11:07:00.878 +07:00 [Information] Executed DbCommand ("5"ms) [Parameters=["@___date_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT [m.IdDeviceNavigation].[IdVehicle], [m].[IdStudent], [m.IdStudentNavigation].[StudentName], [m.IdStudentNavigation.IdSchoolNavigation].[Name] AS [SchoolName], [m.IdStudentNavigation.IdClassOfSchoolNavigation].[Name] AS [ClassOfSchoolName], [m].[CheckOutDate]
+FROM [StudentCheckOut] AS [m]
+LEFT JOIN [Device] AS [m.IdDeviceNavigation] ON [m].[IdDevice] = [m.IdDeviceNavigation].[Id]
+INNER JOIN [Student] AS [m.IdStudentNavigation] ON [m].[IdStudent] = [m.IdStudentNavigation].[Id]
+LEFT JOIN [School] AS [m.IdStudentNavigation.IdSchoolNavigation] ON [m.IdStudentNavigation].[IdSchool] = [m.IdStudentNavigation.IdSchoolNavigation].[Id]
+LEFT JOIN [ClassOfSchool] AS [m.IdStudentNavigation.IdClassOfSchoolNavigation] ON [m.IdStudentNavigation].[IdClassOfSchool] = [m.IdStudentNavigation.IdClassOfSchoolNavigation].[Id]
+WHERE (([m.IdStudentNavigation].[Disable] = 0) AND (CONVERT(date, [m].[CheckOutDate]) = @___date_0)) AND EXISTS (
+    SELECT 1
+    FROM [Vehicle] AS [x]
+    WHERE ([x].[Id] = [m.IdDeviceNavigation].[IdVehicle]) AND ([x].[Status] = 1))"
+2018-04-19 11:07:01.581 +07:00 [Information] Executing FileResult, sending file as "eebf0b60-337a-4942-a812-656ec92dedba.xlsx"
+2018-04-19 11:07:01.597 +07:00 [Information] Executed action "TN.API.Controllers.ExportController.DanhSachHocSinhDiTheoNgayAsync (TN.API)" in 1308.2882ms
+2018-04-19 11:07:01.598 +07:00 [Information] Request finished in 1503.5688ms 200 application/x-msdownload
+2018-04-19 11:08:12.158 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:53648/api/Export/DanhSachHocSinhDiTheoNgay/1/2018-04-19/abc  
+2018-04-19 11:08:12.411 +07:00 [Information] Executing action method "TN.API.Controllers.ExportController.DanhSachHocSinhDiTheoNgayAsync (TN.API)" with arguments (["1", "2018-04-19", "abc"]) - ModelState is Valid
+2018-04-19 11:08:12.594 +07:00 [Information] Entity Framework Core "2.0.2-rtm-10011" initialized '"TNFingerContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-04-19 11:08:12.789 +07:00 [Information] Executed DbCommand ("29"ms) [Parameters=["@__schoolId_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [m].[Id], [m].[Address], [m].[Name], [m].[Note]
+FROM [School] AS [m]
+WHERE [m].[Id] = @__schoolId_0"
+2018-04-19 11:08:12.841 +07:00 [Information] Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [m].[Id], [m].[Brand], [m].[Capacity], [m].[CreatedDate], [m].[Degree], [m].[IdRoute], [m].[Lat], [m].[Lng], [m].[Lpn], [m].[Note], [m].[NumOfSeat], [m].[Organization], [m].[Speed], [m].[Status], [m].[UpdatedDate], [m].[VehicleOwner]
+FROM [Vehicle] AS [m]
+WHERE [m].[Status] = 1"
+2018-04-19 11:08:12.909 +07:00 [Information] Executed DbCommand ("6"ms) [Parameters=["@___date_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT [m.IdDeviceNavigation].[IdVehicle], [m].[IdStudent], [m.IdStudentNavigation].[StudentName], [m.IdStudentNavigation.IdSchoolNavigation].[Name] AS [SchoolName], [m.IdStudentNavigation.IdClassOfSchoolNavigation].[Name] AS [ClassOfSchoolName], [m].[CheckOutDate]
+FROM [StudentCheckOut] AS [m]
+LEFT JOIN [Device] AS [m.IdDeviceNavigation] ON [m].[IdDevice] = [m.IdDeviceNavigation].[Id]
+INNER JOIN [Student] AS [m.IdStudentNavigation] ON [m].[IdStudent] = [m.IdStudentNavigation].[Id]
+LEFT JOIN [School] AS [m.IdStudentNavigation.IdSchoolNavigation] ON [m.IdStudentNavigation].[IdSchool] = [m.IdStudentNavigation.IdSchoolNavigation].[Id]
+LEFT JOIN [ClassOfSchool] AS [m.IdStudentNavigation.IdClassOfSchoolNavigation] ON [m.IdStudentNavigation].[IdClassOfSchool] = [m.IdStudentNavigation.IdClassOfSchoolNavigation].[Id]
+WHERE (([m.IdStudentNavigation].[Disable] = 0) AND (CONVERT(date, [m].[CheckOutDate]) = @___date_0)) AND EXISTS (
+    SELECT 1
+    FROM [Vehicle] AS [x]
+    WHERE ([x].[Id] = [m.IdDeviceNavigation].[IdVehicle]) AND ([x].[Status] = 1))"
+2018-04-19 11:08:13.622 +07:00 [Information] Executing FileResult, sending file as "612ffb08-6225-4b86-9a53-cb6798f1d027.xlsx"
+2018-04-19 11:08:13.636 +07:00 [Information] Executed action "TN.API.Controllers.ExportController.DanhSachHocSinhDiTheoNgayAsync (TN.API)" in 1318.7875ms
+2018-04-19 11:08:13.637 +07:00 [Information] Request finished in 1497.2846ms 200 application/x-msdownload
+2018-04-19 11:10:06.179 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:53648/api/Export/DanhSachHocSinhDiTheoNgay/1/2018-04-19/abc  
+2018-04-19 11:10:06.181 +07:00 [Information] Executing action method "TN.API.Controllers.ExportController.DanhSachHocSinhDiTheoNgayAsync (TN.API)" with arguments (["1", "2018-04-19", "abc"]) - ModelState is Valid
+2018-04-19 11:10:06.183 +07:00 [Information] Entity Framework Core "2.0.2-rtm-10011" initialized '"TNFingerContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-04-19 11:10:06.190 +07:00 [Information] Executed DbCommand ("4"ms) [Parameters=["@__schoolId_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [m].[Id], [m].[Address], [m].[Name], [m].[Note]
+FROM [School] AS [m]
+WHERE [m].[Id] = @__schoolId_0"
+2018-04-19 11:10:06.196 +07:00 [Information] Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [m].[Id], [m].[Brand], [m].[Capacity], [m].[CreatedDate], [m].[Degree], [m].[IdRoute], [m].[Lat], [m].[Lng], [m].[Lpn], [m].[Note], [m].[NumOfSeat], [m].[Organization], [m].[Speed], [m].[Status], [m].[UpdatedDate], [m].[VehicleOwner]
+FROM [Vehicle] AS [m]
+WHERE [m].[Status] = 1"
+2018-04-19 11:10:06.203 +07:00 [Information] Executed DbCommand ("6"ms) [Parameters=["@___date_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT [m.IdDeviceNavigation].[IdVehicle], [m].[IdStudent], [m.IdStudentNavigation].[StudentName], [m.IdStudentNavigation.IdSchoolNavigation].[Name] AS [SchoolName], [m.IdStudentNavigation.IdClassOfSchoolNavigation].[Name] AS [ClassOfSchoolName], [m].[CheckOutDate]
+FROM [StudentCheckOut] AS [m]
+LEFT JOIN [Device] AS [m.IdDeviceNavigation] ON [m].[IdDevice] = [m.IdDeviceNavigation].[Id]
+INNER JOIN [Student] AS [m.IdStudentNavigation] ON [m].[IdStudent] = [m.IdStudentNavigation].[Id]
+LEFT JOIN [School] AS [m.IdStudentNavigation.IdSchoolNavigation] ON [m.IdStudentNavigation].[IdSchool] = [m.IdStudentNavigation.IdSchoolNavigation].[Id]
+LEFT JOIN [ClassOfSchool] AS [m.IdStudentNavigation.IdClassOfSchoolNavigation] ON [m.IdStudentNavigation].[IdClassOfSchool] = [m.IdStudentNavigation.IdClassOfSchoolNavigation].[Id]
+WHERE (([m.IdStudentNavigation].[Disable] = 0) AND (CONVERT(date, [m].[CheckOutDate]) = @___date_0)) AND EXISTS (
+    SELECT 1
+    FROM [Vehicle] AS [x]
+    WHERE ([x].[Id] = [m.IdDeviceNavigation].[IdVehicle]) AND ([x].[Status] = 1))"
+2018-04-19 11:10:06.243 +07:00 [Information] Executing FileResult, sending file as "aa367791-134d-4a30-8afe-1832b4743062.xlsx"
+2018-04-19 11:10:06.243 +07:00 [Information] Executed action "TN.API.Controllers.ExportController.DanhSachHocSinhDiTheoNgayAsync (TN.API)" in 62.961ms
+2018-04-19 11:10:06.244 +07:00 [Information] Request finished in 64.4055ms 200 application/x-msdownload
+2018-04-19 11:10:41.065 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:53648/api/Export/DanhSachHocSinhDiTheoNgay/1/2018-04-19/abc  
+2018-04-19 11:10:41.325 +07:00 [Information] Executing action method "TN.API.Controllers.ExportController.DanhSachHocSinhDiTheoNgayAsync (TN.API)" with arguments (["1", "2018-04-19", "abc"]) - ModelState is Valid
+2018-04-19 11:10:41.521 +07:00 [Information] Entity Framework Core "2.0.2-rtm-10011" initialized '"TNFingerContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-04-19 11:10:41.733 +07:00 [Information] Executed DbCommand ("31"ms) [Parameters=["@__schoolId_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [m].[Id], [m].[Address], [m].[Name], [m].[Note]
+FROM [School] AS [m]
+WHERE [m].[Id] = @__schoolId_0"
+2018-04-19 11:10:41.789 +07:00 [Information] Executed DbCommand ("5"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [m].[Id], [m].[Brand], [m].[Capacity], [m].[CreatedDate], [m].[Degree], [m].[IdRoute], [m].[Lat], [m].[Lng], [m].[Lpn], [m].[Note], [m].[NumOfSeat], [m].[Organization], [m].[Speed], [m].[Status], [m].[UpdatedDate], [m].[VehicleOwner]
+FROM [Vehicle] AS [m]
+WHERE [m].[Status] = 1"
+2018-04-19 11:10:41.859 +07:00 [Information] Executed DbCommand ("5"ms) [Parameters=["@___date_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT [m.IdDeviceNavigation].[IdVehicle], [m].[IdStudent], [m.IdStudentNavigation].[StudentName], [m.IdStudentNavigation.IdSchoolNavigation].[Name] AS [SchoolName], [m.IdStudentNavigation.IdClassOfSchoolNavigation].[Name] AS [ClassOfSchoolName], [m].[CheckOutDate]
+FROM [StudentCheckOut] AS [m]
+LEFT JOIN [Device] AS [m.IdDeviceNavigation] ON [m].[IdDevice] = [m.IdDeviceNavigation].[Id]
+INNER JOIN [Student] AS [m.IdStudentNavigation] ON [m].[IdStudent] = [m.IdStudentNavigation].[Id]
+LEFT JOIN [School] AS [m.IdStudentNavigation.IdSchoolNavigation] ON [m.IdStudentNavigation].[IdSchool] = [m.IdStudentNavigation.IdSchoolNavigation].[Id]
+LEFT JOIN [ClassOfSchool] AS [m.IdStudentNavigation.IdClassOfSchoolNavigation] ON [m.IdStudentNavigation].[IdClassOfSchool] = [m.IdStudentNavigation.IdClassOfSchoolNavigation].[Id]
+WHERE (([m.IdStudentNavigation].[Disable] = 0) AND (CONVERT(date, [m].[CheckOutDate]) = @___date_0)) AND EXISTS (
+    SELECT 1
+    FROM [Vehicle] AS [x]
+    WHERE ([x].[Id] = [m.IdDeviceNavigation].[IdVehicle]) AND ([x].[Status] = 1))"
+2018-04-19 11:10:42.551 +07:00 [Information] Executing FileResult, sending file as "0a69222e-0941-4a1b-89a9-432617bfe99e.xlsx"
+2018-04-19 11:10:42.565 +07:00 [Information] Executed action "TN.API.Controllers.ExportController.DanhSachHocSinhDiTheoNgayAsync (TN.API)" in 1343.5078ms
+2018-04-19 11:10:42.566 +07:00 [Information] Request finished in 1517.3048ms 200 application/x-msdownload
+2018-04-19 11:12:46.590 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:53648/api/Export/DanhSachHocSinhDiTheoNgay/1/2018-04-19/abc  
+2018-04-19 11:12:46.850 +07:00 [Information] Executing action method "TN.API.Controllers.ExportController.DanhSachHocSinhDiTheoNgayAsync (TN.API)" with arguments (["1", "2018-04-19", "abc"]) - ModelState is Valid
+2018-04-19 11:12:47.038 +07:00 [Information] Entity Framework Core "2.0.2-rtm-10011" initialized '"TNFingerContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-04-19 11:12:47.249 +07:00 [Information] Executed DbCommand ("42"ms) [Parameters=["@__schoolId_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [m].[Id], [m].[Address], [m].[Name], [m].[Note]
+FROM [School] AS [m]
+WHERE [m].[Id] = @__schoolId_0"
+2018-04-19 11:12:47.303 +07:00 [Information] Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [m].[Id], [m].[Brand], [m].[Capacity], [m].[CreatedDate], [m].[Degree], [m].[IdRoute], [m].[Lat], [m].[Lng], [m].[Lpn], [m].[Note], [m].[NumOfSeat], [m].[Organization], [m].[Speed], [m].[Status], [m].[UpdatedDate], [m].[VehicleOwner]
+FROM [Vehicle] AS [m]
+WHERE [m].[Status] = 1"
+2018-04-19 11:12:47.401 +07:00 [Information] Executed DbCommand ("7"ms) [Parameters=["@___date_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT [m.IdDeviceNavigation].[IdVehicle], [m].[IdStudent], [m.IdStudentNavigation].[StudentName], [m.IdStudentNavigation.IdSchoolNavigation].[Name] AS [SchoolName], [m.IdStudentNavigation.IdClassOfSchoolNavigation].[Name] AS [ClassOfSchoolName], [m].[CheckOutDate]
+FROM [StudentCheckOut] AS [m]
+LEFT JOIN [Device] AS [m.IdDeviceNavigation] ON [m].[IdDevice] = [m.IdDeviceNavigation].[Id]
+INNER JOIN [Student] AS [m.IdStudentNavigation] ON [m].[IdStudent] = [m.IdStudentNavigation].[Id]
+LEFT JOIN [School] AS [m.IdStudentNavigation.IdSchoolNavigation] ON [m.IdStudentNavigation].[IdSchool] = [m.IdStudentNavigation.IdSchoolNavigation].[Id]
+LEFT JOIN [ClassOfSchool] AS [m.IdStudentNavigation.IdClassOfSchoolNavigation] ON [m.IdStudentNavigation].[IdClassOfSchool] = [m.IdStudentNavigation.IdClassOfSchoolNavigation].[Id]
+WHERE (([m.IdStudentNavigation].[Disable] = 0) AND (CONVERT(date, [m].[CheckOutDate]) = @___date_0)) AND EXISTS (
+    SELECT 1
+    FROM [Vehicle] AS [x]
+    WHERE ([x].[Id] = [m.IdDeviceNavigation].[IdVehicle]) AND ([x].[Status] = 1))"
+2018-04-19 11:12:48.166 +07:00 [Information] Executing FileResult, sending file as "66e3fae6-e680-414b-83b2-832dbaac6bbb.xlsx"
+2018-04-19 11:12:48.186 +07:00 [Information] Executed action "TN.API.Controllers.ExportController.DanhSachHocSinhDiTheoNgayAsync (TN.API)" in 1428.8628ms
+2018-04-19 11:12:48.186 +07:00 [Information] Request finished in 1615.0844ms 200 application/x-msdownload

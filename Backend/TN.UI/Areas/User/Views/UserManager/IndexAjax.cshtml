@@ -1,0 +1,51 @@
+﻿@model TN.Domain.Model.BaseSearchModel<List<TN.Domain.Model.ApplicationUser>>
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    Layout = null;
+    int i = 1;
+}
+<tr style="display:none !important;">
+    <td colspan="999999">
+        <input type="hidden" grid-data-page value="@Model.Page" />
+        <input type="hidden" grid-data-totalrows value="@Model.TotalRows" />
+        <input type="hidden" grid-data-limit value="@Model.Limit" />
+    </td>
+</tr>
+@if (Model.TotalRows == 0)
+{
+    <tr>
+        <td colspan="999">Không tìm thấy bản ghi nào</td>
+    </tr>
+}
+@foreach (var item in Model.Data)
+{
+    <tr>
+        <td class="text-center trcheck"><input type="checkbox" id="item_@i" class="filled-in chk-col-indigo" /><label for="item_@i"></label></td>
+        <td width="51px">
+            <img onerror="this.onerror=null;this.src = '/Content/Admin/images/no-avatar.jpg';" src="@(item.Avatar??"#")" width="30" />
+        </td>
+        <td><span class="text-primary text-name">@item.UserName</span> </td>
+        <td>@item.DisplayName</td>
+        <td>@item.PhoneNumber</td>
+        <td>@item.Email</td>
+        <td>@string.Join(", ", item.Roles.Select(x => x.Name).ToList())</td>
+        <td>
+            @if (item.IsLock)
+            {
+                <span class="text-danger"><i class="material-icons">lock</i></span>
+            }
+            else
+            {
+                <span class="text-success"><i class="material-icons">lock_open</i></span>
+            }
+        </td>
+        <td data-checked data-role-7>
+            <div class="btn-group">
+                <div class="btn-group btn- group-sm" role="group">
+                    <a button-popup data-checked data-role-7 asp-route-returnurl="@Model.ReturnUrl" data-target="#myModal" asp-action="Edit" asp-route-id="@item.Id" title="Cập nhật tài khoản" class="btn bg-indigo waves-effect btncontrolgrid"><i class="material-icons iconcontrol">edit</i></a>
+                </div>
+            </div>
+        </td>
+    </tr>
+    i++;
+}

@@ -1,0 +1,59 @@
+2018-07-24 15:43:44.505 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44396/  
+2018-07-24 15:43:44.505 +07:00 [Information] Request starting HTTP/1.1 DEBUG http://localhost:44396/  0
+2018-07-24 15:43:44.721 +07:00 [Information] Request finished in 169.1896ms 200 
+2018-07-24 15:43:46.443 +07:00 [Information] Entity Framework Core "2.1.1-rtm-30846" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-07-24 15:43:46.891 +07:00 [Information] Executed DbCommand ("20"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[Avatar], [e].[ConcurrencyStamp], [e].[CreatedDate], [e].[CreatedUserId], [e].[DisplayName], [e].[Email], [e].[EmailConfirmed], [e].[IsLock], [e].[IsReLogin], [e].[IsSuperAdmin], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[Note], [e].[NoteLock], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[RoleParents], [e].[RoleSchool], [e].[RoleTransportCompany], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UpdatedDate], [e].[UpdatedUserId], [e].[UserName]
+FROM [adm].[User] AS [e]
+WHERE [e].[Id] = @__get_Item_0"
+2018-07-24 15:43:47.053 +07:00 [Information] Executed DbCommand ("4"ms) [Parameters=["@__user_Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [adm].[UserClaim] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0"
+2018-07-24 15:43:47.172 +07:00 [Information] Executed DbCommand ("4"ms) [Parameters=["@__userId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [x].[Id], [x].[ConcurrencyStamp], [x].[Description], [x].[Name], [x].[NormalizedName], [x].[Type]
+FROM [adm].[Role] AS [x]
+WHERE EXISTS (
+    SELECT 1
+    FROM [adm].[UserRole] AS [m]
+    WHERE ([m].[UserId] = @__userId_0) AND ([m].[RoleId] = [x].[Id]))"
+2018-07-24 15:43:48.244 +07:00 [Information] Route matched with "{action = \"Index\", controller = \"Home\", area = \"\"}". Executing action "TN.UI.Controllers.HomeController.Index (TN.UI)"
+2018-07-24 15:43:48.267 +07:00 [Information] Executing action method "TN.UI.Controllers.HomeController.Index (TN.UI)" - Validation state: Valid
+2018-07-24 15:43:48.276 +07:00 [Information] Executed action method "TN.UI.Controllers.HomeController.Index (TN.UI)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 0.8479ms.
+2018-07-24 15:43:48.403 +07:00 [Information] Executing ViewResult, running view "Index".
+2018-07-24 15:43:48.714 +07:00 [Information] Executed ViewResult - view "Index" executed in 413.3387ms.
+2018-07-24 15:43:48.718 +07:00 [Information] Executed action "TN.UI.Controllers.HomeController.Index (TN.UI)" in 469.3697ms
+2018-07-24 15:43:48.754 +07:00 [Information] Request finished in 4250.2491ms 200 text/html; charset=utf-8
+2018-07-24 15:43:48.869 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44396/Data/Avatar/ecaba803-2c0c-4ec3-bcc1-93ede84c93cc.jpeg  
+2018-07-24 15:43:48.869 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44396/Content/Admin/js/script.js  
+2018-07-24 15:43:48.883 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44396/Content/Admin/site.min.js  
+2018-07-24 15:43:48.935 +07:00 [Information] The file "/Content/Admin/js/script.js" was not modified
+2018-07-24 15:43:48.937 +07:00 [Information] The file "/Data/Avatar/ecaba803-2c0c-4ec3-bcc1-93ede84c93cc.jpeg" was not modified
+2018-07-24 15:43:48.955 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44396/Content/Admin/site.min.css?v=-Lu6426wLYFjpHGyBSdoHbONudZIa7xpfpqwTtTqjLc  
+2018-07-24 15:43:48.957 +07:00 [Information] Request finished in 104.1131ms 304 application/javascript
+2018-07-24 15:43:48.967 +07:00 [Information] Request finished in 115.9951ms 304 image/jpeg
+2018-07-24 15:43:48.994 +07:00 [Information] Sending file. Request path: '"/Content/Admin/site.min.css"'. Physical path: '"D:\2018\1.BusStudent\Sources\Code\Backend\TN.UI\wwwroot\Content\Admin\site.min.css"'
+2018-07-24 15:43:49.028 +07:00 [Information] Request finished in 58.2332ms 200 text/css
+2018-07-24 15:43:49.035 +07:00 [Information] Sending file. Request path: '"/Content/Admin/site.min.js"'. Physical path: '"D:\2018\1.BusStudent\Sources\Code\Backend\TN.UI\wwwroot\Content\Admin\site.min.js"'
+2018-07-24 15:43:49.048 +07:00 [Information] Request finished in 168.3868ms 200 application/javascript
+2018-07-24 15:45:59.895 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44396/  
+2018-07-24 15:45:59.895 +07:00 [Information] Request starting HTTP/1.1 DEBUG http://localhost:44396/  0
+2018-07-24 15:45:59.973 +07:00 [Information] Request finished in 83.7724ms 200 
+2018-07-24 15:46:00.624 +07:00 [Information] Route matched with "{action = \"Index\", controller = \"Home\", area = \"\"}". Executing action "TN.UI.Controllers.HomeController.Index (TN.UI)"
+2018-07-24 15:46:01.216 +07:00 [Information] Entity Framework Core "2.1.1-rtm-30846" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-07-24 15:46:01.972 +07:00 [Information] Executed DbCommand ("104"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[Avatar], [e].[ConcurrencyStamp], [e].[CreatedDate], [e].[CreatedUserId], [e].[DisplayName], [e].[Email], [e].[EmailConfirmed], [e].[IsLock], [e].[IsReLogin], [e].[IsSuperAdmin], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[Note], [e].[NoteLock], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[RoleParents], [e].[RoleSchool], [e].[RoleTransportCompany], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UpdatedDate], [e].[UpdatedUserId], [e].[UserName]
+FROM [adm].[User] AS [e]
+WHERE [e].[Id] = @__get_Item_0"
+2018-07-24 15:46:02.117 +07:00 [Information] Executing action method "TN.UI.Controllers.HomeController.Index (TN.UI)" - Validation state: Valid
+2018-07-24 15:46:02.128 +07:00 [Information] Executed action method "TN.UI.Controllers.HomeController.Index (TN.UI)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 2.3527ms.
+2018-07-24 15:46:02.155 +07:00 [Information] Executing ViewResult, running view "Index".
+2018-07-24 15:46:02.327 +07:00 [Information] Executed ViewResult - view "Index" executed in 182.7671ms.
+2018-07-24 15:46:02.335 +07:00 [Information] Executed action "TN.UI.Controllers.HomeController.Index (TN.UI)" in 1706.4016ms
+2018-07-24 15:46:02.374 +07:00 [Information] Request finished in 2484.6721ms 200 text/html; charset=utf-8
+2018-07-24 15:46:02.381 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44396/Content/Admin/site.min.css?v=-Lu6426wLYFjpHGyBSdoHbONudZIa7xpfpqwTtTqjLc  
+2018-07-24 15:46:02.395 +07:00 [Information] The file "/Content/Admin/site.min.css" was not modified
+2018-07-24 15:46:02.405 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44396/Content/Admin/site.min.js  
+2018-07-24 15:46:02.418 +07:00 [Information] Request finished in 29.2632ms 304 text/css
+2018-07-24 15:46:02.421 +07:00 [Information] The file "/Content/Admin/site.min.js" was not modified
+2018-07-24 15:46:02.432 +07:00 [Information] Request finished in 22.2702ms 304 application/javascript

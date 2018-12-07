@@ -1,0 +1,164 @@
+2018-08-01 11:39:01.009 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44396/  
+2018-08-01 11:39:01.581 +07:00 [Information] Route matched with "{action = \"Index\", controller = \"Home\", area = \"\"}". Executing action "TN.UI.Controllers.HomeController.Index (TN.UI)"
+2018-08-01 11:39:02.116 +07:00 [Information] Entity Framework Core "2.1.1-rtm-30846" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-08-01 11:39:02.359 +07:00 [Information] Executed DbCommand ("14"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[Avatar], [e].[ConcurrencyStamp], [e].[CreatedDate], [e].[CreatedUserId], [e].[DisplayName], [e].[Email], [e].[EmailConfirmed], [e].[IsLock], [e].[IsReLogin], [e].[IsSuperAdmin], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[Note], [e].[NoteLock], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[RoleParents], [e].[RoleSchool], [e].[RoleTransportCompany], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UpdatedDate], [e].[UpdatedUserId], [e].[UserName]
+FROM [adm].[User] AS [e]
+WHERE [e].[Id] = @__get_Item_0"
+2018-08-01 11:39:02.397 +07:00 [Information] AuthenticationScheme: "Identity.Application" signed out.
+2018-08-01 11:39:02.398 +07:00 [Information] AuthenticationScheme: "Identity.External" signed out.
+2018-08-01 11:39:02.398 +07:00 [Information] AuthenticationScheme: "Identity.TwoFactorUserId" signed out.
+2018-08-01 11:39:02.402 +07:00 [Information] Authorization failed for the request at filter '"TN.UI.Extensions.PermissionFilter"'.
+2018-08-01 11:39:02.405 +07:00 [Information] Executing RedirectResult, redirecting to "/Login?ReturnUrl=%2F".
+2018-08-01 11:39:02.411 +07:00 [Information] Executed action "TN.UI.Controllers.HomeController.Index (TN.UI)" in 825.7648ms
+2018-08-01 11:39:02.433 +07:00 [Information] Request finished in 1430.2518ms 302 
+2018-08-01 11:39:02.456 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44396/Login?ReturnUrl=%2F  
+2018-08-01 11:39:02.478 +07:00 [Information] Route matched with "{area = \"User\", action = \"Login\", controller = \"Account\"}". Executing action "TN.UI.Areas.User.Controllers.AccountController.Login (TN.UI)"
+2018-08-01 11:39:02.514 +07:00 [Information] Executing action method "TN.UI.Areas.User.Controllers.AccountController.Login (TN.UI)" with arguments (["/"]) - Validation state: Valid
+2018-08-01 11:39:02.516 +07:00 [Information] AuthenticationScheme: "Identity.External" signed out.
+2018-08-01 11:39:02.520 +07:00 [Information] Executed action method "TN.UI.Areas.User.Controllers.AccountController.Login (TN.UI)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 2.1884ms.
+2018-08-01 11:39:02.533 +07:00 [Information] Executing ViewResult, running view "Login".
+2018-08-01 11:39:02.660 +07:00 [Information] Executed ViewResult - view "Login" executed in 135.7248ms.
+2018-08-01 11:39:02.660 +07:00 [Information] Executed action "TN.UI.Areas.User.Controllers.AccountController.Login (TN.UI)" in 181.8465ms
+2018-08-01 11:39:02.664 +07:00 [Information] Request finished in 208.089ms 200 text/html; charset=utf-8
+2018-08-01 11:39:08.051 +07:00 [Information] Request starting HTTP/1.1 POST http://localhost:44396/Login?ReturnUrl=%2F application/x-www-form-urlencoded 261
+2018-08-01 11:39:08.066 +07:00 [Information] Route matched with "{area = \"User\", action = \"Login\", controller = \"Account\"}". Executing action "TN.UI.Areas.User.Controllers.AccountController.Login (TN.UI)"
+2018-08-01 11:39:08.109 +07:00 [Information] Executing action method "TN.UI.Areas.User.Controllers.AccountController.Login (TN.UI)" with arguments (["TN.Domain.Model.LoginViewModel", "/"]) - Validation state: Valid
+2018-08-01 11:39:08.143 +07:00 [Information] Entity Framework Core "2.1.1-rtm-30846" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-08-01 11:39:08.164 +07:00 [Information] Executed DbCommand ("5"ms) [Parameters=["@__model_Username_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [m].[Id], [m].[AccessFailedCount], [m].[Avatar], [m].[ConcurrencyStamp], [m].[CreatedDate], [m].[CreatedUserId], [m].[DisplayName], [m].[Email], [m].[EmailConfirmed], [m].[IsLock], [m].[IsReLogin], [m].[IsSuperAdmin], [m].[LockoutEnabled], [m].[LockoutEnd], [m].[NormalizedEmail], [m].[NormalizedUserName], [m].[Note], [m].[NoteLock], [m].[PasswordHash], [m].[PhoneNumber], [m].[PhoneNumberConfirmed], [m].[RoleParents], [m].[RoleSchool], [m].[RoleTransportCompany], [m].[SecurityStamp], [m].[TwoFactorEnabled], [m].[UpdatedDate], [m].[UpdatedUserId], [m].[UserName]
+FROM [adm].[User] AS [m]
+WHERE [m].[UserName] = @__model_Username_0"
+2018-08-01 11:39:08.246 +07:00 [Information] Executed DbCommand ("4"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[Avatar], [u].[ConcurrencyStamp], [u].[CreatedDate], [u].[CreatedUserId], [u].[DisplayName], [u].[Email], [u].[EmailConfirmed], [u].[IsLock], [u].[IsReLogin], [u].[IsSuperAdmin], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[Note], [u].[NoteLock], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[RoleParents], [u].[RoleSchool], [u].[RoleTransportCompany], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UpdatedDate], [u].[UpdatedUserId], [u].[UserName]
+FROM [adm].[User] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0"
+2018-08-01 11:39:08.423 +07:00 [Information] Executed DbCommand ("4"ms) [Parameters=["@__user_Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [adm].[UserClaim] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0"
+2018-08-01 11:39:08.519 +07:00 [Information] Executed DbCommand ("4"ms) [Parameters=["@__userId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [x].[Id], [x].[ConcurrencyStamp], [x].[Description], [x].[Name], [x].[NormalizedName], [x].[Type]
+FROM [adm].[Role] AS [x]
+WHERE EXISTS (
+    SELECT 1
+    FROM [adm].[UserRole] AS [m]
+    WHERE ([m].[UserId] = @__userId_0) AND ([m].[RoleId] = [x].[Id]))"
+2018-08-01 11:39:08.528 +07:00 [Information] AuthenticationScheme: "Identity.Application" signed in.
+2018-08-01 11:39:08.683 +07:00 [Information] Executed DbCommand ("4"ms) [Parameters=["@p28='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p29='?' (Size = 4000), @p3='?' (DbType = DateTime2), @p4='?' (DbType = Int32), @p5='?' (Size = 100), @p6='?' (Size = 256), @p7='?' (DbType = Boolean), @p8='?' (DbType = Boolean), @p9='?' (DbType = Boolean), @p10='?' (DbType = Boolean), @p11='?' (DbType = Boolean), @p12='?' (DbType = DateTimeOffset), @p13='?' (Size = 256), @p14='?' (Size = 256), @p15='?' (Size = 4000), @p16='?' (Size = 1000), @p17='?' (Size = 4000), @p18='?' (Size = 4000), @p19='?' (DbType = Boolean), @p20='?' (Size = 4000), @p21='?' (Size = 4000), @p22='?' (Size = 4000), @p23='?' (Size = 4000), @p24='?' (DbType = Boolean), @p25='?' (DbType = DateTime2), @p26='?' (DbType = Int32), @p27='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+UPDATE [adm].[User] SET [AccessFailedCount] = @p0, [Avatar] = @p1, [ConcurrencyStamp] = @p2, [CreatedDate] = @p3, [CreatedUserId] = @p4, [DisplayName] = @p5, [Email] = @p6, [EmailConfirmed] = @p7, [IsLock] = @p8, [IsReLogin] = @p9, [IsSuperAdmin] = @p10, [LockoutEnabled] = @p11, [LockoutEnd] = @p12, [NormalizedEmail] = @p13, [NormalizedUserName] = @p14, [Note] = @p15, [NoteLock] = @p16, [PasswordHash] = @p17, [PhoneNumber] = @p18, [PhoneNumberConfirmed] = @p19, [RoleParents] = @p20, [RoleSchool] = @p21, [RoleTransportCompany] = @p22, [SecurityStamp] = @p23, [TwoFactorEnabled] = @p24, [UpdatedDate] = @p25, [UpdatedUserId] = @p26, [UserName] = @p27
+WHERE [Id] = @p28 AND [ConcurrencyStamp] = @p29;
+SELECT @@ROWCOUNT;"
+2018-08-01 11:39:08.774 +07:00 [Information] Executed action method "TN.UI.Areas.User.Controllers.AccountController.Login (TN.UI)", returned result "Microsoft.AspNetCore.Mvc.RedirectResult" in 664.3105ms.
+2018-08-01 11:39:08.780 +07:00 [Information] Executing RedirectResult, redirecting to "/".
+2018-08-01 11:39:08.780 +07:00 [Information] Executed action "TN.UI.Areas.User.Controllers.AccountController.Login (TN.UI)" in 714.0008ms
+2018-08-01 11:39:08.781 +07:00 [Information] Request finished in 730.0024ms 302 
+2018-08-01 11:39:08.798 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44396/  
+2018-08-01 11:39:08.801 +07:00 [Information] Route matched with "{action = \"Index\", controller = \"Home\", area = \"\"}". Executing action "TN.UI.Controllers.HomeController.Index (TN.UI)"
+2018-08-01 11:39:08.801 +07:00 [Information] Entity Framework Core "2.1.1-rtm-30846" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-08-01 11:39:08.807 +07:00 [Information] Executed DbCommand ("4"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[Avatar], [e].[ConcurrencyStamp], [e].[CreatedDate], [e].[CreatedUserId], [e].[DisplayName], [e].[Email], [e].[EmailConfirmed], [e].[IsLock], [e].[IsReLogin], [e].[IsSuperAdmin], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[Note], [e].[NoteLock], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[RoleParents], [e].[RoleSchool], [e].[RoleTransportCompany], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UpdatedDate], [e].[UpdatedUserId], [e].[UserName]
+FROM [adm].[User] AS [e]
+WHERE [e].[Id] = @__get_Item_0"
+2018-08-01 11:39:08.840 +07:00 [Information] Executing action method "TN.UI.Controllers.HomeController.Index (TN.UI)" - Validation state: Valid
+2018-08-01 11:39:08.841 +07:00 [Information] Executed action method "TN.UI.Controllers.HomeController.Index (TN.UI)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 0.2591ms.
+2018-08-01 11:39:08.872 +07:00 [Information] Executing ViewResult, running view "Index".
+2018-08-01 11:39:08.976 +07:00 [Information] Executed ViewResult - view "Index" executed in 134.8983ms.
+2018-08-01 11:39:08.976 +07:00 [Information] Executed action "TN.UI.Controllers.HomeController.Index (TN.UI)" in 175.2771ms
+2018-08-01 11:39:08.976 +07:00 [Information] Request finished in 178.9236ms 200 text/html; charset=utf-8
+2018-08-01 11:39:09.005 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44396/Data/Avatar/ecaba803-2c0c-4ec3-bcc1-93ede84c93cc.jpeg  
+2018-08-01 11:39:09.030 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44396/Content/Admin/site.min.js  
+2018-08-01 11:39:09.031 +07:00 [Information] The file "/Content/Admin/site.min.js" was not modified
+2018-08-01 11:39:09.032 +07:00 [Information] Request finished in 1.8559ms 304 application/javascript
+2018-08-01 11:39:09.068 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44396/Content/Admin/images/user-img-background.jpg  
+2018-08-01 11:39:09.196 +07:00 [Information] Sending file. Request path: '"/Content/Admin/images/user-img-background.jpg"'. Physical path: '"D:\2018\1.BusStudent\Sources\Code\Backend\TN.UI\wwwroot\Content\Admin\images\user-img-background.jpg"'
+2018-08-01 11:39:09.196 +07:00 [Information] Request finished in 128.176ms 200 image/jpeg
+2018-08-01 11:39:09.270 +07:00 [Information] Sending file. Request path: '"/Data/Avatar/ecaba803-2c0c-4ec3-bcc1-93ede84c93cc.jpeg"'. Physical path: '"D:\2018\1.BusStudent\Sources\Code\Backend\TN.UI\wwwroot\Data\Avatar\ecaba803-2c0c-4ec3-bcc1-93ede84c93cc.jpeg"'
+2018-08-01 11:39:09.271 +07:00 [Information] Request finished in 265.6618ms 200 image/jpeg
+2018-08-01 11:39:17.041 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44396/Admin/User/UserManager  
+2018-08-01 11:39:17.051 +07:00 [Information] Route matched with "{area = \"User\", action = \"Index\", controller = \"UserManager\"}". Executing action "TN.UI.Areas.User.Controllers.UserManagerController.Index (TN.UI)"
+2018-08-01 11:39:17.052 +07:00 [Information] Entity Framework Core "2.1.1-rtm-30846" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-08-01 11:39:17.059 +07:00 [Information] Executed DbCommand ("4"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[Avatar], [e].[ConcurrencyStamp], [e].[CreatedDate], [e].[CreatedUserId], [e].[DisplayName], [e].[Email], [e].[EmailConfirmed], [e].[IsLock], [e].[IsReLogin], [e].[IsSuperAdmin], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[Note], [e].[NoteLock], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[RoleParents], [e].[RoleSchool], [e].[RoleTransportCompany], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UpdatedDate], [e].[UpdatedUserId], [e].[UserName]
+FROM [adm].[User] AS [e]
+WHERE [e].[Id] = @__get_Item_0"
+2018-08-01 11:39:17.090 +07:00 [Information] Executing action method "TN.UI.Areas.User.Controllers.UserManagerController.Index (TN.UI)" - Validation state: Valid
+2018-08-01 11:39:17.109 +07:00 [Information] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [r].[Id], [r].[ConcurrencyStamp], [r].[Description], [r].[Name], [r].[NormalizedName], [r].[Type]
+FROM [adm].[Role] AS [r]"
+2018-08-01 11:39:17.132 +07:00 [Information] Executed action method "TN.UI.Areas.User.Controllers.UserManagerController.Index (TN.UI)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 42.3166ms.
+2018-08-01 11:39:17.146 +07:00 [Information] Executing ViewResult, running view "Index".
+2018-08-01 11:39:17.210 +07:00 [Information] Executed ViewResult - view "Index" executed in 77.2068ms.
+2018-08-01 11:39:17.210 +07:00 [Information] Executed action "TN.UI.Areas.User.Controllers.UserManagerController.Index (TN.UI)" in 158.9302ms
+2018-08-01 11:39:17.210 +07:00 [Information] Request finished in 169.3561ms 200 text/html; charset=utf-8
+2018-08-01 11:39:17.430 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44396/Content/Admin/plugins/bootstrap/fonts/glyphicons-halflings-regular.woff2  
+2018-08-01 11:39:17.431 +07:00 [Information] Sending file. Request path: '"/Content/Admin/plugins/bootstrap/fonts/glyphicons-halflings-regular.woff2"'. Physical path: '"D:\2018\1.BusStudent\Sources\Code\Backend\TN.UI\wwwroot\Content\Admin\plugins\bootstrap\fonts\glyphicons-halflings-regular.woff2"'
+2018-08-01 11:39:17.431 +07:00 [Information] Request finished in 1.096ms 200 font/woff2
+2018-08-01 11:39:17.459 +07:00 [Information] Request starting HTTP/1.1 POST http://localhost:44396/Admin/User/UserManager application/x-www-form-urlencoded; charset=UTF-8 67
+2018-08-01 11:39:17.467 +07:00 [Information] Route matched with "{area = \"User\", action = \"Index\", controller = \"UserManager\"}". Executing action "TN.UI.Areas.User.Controllers.UserManagerController.IndexPost (TN.UI)"
+2018-08-01 11:39:17.467 +07:00 [Information] Entity Framework Core "2.1.1-rtm-30846" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-08-01 11:39:17.472 +07:00 [Information] Executed DbCommand ("4"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[Avatar], [e].[ConcurrencyStamp], [e].[CreatedDate], [e].[CreatedUserId], [e].[DisplayName], [e].[Email], [e].[EmailConfirmed], [e].[IsLock], [e].[IsReLogin], [e].[IsSuperAdmin], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[Note], [e].[NoteLock], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[RoleParents], [e].[RoleSchool], [e].[RoleTransportCompany], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UpdatedDate], [e].[UpdatedUserId], [e].[UserName]
+FROM [adm].[User] AS [e]
+WHERE [e].[Id] = @__get_Item_0"
+2018-08-01 11:39:17.489 +07:00 [Information] Executing action method "TN.UI.Areas.User.Controllers.UserManagerController.IndexPost (TN.UI)" with arguments (["1", "10", "", "", "", "", "asc", "username"]) - Validation state: Valid
+2018-08-01 11:39:17.672 +07:00 [Information] Executed DbCommand ("5"ms) [Parameters=["@__p_2='?' (DbType = Int32), @__p_3='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [m].[Id], [m].[AccessFailedCount], [m].[Avatar], [m].[ConcurrencyStamp], [m].[CreatedDate], [m].[CreatedUserId], [m].[DisplayName], [m].[Email], [m].[EmailConfirmed], [m].[IsLock], [m].[IsReLogin], [m].[IsSuperAdmin], [m].[LockoutEnabled], [m].[LockoutEnd], [m].[NormalizedEmail], [m].[NormalizedUserName], [m].[Note], [m].[NoteLock], [m].[PasswordHash], [m].[PhoneNumber], [m].[PhoneNumberConfirmed], [m].[RoleParents], [m].[RoleSchool], [m].[RoleTransportCompany], [m].[SecurityStamp], [m].[TwoFactorEnabled], [m].[UpdatedDate], [m].[UpdatedUserId], [m].[UserName]
+FROM [adm].[User] AS [m]
+WHERE [m].[IsSuperAdmin] = 0
+ORDER BY [m].[UserName]
+OFFSET @__p_2 ROWS FETCH NEXT @__p_3 ROWS ONLY"
+2018-08-01 11:39:17.711 +07:00 [Warning] The LINQ expression '"where ([x].Id == [m].UserId)"' could not be translated and will be evaluated locally.
+2018-08-01 11:39:17.725 +07:00 [Warning] The LINQ expression '"Any()"' could not be translated and will be evaluated locally.
+2018-08-01 11:39:17.727 +07:00 [Warning] The LINQ expression '"where {from ApplicationUser x in __currentData_0 where ([x].Id == [m].UserId) select [x] => Any()}"' could not be translated and will be evaluated locally.
+2018-08-01 11:39:17.728 +07:00 [Warning] The LINQ expression '"where ([x].Id == [m].UserId)"' could not be translated and will be evaluated locally.
+2018-08-01 11:39:17.728 +07:00 [Warning] The LINQ expression '"Any()"' could not be translated and will be evaluated locally.
+2018-08-01 11:39:17.732 +07:00 [Warning] The LINQ expression '"join ApplicationRole entry in value(Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1[TN.Domain.Model.ApplicationRole]) on [m].RoleId equals [entry].Id"' could not be translated and will be evaluated locally.
+2018-08-01 11:39:17.777 +07:00 [Information] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [m].[UserId], [m].[RoleId]
+FROM [adm].[UserRole] AS [m]"
+2018-08-01 11:39:17.799 +07:00 [Information] Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [entry].[Id], [entry].[ConcurrencyStamp], [entry].[Description], [entry].[Name], [entry].[NormalizedName], [entry].[Type]
+FROM [adm].[Role] AS [entry]"
+2018-08-01 11:39:17.921 +07:00 [Information] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [adm].[User] AS [m]
+WHERE [m].[IsSuperAdmin] = 0"
+2018-08-01 11:39:17.947 +07:00 [Information] Executed action method "TN.UI.Areas.User.Controllers.UserManagerController.IndexPost (TN.UI)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 458.6369ms.
+2018-08-01 11:39:17.949 +07:00 [Information] Executing ViewResult, running view "IndexAjax".
+2018-08-01 11:39:17.980 +07:00 [Information] Executed ViewResult - view "IndexAjax" executed in 32.4129ms.
+2018-08-01 11:39:17.980 +07:00 [Information] Executed action "TN.UI.Areas.User.Controllers.UserManagerController.IndexPost (TN.UI)" in 513.3626ms
+2018-08-01 11:39:17.980 +07:00 [Information] Request finished in 521.0638ms 200 text/html; charset=utf-8
+2018-08-01 11:39:18.157 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44396/Admin/User/UserManager  
+2018-08-01 11:39:18.158 +07:00 [Information] Route matched with "{area = \"User\", action = \"Index\", controller = \"UserManager\"}". Executing action "TN.UI.Areas.User.Controllers.UserManagerController.Index (TN.UI)"
+2018-08-01 11:39:18.158 +07:00 [Information] Entity Framework Core "2.1.1-rtm-30846" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-08-01 11:39:18.163 +07:00 [Information] Executed DbCommand ("4"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[Avatar], [e].[ConcurrencyStamp], [e].[CreatedDate], [e].[CreatedUserId], [e].[DisplayName], [e].[Email], [e].[EmailConfirmed], [e].[IsLock], [e].[IsReLogin], [e].[IsSuperAdmin], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[Note], [e].[NoteLock], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[RoleParents], [e].[RoleSchool], [e].[RoleTransportCompany], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UpdatedDate], [e].[UpdatedUserId], [e].[UserName]
+FROM [adm].[User] AS [e]
+WHERE [e].[Id] = @__get_Item_0"
+2018-08-01 11:39:18.164 +07:00 [Information] Executing action method "TN.UI.Areas.User.Controllers.UserManagerController.Index (TN.UI)" - Validation state: Valid
+2018-08-01 11:39:18.167 +07:00 [Information] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [r].[Id], [r].[ConcurrencyStamp], [r].[Description], [r].[Name], [r].[NormalizedName], [r].[Type]
+FROM [adm].[Role] AS [r]"
+2018-08-01 11:39:18.168 +07:00 [Information] Executed action method "TN.UI.Areas.User.Controllers.UserManagerController.Index (TN.UI)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 3.8281ms.
+2018-08-01 11:39:18.168 +07:00 [Information] Executing ViewResult, running view "Index".
+2018-08-01 11:39:18.169 +07:00 [Information] Executed ViewResult - view "Index" executed in 1.5465ms.
+2018-08-01 11:39:18.170 +07:00 [Information] Executed action "TN.UI.Areas.User.Controllers.UserManagerController.Index (TN.UI)" in 11.4113ms
+2018-08-01 11:39:18.170 +07:00 [Information] Request finished in 12.6654ms 200 text/html; charset=utf-8
+2018-08-01 11:39:19.468 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44396/Admin/User/UserManager/Create  
+2018-08-01 11:39:19.473 +07:00 [Information] Route matched with "{area = \"User\", action = \"Create\", controller = \"UserManager\"}". Executing action "TN.UI.Areas.User.Controllers.UserManagerController.Create (TN.UI)"
+2018-08-01 11:39:19.474 +07:00 [Information] Entity Framework Core "2.1.1-rtm-30846" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-08-01 11:39:19.480 +07:00 [Information] Executed DbCommand ("5"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[Avatar], [e].[ConcurrencyStamp], [e].[CreatedDate], [e].[CreatedUserId], [e].[DisplayName], [e].[Email], [e].[EmailConfirmed], [e].[IsLock], [e].[IsReLogin], [e].[IsSuperAdmin], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[Note], [e].[NoteLock], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[RoleParents], [e].[RoleSchool], [e].[RoleTransportCompany], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UpdatedDate], [e].[UpdatedUserId], [e].[UserName]
+FROM [adm].[User] AS [e]
+WHERE [e].[Id] = @__get_Item_0"
+2018-08-01 11:39:19.481 +07:00 [Information] Executing action method "TN.UI.Areas.User.Controllers.UserManagerController.Create (TN.UI)" - Validation state: Valid
+2018-08-01 11:39:19.485 +07:00 [Information] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [r].[Id], [r].[ConcurrencyStamp], [r].[Description], [r].[Name], [r].[NormalizedName], [r].[Type]
+FROM [adm].[Role] AS [r]"
+2018-08-01 11:39:19.486 +07:00 [Information] Executed action method "TN.UI.Areas.User.Controllers.UserManagerController.Create (TN.UI)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 4.865ms.
+2018-08-01 11:39:19.487 +07:00 [Information] Executing ViewResult, running view "Create".
+2018-08-01 11:39:19.607 +07:00 [Information] Executed ViewResult - view "Create" executed in 121.633ms.
+2018-08-01 11:39:19.608 +07:00 [Information] Executed action "TN.UI.Areas.User.Controllers.UserManagerController.Create (TN.UI)" in 134.0947ms
+2018-08-01 11:39:19.608 +07:00 [Information] Request finished in 139.4116ms 200 text/html; charset=utf-8

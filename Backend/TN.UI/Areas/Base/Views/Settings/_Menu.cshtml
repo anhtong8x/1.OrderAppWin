@@ -1,0 +1,16 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{ 
+    string action = ViewContext.RouteData.Values["action"].ToString();
+}
+<ul class="nav nav-tabs nav-tabs-t" role="tablist">
+    <li role="presentation" class="@(action=="Index"?"active":"")">
+        <a  asp-action="Index">
+            <i class="material-icons">build</i> Cấu hình chung
+        </a>
+    </li>
+    <li role="presentation" class="@(action=="Email"?"active":"")">
+        <a asp-action="Email">
+            <i class="material-icons">email</i> Cấu email server
+        </a>
+    </li>
+</ul>

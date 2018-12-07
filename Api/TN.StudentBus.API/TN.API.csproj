@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <RootNamespace>TN.API</RootNamespace>
+    <AssemblyName>TN.API</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="logs\" />
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Serilog.Extensions.Logging" Version="2.0.2" />
+    <PackageReference Include="Serilog.Sinks.RollingFile" Version="3.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Backend\TN.Infrastructure\TN.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\Shared\TN.Domain\TN.Domain.csproj" />
+  </ItemGroup>
+
+</Project>
