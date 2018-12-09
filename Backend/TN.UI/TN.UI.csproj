@@ -5,6 +5,7 @@
     <UserSecretsId>aspnet-PT.UI-0CEBEBD1-8FBA-4312-BD3F-A7553373BA9C</UserSecretsId>
     <AssemblyName>TN.UI</AssemblyName>
     <RootNamespace>TN.UI</RootNamespace>
+    <NoWin32Manifest>true</NoWin32Manifest>
   </PropertyGroup>
 
   <ItemGroup>

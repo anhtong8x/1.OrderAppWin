@@ -21,7 +21,9 @@ using TN.API.Services;
 using TN.Domain.Model;
 using TN.Infrastructure;
 using TN.Infrastructure.Interfaces;
+using TN.Infrastructure.Interfaces.Manager;
 using TN.Infrastructure.Repositories;
+using TN.Infrastructure.Repositories.Manager;
 
 namespace TN.API
 {
@@ -90,11 +92,11 @@ namespace TN.API
             services.AddScoped<IFileRepository, FileRepository>();
 
 			// khai bao them service ------------------
-			services.AddScoped<IDishRepository, DishRepository>();
-			services.AddScoped<IDishSevice, DishSevice>();
+			services.AddScoped<ITableRepository, TableRepository>();
+			services.AddScoped<ITableSevice, TableSevice>();
 
-			services.AddScoped<ITableStatusRespository, TableStatusRepository>();
-			services.AddScoped<ITableStatusSevice, TableStatusSevice>();
+			//services.AddScoped<ITableStatusRespository, TableStatusRepository>();
+			//services.AddScoped<ITableStatusSevice, TableStatusSevice>();
 
 
 

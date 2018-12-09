@@ -1,0 +1,717 @@
+2018-12-09 09:35:52.796 +07:00 [Information] Request starting HTTP/1.1 DEBUG http://localhost:44396/  0
+2018-12-09 09:35:52.952 +07:00 [Information] Request finished in 161.5224ms 200 
+2018-12-09 09:42:10.082 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44396/  
+2018-12-09 09:42:10.179 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported cultures '["en-US", "en"]'.
+2018-12-09 09:42:10.181 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported UI Cultures '["en-US", "en"]'.
+2018-12-09 09:42:10.672 +07:00 [Information] Route matched with "{action = \"Index\", controller = \"Home\", area = \"\"}". Executing action "TN.UI.Controllers.HomeController.Index (TN.UI)"
+2018-12-09 09:42:11.117 +07:00 [Information] Entity Framework Core "2.1.4-rtm-31024" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-12-09 09:42:11.392 +07:00 [Information] Executed DbCommand ("17"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[Avatar], [e].[ConcurrencyStamp], [e].[CreatedDate], [e].[CreatedUserId], [e].[DisplayName], [e].[Email], [e].[EmailConfirmed], [e].[IsLock], [e].[IsReLogin], [e].[IsSuperAdmin], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[Note], [e].[NoteLock], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[RoleParents], [e].[RoleSchool], [e].[RoleTransportCompany], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UpdatedDate], [e].[UpdatedUserId], [e].[UserName]
+FROM [adm].[User] AS [e]
+WHERE [e].[Id] = @__get_Item_0"
+2018-12-09 09:42:11.449 +07:00 [Information] AuthenticationScheme: "Identity.Application" signed out.
+2018-12-09 09:42:11.450 +07:00 [Information] AuthenticationScheme: "Identity.External" signed out.
+2018-12-09 09:42:11.451 +07:00 [Information] AuthenticationScheme: "Identity.TwoFactorUserId" signed out.
+2018-12-09 09:42:11.453 +07:00 [Information] Authorization failed for the request at filter '"TN.UI.Extensions.PermissionFilter"'.
+2018-12-09 09:42:11.458 +07:00 [Information] Executing RedirectResult, redirecting to "/Login?ReturnUrl=%2F".
+2018-12-09 09:42:11.465 +07:00 [Information] Executed action "TN.UI.Controllers.HomeController.Index (TN.UI)" in 786.2613ms
+2018-12-09 09:42:11.494 +07:00 [Information] Request finished in 1418.8851ms 302 
+2018-12-09 09:42:11.507 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44396/Login?ReturnUrl=%2F  
+2018-12-09 09:42:11.510 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported cultures '["en-US", "en"]'.
+2018-12-09 09:42:11.510 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported UI Cultures '["en-US", "en"]'.
+2018-12-09 09:42:11.542 +07:00 [Information] Route matched with "{area = \"User\", action = \"Login\", controller = \"Account\"}". Executing action "TN.UI.Areas.User.Controllers.AccountController.Login (TN.UI)"
+2018-12-09 09:42:11.591 +07:00 [Information] Executing action method "TN.UI.Areas.User.Controllers.AccountController.Login (TN.UI)" with arguments (["/"]) - Validation state: Valid
+2018-12-09 09:42:11.593 +07:00 [Information] AuthenticationScheme: "Identity.External" signed out.
+2018-12-09 09:42:11.600 +07:00 [Information] Executed action method "TN.UI.Areas.User.Controllers.AccountController.Login (TN.UI)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 3.0878ms.
+2018-12-09 09:42:11.619 +07:00 [Information] Executing ViewResult, running view "Login".
+2018-12-09 09:42:11.830 +07:00 [Information] Executed ViewResult - view "Login" executed in 223.3816ms.
+2018-12-09 09:42:11.831 +07:00 [Information] Executed action "TN.UI.Areas.User.Controllers.AccountController.Login (TN.UI)" in 289.0846ms
+2018-12-09 09:42:11.839 +07:00 [Information] Request finished in 331.6329ms 200 text/html; charset=utf-8
+2018-12-09 09:42:11.861 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44396/Content/Admin/site.min.css?v=jW89cCi60i6h6mXSm6FblqHAQ9b_Ws0NOy1F8uGIlYc  
+2018-12-09 09:42:11.863 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported cultures '["en-US", "en"]'.
+2018-12-09 09:42:11.863 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported UI Cultures '["en-US", "en"]'.
+2018-12-09 09:42:11.902 +07:00 [Information] Sending file. Request path: '"/Content/Admin/site.min.css"'. Physical path: '"F:\4.Net\5.API\Backend\TN.UI\wwwroot\Content\Admin\site.min.css"'
+2018-12-09 09:42:11.903 +07:00 [Information] Request finished in 41.948ms 200 text/css
+2018-12-09 09:42:11.917 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44396/Content/Admin/js/jquery.min.js  
+2018-12-09 09:42:11.918 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported cultures '["en-US", "en"]'.
+2018-12-09 09:42:11.918 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported UI Cultures '["en-US", "en"]'.
+2018-12-09 09:42:11.994 +07:00 [Information] Sending file. Request path: '"/Content/Admin/js/jquery.min.js"'. Physical path: '"F:\4.Net\5.API\Backend\TN.UI\wwwroot\Content\Admin\js\jquery.min.js"'
+2018-12-09 09:42:11.994 +07:00 [Information] Request finished in 77.1831ms 200 application/javascript
+2018-12-09 09:42:12.004 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44396/Content/Admin/site.min.js?v=uGEmHVBVwqSwceRoffkJ4JsqPQI9uYkMXT592pcUwAs  
+2018-12-09 09:42:12.004 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported cultures '["en-US", "en"]'.
+2018-12-09 09:42:12.004 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported UI Cultures '["en-US", "en"]'.
+2018-12-09 09:42:12.008 +07:00 [Information] Sending file. Request path: '"/Content/Admin/site.min.js"'. Physical path: '"F:\4.Net\5.API\Backend\TN.UI\wwwroot\Content\Admin\site.min.js"'
+2018-12-09 09:42:12.008 +07:00 [Information] Request finished in 4.4921ms 200 application/javascript
+2018-12-09 09:42:12.029 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44396/Content/Admin/js/script.js  
+2018-12-09 09:42:12.030 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported cultures '["en-US", "en"]'.
+2018-12-09 09:42:12.031 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported UI Cultures '["en-US", "en"]'.
+2018-12-09 09:42:12.067 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44396/Content/Admin/js/jquery.validate.min.js  
+2018-12-09 09:42:12.068 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported cultures '["en-US", "en"]'.
+2018-12-09 09:42:12.068 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported UI Cultures '["en-US", "en"]'.
+2018-12-09 09:42:12.070 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44396/Content/Admin/js/jquery.validate.unobtrusive.min.js  
+2018-12-09 09:42:12.071 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported cultures '["en-US", "en"]'.
+2018-12-09 09:42:12.071 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported UI Cultures '["en-US", "en"]'.
+2018-12-09 09:42:12.120 +07:00 [Information] Sending file. Request path: '"/Content/Admin/js/jquery.validate.min.js"'. Physical path: '"F:\4.Net\5.API\Backend\TN.UI\wwwroot\Content\Admin\js\jquery.validate.min.js"'
+2018-12-09 09:42:12.120 +07:00 [Information] Request finished in 52.7628ms 200 application/javascript
+2018-12-09 09:42:12.121 +07:00 [Information] Sending file. Request path: '"/Content/Admin/js/jquery.validate.unobtrusive.min.js"'. Physical path: '"F:\4.Net\5.API\Backend\TN.UI\wwwroot\Content\Admin\js\jquery.validate.unobtrusive.min.js"'
+2018-12-09 09:42:12.121 +07:00 [Information] Request finished in 50.79ms 200 application/javascript
+2018-12-09 09:42:12.153 +07:00 [Information] Sending file. Request path: '"/Content/Admin/js/script.js"'. Physical path: '"F:\4.Net\5.API\Backend\TN.UI\wwwroot\Content\Admin\js\script.js"'
+2018-12-09 09:42:12.153 +07:00 [Information] Request finished in 124.2512ms 200 application/javascript
+2018-12-09 09:42:12.444 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44396/content/admin/images/bacvn.jpg  
+2018-12-09 09:42:12.445 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported cultures '["en-US", "en"]'.
+2018-12-09 09:42:12.445 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported UI Cultures '["en-US", "en"]'.
+2018-12-09 09:42:12.472 +07:00 [Information] Sending file. Request path: '"/content/admin/images/bacvn.jpg"'. Physical path: '"F:\4.Net\5.API\Backend\TN.UI\wwwroot\content\admin\images\bacvn.jpg"'
+2018-12-09 09:42:12.473 +07:00 [Information] Request finished in 28.7906ms 200 image/jpeg
+2018-12-09 09:42:12.768 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44396/Content/Admin/favicon.ico  
+2018-12-09 09:42:12.769 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported cultures '["en-US", "en"]'.
+2018-12-09 09:42:12.769 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported UI Cultures '["en-US", "en"]'.
+2018-12-09 09:42:12.772 +07:00 [Information] Request finished in 4.0843ms 404 
+2018-12-09 09:42:26.919 +07:00 [Information] Request starting HTTP/1.1 POST http://localhost:44396/Login?ReturnUrl=%2F application/x-www-form-urlencoded 261
+2018-12-09 09:42:26.920 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported cultures '["en-US", "en"]'.
+2018-12-09 09:42:26.921 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported UI Cultures '["en-US", "en"]'.
+2018-12-09 09:42:26.937 +07:00 [Information] Route matched with "{area = \"User\", action = \"Login\", controller = \"Account\"}". Executing action "TN.UI.Areas.User.Controllers.AccountController.Login (TN.UI)"
+2018-12-09 09:42:26.981 +07:00 [Information] Executing action method "TN.UI.Areas.User.Controllers.AccountController.Login (TN.UI)" with arguments (["TN.Domain.Model.LoginViewModel", "/"]) - Validation state: Valid
+2018-12-09 09:42:26.990 +07:00 [Information] Entity Framework Core "2.1.4-rtm-31024" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-12-09 09:42:27.028 +07:00 [Information] Executed DbCommand ("5"ms) [Parameters=["@__model_Username_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [m].[Id], [m].[AccessFailedCount], [m].[Avatar], [m].[ConcurrencyStamp], [m].[CreatedDate], [m].[CreatedUserId], [m].[DisplayName], [m].[Email], [m].[EmailConfirmed], [m].[IsLock], [m].[IsReLogin], [m].[IsSuperAdmin], [m].[LockoutEnabled], [m].[LockoutEnd], [m].[NormalizedEmail], [m].[NormalizedUserName], [m].[Note], [m].[NoteLock], [m].[PasswordHash], [m].[PhoneNumber], [m].[PhoneNumberConfirmed], [m].[RoleParents], [m].[RoleSchool], [m].[RoleTransportCompany], [m].[SecurityStamp], [m].[TwoFactorEnabled], [m].[UpdatedDate], [m].[UpdatedUserId], [m].[UserName]
+FROM [adm].[User] AS [m]
+WHERE [m].[UserName] = @__model_Username_0"
+2018-12-09 09:42:27.153 +07:00 [Information] Executed DbCommand ("4"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[Avatar], [u].[ConcurrencyStamp], [u].[CreatedDate], [u].[CreatedUserId], [u].[DisplayName], [u].[Email], [u].[EmailConfirmed], [u].[IsLock], [u].[IsReLogin], [u].[IsSuperAdmin], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[Note], [u].[NoteLock], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[RoleParents], [u].[RoleSchool], [u].[RoleTransportCompany], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UpdatedDate], [u].[UpdatedUserId], [u].[UserName]
+FROM [adm].[User] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0"
+2018-12-09 09:42:27.198 +07:00 [Warning] Invalid password for user "18".
+2018-12-09 09:42:27.199 +07:00 [Warning] User "18" failed to provide the correct password.
+2018-12-09 09:42:27.199 +07:00 [Information] AuthenticationScheme: "Identity.External" signed out.
+2018-12-09 09:42:27.205 +07:00 [Information] Executed action method "TN.UI.Areas.User.Controllers.AccountController.Login (TN.UI)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 223.9947ms.
+2018-12-09 09:42:27.214 +07:00 [Information] Executing ViewResult, running view "Login".
+2018-12-09 09:42:27.221 +07:00 [Information] Executed ViewResult - view "Login" executed in 7.4885ms.
+2018-12-09 09:42:27.222 +07:00 [Information] Executed action "TN.UI.Areas.User.Controllers.AccountController.Login (TN.UI)" in 284.4996ms
+2018-12-09 09:42:27.222 +07:00 [Information] Request finished in 303.5732ms 200 text/html; charset=utf-8
+2018-12-09 09:42:54.871 +07:00 [Information] Request starting HTTP/1.1 POST http://localhost:44396/Login?ReturnUrl=%2F application/x-www-form-urlencoded 261
+2018-12-09 09:42:54.871 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported cultures '["en-US", "en"]'.
+2018-12-09 09:42:54.871 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported UI Cultures '["en-US", "en"]'.
+2018-12-09 09:42:54.872 +07:00 [Information] Route matched with "{area = \"User\", action = \"Login\", controller = \"Account\"}". Executing action "TN.UI.Areas.User.Controllers.AccountController.Login (TN.UI)"
+2018-12-09 09:42:54.874 +07:00 [Information] Executing action method "TN.UI.Areas.User.Controllers.AccountController.Login (TN.UI)" with arguments (["TN.Domain.Model.LoginViewModel", "/"]) - Validation state: Valid
+2018-12-09 09:42:54.874 +07:00 [Information] Entity Framework Core "2.1.4-rtm-31024" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-12-09 09:42:54.877 +07:00 [Information] Executed DbCommand ("1"ms) [Parameters=["@__model_Username_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [m].[Id], [m].[AccessFailedCount], [m].[Avatar], [m].[ConcurrencyStamp], [m].[CreatedDate], [m].[CreatedUserId], [m].[DisplayName], [m].[Email], [m].[EmailConfirmed], [m].[IsLock], [m].[IsReLogin], [m].[IsSuperAdmin], [m].[LockoutEnabled], [m].[LockoutEnd], [m].[NormalizedEmail], [m].[NormalizedUserName], [m].[Note], [m].[NoteLock], [m].[PasswordHash], [m].[PhoneNumber], [m].[PhoneNumberConfirmed], [m].[RoleParents], [m].[RoleSchool], [m].[RoleTransportCompany], [m].[SecurityStamp], [m].[TwoFactorEnabled], [m].[UpdatedDate], [m].[UpdatedUserId], [m].[UserName]
+FROM [adm].[User] AS [m]
+WHERE [m].[UserName] = @__model_Username_0"
+2018-12-09 09:42:54.882 +07:00 [Information] Executed DbCommand ("2"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[Avatar], [u].[ConcurrencyStamp], [u].[CreatedDate], [u].[CreatedUserId], [u].[DisplayName], [u].[Email], [u].[EmailConfirmed], [u].[IsLock], [u].[IsReLogin], [u].[IsSuperAdmin], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[Note], [u].[NoteLock], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[RoleParents], [u].[RoleSchool], [u].[RoleTransportCompany], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UpdatedDate], [u].[UpdatedUserId], [u].[UserName]
+FROM [adm].[User] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0"
+2018-12-09 09:42:54.966 +07:00 [Information] Executed DbCommand ("3"ms) [Parameters=["@__user_Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [adm].[UserClaim] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0"
+2018-12-09 09:42:55.016 +07:00 [Information] Executed DbCommand ("5"ms) [Parameters=["@__userId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [x].[Id], [x].[ConcurrencyStamp], [x].[Description], [x].[Name], [x].[NormalizedName], [x].[Type]
+FROM [adm].[Role] AS [x]
+WHERE EXISTS (
+    SELECT 1
+    FROM [adm].[UserRole] AS [m]
+    WHERE ([m].[UserId] = @__userId_0) AND ([m].[RoleId] = [x].[Id]))"
+2018-12-09 09:42:55.033 +07:00 [Information] AuthenticationScheme: "Identity.Application" signed in.
+2018-12-09 09:42:55.157 +07:00 [Information] Executed DbCommand ("18"ms) [Parameters=["@p28='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p29='?' (Size = 4000), @p3='?' (DbType = DateTime2), @p4='?' (DbType = Int32), @p5='?' (Size = 100), @p6='?' (Size = 256), @p7='?' (DbType = Boolean), @p8='?' (DbType = Boolean), @p9='?' (DbType = Boolean), @p10='?' (DbType = Boolean), @p11='?' (DbType = Boolean), @p12='?' (DbType = DateTimeOffset), @p13='?' (Size = 256), @p14='?' (Size = 256), @p15='?' (Size = 4000), @p16='?' (Size = 1000), @p17='?' (Size = 4000), @p18='?' (Size = 4000), @p19='?' (DbType = Boolean), @p20='?' (Size = 4000), @p21='?' (Size = 4000), @p22='?' (Size = 4000), @p23='?' (Size = 4000), @p24='?' (DbType = Boolean), @p25='?' (DbType = DateTime2), @p26='?' (DbType = Int32), @p27='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+UPDATE [adm].[User] SET [AccessFailedCount] = @p0, [Avatar] = @p1, [ConcurrencyStamp] = @p2, [CreatedDate] = @p3, [CreatedUserId] = @p4, [DisplayName] = @p5, [Email] = @p6, [EmailConfirmed] = @p7, [IsLock] = @p8, [IsReLogin] = @p9, [IsSuperAdmin] = @p10, [LockoutEnabled] = @p11, [LockoutEnd] = @p12, [NormalizedEmail] = @p13, [NormalizedUserName] = @p14, [Note] = @p15, [NoteLock] = @p16, [PasswordHash] = @p17, [PhoneNumber] = @p18, [PhoneNumberConfirmed] = @p19, [RoleParents] = @p20, [RoleSchool] = @p21, [RoleTransportCompany] = @p22, [SecurityStamp] = @p23, [TwoFactorEnabled] = @p24, [UpdatedDate] = @p25, [UpdatedUserId] = @p26, [UserName] = @p27
+WHERE [Id] = @p28 AND [ConcurrencyStamp] = @p29;
+SELECT @@ROWCOUNT;"
+2018-12-09 09:42:55.175 +07:00 [Information] Executed action method "TN.UI.Areas.User.Controllers.AccountController.Login (TN.UI)", returned result "Microsoft.AspNetCore.Mvc.RedirectResult" in 301.3197ms.
+2018-12-09 09:42:55.175 +07:00 [Information] Executing RedirectResult, redirecting to "/".
+2018-12-09 09:42:55.176 +07:00 [Information] Executed action "TN.UI.Areas.User.Controllers.AccountController.Login (TN.UI)" in 303.9422ms
+2018-12-09 09:42:55.176 +07:00 [Information] Request finished in 305.5785ms 302 
+2018-12-09 09:42:55.183 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44396/  
+2018-12-09 09:42:55.184 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported cultures '["en-US", "en"]'.
+2018-12-09 09:42:55.184 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported UI Cultures '["en-US", "en"]'.
+2018-12-09 09:42:55.194 +07:00 [Information] Route matched with "{action = \"Index\", controller = \"Home\", area = \"\"}". Executing action "TN.UI.Controllers.HomeController.Index (TN.UI)"
+2018-12-09 09:42:55.196 +07:00 [Information] Entity Framework Core "2.1.4-rtm-31024" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-12-09 09:42:55.199 +07:00 [Information] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[Avatar], [e].[ConcurrencyStamp], [e].[CreatedDate], [e].[CreatedUserId], [e].[DisplayName], [e].[Email], [e].[EmailConfirmed], [e].[IsLock], [e].[IsReLogin], [e].[IsSuperAdmin], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[Note], [e].[NoteLock], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[RoleParents], [e].[RoleSchool], [e].[RoleTransportCompany], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UpdatedDate], [e].[UpdatedUserId], [e].[UserName]
+FROM [adm].[User] AS [e]
+WHERE [e].[Id] = @__get_Item_0"
+2018-12-09 09:42:55.217 +07:00 [Information] Executing action method "TN.UI.Controllers.HomeController.Index (TN.UI)" - Validation state: Valid
+2018-12-09 09:42:55.218 +07:00 [Information] Executed action method "TN.UI.Controllers.HomeController.Index (TN.UI)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 0.2043ms.
+2018-12-09 09:42:55.223 +07:00 [Information] Executing ViewResult, running view "Index".
+2018-12-09 09:42:55.324 +07:00 [Information] Executed ViewResult - view "Index" executed in 106.5297ms.
+2018-12-09 09:42:55.325 +07:00 [Information] Executed action "TN.UI.Controllers.HomeController.Index (TN.UI)" in 130.2373ms
+2018-12-09 09:42:55.325 +07:00 [Information] Request finished in 142.273ms 200 text/html; charset=utf-8
+2018-12-09 09:42:55.367 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44396/Data/Avatar/ecaba803-2c0c-4ec3-bcc1-93ede84c93cc.jpeg  
+2018-12-09 09:42:55.367 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported cultures '["en-US", "en"]'.
+2018-12-09 09:42:55.367 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported UI Cultures '["en-US", "en"]'.
+2018-12-09 09:42:55.369 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44396/Content/Admin/site.min.js  
+2018-12-09 09:42:55.370 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported cultures '["en-US", "en"]'.
+2018-12-09 09:42:55.370 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported UI Cultures '["en-US", "en"]'.
+2018-12-09 09:42:55.374 +07:00 [Information] Sending file. Request path: '"/Content/Admin/site.min.js"'. Physical path: '"F:\4.Net\5.API\Backend\TN.UI\wwwroot\Content\Admin\site.min.js"'
+2018-12-09 09:42:55.375 +07:00 [Information] Request finished in 5.8241ms 200 application/javascript
+2018-12-09 09:42:55.379 +07:00 [Information] Sending file. Request path: '"/Data/Avatar/ecaba803-2c0c-4ec3-bcc1-93ede84c93cc.jpeg"'. Physical path: '"F:\4.Net\5.API\Backend\TN.UI\wwwroot\Data\Avatar\ecaba803-2c0c-4ec3-bcc1-93ede84c93cc.jpeg"'
+2018-12-09 09:42:55.379 +07:00 [Information] Request finished in 13.3703ms 200 image/jpeg
+2018-12-09 09:42:55.466 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44396/Content/Admin/images/user-img-background.jpg  
+2018-12-09 09:42:55.467 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported cultures '["en-US", "en"]'.
+2018-12-09 09:42:55.467 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported UI Cultures '["en-US", "en"]'.
+2018-12-09 09:42:55.480 +07:00 [Information] Sending file. Request path: '"/Content/Admin/images/user-img-background.jpg"'. Physical path: '"F:\4.Net\5.API\Backend\TN.UI\wwwroot\Content\Admin\images\user-img-background.jpg"'
+2018-12-09 09:42:55.480 +07:00 [Information] Request finished in 13.4617ms 200 image/jpeg
+2018-12-09 09:42:55.660 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44396/favicon.ico  
+2018-12-09 09:42:55.662 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported cultures '["en-US", "en"]'.
+2018-12-09 09:42:55.662 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported UI Cultures '["en-US", "en"]'.
+2018-12-09 09:42:55.675 +07:00 [Information] Sending file. Request path: '"/favicon.ico"'. Physical path: '"F:\4.Net\5.API\Backend\TN.UI\wwwroot\favicon.ico"'
+2018-12-09 09:42:55.675 +07:00 [Information] Request finished in 15.173ms 200 image/x-icon
+2018-12-09 10:13:47.700 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44396/  
+2018-12-09 10:13:47.800 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported cultures '["en-US", "en"]'.
+2018-12-09 10:13:47.802 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported UI Cultures '["en-US", "en"]'.
+2018-12-09 10:13:48.367 +07:00 [Information] Entity Framework Core "2.1.4-rtm-31024" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-12-09 10:13:48.656 +07:00 [Information] Executed DbCommand ("21"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[Avatar], [e].[ConcurrencyStamp], [e].[CreatedDate], [e].[CreatedUserId], [e].[DisplayName], [e].[Email], [e].[EmailConfirmed], [e].[IsLock], [e].[IsReLogin], [e].[IsSuperAdmin], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[Note], [e].[NoteLock], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[RoleParents], [e].[RoleSchool], [e].[RoleTransportCompany], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UpdatedDate], [e].[UpdatedUserId], [e].[UserName]
+FROM [adm].[User] AS [e]
+WHERE [e].[Id] = @__get_Item_0"
+2018-12-09 10:13:48.728 +07:00 [Information] AuthenticationScheme: "Identity.Application" signed out.
+2018-12-09 10:13:48.730 +07:00 [Information] AuthenticationScheme: "Identity.External" signed out.
+2018-12-09 10:13:48.731 +07:00 [Information] AuthenticationScheme: "Identity.TwoFactorUserId" signed out.
+2018-12-09 10:13:48.735 +07:00 [Information] "Identity.Application" was not authenticated. Failure message: "No principal."
+2018-12-09 10:13:49.111 +07:00 [Information] Route matched with "{action = \"Index\", controller = \"Home\", area = \"\"}". Executing action "TN.UI.Controllers.HomeController.Index (TN.UI)"
+2018-12-09 10:13:49.130 +07:00 [Information] Executed DbCommand ("2"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[Avatar], [e].[ConcurrencyStamp], [e].[CreatedDate], [e].[CreatedUserId], [e].[DisplayName], [e].[Email], [e].[EmailConfirmed], [e].[IsLock], [e].[IsReLogin], [e].[IsSuperAdmin], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[Note], [e].[NoteLock], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[RoleParents], [e].[RoleSchool], [e].[RoleTransportCompany], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UpdatedDate], [e].[UpdatedUserId], [e].[UserName]
+FROM [adm].[User] AS [e]
+WHERE [e].[Id] = @__get_Item_0"
+2018-12-09 10:13:49.132 +07:00 [Information] AuthenticationScheme: "Identity.Application" signed out.
+2018-12-09 10:13:49.132 +07:00 [Information] AuthenticationScheme: "Identity.External" signed out.
+2018-12-09 10:13:49.132 +07:00 [Information] AuthenticationScheme: "Identity.TwoFactorUserId" signed out.
+2018-12-09 10:13:49.140 +07:00 [Information] Authorization failed for the request at filter '"TN.UI.Extensions.PermissionFilter"'.
+2018-12-09 10:13:49.145 +07:00 [Information] Executing RedirectResult, redirecting to "/Login?ReturnUrl=%2F".
+2018-12-09 10:13:49.154 +07:00 [Information] Executed action "TN.UI.Controllers.HomeController.Index (TN.UI)" in 34.1859ms
+2018-12-09 10:13:49.184 +07:00 [Information] Request finished in 1491.9679ms 302 
+2018-12-09 10:13:49.194 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44396/Login?ReturnUrl=%2F  
+2018-12-09 10:13:49.198 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported cultures '["en-US", "en"]'.
+2018-12-09 10:13:49.198 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported UI Cultures '["en-US", "en"]'.
+2018-12-09 10:13:49.232 +07:00 [Information] Route matched with "{area = \"User\", action = \"Login\", controller = \"Account\"}". Executing action "TN.UI.Areas.User.Controllers.AccountController.Login (TN.UI)"
+2018-12-09 10:13:49.299 +07:00 [Information] Executing action method "TN.UI.Areas.User.Controllers.AccountController.Login (TN.UI)" with arguments (["/"]) - Validation state: Valid
+2018-12-09 10:13:49.303 +07:00 [Information] AuthenticationScheme: "Identity.External" signed out.
+2018-12-09 10:13:49.309 +07:00 [Information] Executed action method "TN.UI.Areas.User.Controllers.AccountController.Login (TN.UI)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 4.7969ms.
+2018-12-09 10:13:49.331 +07:00 [Information] Executing ViewResult, running view "Login".
+2018-12-09 10:13:49.576 +07:00 [Information] Executed ViewResult - view "Login" executed in 257.2561ms.
+2018-12-09 10:13:49.577 +07:00 [Information] Executed action "TN.UI.Areas.User.Controllers.AccountController.Login (TN.UI)" in 343.5092ms
+2018-12-09 10:13:49.586 +07:00 [Information] Request finished in 391.5425ms 200 text/html; charset=utf-8
+2018-12-09 10:13:49.636 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44396/Content/Admin/site.min.css?v=jW89cCi60i6h6mXSm6FblqHAQ9b_Ws0NOy1F8uGIlYc  
+2018-12-09 10:13:49.636 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported cultures '["en-US", "en"]'.
+2018-12-09 10:13:49.637 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported UI Cultures '["en-US", "en"]'.
+2018-12-09 10:13:49.642 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44396/Content/Admin/site.min.js?v=uGEmHVBVwqSwceRoffkJ4JsqPQI9uYkMXT592pcUwAs  
+2018-12-09 10:13:49.643 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported cultures '["en-US", "en"]'.
+2018-12-09 10:13:49.643 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported UI Cultures '["en-US", "en"]'.
+2018-12-09 10:13:49.648 +07:00 [Information] The file "/Content/Admin/site.min.css" was not modified
+2018-12-09 10:13:49.648 +07:00 [Information] The file "/Content/Admin/site.min.js" was not modified
+2018-12-09 10:13:49.652 +07:00 [Information] Request finished in 20.6072ms 304 text/css
+2018-12-09 10:13:49.652 +07:00 [Information] Request finished in 9.6229ms 304 application/javascript
+2018-12-09 10:44:20.926 +07:00 [Information] Request starting HTTP/1.1 POST http://localhost:44396/Login?ReturnUrl=%2F application/x-www-form-urlencoded 245
+2018-12-09 10:44:21.046 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported cultures '["en-US", "en"]'.
+2018-12-09 10:44:21.047 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported UI Cultures '["en-US", "en"]'.
+2018-12-09 10:44:21.474 +07:00 [Information] Route matched with "{area = \"User\", action = \"Login\", controller = \"Account\"}". Executing action "TN.UI.Areas.User.Controllers.AccountController.Login (TN.UI)"
+2018-12-09 10:44:21.697 +07:00 [Information] Executing action method "TN.UI.Areas.User.Controllers.AccountController.Login (TN.UI)" with arguments (["TN.Domain.Model.LoginViewModel", "/"]) - Validation state: Valid
+2018-12-09 10:44:22.141 +07:00 [Information] Entity Framework Core "2.1.4-rtm-31024" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-12-09 10:44:22.430 +07:00 [Information] Executed DbCommand ("19"ms) [Parameters=["@__model_Username_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [m].[Id], [m].[AccessFailedCount], [m].[Avatar], [m].[ConcurrencyStamp], [m].[CreatedDate], [m].[CreatedUserId], [m].[DisplayName], [m].[Email], [m].[EmailConfirmed], [m].[IsLock], [m].[IsReLogin], [m].[IsSuperAdmin], [m].[LockoutEnabled], [m].[LockoutEnd], [m].[NormalizedEmail], [m].[NormalizedUserName], [m].[Note], [m].[NoteLock], [m].[PasswordHash], [m].[PhoneNumber], [m].[PhoneNumberConfirmed], [m].[RoleParents], [m].[RoleSchool], [m].[RoleTransportCompany], [m].[SecurityStamp], [m].[TwoFactorEnabled], [m].[UpdatedDate], [m].[UpdatedUserId], [m].[UserName]
+FROM [adm].[User] AS [m]
+WHERE [m].[UserName] = @__model_Username_0"
+2018-12-09 10:44:22.570 +07:00 [Information] Executed DbCommand ("2"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[Avatar], [u].[ConcurrencyStamp], [u].[CreatedDate], [u].[CreatedUserId], [u].[DisplayName], [u].[Email], [u].[EmailConfirmed], [u].[IsLock], [u].[IsReLogin], [u].[IsSuperAdmin], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[Note], [u].[NoteLock], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[RoleParents], [u].[RoleSchool], [u].[RoleTransportCompany], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UpdatedDate], [u].[UpdatedUserId], [u].[UserName]
+FROM [adm].[User] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0"
+2018-12-09 10:44:22.668 +07:00 [Information] Executed DbCommand ("0"ms) [Parameters=["@__user_Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [adm].[UserClaim] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0"
+2018-12-09 10:44:22.714 +07:00 [Information] Executed DbCommand ("4"ms) [Parameters=["@__userId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [x].[Id], [x].[ConcurrencyStamp], [x].[Description], [x].[Name], [x].[NormalizedName], [x].[Type]
+FROM [adm].[Role] AS [x]
+WHERE EXISTS (
+    SELECT 1
+    FROM [adm].[UserRole] AS [m]
+    WHERE ([m].[UserId] = @__userId_0) AND ([m].[RoleId] = [x].[Id]))"
+2018-12-09 10:44:22.737 +07:00 [Information] AuthenticationScheme: "Identity.Application" signed in.
+2018-12-09 10:44:22.960 +07:00 [Information] Executed DbCommand ("130"ms) [Parameters=["@p28='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p29='?' (Size = 4000), @p3='?' (DbType = DateTime2), @p4='?' (DbType = Int32), @p5='?' (Size = 100), @p6='?' (Size = 256), @p7='?' (DbType = Boolean), @p8='?' (DbType = Boolean), @p9='?' (DbType = Boolean), @p10='?' (DbType = Boolean), @p11='?' (DbType = Boolean), @p12='?' (DbType = DateTimeOffset), @p13='?' (Size = 256), @p14='?' (Size = 256), @p15='?' (Size = 4000), @p16='?' (Size = 1000), @p17='?' (Size = 4000), @p18='?' (Size = 4000), @p19='?' (DbType = Boolean), @p20='?' (Size = 4000), @p21='?' (Size = 4000), @p22='?' (Size = 4000), @p23='?' (Size = 4000), @p24='?' (DbType = Boolean), @p25='?' (DbType = DateTime2), @p26='?' (DbType = Int32), @p27='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+UPDATE [adm].[User] SET [AccessFailedCount] = @p0, [Avatar] = @p1, [ConcurrencyStamp] = @p2, [CreatedDate] = @p3, [CreatedUserId] = @p4, [DisplayName] = @p5, [Email] = @p6, [EmailConfirmed] = @p7, [IsLock] = @p8, [IsReLogin] = @p9, [IsSuperAdmin] = @p10, [LockoutEnabled] = @p11, [LockoutEnd] = @p12, [NormalizedEmail] = @p13, [NormalizedUserName] = @p14, [Note] = @p15, [NoteLock] = @p16, [PasswordHash] = @p17, [PhoneNumber] = @p18, [PhoneNumberConfirmed] = @p19, [RoleParents] = @p20, [RoleSchool] = @p21, [RoleTransportCompany] = @p22, [SecurityStamp] = @p23, [TwoFactorEnabled] = @p24, [UpdatedDate] = @p25, [UpdatedUserId] = @p26, [UserName] = @p27
+WHERE [Id] = @p28 AND [ConcurrencyStamp] = @p29;
+SELECT @@ROWCOUNT;"
+2018-12-09 10:44:23.016 +07:00 [Information] Executed action method "TN.UI.Areas.User.Controllers.AccountController.Login (TN.UI)", returned result "Microsoft.AspNetCore.Mvc.RedirectResult" in 1311.4201ms.
+2018-12-09 10:44:23.034 +07:00 [Information] Executing RedirectResult, redirecting to "/".
+2018-12-09 10:44:23.044 +07:00 [Information] Executed action "TN.UI.Areas.User.Controllers.AccountController.Login (TN.UI)" in 1563.1532ms
+2018-12-09 10:44:23.075 +07:00 [Information] Request finished in 2159.9396ms 302 
+2018-12-09 10:44:23.087 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44396/  
+2018-12-09 10:44:23.088 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported cultures '["en-US", "en"]'.
+2018-12-09 10:44:23.088 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported UI Cultures '["en-US", "en"]'.
+2018-12-09 10:44:23.107 +07:00 [Information] Route matched with "{action = \"Index\", controller = \"Home\", area = \"\"}". Executing action "TN.UI.Controllers.HomeController.Index (TN.UI)"
+2018-12-09 10:44:23.119 +07:00 [Information] Entity Framework Core "2.1.4-rtm-31024" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-12-09 10:44:23.141 +07:00 [Information] Executed DbCommand ("3"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[Avatar], [e].[ConcurrencyStamp], [e].[CreatedDate], [e].[CreatedUserId], [e].[DisplayName], [e].[Email], [e].[EmailConfirmed], [e].[IsLock], [e].[IsReLogin], [e].[IsSuperAdmin], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[Note], [e].[NoteLock], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[RoleParents], [e].[RoleSchool], [e].[RoleTransportCompany], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UpdatedDate], [e].[UpdatedUserId], [e].[UserName]
+FROM [adm].[User] AS [e]
+WHERE [e].[Id] = @__get_Item_0"
+2018-12-09 10:44:23.161 +07:00 [Information] Executing action method "TN.UI.Controllers.HomeController.Index (TN.UI)" - Validation state: Valid
+2018-12-09 10:44:23.162 +07:00 [Information] Executed action method "TN.UI.Controllers.HomeController.Index (TN.UI)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 0.6385ms.
+2018-12-09 10:44:23.187 +07:00 [Information] Executing ViewResult, running view "Index".
+2018-12-09 10:44:23.353 +07:00 [Information] Executed ViewResult - view "Index" executed in 186.1064ms.
+2018-12-09 10:44:23.354 +07:00 [Information] Executed action "TN.UI.Controllers.HomeController.Index (TN.UI)" in 246.6564ms
+2018-12-09 10:44:23.360 +07:00 [Information] Request finished in 273.4898ms 200 text/html; charset=utf-8
+2018-12-09 10:44:23.389 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44396/Content/Admin/site.min.css?v=jW89cCi60i6h6mXSm6FblqHAQ9b_Ws0NOy1F8uGIlYc  
+2018-12-09 10:44:23.391 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported cultures '["en-US", "en"]'.
+2018-12-09 10:44:23.391 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported UI Cultures '["en-US", "en"]'.
+2018-12-09 10:44:23.398 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44396/Content/Admin/site.min.js  
+2018-12-09 10:44:23.398 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported cultures '["en-US", "en"]'.
+2018-12-09 10:44:23.398 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported UI Cultures '["en-US", "en"]'.
+2018-12-09 10:44:23.404 +07:00 [Information] The file "/Content/Admin/site.min.css" was not modified
+2018-12-09 10:44:23.404 +07:00 [Information] The file "/Content/Admin/site.min.js" was not modified
+2018-12-09 10:44:23.407 +07:00 [Information] Request finished in 18.2261ms 304 text/css
+2018-12-09 10:44:23.407 +07:00 [Information] Request finished in 9.6237ms 304 application/javascript
+2018-12-09 17:27:54.415 +07:00 [Information] Request starting HTTP/1.1 DEBUG http://localhost:44396/  0
+2018-12-09 17:27:54.531 +07:00 [Information] Request finished in 120.0584ms 200 
+2018-12-09 17:27:58.281 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44396/  
+2018-12-09 17:27:58.374 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported cultures '["en-US", "en"]'.
+2018-12-09 17:27:58.387 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported UI Cultures '["en-US", "en"]'.
+2018-12-09 17:27:59.981 +07:00 [Information] Route matched with "{action = \"Index\", controller = \"Home\", area = \"\"}". Executing action "TN.UI.Controllers.HomeController.Index (TN.UI)"
+2018-12-09 17:28:00.815 +07:00 [Information] Entity Framework Core "2.1.4-rtm-31024" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-12-09 17:28:01.368 +07:00 [Information] Executed DbCommand ("37"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[Avatar], [e].[ConcurrencyStamp], [e].[CreatedDate], [e].[CreatedUserId], [e].[DisplayName], [e].[Email], [e].[EmailConfirmed], [e].[IsLock], [e].[IsReLogin], [e].[IsSuperAdmin], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[Note], [e].[NoteLock], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[RoleParents], [e].[RoleSchool], [e].[RoleTransportCompany], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UpdatedDate], [e].[UpdatedUserId], [e].[UserName]
+FROM [adm].[User] AS [e]
+WHERE [e].[Id] = @__get_Item_0"
+2018-12-09 17:28:01.446 +07:00 [Information] AuthenticationScheme: "Identity.Application" signed out.
+2018-12-09 17:28:01.452 +07:00 [Information] AuthenticationScheme: "Identity.External" signed out.
+2018-12-09 17:28:01.457 +07:00 [Information] AuthenticationScheme: "Identity.TwoFactorUserId" signed out.
+2018-12-09 17:28:01.466 +07:00 [Information] Authorization failed for the request at filter '"TN.UI.Extensions.PermissionFilter"'.
+2018-12-09 17:28:01.479 +07:00 [Information] Executing RedirectResult, redirecting to "/Login?ReturnUrl=%2F".
+2018-12-09 17:28:01.493 +07:00 [Information] Executed action "TN.UI.Controllers.HomeController.Index (TN.UI)" in 1495.8096ms
+2018-12-09 17:28:01.537 +07:00 [Information] Request finished in 3260.3109ms 302 
+2018-12-09 17:28:01.544 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44396/Login?ReturnUrl=%2F  
+2018-12-09 17:28:01.557 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported cultures '["en-US", "en"]'.
+2018-12-09 17:28:01.563 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported UI Cultures '["en-US", "en"]'.
+2018-12-09 17:28:01.605 +07:00 [Information] Route matched with "{area = \"User\", action = \"Login\", controller = \"Account\"}". Executing action "TN.UI.Areas.User.Controllers.AccountController.Login (TN.UI)"
+2018-12-09 17:28:01.672 +07:00 [Information] Executing action method "TN.UI.Areas.User.Controllers.AccountController.Login (TN.UI)" with arguments (["/"]) - Validation state: Valid
+2018-12-09 17:28:01.682 +07:00 [Information] AuthenticationScheme: "Identity.External" signed out.
+2018-12-09 17:28:01.694 +07:00 [Information] Executed action method "TN.UI.Areas.User.Controllers.AccountController.Login (TN.UI)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 11.1307ms.
+2018-12-09 17:28:01.729 +07:00 [Information] Executing ViewResult, running view "Login".
+2018-12-09 17:28:02.780 +07:00 [Information] Executed ViewResult - view "Login" executed in 1069.1668ms.
+2018-12-09 17:28:02.786 +07:00 [Information] Executed action "TN.UI.Areas.User.Controllers.AccountController.Login (TN.UI)" in 1176.5965ms
+2018-12-09 17:28:02.864 +07:00 [Information] Request finished in 1256.6732ms 200 text/html; charset=utf-8
+2018-12-09 17:28:02.869 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44396/Content/Admin/site.min.css?v=jW89cCi60i6h6mXSm6FblqHAQ9b_Ws0NOy1F8uGIlYc  
+2018-12-09 17:28:02.874 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44396/Content/Admin/site.min.js?v=uGEmHVBVwqSwceRoffkJ4JsqPQI9uYkMXT592pcUwAs  
+2018-12-09 17:28:02.885 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported cultures '["en-US", "en"]'.
+2018-12-09 17:28:02.886 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported cultures '["en-US", "en"]'.
+2018-12-09 17:28:02.895 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported UI Cultures '["en-US", "en"]'.
+2018-12-09 17:28:02.899 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported UI Cultures '["en-US", "en"]'.
+2018-12-09 17:28:02.920 +07:00 [Information] The file "/Content/Admin/site.min.css" was not modified
+2018-12-09 17:28:02.918 +07:00 [Information] The file "/Content/Admin/site.min.js" was not modified
+2018-12-09 17:28:02.936 +07:00 [Information] Request finished in 65.6635ms 304 text/css
+2018-12-09 17:28:02.943 +07:00 [Information] Request finished in 58.6947ms 304 application/javascript
+2018-12-09 17:28:03.406 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44396/Content/Admin/favicon.ico  
+2018-12-09 17:28:03.413 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported cultures '["en-US", "en"]'.
+2018-12-09 17:28:03.421 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported UI Cultures '["en-US", "en"]'.
+2018-12-09 17:28:03.434 +07:00 [Information] Request finished in 31.9633ms 404 
+2018-12-09 17:28:12.792 +07:00 [Information] Request starting HTTP/1.1 POST http://localhost:44396/Login?ReturnUrl=%2F application/x-www-form-urlencoded 245
+2018-12-09 17:28:12.801 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported cultures '["en-US", "en"]'.
+2018-12-09 17:28:12.808 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported UI Cultures '["en-US", "en"]'.
+2018-12-09 17:28:12.845 +07:00 [Information] Route matched with "{area = \"User\", action = \"Login\", controller = \"Account\"}". Executing action "TN.UI.Areas.User.Controllers.AccountController.Login (TN.UI)"
+2018-12-09 17:28:12.905 +07:00 [Information] Executing action method "TN.UI.Areas.User.Controllers.AccountController.Login (TN.UI)" with arguments (["TN.Domain.Model.LoginViewModel", "/"]) - Validation state: Valid
+2018-12-09 17:28:18.232 +07:00 [Information] Entity Framework Core "2.1.4-rtm-31024" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-12-09 17:28:18.281 +07:00 [Information] Executed DbCommand ("7"ms) [Parameters=["@__model_Username_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [m].[Id], [m].[AccessFailedCount], [m].[Avatar], [m].[ConcurrencyStamp], [m].[CreatedDate], [m].[CreatedUserId], [m].[DisplayName], [m].[Email], [m].[EmailConfirmed], [m].[IsLock], [m].[IsReLogin], [m].[IsSuperAdmin], [m].[LockoutEnabled], [m].[LockoutEnd], [m].[NormalizedEmail], [m].[NormalizedUserName], [m].[Note], [m].[NoteLock], [m].[PasswordHash], [m].[PhoneNumber], [m].[PhoneNumberConfirmed], [m].[RoleParents], [m].[RoleSchool], [m].[RoleTransportCompany], [m].[SecurityStamp], [m].[TwoFactorEnabled], [m].[UpdatedDate], [m].[UpdatedUserId], [m].[UserName]
+FROM [adm].[User] AS [m]
+WHERE [m].[UserName] = @__model_Username_0"
+2018-12-09 17:28:18.446 +07:00 [Information] Executed DbCommand ("7"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[Avatar], [u].[ConcurrencyStamp], [u].[CreatedDate], [u].[CreatedUserId], [u].[DisplayName], [u].[Email], [u].[EmailConfirmed], [u].[IsLock], [u].[IsReLogin], [u].[IsSuperAdmin], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[Note], [u].[NoteLock], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[RoleParents], [u].[RoleSchool], [u].[RoleTransportCompany], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UpdatedDate], [u].[UpdatedUserId], [u].[UserName]
+FROM [adm].[User] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0"
+2018-12-09 17:28:18.650 +07:00 [Information] Executed DbCommand ("5"ms) [Parameters=["@__user_Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [adm].[UserClaim] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0"
+2018-12-09 17:28:18.726 +07:00 [Information] Executed DbCommand ("6"ms) [Parameters=["@__userId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [x].[Id], [x].[ConcurrencyStamp], [x].[Description], [x].[Name], [x].[NormalizedName], [x].[Type]
+FROM [adm].[Role] AS [x]
+WHERE EXISTS (
+    SELECT 1
+    FROM [adm].[UserRole] AS [m]
+    WHERE ([m].[UserId] = @__userId_0) AND ([m].[RoleId] = [x].[Id]))"
+2018-12-09 17:28:18.749 +07:00 [Information] AuthenticationScheme: "Identity.Application" signed in.
+2018-12-09 17:28:18.914 +07:00 [Information] Executed DbCommand ("18"ms) [Parameters=["@p28='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p29='?' (Size = 4000), @p3='?' (DbType = DateTime2), @p4='?' (DbType = Int32), @p5='?' (Size = 100), @p6='?' (Size = 256), @p7='?' (DbType = Boolean), @p8='?' (DbType = Boolean), @p9='?' (DbType = Boolean), @p10='?' (DbType = Boolean), @p11='?' (DbType = Boolean), @p12='?' (DbType = DateTimeOffset), @p13='?' (Size = 256), @p14='?' (Size = 256), @p15='?' (Size = 4000), @p16='?' (Size = 1000), @p17='?' (Size = 4000), @p18='?' (Size = 4000), @p19='?' (DbType = Boolean), @p20='?' (Size = 4000), @p21='?' (Size = 4000), @p22='?' (Size = 4000), @p23='?' (Size = 4000), @p24='?' (DbType = Boolean), @p25='?' (DbType = DateTime2), @p26='?' (DbType = Int32), @p27='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+UPDATE [adm].[User] SET [AccessFailedCount] = @p0, [Avatar] = @p1, [ConcurrencyStamp] = @p2, [CreatedDate] = @p3, [CreatedUserId] = @p4, [DisplayName] = @p5, [Email] = @p6, [EmailConfirmed] = @p7, [IsLock] = @p8, [IsReLogin] = @p9, [IsSuperAdmin] = @p10, [LockoutEnabled] = @p11, [LockoutEnd] = @p12, [NormalizedEmail] = @p13, [NormalizedUserName] = @p14, [Note] = @p15, [NoteLock] = @p16, [PasswordHash] = @p17, [PhoneNumber] = @p18, [PhoneNumberConfirmed] = @p19, [RoleParents] = @p20, [RoleSchool] = @p21, [RoleTransportCompany] = @p22, [SecurityStamp] = @p23, [TwoFactorEnabled] = @p24, [UpdatedDate] = @p25, [UpdatedUserId] = @p26, [UserName] = @p27
+WHERE [Id] = @p28 AND [ConcurrencyStamp] = @p29;
+SELECT @@ROWCOUNT;"
+2018-12-09 17:28:18.945 +07:00 [Information] Executed action method "TN.UI.Areas.User.Controllers.AccountController.Login (TN.UI)", returned result "Microsoft.AspNetCore.Mvc.RedirectResult" in 6034.0968ms.
+2018-12-09 17:28:18.959 +07:00 [Information] Executing RedirectResult, redirecting to "/".
+2018-12-09 17:28:18.965 +07:00 [Information] Executed action "TN.UI.Areas.User.Controllers.AccountController.Login (TN.UI)" in 6112.5256ms
+2018-12-09 17:28:18.973 +07:00 [Information] Request finished in 6179.4001ms 302 
+2018-12-09 17:28:18.982 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44396/  
+2018-12-09 17:28:18.989 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported cultures '["en-US", "en"]'.
+2018-12-09 17:28:18.995 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported UI Cultures '["en-US", "en"]'.
+2018-12-09 17:28:19.013 +07:00 [Information] Route matched with "{action = \"Index\", controller = \"Home\", area = \"\"}". Executing action "TN.UI.Controllers.HomeController.Index (TN.UI)"
+2018-12-09 17:28:19.019 +07:00 [Information] Entity Framework Core "2.1.4-rtm-31024" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-12-09 17:28:19.028 +07:00 [Information] Executed DbCommand ("1"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[Avatar], [e].[ConcurrencyStamp], [e].[CreatedDate], [e].[CreatedUserId], [e].[DisplayName], [e].[Email], [e].[EmailConfirmed], [e].[IsLock], [e].[IsReLogin], [e].[IsSuperAdmin], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[Note], [e].[NoteLock], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[RoleParents], [e].[RoleSchool], [e].[RoleTransportCompany], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UpdatedDate], [e].[UpdatedUserId], [e].[UserName]
+FROM [adm].[User] AS [e]
+WHERE [e].[Id] = @__get_Item_0"
+2018-12-09 17:28:19.055 +07:00 [Information] Executing action method "TN.UI.Controllers.HomeController.Index (TN.UI)" - Validation state: Valid
+2018-12-09 17:28:19.059 +07:00 [Information] Executed action method "TN.UI.Controllers.HomeController.Index (TN.UI)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 0.506ms.
+2018-12-09 17:28:19.100 +07:00 [Information] Executing ViewResult, running view "Index".
+2018-12-09 17:28:19.309 +07:00 [Information] Executed ViewResult - view "Index" executed in 238.5764ms.
+2018-12-09 17:28:19.387 +07:00 [Information] Executed action "TN.UI.Controllers.HomeController.Index (TN.UI)" in 299.5081ms
+2018-12-09 17:28:19.392 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44396/Content/Admin/site.min.js  
+2018-12-09 17:28:19.409 +07:00 [Information] Request finished in 419.8338ms 200 text/html; charset=utf-8
+2018-12-09 17:28:19.416 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported cultures '["en-US", "en"]'.
+2018-12-09 17:28:19.439 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported UI Cultures '["en-US", "en"]'.
+2018-12-09 17:28:19.454 +07:00 [Information] The file "/Content/Admin/site.min.js" was not modified
+2018-12-09 17:28:19.462 +07:00 [Information] Request finished in 75.0677ms 304 application/javascript
+2018-12-09 17:39:49.244 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44396/  
+2018-12-09 17:39:49.344 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported cultures '["en-US", "en"]'.
+2018-12-09 17:39:49.346 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported UI Cultures '["en-US", "en"]'.
+2018-12-09 17:39:49.804 +07:00 [Information] Route matched with "{action = \"Index\", controller = \"Home\", area = \"\"}". Executing action "TN.UI.Controllers.HomeController.Index (TN.UI)"
+2018-12-09 17:39:50.201 +07:00 [Information] Entity Framework Core "2.1.4-rtm-31024" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-12-09 17:39:50.485 +07:00 [Information] Executed DbCommand ("19"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[Avatar], [e].[ConcurrencyStamp], [e].[CreatedDate], [e].[CreatedUserId], [e].[DisplayName], [e].[Email], [e].[EmailConfirmed], [e].[IsLock], [e].[IsReLogin], [e].[IsSuperAdmin], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[Note], [e].[NoteLock], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[RoleParents], [e].[RoleSchool], [e].[RoleTransportCompany], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UpdatedDate], [e].[UpdatedUserId], [e].[UserName]
+FROM [adm].[User] AS [e]
+WHERE [e].[Id] = @__get_Item_0"
+2018-12-09 17:39:50.540 +07:00 [Information] AuthenticationScheme: "Identity.Application" signed out.
+2018-12-09 17:39:50.542 +07:00 [Information] AuthenticationScheme: "Identity.External" signed out.
+2018-12-09 17:39:50.542 +07:00 [Information] AuthenticationScheme: "Identity.TwoFactorUserId" signed out.
+2018-12-09 17:39:50.545 +07:00 [Information] Authorization failed for the request at filter '"TN.UI.Extensions.PermissionFilter"'.
+2018-12-09 17:39:50.549 +07:00 [Information] Executing RedirectResult, redirecting to "/Login?ReturnUrl=%2F".
+2018-12-09 17:39:50.556 +07:00 [Information] Executed action "TN.UI.Controllers.HomeController.Index (TN.UI)" in 745.9943ms
+2018-12-09 17:39:50.583 +07:00 [Information] Request finished in 1346.5661ms 302 
+2018-12-09 17:39:50.594 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44396/Login?ReturnUrl=%2F  
+2018-12-09 17:39:50.597 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported cultures '["en-US", "en"]'.
+2018-12-09 17:39:50.597 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported UI Cultures '["en-US", "en"]'.
+2018-12-09 17:39:50.630 +07:00 [Information] Route matched with "{area = \"User\", action = \"Login\", controller = \"Account\"}". Executing action "TN.UI.Areas.User.Controllers.AccountController.Login (TN.UI)"
+2018-12-09 17:39:50.689 +07:00 [Information] Executing action method "TN.UI.Areas.User.Controllers.AccountController.Login (TN.UI)" with arguments (["/"]) - Validation state: Valid
+2018-12-09 17:39:50.694 +07:00 [Information] AuthenticationScheme: "Identity.External" signed out.
+2018-12-09 17:39:50.701 +07:00 [Information] Executed action method "TN.UI.Areas.User.Controllers.AccountController.Login (TN.UI)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 5.3034ms.
+2018-12-09 17:39:50.724 +07:00 [Information] Executing ViewResult, running view "Login".
+2018-12-09 17:39:50.916 +07:00 [Information] Executed ViewResult - view "Login" executed in 206.497ms.
+2018-12-09 17:39:50.916 +07:00 [Information] Executed action "TN.UI.Areas.User.Controllers.AccountController.Login (TN.UI)" in 286.1564ms
+2018-12-09 17:39:50.924 +07:00 [Information] Request finished in 330.1957ms 200 text/html; charset=utf-8
+2018-12-09 17:39:51.385 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44396/Content/Admin/favicon.ico  
+2018-12-09 17:39:51.387 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported cultures '["en-US", "en"]'.
+2018-12-09 17:39:51.387 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported UI Cultures '["en-US", "en"]'.
+2018-12-09 17:39:51.394 +07:00 [Information] Request finished in 8.2257ms 404 
+2018-12-09 17:39:52.840 +07:00 [Information] Request starting HTTP/1.1 POST http://localhost:44396/Login?ReturnUrl=%2F application/x-www-form-urlencoded 245
+2018-12-09 17:39:52.841 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported cultures '["en-US", "en"]'.
+2018-12-09 17:39:52.842 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported UI Cultures '["en-US", "en"]'.
+2018-12-09 17:39:52.859 +07:00 [Information] Route matched with "{area = \"User\", action = \"Login\", controller = \"Account\"}". Executing action "TN.UI.Areas.User.Controllers.AccountController.Login (TN.UI)"
+2018-12-09 17:39:52.911 +07:00 [Information] Executing action method "TN.UI.Areas.User.Controllers.AccountController.Login (TN.UI)" with arguments (["TN.Domain.Model.LoginViewModel", "/"]) - Validation state: Valid
+2018-12-09 17:39:52.922 +07:00 [Information] Entity Framework Core "2.1.4-rtm-31024" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-12-09 17:39:52.957 +07:00 [Information] Executed DbCommand ("6"ms) [Parameters=["@__model_Username_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [m].[Id], [m].[AccessFailedCount], [m].[Avatar], [m].[ConcurrencyStamp], [m].[CreatedDate], [m].[CreatedUserId], [m].[DisplayName], [m].[Email], [m].[EmailConfirmed], [m].[IsLock], [m].[IsReLogin], [m].[IsSuperAdmin], [m].[LockoutEnabled], [m].[LockoutEnd], [m].[NormalizedEmail], [m].[NormalizedUserName], [m].[Note], [m].[NoteLock], [m].[PasswordHash], [m].[PhoneNumber], [m].[PhoneNumberConfirmed], [m].[RoleParents], [m].[RoleSchool], [m].[RoleTransportCompany], [m].[SecurityStamp], [m].[TwoFactorEnabled], [m].[UpdatedDate], [m].[UpdatedUserId], [m].[UserName]
+FROM [adm].[User] AS [m]
+WHERE [m].[UserName] = @__model_Username_0"
+2018-12-09 17:39:53.070 +07:00 [Information] Executed DbCommand ("5"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[Avatar], [u].[ConcurrencyStamp], [u].[CreatedDate], [u].[CreatedUserId], [u].[DisplayName], [u].[Email], [u].[EmailConfirmed], [u].[IsLock], [u].[IsReLogin], [u].[IsSuperAdmin], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[Note], [u].[NoteLock], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[RoleParents], [u].[RoleSchool], [u].[RoleTransportCompany], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UpdatedDate], [u].[UpdatedUserId], [u].[UserName]
+FROM [adm].[User] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0"
+2018-12-09 17:39:53.196 +07:00 [Information] Executed DbCommand ("3"ms) [Parameters=["@__user_Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [adm].[UserClaim] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0"
+2018-12-09 17:39:53.255 +07:00 [Information] Executed DbCommand ("6"ms) [Parameters=["@__userId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [x].[Id], [x].[ConcurrencyStamp], [x].[Description], [x].[Name], [x].[NormalizedName], [x].[Type]
+FROM [adm].[Role] AS [x]
+WHERE EXISTS (
+    SELECT 1
+    FROM [adm].[UserRole] AS [m]
+    WHERE ([m].[UserId] = @__userId_0) AND ([m].[RoleId] = [x].[Id]))"
+2018-12-09 17:39:53.271 +07:00 [Information] AuthenticationScheme: "Identity.Application" signed in.
+2018-12-09 17:39:53.390 +07:00 [Information] Executed DbCommand ("12"ms) [Parameters=["@p28='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p29='?' (Size = 4000), @p3='?' (DbType = DateTime2), @p4='?' (DbType = Int32), @p5='?' (Size = 100), @p6='?' (Size = 256), @p7='?' (DbType = Boolean), @p8='?' (DbType = Boolean), @p9='?' (DbType = Boolean), @p10='?' (DbType = Boolean), @p11='?' (DbType = Boolean), @p12='?' (DbType = DateTimeOffset), @p13='?' (Size = 256), @p14='?' (Size = 256), @p15='?' (Size = 4000), @p16='?' (Size = 1000), @p17='?' (Size = 4000), @p18='?' (Size = 4000), @p19='?' (DbType = Boolean), @p20='?' (Size = 4000), @p21='?' (Size = 4000), @p22='?' (Size = 4000), @p23='?' (Size = 4000), @p24='?' (DbType = Boolean), @p25='?' (DbType = DateTime2), @p26='?' (DbType = Int32), @p27='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+UPDATE [adm].[User] SET [AccessFailedCount] = @p0, [Avatar] = @p1, [ConcurrencyStamp] = @p2, [CreatedDate] = @p3, [CreatedUserId] = @p4, [DisplayName] = @p5, [Email] = @p6, [EmailConfirmed] = @p7, [IsLock] = @p8, [IsReLogin] = @p9, [IsSuperAdmin] = @p10, [LockoutEnabled] = @p11, [LockoutEnd] = @p12, [NormalizedEmail] = @p13, [NormalizedUserName] = @p14, [Note] = @p15, [NoteLock] = @p16, [PasswordHash] = @p17, [PhoneNumber] = @p18, [PhoneNumberConfirmed] = @p19, [RoleParents] = @p20, [RoleSchool] = @p21, [RoleTransportCompany] = @p22, [SecurityStamp] = @p23, [TwoFactorEnabled] = @p24, [UpdatedDate] = @p25, [UpdatedUserId] = @p26, [UserName] = @p27
+WHERE [Id] = @p28 AND [ConcurrencyStamp] = @p29;
+SELECT @@ROWCOUNT;"
+2018-12-09 17:39:53.411 +07:00 [Information] Executed action method "TN.UI.Areas.User.Controllers.AccountController.Login (TN.UI)", returned result "Microsoft.AspNetCore.Mvc.RedirectResult" in 499.9176ms.
+2018-12-09 17:39:53.418 +07:00 [Information] Executing RedirectResult, redirecting to "/".
+2018-12-09 17:39:53.419 +07:00 [Information] Executed action "TN.UI.Areas.User.Controllers.AccountController.Login (TN.UI)" in 559.4589ms
+2018-12-09 17:39:53.419 +07:00 [Information] Request finished in 579.1947ms 302 
+2018-12-09 17:39:53.427 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44396/  
+2018-12-09 17:39:53.428 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported cultures '["en-US", "en"]'.
+2018-12-09 17:39:53.428 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported UI Cultures '["en-US", "en"]'.
+2018-12-09 17:39:53.443 +07:00 [Information] Route matched with "{action = \"Index\", controller = \"Home\", area = \"\"}". Executing action "TN.UI.Controllers.HomeController.Index (TN.UI)"
+2018-12-09 17:39:53.444 +07:00 [Information] Entity Framework Core "2.1.4-rtm-31024" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-12-09 17:39:53.447 +07:00 [Information] Executed DbCommand ("1"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[Avatar], [e].[ConcurrencyStamp], [e].[CreatedDate], [e].[CreatedUserId], [e].[DisplayName], [e].[Email], [e].[EmailConfirmed], [e].[IsLock], [e].[IsReLogin], [e].[IsSuperAdmin], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[Note], [e].[NoteLock], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[RoleParents], [e].[RoleSchool], [e].[RoleTransportCompany], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UpdatedDate], [e].[UpdatedUserId], [e].[UserName]
+FROM [adm].[User] AS [e]
+WHERE [e].[Id] = @__get_Item_0"
+2018-12-09 17:39:53.465 +07:00 [Information] Executing action method "TN.UI.Controllers.HomeController.Index (TN.UI)" - Validation state: Valid
+2018-12-09 17:39:53.465 +07:00 [Information] Executed action method "TN.UI.Controllers.HomeController.Index (TN.UI)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 0.2155ms.
+2018-12-09 17:39:53.473 +07:00 [Information] Executing ViewResult, running view "Index".
+2018-12-09 17:39:53.575 +07:00 [Information] Executed ViewResult - view "Index" executed in 109.0575ms.
+2018-12-09 17:39:53.575 +07:00 [Information] Executed action "TN.UI.Controllers.HomeController.Index (TN.UI)" in 132.0512ms
+2018-12-09 17:39:53.575 +07:00 [Information] Request finished in 148.2444ms 200 text/html; charset=utf-8
+2018-12-09 17:41:46.567 +07:00 [Information] Request starting HTTP/1.1 POST http://127.0.0.1:10415/iisintegration  0
+2018-12-09 17:41:46.569 +07:00 [Information] Request finished in 2.5809ms 202 
+2018-12-09 20:46:12.044 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44396/https:/localhost:44399/  
+2018-12-09 20:46:12.149 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported cultures '["en-US", "en"]'.
+2018-12-09 20:46:12.150 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported UI Cultures '["en-US", "en"]'.
+2018-12-09 20:46:12.541 +07:00 [Information] Request finished in 504.753ms 404 
+2018-12-09 20:46:26.040 +07:00 [Information] Request starting HTTP/1.1 GET http://192.168.1.118:44396/  
+2018-12-09 20:46:26.041 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported cultures '["en-US", "en"]'.
+2018-12-09 20:46:26.042 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported UI Cultures '["en-US", "en"]'.
+2018-12-09 20:46:26.180 +07:00 [Information] Route matched with "{action = \"Index\", controller = \"Home\", area = \"\"}". Executing action "TN.UI.Controllers.HomeController.Index (TN.UI)"
+2018-12-09 20:46:26.562 +07:00 [Information] Entity Framework Core "2.1.4-rtm-31024" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-12-09 20:46:26.833 +07:00 [Information] Executed DbCommand ("19"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[Avatar], [e].[ConcurrencyStamp], [e].[CreatedDate], [e].[CreatedUserId], [e].[DisplayName], [e].[Email], [e].[EmailConfirmed], [e].[IsLock], [e].[IsReLogin], [e].[IsSuperAdmin], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[Note], [e].[NoteLock], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[RoleParents], [e].[RoleSchool], [e].[RoleTransportCompany], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UpdatedDate], [e].[UpdatedUserId], [e].[UserName]
+FROM [adm].[User] AS [e]
+WHERE [e].[Id] = @__get_Item_0"
+2018-12-09 20:46:26.888 +07:00 [Information] AuthenticationScheme: "Identity.Application" signed out.
+2018-12-09 20:46:26.890 +07:00 [Information] AuthenticationScheme: "Identity.External" signed out.
+2018-12-09 20:46:26.890 +07:00 [Information] AuthenticationScheme: "Identity.TwoFactorUserId" signed out.
+2018-12-09 20:46:26.893 +07:00 [Information] Authorization failed for the request at filter '"TN.UI.Extensions.PermissionFilter"'.
+2018-12-09 20:46:26.899 +07:00 [Information] Executing RedirectResult, redirecting to "/Login?ReturnUrl=%2F".
+2018-12-09 20:46:26.908 +07:00 [Information] Executed action "TN.UI.Controllers.HomeController.Index (TN.UI)" in 720.9488ms
+2018-12-09 20:46:26.928 +07:00 [Information] Request finished in 887.9897ms 302 
+2018-12-09 20:46:26.935 +07:00 [Information] Request starting HTTP/1.1 GET http://192.168.1.118:44396/Login?ReturnUrl=%2F  
+2018-12-09 20:46:26.938 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported cultures '["en-US", "en"]'.
+2018-12-09 20:46:26.938 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported UI Cultures '["en-US", "en"]'.
+2018-12-09 20:46:26.969 +07:00 [Information] Route matched with "{area = \"User\", action = \"Login\", controller = \"Account\"}". Executing action "TN.UI.Areas.User.Controllers.AccountController.Login (TN.UI)"
+2018-12-09 20:46:27.020 +07:00 [Information] Executing action method "TN.UI.Areas.User.Controllers.AccountController.Login (TN.UI)" with arguments (["/"]) - Validation state: Valid
+2018-12-09 20:46:27.022 +07:00 [Information] AuthenticationScheme: "Identity.External" signed out.
+2018-12-09 20:46:27.028 +07:00 [Information] Executed action method "TN.UI.Areas.User.Controllers.AccountController.Login (TN.UI)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 3.1682ms.
+2018-12-09 20:46:27.046 +07:00 [Information] Executing ViewResult, running view "Login".
+2018-12-09 20:46:27.217 +07:00 [Information] Executed ViewResult - view "Login" executed in 182.0592ms.
+2018-12-09 20:46:27.218 +07:00 [Information] Executed action "TN.UI.Areas.User.Controllers.AccountController.Login (TN.UI)" in 248.4206ms
+2018-12-09 20:46:27.225 +07:00 [Information] Request finished in 289.5304ms 200 text/html; charset=utf-8
+2018-12-09 20:46:27.248 +07:00 [Information] Request starting HTTP/1.1 GET http://192.168.1.118:44396/Content/Admin/site.min.css?v=jW89cCi60i6h6mXSm6FblqHAQ9b_Ws0NOy1F8uGIlYc  
+2018-12-09 20:46:27.252 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported cultures '["en-US", "en"]'.
+2018-12-09 20:46:27.252 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported UI Cultures '["en-US", "en"]'.
+2018-12-09 20:46:27.298 +07:00 [Information] Sending file. Request path: '"/Content/Admin/site.min.css"'. Physical path: '"F:\4.Net\5.API\Backend\TN.UI\wwwroot\Content\Admin\site.min.css"'
+2018-12-09 20:46:27.299 +07:00 [Information] Request finished in 50.34ms 200 text/css
+2018-12-09 20:46:27.343 +07:00 [Information] Request starting HTTP/1.1 GET http://192.168.1.118:44396/content/admin/images/bacvn.jpg  
+2018-12-09 20:46:27.345 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported cultures '["en-US", "en"]'.
+2018-12-09 20:46:27.346 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported UI Cultures '["en-US", "en"]'.
+2018-12-09 20:46:27.357 +07:00 [Information] Request starting HTTP/1.1 GET http://192.168.1.118:44396/Content/Admin/js/jquery.min.js  
+2018-12-09 20:46:27.357 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported cultures '["en-US", "en"]'.
+2018-12-09 20:46:27.357 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported UI Cultures '["en-US", "en"]'.
+2018-12-09 20:46:27.364 +07:00 [Information] Request starting HTTP/1.1 GET http://192.168.1.118:44396/Content/Admin/site.min.js?v=uGEmHVBVwqSwceRoffkJ4JsqPQI9uYkMXT592pcUwAs  
+2018-12-09 20:46:27.365 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported cultures '["en-US", "en"]'.
+2018-12-09 20:46:27.365 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported UI Cultures '["en-US", "en"]'.
+2018-12-09 20:46:27.366 +07:00 [Information] Request starting HTTP/1.1 GET http://192.168.1.118:44396/Content/Admin/js/script.js  
+2018-12-09 20:46:27.366 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported cultures '["en-US", "en"]'.
+2018-12-09 20:46:27.366 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported UI Cultures '["en-US", "en"]'.
+2018-12-09 20:46:27.389 +07:00 [Information] Request starting HTTP/1.1 GET http://192.168.1.118:44396/Content/Admin/js/jquery.validate.unobtrusive.min.js  
+2018-12-09 20:46:27.390 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported cultures '["en-US", "en"]'.
+2018-12-09 20:46:27.390 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported UI Cultures '["en-US", "en"]'.
+2018-12-09 20:46:27.446 +07:00 [Information] Request starting HTTP/1.1 GET http://192.168.1.118:44396/Content/Admin/js/jquery.validate.min.js  
+2018-12-09 20:46:27.446 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported cultures '["en-US", "en"]'.
+2018-12-09 20:46:27.446 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported UI Cultures '["en-US", "en"]'.
+2018-12-09 20:46:27.490 +07:00 [Information] Sending file. Request path: '"/Content/Admin/js/jquery.validate.unobtrusive.min.js"'. Physical path: '"F:\4.Net\5.API\Backend\TN.UI\wwwroot\Content\Admin\js\jquery.validate.unobtrusive.min.js"'
+2018-12-09 20:46:27.490 +07:00 [Information] Request finished in 101.1418ms 200 application/javascript
+2018-12-09 20:46:27.491 +07:00 [Information] Sending file. Request path: '"/Content/Admin/site.min.js"'. Physical path: '"F:\4.Net\5.API\Backend\TN.UI\wwwroot\Content\Admin\site.min.js"'
+2018-12-09 20:46:27.491 +07:00 [Information] Request finished in 126.709ms 200 application/javascript
+2018-12-09 20:46:27.511 +07:00 [Information] Sending file. Request path: '"/Content/Admin/js/jquery.min.js"'. Physical path: '"F:\4.Net\5.API\Backend\TN.UI\wwwroot\Content\Admin\js\jquery.min.js"'
+2018-12-09 20:46:27.511 +07:00 [Information] Request finished in 154.4849ms 200 application/javascript
+2018-12-09 20:46:27.522 +07:00 [Information] Sending file. Request path: '"/Content/Admin/js/jquery.validate.min.js"'. Physical path: '"F:\4.Net\5.API\Backend\TN.UI\wwwroot\Content\Admin\js\jquery.validate.min.js"'
+2018-12-09 20:46:27.522 +07:00 [Information] Request finished in 75.9986ms 200 application/javascript
+2018-12-09 20:46:27.540 +07:00 [Information] Sending file. Request path: '"/content/admin/images/bacvn.jpg"'. Physical path: '"F:\4.Net\5.API\Backend\TN.UI\wwwroot\content\admin\images\bacvn.jpg"'
+2018-12-09 20:46:27.541 +07:00 [Information] Request finished in 197.6732ms 200 image/jpeg
+2018-12-09 20:46:27.737 +07:00 [Information] Sending file. Request path: '"/Content/Admin/js/script.js"'. Physical path: '"F:\4.Net\5.API\Backend\TN.UI\wwwroot\Content\Admin\js\script.js"'
+2018-12-09 20:46:27.737 +07:00 [Information] Request finished in 371.0957ms 200 application/javascript
+2018-12-09 20:46:28.015 +07:00 [Information] Request starting HTTP/1.1 GET http://192.168.1.118:44396/Content/Admin/favicon.ico  
+2018-12-09 20:46:28.017 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported cultures '["en-US", "en"]'.
+2018-12-09 20:46:28.017 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported UI Cultures '["en-US", "en"]'.
+2018-12-09 20:46:28.018 +07:00 [Information] Request finished in 2.995ms 404 
+2018-12-09 20:46:47.472 +07:00 [Information] Request starting HTTP/1.1 POST http://192.168.1.118:44396/Login?ReturnUrl=%2F application/x-www-form-urlencoded 245
+2018-12-09 20:46:47.475 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported cultures '["en-US", "en"]'.
+2018-12-09 20:46:47.475 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported UI Cultures '["en-US", "en"]'.
+2018-12-09 20:46:47.488 +07:00 [Information] Route matched with "{area = \"User\", action = \"Login\", controller = \"Account\"}". Executing action "TN.UI.Areas.User.Controllers.AccountController.Login (TN.UI)"
+2018-12-09 20:46:47.530 +07:00 [Information] Executing action method "TN.UI.Areas.User.Controllers.AccountController.Login (TN.UI)" with arguments (["TN.Domain.Model.LoginViewModel", "/"]) - Validation state: Valid
+2018-12-09 20:46:47.540 +07:00 [Information] Entity Framework Core "2.1.4-rtm-31024" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-12-09 20:46:47.575 +07:00 [Information] Executed DbCommand ("8"ms) [Parameters=["@__model_Username_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [m].[Id], [m].[AccessFailedCount], [m].[Avatar], [m].[ConcurrencyStamp], [m].[CreatedDate], [m].[CreatedUserId], [m].[DisplayName], [m].[Email], [m].[EmailConfirmed], [m].[IsLock], [m].[IsReLogin], [m].[IsSuperAdmin], [m].[LockoutEnabled], [m].[LockoutEnd], [m].[NormalizedEmail], [m].[NormalizedUserName], [m].[Note], [m].[NoteLock], [m].[PasswordHash], [m].[PhoneNumber], [m].[PhoneNumberConfirmed], [m].[RoleParents], [m].[RoleSchool], [m].[RoleTransportCompany], [m].[SecurityStamp], [m].[TwoFactorEnabled], [m].[UpdatedDate], [m].[UpdatedUserId], [m].[UserName]
+FROM [adm].[User] AS [m]
+WHERE [m].[UserName] = @__model_Username_0"
+2018-12-09 20:46:47.690 +07:00 [Information] Executed DbCommand ("4"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[Avatar], [u].[ConcurrencyStamp], [u].[CreatedDate], [u].[CreatedUserId], [u].[DisplayName], [u].[Email], [u].[EmailConfirmed], [u].[IsLock], [u].[IsReLogin], [u].[IsSuperAdmin], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[Note], [u].[NoteLock], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[RoleParents], [u].[RoleSchool], [u].[RoleTransportCompany], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UpdatedDate], [u].[UpdatedUserId], [u].[UserName]
+FROM [adm].[User] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0"
+2018-12-09 20:46:47.789 +07:00 [Information] Executed DbCommand ("3"ms) [Parameters=["@__user_Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [adm].[UserClaim] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0"
+2018-12-09 20:46:47.840 +07:00 [Information] Executed DbCommand ("6"ms) [Parameters=["@__userId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [x].[Id], [x].[ConcurrencyStamp], [x].[Description], [x].[Name], [x].[NormalizedName], [x].[Type]
+FROM [adm].[Role] AS [x]
+WHERE EXISTS (
+    SELECT 1
+    FROM [adm].[UserRole] AS [m]
+    WHERE ([m].[UserId] = @__userId_0) AND ([m].[RoleId] = [x].[Id]))"
+2018-12-09 20:46:47.855 +07:00 [Information] AuthenticationScheme: "Identity.Application" signed in.
+2018-12-09 20:46:47.966 +07:00 [Information] Executed DbCommand ("11"ms) [Parameters=["@p28='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p29='?' (Size = 4000), @p3='?' (DbType = DateTime2), @p4='?' (DbType = Int32), @p5='?' (Size = 100), @p6='?' (Size = 256), @p7='?' (DbType = Boolean), @p8='?' (DbType = Boolean), @p9='?' (DbType = Boolean), @p10='?' (DbType = Boolean), @p11='?' (DbType = Boolean), @p12='?' (DbType = DateTimeOffset), @p13='?' (Size = 256), @p14='?' (Size = 256), @p15='?' (Size = 4000), @p16='?' (Size = 1000), @p17='?' (Size = 4000), @p18='?' (Size = 4000), @p19='?' (DbType = Boolean), @p20='?' (Size = 4000), @p21='?' (Size = 4000), @p22='?' (Size = 4000), @p23='?' (Size = 4000), @p24='?' (DbType = Boolean), @p25='?' (DbType = DateTime2), @p26='?' (DbType = Int32), @p27='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+UPDATE [adm].[User] SET [AccessFailedCount] = @p0, [Avatar] = @p1, [ConcurrencyStamp] = @p2, [CreatedDate] = @p3, [CreatedUserId] = @p4, [DisplayName] = @p5, [Email] = @p6, [EmailConfirmed] = @p7, [IsLock] = @p8, [IsReLogin] = @p9, [IsSuperAdmin] = @p10, [LockoutEnabled] = @p11, [LockoutEnd] = @p12, [NormalizedEmail] = @p13, [NormalizedUserName] = @p14, [Note] = @p15, [NoteLock] = @p16, [PasswordHash] = @p17, [PhoneNumber] = @p18, [PhoneNumberConfirmed] = @p19, [RoleParents] = @p20, [RoleSchool] = @p21, [RoleTransportCompany] = @p22, [SecurityStamp] = @p23, [TwoFactorEnabled] = @p24, [UpdatedDate] = @p25, [UpdatedUserId] = @p26, [UserName] = @p27
+WHERE [Id] = @p28 AND [ConcurrencyStamp] = @p29;
+SELECT @@ROWCOUNT;"
+2018-12-09 20:46:47.989 +07:00 [Information] Executed action method "TN.UI.Areas.User.Controllers.AccountController.Login (TN.UI)", returned result "Microsoft.AspNetCore.Mvc.RedirectResult" in 458.6329ms.
+2018-12-09 20:46:47.999 +07:00 [Information] Executing RedirectResult, redirecting to "/".
+2018-12-09 20:46:47.999 +07:00 [Information] Executed action "TN.UI.Areas.User.Controllers.AccountController.Login (TN.UI)" in 510.5272ms
+2018-12-09 20:46:47.999 +07:00 [Information] Request finished in 527.5307ms 302 
+2018-12-09 20:46:48.007 +07:00 [Information] Request starting HTTP/1.1 GET http://192.168.1.118:44396/  
+2018-12-09 20:46:48.008 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported cultures '["en-US", "en"]'.
+2018-12-09 20:46:48.008 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported UI Cultures '["en-US", "en"]'.
+2018-12-09 20:46:48.021 +07:00 [Information] Route matched with "{action = \"Index\", controller = \"Home\", area = \"\"}". Executing action "TN.UI.Controllers.HomeController.Index (TN.UI)"
+2018-12-09 20:46:48.023 +07:00 [Information] Entity Framework Core "2.1.4-rtm-31024" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-12-09 20:46:48.028 +07:00 [Information] Executed DbCommand ("2"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[Avatar], [e].[ConcurrencyStamp], [e].[CreatedDate], [e].[CreatedUserId], [e].[DisplayName], [e].[Email], [e].[EmailConfirmed], [e].[IsLock], [e].[IsReLogin], [e].[IsSuperAdmin], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[Note], [e].[NoteLock], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[RoleParents], [e].[RoleSchool], [e].[RoleTransportCompany], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UpdatedDate], [e].[UpdatedUserId], [e].[UserName]
+FROM [adm].[User] AS [e]
+WHERE [e].[Id] = @__get_Item_0"
+2018-12-09 20:46:48.045 +07:00 [Information] Executing action method "TN.UI.Controllers.HomeController.Index (TN.UI)" - Validation state: Valid
+2018-12-09 20:46:48.046 +07:00 [Information] Executed action method "TN.UI.Controllers.HomeController.Index (TN.UI)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 0.2222ms.
+2018-12-09 20:46:48.051 +07:00 [Information] Executing ViewResult, running view "Index".
+2018-12-09 20:46:48.145 +07:00 [Information] Executed ViewResult - view "Index" executed in 99.5162ms.
+2018-12-09 20:46:48.146 +07:00 [Information] Executed action "TN.UI.Controllers.HomeController.Index (TN.UI)" in 123.9285ms
+2018-12-09 20:46:48.146 +07:00 [Information] Request finished in 139.713ms 200 text/html; charset=utf-8
+2018-12-09 20:46:48.179 +07:00 [Information] Request starting HTTP/1.1 GET http://192.168.1.118:44396/Content/Admin/site.min.js  
+2018-12-09 20:46:48.180 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported cultures '["en-US", "en"]'.
+2018-12-09 20:46:48.180 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported UI Cultures '["en-US", "en"]'.
+2018-12-09 20:46:48.180 +07:00 [Information] Request starting HTTP/1.1 GET http://192.168.1.118:44396/Content/Admin/site.min.css?v=jW89cCi60i6h6mXSm6FblqHAQ9b_Ws0NOy1F8uGIlYc  
+2018-12-09 20:46:48.180 +07:00 [Information] Request starting HTTP/1.1 GET http://192.168.1.118:44396/Data/Avatar/ecaba803-2c0c-4ec3-bcc1-93ede84c93cc.jpeg  
+2018-12-09 20:46:48.180 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported cultures '["en-US", "en"]'.
+2018-12-09 20:46:48.180 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported cultures '["en-US", "en"]'.
+2018-12-09 20:46:48.181 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported UI Cultures '["en-US", "en"]'.
+2018-12-09 20:46:48.181 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported UI Cultures '["en-US", "en"]'.
+2018-12-09 20:46:48.184 +07:00 [Information] Sending file. Request path: '"/Content/Admin/site.min.js"'. Physical path: '"F:\4.Net\5.API\Backend\TN.UI\wwwroot\Content\Admin\site.min.js"'
+2018-12-09 20:46:48.185 +07:00 [Information] Request finished in 7.1927ms 200 application/javascript
+2018-12-09 20:46:48.196 +07:00 [Information] Sending file. Request path: '"/Data/Avatar/ecaba803-2c0c-4ec3-bcc1-93ede84c93cc.jpeg"'. Physical path: '"F:\4.Net\5.API\Backend\TN.UI\wwwroot\Data\Avatar\ecaba803-2c0c-4ec3-bcc1-93ede84c93cc.jpeg"'
+2018-12-09 20:46:48.197 +07:00 [Information] Request finished in 16.5519ms 200 image/jpeg
+2018-12-09 20:46:48.201 +07:00 [Information] Sending file. Request path: '"/Content/Admin/site.min.css"'. Physical path: '"F:\4.Net\5.API\Backend\TN.UI\wwwroot\Content\Admin\site.min.css"'
+2018-12-09 20:46:48.202 +07:00 [Information] Request finished in 21.6671ms 200 text/css
+2018-12-09 20:46:48.438 +07:00 [Information] Request starting HTTP/1.1 GET http://192.168.1.118:44396/Content/Admin/images/user-img-background.jpg  
+2018-12-09 20:46:48.439 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported cultures '["en-US", "en"]'.
+2018-12-09 20:46:48.439 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported UI Cultures '["en-US", "en"]'.
+2018-12-09 20:46:48.451 +07:00 [Information] Sending file. Request path: '"/Content/Admin/images/user-img-background.jpg"'. Physical path: '"F:\4.Net\5.API\Backend\TN.UI\wwwroot\Content\Admin\images\user-img-background.jpg"'
+2018-12-09 20:46:48.452 +07:00 [Information] Request finished in 13.771ms 200 image/jpeg
+2018-12-09 20:46:48.570 +07:00 [Information] Request starting HTTP/1.1 GET http://192.168.1.118:44396/favicon.ico  
+2018-12-09 20:46:48.571 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported cultures '["en-US", "en"]'.
+2018-12-09 20:46:48.571 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported UI Cultures '["en-US", "en"]'.
+2018-12-09 20:46:48.584 +07:00 [Information] Sending file. Request path: '"/favicon.ico"'. Physical path: '"F:\4.Net\5.API\Backend\TN.UI\wwwroot\favicon.ico"'
+2018-12-09 20:46:48.584 +07:00 [Information] Request finished in 14.46ms 200 image/x-icon
+2018-12-09 20:47:14.649 +07:00 [Information] Request starting HTTP/1.1 POST http://127.0.0.1:23030/iisintegration  0
+2018-12-09 20:47:14.650 +07:00 [Information] Request finished in 0.4069ms 202 
+2018-12-09 20:48:32.762 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44396/https:/localhost:44399/  
+2018-12-09 20:48:32.864 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported cultures '["en-US", "en"]'.
+2018-12-09 20:48:32.865 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported UI Cultures '["en-US", "en"]'.
+2018-12-09 20:48:33.236 +07:00 [Information] Request finished in 482.7909ms 404 
+2018-12-09 20:48:37.042 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44396/  
+2018-12-09 20:48:37.044 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported cultures '["en-US", "en"]'.
+2018-12-09 20:48:37.045 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported UI Cultures '["en-US", "en"]'.
+2018-12-09 20:48:37.198 +07:00 [Information] Route matched with "{action = \"Index\", controller = \"Home\", area = \"\"}". Executing action "TN.UI.Controllers.HomeController.Index (TN.UI)"
+2018-12-09 20:48:37.669 +07:00 [Information] Entity Framework Core "2.1.4-rtm-31024" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-12-09 20:48:37.954 +07:00 [Information] Executed DbCommand ("18"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[Avatar], [e].[ConcurrencyStamp], [e].[CreatedDate], [e].[CreatedUserId], [e].[DisplayName], [e].[Email], [e].[EmailConfirmed], [e].[IsLock], [e].[IsReLogin], [e].[IsSuperAdmin], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[Note], [e].[NoteLock], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[RoleParents], [e].[RoleSchool], [e].[RoleTransportCompany], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UpdatedDate], [e].[UpdatedUserId], [e].[UserName]
+FROM [adm].[User] AS [e]
+WHERE [e].[Id] = @__get_Item_0"
+2018-12-09 20:48:38.020 +07:00 [Information] AuthenticationScheme: "Identity.Application" signed out.
+2018-12-09 20:48:38.021 +07:00 [Information] AuthenticationScheme: "Identity.External" signed out.
+2018-12-09 20:48:38.021 +07:00 [Information] AuthenticationScheme: "Identity.TwoFactorUserId" signed out.
+2018-12-09 20:48:38.024 +07:00 [Information] Authorization failed for the request at filter '"TN.UI.Extensions.PermissionFilter"'.
+2018-12-09 20:48:38.028 +07:00 [Information] Executing RedirectResult, redirecting to "/Login?ReturnUrl=%2F".
+2018-12-09 20:48:38.035 +07:00 [Information] Executed action "TN.UI.Controllers.HomeController.Index (TN.UI)" in 831.6033ms
+2018-12-09 20:48:38.051 +07:00 [Information] Request finished in 1008.2034ms 302 
+2018-12-09 20:48:38.057 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44396/Login?ReturnUrl=%2F  
+2018-12-09 20:48:38.060 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported cultures '["en-US", "en"]'.
+2018-12-09 20:48:38.060 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported UI Cultures '["en-US", "en"]'.
+2018-12-09 20:48:38.095 +07:00 [Information] Route matched with "{area = \"User\", action = \"Login\", controller = \"Account\"}". Executing action "TN.UI.Areas.User.Controllers.AccountController.Login (TN.UI)"
+2018-12-09 20:48:38.145 +07:00 [Information] Executing action method "TN.UI.Areas.User.Controllers.AccountController.Login (TN.UI)" with arguments (["/"]) - Validation state: Valid
+2018-12-09 20:48:38.148 +07:00 [Information] AuthenticationScheme: "Identity.External" signed out.
+2018-12-09 20:48:38.154 +07:00 [Information] Executed action method "TN.UI.Areas.User.Controllers.AccountController.Login (TN.UI)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 3.5452ms.
+2018-12-09 20:48:38.178 +07:00 [Information] Executing ViewResult, running view "Login".
+2018-12-09 20:48:38.355 +07:00 [Information] Executed ViewResult - view "Login" executed in 191.6465ms.
+2018-12-09 20:48:38.356 +07:00 [Information] Executed action "TN.UI.Areas.User.Controllers.AccountController.Login (TN.UI)" in 260.6379ms
+2018-12-09 20:48:38.364 +07:00 [Information] Request finished in 306.7629ms 200 text/html; charset=utf-8
+2018-12-09 20:48:38.396 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44396/Content/Admin/site.min.css?v=jW89cCi60i6h6mXSm6FblqHAQ9b_Ws0NOy1F8uGIlYc  
+2018-12-09 20:48:38.399 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported cultures '["en-US", "en"]'.
+2018-12-09 20:48:38.399 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported UI Cultures '["en-US", "en"]'.
+2018-12-09 20:48:38.412 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44396/Content/Admin/site.min.js?v=uGEmHVBVwqSwceRoffkJ4JsqPQI9uYkMXT592pcUwAs  
+2018-12-09 20:48:38.412 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported cultures '["en-US", "en"]'.
+2018-12-09 20:48:38.412 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported UI Cultures '["en-US", "en"]'.
+2018-12-09 20:48:38.447 +07:00 [Information] Sending file. Request path: '"/Content/Admin/site.min.css"'. Physical path: '"F:\4.Net\5.API\Backend\TN.UI\wwwroot\Content\Admin\site.min.css"'
+2018-12-09 20:48:38.447 +07:00 [Information] Request finished in 51.7456ms 200 text/css
+2018-12-09 20:48:38.448 +07:00 [Information] Sending file. Request path: '"/Content/Admin/site.min.js"'. Physical path: '"F:\4.Net\5.API\Backend\TN.UI\wwwroot\Content\Admin\site.min.js"'
+2018-12-09 20:48:38.448 +07:00 [Information] Request finished in 36.4622ms 200 application/javascript
+2018-12-09 20:48:38.882 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44396/Content/Admin/favicon.ico  
+2018-12-09 20:48:38.884 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported cultures '["en-US", "en"]'.
+2018-12-09 20:48:38.884 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported UI Cultures '["en-US", "en"]'.
+2018-12-09 20:48:38.884 +07:00 [Information] Request finished in 3.307ms 404 
+2018-12-09 20:48:52.601 +07:00 [Information] Request starting HTTP/1.1 GET http://192.168.1.118:44396/Login?ReturnUrl=%2F  
+2018-12-09 20:48:52.602 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported cultures '["en-US", "en"]'.
+2018-12-09 20:48:52.602 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported UI Cultures '["en-US", "en"]'.
+2018-12-09 20:48:52.626 +07:00 [Information] Route matched with "{area = \"User\", action = \"Login\", controller = \"Account\"}". Executing action "TN.UI.Areas.User.Controllers.AccountController.Login (TN.UI)"
+2018-12-09 20:48:52.628 +07:00 [Information] Executing action method "TN.UI.Areas.User.Controllers.AccountController.Login (TN.UI)" with arguments (["/"]) - Validation state: Valid
+2018-12-09 20:48:52.628 +07:00 [Information] AuthenticationScheme: "Identity.External" signed out.
+2018-12-09 20:48:52.628 +07:00 [Information] Executed action method "TN.UI.Areas.User.Controllers.AccountController.Login (TN.UI)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 0.5104ms.
+2018-12-09 20:48:52.629 +07:00 [Information] Executing ViewResult, running view "Login".
+2018-12-09 20:48:52.635 +07:00 [Information] Executed ViewResult - view "Login" executed in 6.3859ms.
+2018-12-09 20:48:52.636 +07:00 [Information] Executed action "TN.UI.Areas.User.Controllers.AccountController.Login (TN.UI)" in 9.8942ms
+2018-12-09 20:48:52.636 +07:00 [Information] Request finished in 35.5448ms 200 text/html; charset=utf-8
+2018-12-09 20:48:52.700 +07:00 [Information] Request starting HTTP/1.1 GET http://192.168.1.118:44396/Content/Admin/site.min.css?v=jW89cCi60i6h6mXSm6FblqHAQ9b_Ws0NOy1F8uGIlYc  
+2018-12-09 20:48:52.701 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported cultures '["en-US", "en"]'.
+2018-12-09 20:48:52.702 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported UI Cultures '["en-US", "en"]'.
+2018-12-09 20:48:52.703 +07:00 [Information] Request starting HTTP/1.1 GET http://192.168.1.118:44396/Content/Admin/site.min.js?v=uGEmHVBVwqSwceRoffkJ4JsqPQI9uYkMXT592pcUwAs  
+2018-12-09 20:48:52.703 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported cultures '["en-US", "en"]'.
+2018-12-09 20:48:52.704 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported UI Cultures '["en-US", "en"]'.
+2018-12-09 20:48:52.704 +07:00 [Information] Request starting HTTP/1.1 GET http://192.168.1.118:44396/Content/Admin/js/jquery.min.js  
+2018-12-09 20:48:52.704 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported cultures '["en-US", "en"]'.
+2018-12-09 20:48:52.705 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported UI Cultures '["en-US", "en"]'.
+2018-12-09 20:48:52.705 +07:00 [Information] Request starting HTTP/1.1 GET http://192.168.1.118:44396/Content/Admin/js/jquery.validate.min.js  
+2018-12-09 20:48:52.706 +07:00 [Information] Request starting HTTP/1.1 GET http://192.168.1.118:44396/Content/Admin/js/script.js  
+2018-12-09 20:48:52.706 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported cultures '["en-US", "en"]'.
+2018-12-09 20:48:52.706 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported cultures '["en-US", "en"]'.
+2018-12-09 20:48:52.706 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported UI Cultures '["en-US", "en"]'.
+2018-12-09 20:48:52.706 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported UI Cultures '["en-US", "en"]'.
+2018-12-09 20:48:52.707 +07:00 [Information] Sending file. Request path: '"/Content/Admin/js/script.js"'. Physical path: '"F:\4.Net\5.API\Backend\TN.UI\wwwroot\Content\Admin\js\script.js"'
+2018-12-09 20:48:52.707 +07:00 [Information] Sending file. Request path: '"/Content/Admin/js/jquery.validate.min.js"'. Physical path: '"F:\4.Net\5.API\Backend\TN.UI\wwwroot\Content\Admin\js\jquery.validate.min.js"'
+2018-12-09 20:48:52.707 +07:00 [Information] Request finished in 1.4136ms 200 application/javascript
+2018-12-09 20:48:52.707 +07:00 [Information] Sending file. Request path: '"/Content/Admin/site.min.js"'. Physical path: '"F:\4.Net\5.API\Backend\TN.UI\wwwroot\Content\Admin\site.min.js"'
+2018-12-09 20:48:52.707 +07:00 [Information] Request finished in 1.668ms 200 application/javascript
+2018-12-09 20:48:52.707 +07:00 [Information] Request finished in 4.3471ms 200 application/javascript
+2018-12-09 20:48:52.707 +07:00 [Information] Sending file. Request path: '"/Content/Admin/js/jquery.min.js"'. Physical path: '"F:\4.Net\5.API\Backend\TN.UI\wwwroot\Content\Admin\js\jquery.min.js"'
+2018-12-09 20:48:52.708 +07:00 [Information] Request finished in 3.4939ms 200 application/javascript
+2018-12-09 20:48:52.708 +07:00 [Information] Sending file. Request path: '"/Content/Admin/site.min.css"'. Physical path: '"F:\4.Net\5.API\Backend\TN.UI\wwwroot\Content\Admin\site.min.css"'
+2018-12-09 20:48:52.708 +07:00 [Information] Request finished in 8.2445ms 200 text/css
+2018-12-09 20:48:52.727 +07:00 [Information] Request starting HTTP/1.1 GET http://192.168.1.118:44396/Content/Admin/js/jquery.validate.unobtrusive.min.js  
+2018-12-09 20:48:52.728 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported cultures '["en-US", "en"]'.
+2018-12-09 20:48:52.728 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported UI Cultures '["en-US", "en"]'.
+2018-12-09 20:48:52.729 +07:00 [Information] Sending file. Request path: '"/Content/Admin/js/jquery.validate.unobtrusive.min.js"'. Physical path: '"F:\4.Net\5.API\Backend\TN.UI\wwwroot\Content\Admin\js\jquery.validate.unobtrusive.min.js"'
+2018-12-09 20:48:52.729 +07:00 [Information] Request finished in 1.7643ms 200 application/javascript
+2018-12-09 20:48:53.077 +07:00 [Information] Request starting HTTP/1.1 GET http://192.168.1.118:44396/content/admin/images/bacvn.jpg  
+2018-12-09 20:48:53.078 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported cultures '["en-US", "en"]'.
+2018-12-09 20:48:53.078 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported UI Cultures '["en-US", "en"]'.
+2018-12-09 20:48:53.088 +07:00 [Information] Sending file. Request path: '"/content/admin/images/bacvn.jpg"'. Physical path: '"F:\4.Net\5.API\Backend\TN.UI\wwwroot\content\admin\images\bacvn.jpg"'
+2018-12-09 20:48:53.088 +07:00 [Information] Request finished in 11.4506ms 200 image/jpeg
+2018-12-09 20:50:39.051 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44396/https:/localhost:44399/  
+2018-12-09 20:50:39.153 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported cultures '["en-US", "en"]'.
+2018-12-09 20:50:39.155 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported UI Cultures '["en-US", "en"]'.
+2018-12-09 20:50:39.530 +07:00 [Information] Request finished in 487.3509ms 404 
+2018-12-09 20:50:42.658 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44396/  
+2018-12-09 20:50:42.659 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported cultures '["en-US", "en"]'.
+2018-12-09 20:50:42.659 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported UI Cultures '["en-US", "en"]'.
+2018-12-09 20:50:42.807 +07:00 [Information] Route matched with "{action = \"Index\", controller = \"Home\", area = \"\"}". Executing action "TN.UI.Controllers.HomeController.Index (TN.UI)"
+2018-12-09 20:50:43.251 +07:00 [Information] Entity Framework Core "2.1.4-rtm-31024" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-12-09 20:50:43.533 +07:00 [Information] Executed DbCommand ("18"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[Avatar], [e].[ConcurrencyStamp], [e].[CreatedDate], [e].[CreatedUserId], [e].[DisplayName], [e].[Email], [e].[EmailConfirmed], [e].[IsLock], [e].[IsReLogin], [e].[IsSuperAdmin], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[Note], [e].[NoteLock], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[RoleParents], [e].[RoleSchool], [e].[RoleTransportCompany], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UpdatedDate], [e].[UpdatedUserId], [e].[UserName]
+FROM [adm].[User] AS [e]
+WHERE [e].[Id] = @__get_Item_0"
+2018-12-09 20:50:43.591 +07:00 [Information] AuthenticationScheme: "Identity.Application" signed out.
+2018-12-09 20:50:43.592 +07:00 [Information] AuthenticationScheme: "Identity.External" signed out.
+2018-12-09 20:50:43.593 +07:00 [Information] AuthenticationScheme: "Identity.TwoFactorUserId" signed out.
+2018-12-09 20:50:43.595 +07:00 [Information] Authorization failed for the request at filter '"TN.UI.Extensions.PermissionFilter"'.
+2018-12-09 20:50:43.600 +07:00 [Information] Executing RedirectResult, redirecting to "/Login?ReturnUrl=%2F".
+2018-12-09 20:50:43.607 +07:00 [Information] Executed action "TN.UI.Controllers.HomeController.Index (TN.UI)" in 794.303ms
+2018-12-09 20:50:43.624 +07:00 [Information] Request finished in 966.9835ms 302 
+2018-12-09 20:50:43.632 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44396/Login?ReturnUrl=%2F  
+2018-12-09 20:50:43.634 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported cultures '["en-US", "en"]'.
+2018-12-09 20:50:43.634 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported UI Cultures '["en-US", "en"]'.
+2018-12-09 20:50:43.670 +07:00 [Information] Route matched with "{area = \"User\", action = \"Login\", controller = \"Account\"}". Executing action "TN.UI.Areas.User.Controllers.AccountController.Login (TN.UI)"
+2018-12-09 20:50:43.727 +07:00 [Information] Executing action method "TN.UI.Areas.User.Controllers.AccountController.Login (TN.UI)" with arguments (["/"]) - Validation state: Valid
+2018-12-09 20:50:43.730 +07:00 [Information] AuthenticationScheme: "Identity.External" signed out.
+2018-12-09 20:50:43.736 +07:00 [Information] Executed action method "TN.UI.Areas.User.Controllers.AccountController.Login (TN.UI)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 4.1816ms.
+2018-12-09 20:50:43.754 +07:00 [Information] Executing ViewResult, running view "Login".
+2018-12-09 20:50:43.934 +07:00 [Information] Executed ViewResult - view "Login" executed in 190.4532ms.
+2018-12-09 20:50:43.935 +07:00 [Information] Executed action "TN.UI.Areas.User.Controllers.AccountController.Login (TN.UI)" in 263.9409ms
+2018-12-09 20:50:43.942 +07:00 [Information] Request finished in 310.2506ms 200 text/html; charset=utf-8
+2018-12-09 20:52:20.300 +07:00 [Information] Request starting HTTP/1.1 POST http://127.0.0.1:23272/iisintegration  0
+2018-12-09 20:52:20.301 +07:00 [Information] Request finished in 0.5287ms 202 

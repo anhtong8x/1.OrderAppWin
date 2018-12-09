@@ -19,6 +19,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{9A8170
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TN.API", "Api\TN.StudentBus.API\TN.API.csproj", "{527193B7-8434-4CB5-AA78-4A3F9CABB27C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TN.StudentBus.Office", "Form\TN.StudentBus.Form\Office\TN.StudentBus.Office.csproj", "{0040840C-3B49-4788-85D4-1F5C95E9B341}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +43,10 @@ Global
 		{527193B7-8434-4CB5-AA78-4A3F9CABB27C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{527193B7-8434-4CB5-AA78-4A3F9CABB27C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{527193B7-8434-4CB5-AA78-4A3F9CABB27C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0040840C-3B49-4788-85D4-1F5C95E9B341}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0040840C-3B49-4788-85D4-1F5C95E9B341}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0040840C-3B49-4788-85D4-1F5C95E9B341}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0040840C-3B49-4788-85D4-1F5C95E9B341}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -50,6 +56,7 @@ Global
 		{654B3731-6681-4D9D-BABF-D21B0FBB76B2} = {9A81705E-0807-4D64-ADF2-93D8ECB56B4F}
 		{BAEE329D-85E6-4367-A345-AA37DA897219} = {9A81705E-0807-4D64-ADF2-93D8ECB56B4F}
 		{527193B7-8434-4CB5-AA78-4A3F9CABB27C} = {FCB44430-6B08-434D-9F4B-DF97A7FE7872}
+		{0040840C-3B49-4788-85D4-1F5C95E9B341} = {0A9328C2-408A-4632-935E-53C16A0939A8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C2BA2D72-7156-4635-AFDE-858B649FD770}

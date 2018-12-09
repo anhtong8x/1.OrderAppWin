@@ -28,14 +28,17 @@ namespace TN.Infrastructure
         public DbSet<RoleArea> RoleAreas { get; set; }
         public DbSet<Log> Logs { get; set; }
 
-        // table app
-		public DbSet<Dish> Dishs { get; set; }
-		public DbSet<TableStatus> TableStatuss { get; set; }
-		public DbSet<DishPrice> DishPrices { get; set; }
+        // khai bao cac bang them
+        public DbSet<Dish> Dishs { get; set; }
+        public DbSet<DishPrice> DishPrices { get; set; }
         public DbSet<Table> Tables { get; set; }
-        public DbSet<Bill> Bills { get; set; }
-        public DbSet<BillDetail> BillDetails { get; set; }
-        public DbSet<MLog> MLogs { get; set; }
+
+        //public DbSet<TableStatus> TableStatuss { get; set; }
+        //public DbSet<DishPrice> DishPrices { get; set; }
+        //      public DbSet<Table> Tables { get; set; }
+        //      public DbSet<Bill> Bills { get; set; }
+        //      public DbSet<BillDetail> BillDetails { get; set; }
+        //      public DbSet<MLog> MLogs { get; set; }
 
 
 
@@ -63,11 +66,12 @@ namespace TN.Infrastructure
 
 			// khai bao cac bang them
 			builder.Entity<Dish>().ToTable("Dish");
-			builder.Entity<TableStatus>().ToTable("TableStatus");
-			builder.Entity<DishPrice>().ToTable("DishPrice");
+            builder.Entity<DishPrice>().ToTable("DishPrice");
+            builder.Entity<Table>().ToTable("Table");
 
-		}
-		public async Task<bool> SaveEntitiesAsync(CancellationToken cancellationToken = default(CancellationToken))
+
+        }
+        public async Task<bool> SaveEntitiesAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
             var result = await base.SaveChangesAsync();
             return true;
