@@ -14,9 +14,9 @@ namespace TN.API.Controllers
     [Authorize]
     [Route("api/[controller]")]
     [ApiController]
-    public class TableController : BaseController<Table, ITableSevice>
+    public class BillController : BaseController<Bill, IBillService>
     {
-        public TableController(ITableSevice service)
+        public BillController(IBillService service)
           : base(service)
         {
         }
@@ -87,8 +87,30 @@ namespace TN.API.Controllers
             }
         }
 
-        [HttpPost("Create")]
-        public async Task<IActionResult> Create([FromBody] TableModel obj)
+		[AllowAnonymous]
+		[HttpGet("GetTable/{id}")]
+		public async Task<IActionResult> GetTable(int id)
+		{
+			try
+			{
+				if (!ModelState.IsValid)
+				{
+					return Ok(new ApiResponseData<object>()
+					{
+						ErrorCode = ApiResponseErrorCode.FalseIsValid,
+						Message = Newtonsoft.Json.JsonConvert.SerializeObject(ModelState)
+					});
+				}
+				return Ok(await Service.GetTable(id));
+			}
+			catch (Exception)
+			{
+				return BadRequest(new ApiResponseData<object>() { Status = false, ErrorCode = ApiResponseErrorCode.ServerError });
+			}
+		}
+
+		[HttpPost("Create")]
+        public async Task<IActionResult> Create([FromBody] BillModel obj)
         {
             try
             {
@@ -109,7 +131,7 @@ namespace TN.API.Controllers
         }
 
         [HttpPut("Edit")]
-        public async Task<IActionResult> Edit([FromBody] TableModel obj)
+        public async Task<IActionResult> Edit([FromBody] BillModel obj)
         {
             try
             {

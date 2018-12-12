@@ -1,0 +1,262 @@
+2018-12-12 12:37:58.049 +07:00 [Fatal] Unable to start Kestrel.
+System.IO.IOException: Failed to bind to address http://[::]:44353: address already in use. ---> Microsoft.AspNetCore.Connections.AddressInUseException: Only one usage of each socket address (protocol/network address/port) is normally permitted ---> System.Net.Sockets.SocketException: Only one usage of each socket address (protocol/network address/port) is normally permitted
+   at System.Net.Sockets.Socket.UpdateStatusAfterSocketErrorAndThrowException(SocketError error, String callerName)
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransport.BindAsync()
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransport.BindAsync()
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer.<>c__DisplayClass22_0`1.<<StartAsync>g__OnBind|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.ListenOptions.BindAsync(AddressBindContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.AnyIPListenOptions.BindAsync(AddressBindContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.AddressesStrategy.BindAsync(AddressBindContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindAsync(IServerAddressesFeature addresses, KestrelServerOptions serverOptions, ILogger logger, Func`2 createBinding)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+2018-12-12 12:38:23.877 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44353/api/Bill/Get/1  
+2018-12-12 12:38:24.080 +07:00 [Information] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '12/08/2018 06:33:44', Current time: '12/12/2018 05:38:24'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2018-12-12 12:38:24.083 +07:00 [Information] "Bearer" was not authenticated. Failure message: "IDX10223: Lifetime validation failed. The token is expired. ValidTo: '12/08/2018 06:33:44', Current time: '12/12/2018 05:38:24'."
+2018-12-12 12:38:24.125 +07:00 [Information] Request finished in 252.1901ms 307 
+2018-12-12 12:38:39.635 +07:00 [Information] Request starting HTTP/1.1 GET http://192.168.1.112:44353/api/Bill/Get/1  
+2018-12-12 12:38:39.639 +07:00 [Information] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '12/08/2018 06:33:44', Current time: '12/12/2018 05:38:39'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2018-12-12 12:38:39.643 +07:00 [Information] "Bearer" was not authenticated. Failure message: "IDX10223: Lifetime validation failed. The token is expired. ValidTo: '12/08/2018 06:33:44', Current time: '12/12/2018 05:38:39'."
+2018-12-12 12:38:39.647 +07:00 [Information] Request finished in 11.2494ms 307 
+2018-12-12 12:39:53.693 +07:00 [Information] Request starting HTTP/1.1 GET http://192.168.1.112:44353/api/Bill/Get/1  
+2018-12-12 12:39:53.827 +07:00 [Information] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '12/08/2018 06:33:44', Current time: '12/12/2018 05:39:53'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2018-12-12 12:39:53.828 +07:00 [Information] "Bearer" was not authenticated. Failure message: "IDX10223: Lifetime validation failed. The token is expired. ValidTo: '12/08/2018 06:33:44', Current time: '12/12/2018 05:39:53'."
+2018-12-12 12:39:53.830 +07:00 [Warning] Failed to determine the https port for redirect.
+2018-12-12 12:39:53.925 +07:00 [Information] Route matched with "{action = \"Get\", controller = \"Bill\"}". Executing action "TN.API.Controllers.BillController.Get (TN.API)"
+2018-12-12 12:39:53.933 +07:00 [Information] Executed action "TN.API.Controllers.BillController.Get (TN.API)" in 5.5429ms
+2018-12-12 12:39:53.939 +07:00 [Error] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'TN.API.Services.IBillService' while attempting to activate 'TN.API.Controllers.BillController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2018-12-12 12:39:53.964 +07:00 [Information] Request finished in 274.7786ms 500 text/html; charset=utf-8
+2018-12-12 12:40:00.208 +07:00 [Information] Request starting HTTP/1.1 GET http://192.168.1.112:44353/api/Bill/Get/1  
+2018-12-12 12:40:00.209 +07:00 [Information] Route matched with "{action = \"Get\", controller = \"Bill\"}". Executing action "TN.API.Controllers.BillController.Get (TN.API)"
+2018-12-12 12:40:00.209 +07:00 [Information] Executed action "TN.API.Controllers.BillController.Get (TN.API)" in 0.587ms
+2018-12-12 12:40:00.210 +07:00 [Error] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'TN.API.Services.IBillService' while attempting to activate 'TN.API.Controllers.BillController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2018-12-12 12:40:00.218 +07:00 [Information] Request finished in 10.0476ms 500 text/html; charset=utf-8
+2018-12-12 12:40:12.624 +07:00 [Information] Request starting HTTP/1.1 GET http://192.168.1.112:44353/api/Bill/Gets  
+2018-12-12 12:40:12.630 +07:00 [Information] Route matched with "{action = \"Gets\", controller = \"Bill\"}". Executing action "TN.API.Controllers.BillController.Gets (TN.API)"
+2018-12-12 12:40:12.630 +07:00 [Information] Executed action "TN.API.Controllers.BillController.Gets (TN.API)" in 0.2281ms
+2018-12-12 12:40:12.631 +07:00 [Error] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'TN.API.Services.IBillService' while attempting to activate 'TN.API.Controllers.BillController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2018-12-12 12:40:12.634 +07:00 [Information] Request finished in 9.8818ms 500 text/html; charset=utf-8
+2018-12-12 12:40:21.342 +07:00 [Information] Request starting HTTP/1.1 GET http://192.168.1.112:44353/api/Table/Gets  
+2018-12-12 12:40:21.366 +07:00 [Information] Successfully validated the token.
+2018-12-12 12:40:21.369 +07:00 [Information] Route matched with "{action = \"Gets\", controller = \"Table\"}". Executing action "TN.API.Controllers.TableController.Gets (TN.API)"
+2018-12-12 12:40:21.443 +07:00 [Information] Executing action method "TN.API.Controllers.TableController.Gets (TN.API)" - Validation state: Valid
+2018-12-12 12:40:21.642 +07:00 [Information] Entity Framework Core "2.1.4-rtm-31024" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-12-12 12:40:21.757 +07:00 [Information] Executed DbCommand ("9"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [t].[Id], [t].[Name], [t].[Note], [t].[Status]
+FROM [Table] AS [t]"
+2018-12-12 12:40:21.802 +07:00 [Information] Executed action method "TN.API.Controllers.TableController.Gets (TN.API)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 356.2114ms.
+2018-12-12 12:40:21.811 +07:00 [Information] Executing ObjectResult, writing value of type '"TN.API.Models.Data.ApiResponseData`1[[System.Object, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+2018-12-12 12:40:21.853 +07:00 [Information] Executed action "TN.API.Controllers.TableController.Gets (TN.API)" in 483.9359ms
+2018-12-12 12:40:21.856 +07:00 [Information] Request finished in 513.8673ms 200 application/json; charset=utf-8
+2018-12-12 12:43:11.557 +07:00 [Information] Request starting HTTP/1.1 GET http://192.168.1.112:44353/api/Bill/Gets  
+2018-12-12 12:43:11.601 +07:00 [Warning] Failed to determine the https port for redirect.
+2018-12-12 12:43:11.690 +07:00 [Information] Route matched with "{action = \"Gets\", controller = \"Bill\"}". Executing action "TN.API.Controllers.BillController.Gets (TN.API)"
+2018-12-12 12:43:11.762 +07:00 [Information] Executing action method "TN.API.Controllers.BillController.Gets (TN.API)" - Validation state: Valid
+2018-12-12 12:43:11.951 +07:00 [Information] Entity Framework Core "2.1.4-rtm-31024" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-12-12 12:43:12.063 +07:00 [Information] Executed DbCommand ("10"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [b].[Id], [b].[CashierId], [b].[CashierName], [b].[CreateDate], [b].[Money], [b].[Note], [b].[Paid], [b].[TableId], [b].[WaiterName], [b].[WaitersId]
+FROM [Bill] AS [b]"
+2018-12-12 12:43:12.149 +07:00 [Information] Executed action method "TN.API.Controllers.BillController.Gets (TN.API)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 383.2053ms.
+2018-12-12 12:43:12.160 +07:00 [Information] Executing ObjectResult, writing value of type '"TN.API.Models.Data.ApiResponseData`1[[System.Object, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+2018-12-12 12:43:12.293 +07:00 [Information] Executed action "TN.API.Controllers.BillController.Gets (TN.API)" in 600.269ms
+2018-12-12 12:43:12.298 +07:00 [Information] Request finished in 747.9921ms 200 application/json; charset=utf-8
+2018-12-12 12:44:01.920 +07:00 [Information] Request starting HTTP/1.1 GET http://192.168.1.112:44353/api/Bill/Get/1  
+2018-12-12 12:44:01.942 +07:00 [Information] Route matched with "{action = \"Get\", controller = \"Bill\"}". Executing action "TN.API.Controllers.BillController.Get (TN.API)"
+2018-12-12 12:44:01.974 +07:00 [Information] Executing action method "TN.API.Controllers.BillController.Get (TN.API)" with arguments (["1"]) - Validation state: Valid
+2018-12-12 12:44:01.980 +07:00 [Information] Entity Framework Core "2.1.4-rtm-31024" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-12-12 12:44:02.012 +07:00 [Information] Executed DbCommand ("4"ms) [Parameters=["@__id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [x].[Id], [x].[CashierId], [x].[CashierName], [x].[CreateDate], [x].[Money], [x].[Note], [x].[Paid], [x].[TableId], [x].[WaiterName], [x].[WaitersId]
+FROM [Bill] AS [x]
+WHERE ([x].[Id] = @__id_0) AND ([x].[Paid] = 1)"
+2018-12-12 12:44:02.016 +07:00 [Information] Executed action method "TN.API.Controllers.BillController.Get (TN.API)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 41.0898ms.
+2018-12-12 12:44:02.016 +07:00 [Information] Executing ObjectResult, writing value of type '"TN.API.Models.Data.ApiResponseData`1[[System.Object, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+2018-12-12 12:44:02.017 +07:00 [Information] Executed action "TN.API.Controllers.BillController.Get (TN.API)" in 74.2243ms
+2018-12-12 12:44:02.017 +07:00 [Information] Request finished in 97.5126ms 200 application/json; charset=utf-8
+2018-12-12 12:46:51.951 +07:00 [Information] Request starting HTTP/1.1 GET http://192.168.1.112:44353/api/Bill/GetTable/1  
+2018-12-12 12:46:51.996 +07:00 [Warning] Failed to determine the https port for redirect.
+2018-12-12 12:46:52.078 +07:00 [Information] Request finished in 130.7188ms 404 
+2018-12-12 12:48:36.649 +07:00 [Information] Request starting HTTP/1.1 GET http://192.168.1.112:44353/api/Bill/GetTable/1  
+2018-12-12 12:48:36.694 +07:00 [Warning] Failed to determine the https port for redirect.
+2018-12-12 12:48:36.770 +07:00 [Information] Request finished in 124.8786ms 404 
+2018-12-12 12:48:44.677 +07:00 [Information] Request starting HTTP/1.1 GET http://192.168.1.112:44353/api/Bill/Get/1  
+2018-12-12 12:48:44.691 +07:00 [Error] Request matched multiple actions resulting in ambiguity. Matching actions: "TN.API.Controllers.BillController.Get (TN.API)
+TN.API.Controllers.BillController.GetTable (TN.API)"
+2018-12-12 12:48:44.722 +07:00 [Error] An unhandled exception has occurred while executing the request.
+Microsoft.AspNetCore.Mvc.Internal.AmbiguousActionException: Multiple actions matched. The following actions matched route data and had all constraints satisfied:
+
+TN.API.Controllers.BillController.Get (TN.API)
+TN.API.Controllers.BillController.GetTable (TN.API)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionSelector.SelectBestCandidate(RouteContext context, IReadOnlyList`1 candidates)
+   at Microsoft.AspNetCore.Mvc.Internal.MvcAttributeRouteHandler.RouteAsync(RouteContext context)
+   at Microsoft.AspNetCore.Routing.Tree.TreeRouter.RouteAsync(RouteContext context)
+   at Microsoft.AspNetCore.Routing.RouteCollection.RouteAsync(RouteContext context)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2018-12-12 12:48:44.754 +07:00 [Information] Request finished in 76.953ms 500 text/html; charset=utf-8
+2018-12-12 12:49:28.587 +07:00 [Information] Request starting HTTP/1.1 GET http://192.168.1.112:44353/api/Bill/Get/1  
+2018-12-12 12:49:28.640 +07:00 [Warning] Failed to determine the https port for redirect.
+2018-12-12 12:49:28.742 +07:00 [Information] Route matched with "{action = \"Get\", controller = \"Bill\"}". Executing action "TN.API.Controllers.BillController.Get (TN.API)"
+2018-12-12 12:49:28.826 +07:00 [Information] Executing action method "TN.API.Controllers.BillController.Get (TN.API)" with arguments (["1"]) - Validation state: Valid
+2018-12-12 12:49:29.023 +07:00 [Information] Entity Framework Core "2.1.4-rtm-31024" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-12-12 12:49:29.153 +07:00 [Information] Executed DbCommand ("8"ms) [Parameters=["@__id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [x].[Id], [x].[CashierId], [x].[CashierName], [x].[CreateDate], [x].[Money], [x].[Note], [x].[Paid], [x].[TableId], [x].[WaiterName], [x].[WaitersId]
+FROM [Bill] AS [x]
+WHERE ([x].[Id] = @__id_0) AND ([x].[Paid] = 1)"
+2018-12-12 12:49:29.174 +07:00 [Information] Executed action method "TN.API.Controllers.BillController.Get (TN.API)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 345.671ms.
+2018-12-12 12:49:29.187 +07:00 [Information] Executing ObjectResult, writing value of type '"TN.API.Models.Data.ApiResponseData`1[[System.Object, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+2018-12-12 12:49:29.288 +07:00 [Information] Executed action "TN.API.Controllers.BillController.Get (TN.API)" in 542.4772ms
+2018-12-12 12:49:29.294 +07:00 [Information] Request finished in 713.0477ms 200 application/json; charset=utf-8
+2018-12-12 12:49:34.284 +07:00 [Information] Request starting HTTP/1.1 GET http://192.168.1.112:44353/api/Bill/Get/2  
+2018-12-12 12:49:34.286 +07:00 [Information] Route matched with "{action = \"Get\", controller = \"Bill\"}". Executing action "TN.API.Controllers.BillController.Get (TN.API)"
+2018-12-12 12:49:34.291 +07:00 [Information] Executing action method "TN.API.Controllers.BillController.Get (TN.API)" with arguments (["2"]) - Validation state: Valid
+2018-12-12 12:49:34.292 +07:00 [Information] Entity Framework Core "2.1.4-rtm-31024" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-12-12 12:49:34.299 +07:00 [Information] Executed DbCommand ("4"ms) [Parameters=["@__id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [x].[Id], [x].[CashierId], [x].[CashierName], [x].[CreateDate], [x].[Money], [x].[Note], [x].[Paid], [x].[TableId], [x].[WaiterName], [x].[WaitersId]
+FROM [Bill] AS [x]
+WHERE ([x].[Id] = @__id_0) AND ([x].[Paid] = 1)"
+2018-12-12 12:49:34.300 +07:00 [Information] Executed action method "TN.API.Controllers.BillController.Get (TN.API)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 9.0475ms.
+2018-12-12 12:49:34.300 +07:00 [Information] Executing ObjectResult, writing value of type '"TN.API.Models.Data.ApiResponseData`1[[System.Object, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+2018-12-12 12:49:34.301 +07:00 [Information] Executed action "TN.API.Controllers.BillController.Get (TN.API)" in 14.7848ms
+2018-12-12 12:49:34.301 +07:00 [Information] Request finished in 17.1692ms 200 application/json; charset=utf-8
+2018-12-12 12:49:53.737 +07:00 [Information] Request starting HTTP/1.1 GET http://192.168.1.112:44353/api/Bill/Get/4  
+2018-12-12 12:49:53.737 +07:00 [Information] Route matched with "{action = \"Get\", controller = \"Bill\"}". Executing action "TN.API.Controllers.BillController.Get (TN.API)"
+2018-12-12 12:49:53.737 +07:00 [Information] Executing action method "TN.API.Controllers.BillController.Get (TN.API)" with arguments (["4"]) - Validation state: Valid
+2018-12-12 12:49:53.738 +07:00 [Information] Entity Framework Core "2.1.4-rtm-31024" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-12-12 12:49:53.741 +07:00 [Information] Executed DbCommand ("2"ms) [Parameters=["@__id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [x].[Id], [x].[CashierId], [x].[CashierName], [x].[CreateDate], [x].[Money], [x].[Note], [x].[Paid], [x].[TableId], [x].[WaiterName], [x].[WaitersId]
+FROM [Bill] AS [x]
+WHERE ([x].[Id] = @__id_0) AND ([x].[Paid] = 1)"
+2018-12-12 12:49:53.783 +07:00 [Information] Executed action method "TN.API.Controllers.BillController.Get (TN.API)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 45.6315ms.
+2018-12-12 12:49:53.783 +07:00 [Information] Executing ObjectResult, writing value of type '"TN.API.Models.Data.ApiResponseData`1[[System.Object, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+2018-12-12 12:49:53.807 +07:00 [Information] Executed action "TN.API.Controllers.BillController.Get (TN.API)" in 69.7608ms
+2018-12-12 12:49:53.807 +07:00 [Information] Request finished in 70.4401ms 200 application/json; charset=utf-8
+2018-12-12 12:50:04.173 +07:00 [Information] Request starting HTTP/1.1 GET http://192.168.1.112:44353/api/Bill/Get/5  
+2018-12-12 12:50:04.173 +07:00 [Information] Route matched with "{action = \"Get\", controller = \"Bill\"}". Executing action "TN.API.Controllers.BillController.Get (TN.API)"
+2018-12-12 12:50:04.173 +07:00 [Information] Executing action method "TN.API.Controllers.BillController.Get (TN.API)" with arguments (["5"]) - Validation state: Valid
+2018-12-12 12:50:04.174 +07:00 [Information] Entity Framework Core "2.1.4-rtm-31024" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-12-12 12:50:04.176 +07:00 [Information] Executed DbCommand ("2"ms) [Parameters=["@__id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [x].[Id], [x].[CashierId], [x].[CashierName], [x].[CreateDate], [x].[Money], [x].[Note], [x].[Paid], [x].[TableId], [x].[WaiterName], [x].[WaitersId]
+FROM [Bill] AS [x]
+WHERE ([x].[Id] = @__id_0) AND ([x].[Paid] = 1)"
+2018-12-12 12:50:04.177 +07:00 [Information] Executed action method "TN.API.Controllers.BillController.Get (TN.API)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 3.017ms.
+2018-12-12 12:50:04.177 +07:00 [Information] Executing ObjectResult, writing value of type '"TN.API.Models.Data.ApiResponseData`1[[System.Object, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+2018-12-12 12:50:04.177 +07:00 [Information] Executed action "TN.API.Controllers.BillController.Get (TN.API)" in 3.7734ms
+2018-12-12 12:50:04.177 +07:00 [Information] Request finished in 4.3915ms 200 application/json; charset=utf-8
+2018-12-12 12:50:09.200 +07:00 [Information] Request starting HTTP/1.1 GET http://192.168.1.112:44353/api/Bill/Get/2  
+2018-12-12 12:50:09.200 +07:00 [Information] Route matched with "{action = \"Get\", controller = \"Bill\"}". Executing action "TN.API.Controllers.BillController.Get (TN.API)"
+2018-12-12 12:50:09.201 +07:00 [Information] Executing action method "TN.API.Controllers.BillController.Get (TN.API)" with arguments (["2"]) - Validation state: Valid
+2018-12-12 12:50:09.201 +07:00 [Information] Entity Framework Core "2.1.4-rtm-31024" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-12-12 12:50:09.202 +07:00 [Information] Executed DbCommand ("0"ms) [Parameters=["@__id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [x].[Id], [x].[CashierId], [x].[CashierName], [x].[CreateDate], [x].[Money], [x].[Note], [x].[Paid], [x].[TableId], [x].[WaiterName], [x].[WaitersId]
+FROM [Bill] AS [x]
+WHERE ([x].[Id] = @__id_0) AND ([x].[Paid] = 1)"
+2018-12-12 12:50:09.202 +07:00 [Information] Executed action method "TN.API.Controllers.BillController.Get (TN.API)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 1.2669ms.
+2018-12-12 12:50:09.202 +07:00 [Information] Executing ObjectResult, writing value of type '"TN.API.Models.Data.ApiResponseData`1[[System.Object, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+2018-12-12 12:50:09.202 +07:00 [Information] Executed action "TN.API.Controllers.BillController.Get (TN.API)" in 1.9478ms
+2018-12-12 12:50:09.203 +07:00 [Information] Request finished in 2.6177ms 200 application/json; charset=utf-8
+2018-12-12 12:50:13.437 +07:00 [Information] Request starting HTTP/1.1 GET http://192.168.1.112:44353/api/Bill/Get/4  
+2018-12-12 12:50:13.437 +07:00 [Information] Route matched with "{action = \"Get\", controller = \"Bill\"}". Executing action "TN.API.Controllers.BillController.Get (TN.API)"
+2018-12-12 12:50:13.438 +07:00 [Information] Executing action method "TN.API.Controllers.BillController.Get (TN.API)" with arguments (["4"]) - Validation state: Valid
+2018-12-12 12:50:13.438 +07:00 [Information] Entity Framework Core "2.1.4-rtm-31024" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-12-12 12:50:13.439 +07:00 [Information] Executed DbCommand ("0"ms) [Parameters=["@__id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [x].[Id], [x].[CashierId], [x].[CashierName], [x].[CreateDate], [x].[Money], [x].[Note], [x].[Paid], [x].[TableId], [x].[WaiterName], [x].[WaitersId]
+FROM [Bill] AS [x]
+WHERE ([x].[Id] = @__id_0) AND ([x].[Paid] = 1)"
+2018-12-12 12:50:13.439 +07:00 [Information] Executed action method "TN.API.Controllers.BillController.Get (TN.API)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 1.3098ms.
+2018-12-12 12:50:13.439 +07:00 [Information] Executing ObjectResult, writing value of type '"TN.API.Models.Data.ApiResponseData`1[[System.Object, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+2018-12-12 12:50:13.439 +07:00 [Information] Executed action "TN.API.Controllers.BillController.Get (TN.API)" in 2.0696ms
+2018-12-12 12:50:13.439 +07:00 [Information] Request finished in 2.5799ms 200 application/json; charset=utf-8
+2018-12-12 12:51:17.222 +07:00 [Information] Request starting HTTP/1.1 GET http://192.168.1.112:44353/api/Bill/GetTable/1  
+2018-12-12 12:51:17.225 +07:00 [Information] Route matched with "{action = \"GetTable\", controller = \"Bill\"}". Executing action "TN.API.Controllers.BillController.GetTable (TN.API)"
+2018-12-12 12:51:17.226 +07:00 [Information] Executing action method "TN.API.Controllers.BillController.GetTable (TN.API)" with arguments (["1"]) - Validation state: Valid
+2018-12-12 12:51:17.228 +07:00 [Information] Entity Framework Core "2.1.4-rtm-31024" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-12-12 12:51:17.241 +07:00 [Information] Executed DbCommand ("5"ms) [Parameters=["@__id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [x].[Id], [x].[CashierId], [x].[CashierName], [x].[CreateDate], [x].[Money], [x].[Note], [x].[Paid], [x].[TableId], [x].[WaiterName], [x].[WaitersId]
+FROM [Bill] AS [x]
+WHERE ([x].[TableId] = @__id_0) AND ([x].[Paid] = 1)"
+2018-12-12 12:51:17.243 +07:00 [Information] Executed action method "TN.API.Controllers.BillController.GetTable (TN.API)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 17.4995ms.
+2018-12-12 12:51:17.243 +07:00 [Information] Executing ObjectResult, writing value of type '"TN.API.Models.Data.ApiResponseData`1[[System.Object, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+2018-12-12 12:51:17.244 +07:00 [Information] Executed action "TN.API.Controllers.BillController.GetTable (TN.API)" in 18.4123ms
+2018-12-12 12:51:17.244 +07:00 [Information] Request finished in 22.2921ms 200 application/json; charset=utf-8
+2018-12-12 12:51:35.613 +07:00 [Information] Request starting HTTP/1.1 GET http://192.168.1.112:44353/api/Bill/Gets  
+2018-12-12 12:51:35.651 +07:00 [Information] Successfully validated the token.
+2018-12-12 12:51:35.657 +07:00 [Information] Route matched with "{action = \"Gets\", controller = \"Bill\"}". Executing action "TN.API.Controllers.BillController.Gets (TN.API)"
+2018-12-12 12:51:35.662 +07:00 [Information] Executing action method "TN.API.Controllers.BillController.Gets (TN.API)" - Validation state: Valid
+2018-12-12 12:51:35.668 +07:00 [Information] Entity Framework Core "2.1.4-rtm-31024" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-12-12 12:51:35.674 +07:00 [Information] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [b].[Id], [b].[CashierId], [b].[CashierName], [b].[CreateDate], [b].[Money], [b].[Note], [b].[Paid], [b].[TableId], [b].[WaiterName], [b].[WaitersId]
+FROM [Bill] AS [b]"
+2018-12-12 12:51:35.677 +07:00 [Information] Executed action method "TN.API.Controllers.BillController.Gets (TN.API)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 14.7023ms.
+2018-12-12 12:51:35.677 +07:00 [Information] Executing ObjectResult, writing value of type '"TN.API.Models.Data.ApiResponseData`1[[System.Object, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+2018-12-12 12:51:35.692 +07:00 [Information] Executed action "TN.API.Controllers.BillController.Gets (TN.API)" in 33.6764ms
+2018-12-12 12:51:35.692 +07:00 [Information] Request finished in 79.1193ms 200 application/json; charset=utf-8
+2018-12-12 13:58:27.354 +07:00 [Information] Request starting HTTP/1.1 GET http://192.168.1.112:44353/api/BillDetail/Gets  
+2018-12-12 13:58:27.487 +07:00 [Information] Successfully validated the token.
+2018-12-12 13:58:27.490 +07:00 [Warning] Failed to determine the https port for redirect.
+2018-12-12 13:58:27.569 +07:00 [Information] Request finished in 221.2992ms 404 

@@ -49,6 +49,7 @@ namespace TN.StudentBus.Office
                 }
                 btnLogin.Enabled = false;
                 btnLogin.Text = "Đang xử lý...";
+
                 var dl = await DALContext.LoginAsync(_Username.Text.Trim(), _Password.Text.Trim());
                 if(dl==null)
                 {

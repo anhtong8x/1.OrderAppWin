@@ -1,0 +1,47 @@
+2018-12-10 22:48:53.136 +07:00 [Information] Request starting HTTP/1.1 DEBUG http://localhost:44396/  0
+2018-12-10 22:48:53.136 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44396/https:/localhost:44399/  
+2018-12-10 22:48:53.370 +07:00 [Information] Request finished in 238.8307ms 200 
+2018-12-10 22:48:53.471 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported cultures '["en-US", "en"]'.
+2018-12-10 22:48:53.480 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported UI Cultures '["en-US", "en"]'.
+2018-12-10 22:48:54.037 +07:00 [Information] Request finished in 892.4342ms 404 
+2018-12-10 22:49:02.043 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44396/  
+2018-12-10 22:49:02.049 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported cultures '["en-US", "en"]'.
+2018-12-10 22:49:02.060 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported UI Cultures '["en-US", "en"]'.
+2018-12-10 22:49:02.488 +07:00 [Information] Route matched with "{action = \"Index\", controller = \"Home\", area = \"\"}". Executing action "TN.UI.Controllers.HomeController.Index (TN.UI)"
+2018-12-10 22:49:03.140 +07:00 [Information] Entity Framework Core "2.1.4-rtm-31024" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-12-10 22:49:03.706 +07:00 [Information] Executed DbCommand ("37"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[Avatar], [e].[ConcurrencyStamp], [e].[CreatedDate], [e].[CreatedUserId], [e].[DisplayName], [e].[Email], [e].[EmailConfirmed], [e].[IsLock], [e].[IsReLogin], [e].[IsSuperAdmin], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[Note], [e].[NoteLock], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[RoleParents], [e].[RoleSchool], [e].[RoleTransportCompany], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UpdatedDate], [e].[UpdatedUserId], [e].[UserName]
+FROM [adm].[User] AS [e]
+WHERE [e].[Id] = @__get_Item_0"
+2018-12-10 22:49:03.813 +07:00 [Information] AuthenticationScheme: "Identity.Application" signed out.
+2018-12-10 22:49:03.822 +07:00 [Information] AuthenticationScheme: "Identity.External" signed out.
+2018-12-10 22:49:03.831 +07:00 [Information] AuthenticationScheme: "Identity.TwoFactorUserId" signed out.
+2018-12-10 22:49:03.842 +07:00 [Information] Authorization failed for the request at filter '"TN.UI.Extensions.PermissionFilter"'.
+2018-12-10 22:49:03.857 +07:00 [Information] Executing RedirectResult, redirecting to "/Login?ReturnUrl=%2F".
+2018-12-10 22:49:03.876 +07:00 [Information] Executed action "TN.UI.Controllers.HomeController.Index (TN.UI)" in 1373.5143ms
+2018-12-10 22:49:03.906 +07:00 [Information] Request finished in 1861.1071ms 302 
+2018-12-10 22:49:03.915 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44396/Login?ReturnUrl=%2F  
+2018-12-10 22:49:03.926 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported cultures '["en-US", "en"]'.
+2018-12-10 22:49:03.933 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported UI Cultures '["en-US", "en"]'.
+2018-12-10 22:49:03.978 +07:00 [Information] Route matched with "{area = \"User\", action = \"Login\", controller = \"Account\"}". Executing action "TN.UI.Areas.User.Controllers.AccountController.Login (TN.UI)"
+2018-12-10 22:49:04.094 +07:00 [Information] Executing action method "TN.UI.Areas.User.Controllers.AccountController.Login (TN.UI)" with arguments (["/"]) - Validation state: Valid
+2018-12-10 22:49:04.106 +07:00 [Information] AuthenticationScheme: "Identity.External" signed out.
+2018-12-10 22:49:04.122 +07:00 [Information] Executed action method "TN.UI.Areas.User.Controllers.AccountController.Login (TN.UI)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 13.3623ms.
+2018-12-10 22:49:04.153 +07:00 [Information] Executing ViewResult, running view "Login".
+2018-12-10 22:49:04.783 +07:00 [Information] Executed ViewResult - view "Login" executed in 643.665ms.
+2018-12-10 22:49:04.794 +07:00 [Information] Executed action "TN.UI.Areas.User.Controllers.AccountController.Login (TN.UI)" in 802.3436ms
+2018-12-10 22:49:04.817 +07:00 [Information] Request finished in 896.5444ms 200 text/html; charset=utf-8
+2018-12-10 22:49:04.875 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44396/Content/Admin/site.min.css?v=jW89cCi60i6h6mXSm6FblqHAQ9b_Ws0NOy1F8uGIlYc  
+2018-12-10 22:49:04.878 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44396/Content/Admin/site.min.js?v=uGEmHVBVwqSwceRoffkJ4JsqPQI9uYkMXT592pcUwAs  
+2018-12-10 22:49:04.895 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported cultures '["en-US", "en"]'.
+2018-12-10 22:49:04.895 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported cultures '["en-US", "en"]'.
+2018-12-10 22:49:04.909 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported UI Cultures '["en-US", "en"]'.
+2018-12-10 22:49:04.913 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported UI Cultures '["en-US", "en"]'.
+2018-12-10 22:49:04.989 +07:00 [Information] Sending file. Request path: '"/Content/Admin/site.min.css"'. Physical path: '"F:\4.Net\5.API\Backend\TN.UI\wwwroot\Content\Admin\site.min.css"'
+2018-12-10 22:49:04.999 +07:00 [Information] Sending file. Request path: '"/Content/Admin/site.min.js"'. Physical path: '"F:\4.Net\5.API\Backend\TN.UI\wwwroot\Content\Admin\site.min.js"'
+2018-12-10 22:49:05.032 +07:00 [Information] Request finished in 139.5737ms 200 text/css
+2018-12-10 22:49:05.047 +07:00 [Information] Request finished in 165.0383ms 200 application/javascript
+2018-12-10 22:49:06.296 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44396/Content/Admin/favicon.ico  
+2018-12-10 22:49:06.313 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported cultures '["en-US", "en"]'.
+2018-12-10 22:49:06.333 +07:00 [Warning] "AcceptLanguageHeaderRequestCultureProvider" returned the following unsupported UI Cultures '["en-US", "en"]'.
+2018-12-10 22:49:06.356 +07:00 [Information] Request finished in 55.5751ms 404 

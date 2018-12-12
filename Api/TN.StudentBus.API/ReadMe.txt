@@ -4,3 +4,6 @@
 
 2. chay web bang ip
 netsh http add urlacl url=http://192.168.1.118:44353/ user=everyone
+
+netsh http show urlacl
+netsh http delete urlacl url=http://192.168.1.118:44353/

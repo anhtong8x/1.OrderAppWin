@@ -1,0 +1,84 @@
+--
+link: https://www.linkedin.com/learning/migrating-from-asp-dot-net-web-api-2-2-to-asp-dot-net-core/launch-app-with-kestrel-or-iis
+
+Chay web bang ten app: UseKestrel
+1. run app bang ten app 
+2. vao dos: chuyen thu muc den noi chua code web
+3. danh lenh: dotnet run
+4. vao properties/launchSettings.json:
+
+    "iisExpress": {
+      "applicationUrl": "http://192.168.1.118:44353", 
+      "sslPort": 0
+    }
+// "http://192.168.1.118:44353",  => doi thanh ip va port minh can
+
+5. vao class program
+   public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
+            WebHost.CreateDefaultBuilder(args)
+                .UseKestrel()
+                .UseUrls("http://*:44353")
+                .UseStartup<Startup>();
+6. Quay lai dos danh lenh
+F:\4.Net\5.API\Api\TN.StudentBus.API>
+dotnet run			
+ctrl + c
+set aspnetcore_environment=development	
+ctrl + c
+
+7. tao file cmd nhu sau: runt_development.cmd
+set aspnetcore_environment=development
+dotnet restore
+dotnet build
+dotnet run
+pause
+
+8. khi can chay chi can click vao file cmd la ok
+
+-----------------------------
+
+C:\Users\Administrator>f:
+
+f:\>cd F:\4.Net\5.API\Api\TN.StudentBus.API
+
+F:\4.Net\5.API\Api\TN.StudentBus.API>dotnet run
+Using launch settings from F:\4.Net\5.API\Api\TN.StudentBus.API\Properties\launchSettings.json...
+info: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[0]
+      User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+Hosting environment: Development
+Content root path: F:\4.Net\5.API\Api\TN.StudentBus.API
+Now listening on: http://[::]:44353
+Application started. Press Ctrl+C to shut down.
+info: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]
+      Request starting HTTP/1.1 GET http://192.168.1.118:44353/
+warn: Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware[3]
+      Failed to determine the https port for redirect.
+warn: Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware[3]
+      Failed to determine the https port for redirect.
+info: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]
+      Request finished in 254.1368ms 404
+Application is shutting down...
+^C
+F:\4.Net\5.API\Api\TN.StudentBus.API>dotnet run
+Using launch settings from F:\4.Net\5.API\Api\TN.StudentBus.API\Properties\launchSettings.json...
+info: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[0]
+      User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+Hosting environment: Development
+Content root path: F:\4.Net\5.API\Api\TN.StudentBus.API
+Now listening on: http://[::]:44353
+Application started. Press Ctrl+C to shut down.
+Application is shutting down...
+^C
+F:\4.Net\5.API\Api\TN.StudentBus.API>set aspnetcore_environment=development
+
+F:\4.Net\5.API\Api\TN.StudentBus.API>dotnet run
+Using launch settings from F:\4.Net\5.API\Api\TN.StudentBus.API\Properties\launchSettings.json...
+info: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[0]
+      User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+Hosting environment: Development
+Content root path: F:\4.Net\5.API\Api\TN.StudentBus.API
+Now listening on: http://[::]:44353
+Application started. Press Ctrl+C to shut down.
+Application is shutting down...
+^C
+F:\4.Net\5.API\Api\TN.StudentBus.API>

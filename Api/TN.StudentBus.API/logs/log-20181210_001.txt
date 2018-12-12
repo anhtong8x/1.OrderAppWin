@@ -1,0 +1,230 @@
+2018-12-10 22:54:41.490 +07:00 [Information] Request starting HTTP/1.1 GET http://192.168.1.118:44353/  
+2018-12-10 22:54:41.662 +07:00 [Warning] Failed to determine the https port for redirect.
+2018-12-10 22:54:41.897 +07:00 [Information] Request finished in 416.3657ms 404 
+2018-12-10 22:54:45.861 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44353/  
+2018-12-10 22:54:45.865 +07:00 [Information] Request finished in 4.7902ms 404 
+2018-12-10 22:55:12.553 +07:00 [Information] Request starting HTTP/1.1 POST http://127.0.0.1:11520/iisintegration  0
+2018-12-10 22:55:12.556 +07:00 [Information] Request finished in 2.2271ms 202 
+2018-12-10 22:59:52.647 +07:00 [Information] Request starting HTTP/1.1 GET http://192.168.1.118:44353/api/values  
+2018-12-10 22:59:52.751 +07:00 [Information] Request finished in 112.9504ms 307 
+2018-12-10 23:01:39.177 +07:00 [Information] Request starting HTTP/1.1 DEBUG http://localhost:44353/  0
+2018-12-10 23:01:39.294 +07:00 [Information] Request finished in 128.6612ms 200 
+2018-12-10 23:02:14.157 +07:00 [Information] Request starting HTTP/1.1 GET http://192.168.1.118:44353/  
+2018-12-10 23:02:14.373 +07:00 [Information] Request finished in 263.2877ms 307 
+2018-12-10 23:02:14.408 +07:00 [Information] Request starting HTTP/1.1 GET http://192.168.1.118:44389/  
+2018-12-10 23:02:14.950 +07:00 [Information] Request finished in 461.3688ms 404 
+2018-12-10 23:02:54.186 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44353/api/table  
+2018-12-10 23:02:54.186 +07:00 [Information] Request starting HTTP/1.1 DEBUG http://localhost:44353/  0
+2018-12-10 23:02:54.315 +07:00 [Information] Request finished in 131.7304ms 200 
+2018-12-10 23:02:54.458 +07:00 [Warning] Failed to determine the https port for redirect.
+2018-12-10 23:02:54.849 +07:00 [Information] Request finished in 671.4048ms 404 
+2018-12-10 23:05:13.584 +07:00 [Information] Request starting HTTP/1.1 DEBUG http://localhost:44353/  0
+2018-12-10 23:05:13.722 +07:00 [Information] Request finished in 174.6041ms 200 
+2018-12-10 23:05:33.488 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44353/  
+2018-12-10 23:05:33.613 +07:00 [Warning] Failed to determine the https port for redirect.
+2018-12-10 23:05:33.893 +07:00 [Information] Request finished in 399.1626ms 404 
+2018-12-10 23:05:44.896 +07:00 [Information] Request starting HTTP/1.1 GET http://192.168.1.118:44353/  
+2018-12-10 23:05:44.937 +07:00 [Information] Request finished in 15.9419ms 404 
+2018-12-10 23:08:57.326 +07:00 [Information] Request starting HTTP/1.1 DEBUG http://localhost:44353/  0
+2018-12-10 23:08:57.326 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44353/api/values  
+2018-12-10 23:08:57.482 +07:00 [Information] Request finished in 163.024ms 200 
+2018-12-10 23:08:57.623 +07:00 [Warning] Failed to determine the https port for redirect.
+2018-12-10 23:08:58.006 +07:00 [Information] Route matched with "{action = \"Get\", controller = \"Values\"}". Executing action "TN.API.Controllers.ValuesController.Get (TN.API)"
+2018-12-10 23:08:58.026 +07:00 [Information] Executing action method "TN.API.Controllers.ValuesController.Get (TN.API)" - Validation state: Valid
+2018-12-10 23:08:58.041 +07:00 [Information] Executed action method "TN.API.Controllers.ValuesController.Get (TN.API)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 0.626ms.
+2018-12-10 23:08:58.060 +07:00 [Information] Executing ObjectResult, writing value of type '"System.String[]"'.
+2018-12-10 23:08:58.194 +07:00 [Information] Executed action "TN.API.Controllers.ValuesController.Get (TN.API)" in 164.418ms
+2018-12-10 23:08:58.241 +07:00 [Information] Request finished in 916.2842ms 200 application/json; charset=utf-8
+2018-12-10 23:09:22.632 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44353/  
+2018-12-10 23:09:22.679 +07:00 [Information] Request finished in 66.8866ms 404 
+2018-12-10 23:10:13.851 +07:00 [Information] Request starting HTTP/1.1 GET http://192.168.1.118:44353/api/values  
+2018-12-10 23:10:13.851 +07:00 [Information] Request starting HTTP/1.1 DEBUG http://192.168.1.118:44353/  0
+2018-12-10 23:10:13.956 +07:00 [Information] Request finished in 113.2493ms 200 
+2018-12-10 23:10:14.082 +07:00 [Warning] Failed to determine the https port for redirect.
+2018-12-10 23:10:14.371 +07:00 [Information] Route matched with "{action = \"Get\", controller = \"Values\"}". Executing action "TN.API.Controllers.ValuesController.Get (TN.API)"
+2018-12-10 23:10:14.397 +07:00 [Information] Executing action method "TN.API.Controllers.ValuesController.Get (TN.API)" - Validation state: Valid
+2018-12-10 23:10:14.409 +07:00 [Information] Executed action method "TN.API.Controllers.ValuesController.Get (TN.API)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 0.5479ms.
+2018-12-10 23:10:14.441 +07:00 [Information] Executing ObjectResult, writing value of type '"System.String[]"'.
+2018-12-10 23:10:14.576 +07:00 [Information] Executed action "TN.API.Controllers.ValuesController.Get (TN.API)" in 180.3778ms
+2018-12-10 23:10:14.611 +07:00 [Information] Request finished in 765.6904ms 200 application/json; charset=utf-8
+2018-12-10 23:10:29.194 +07:00 [Information] Request starting HTTP/1.1 GET http://192.168.1.118:44353/api/table/get/2  
+2018-12-10 23:10:29.245 +07:00 [Information] Route matched with "{action = \"Get\", controller = \"Table\"}". Executing action "TN.API.Controllers.TableController.Get (TN.API)"
+2018-12-10 23:10:29.488 +07:00 [Information] Executing action method "TN.API.Controllers.TableController.Get (TN.API)" with arguments (["2"]) - Validation state: Valid
+2018-12-10 23:10:29.940 +07:00 [Information] Entity Framework Core "2.1.4-rtm-31024" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-12-10 23:10:30.319 +07:00 [Information] Executed DbCommand ("21"ms) [Parameters=["@__id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [x].[Id], [x].[Name], [x].[Note], [x].[Status]
+FROM [Table] AS [x]
+WHERE [x].[Id] = @__id_0"
+2018-12-10 23:10:30.420 +07:00 [Information] Executed action method "TN.API.Controllers.TableController.Get (TN.API)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 924.6961ms.
+2018-12-10 23:10:30.433 +07:00 [Information] Executing ObjectResult, writing value of type '"TN.API.Models.Data.ApiResponseData`1[[System.Object, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+2018-12-10 23:10:30.461 +07:00 [Information] Executed action "TN.API.Controllers.TableController.Get (TN.API)" in 1209.3403ms
+2018-12-10 23:10:30.508 +07:00 [Information] Request finished in 1303.0337ms 200 application/json; charset=utf-8
+2018-12-10 23:13:39.512 +07:00 [Information] Request starting HTTP/1.1 GET http://192.168.1.118:44353/api/values  
+2018-12-10 23:13:39.610 +07:00 [Warning] Failed to determine the https port for redirect.
+2018-12-10 23:13:39.825 +07:00 [Information] Route matched with "{action = \"Get\", controller = \"Values\"}". Executing action "TN.API.Controllers.ValuesController.Get (TN.API)"
+2018-12-10 23:13:39.844 +07:00 [Information] Executing action method "TN.API.Controllers.ValuesController.Get (TN.API)" - Validation state: Valid
+2018-12-10 23:13:39.850 +07:00 [Information] Executed action method "TN.API.Controllers.ValuesController.Get (TN.API)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 0.286ms.
+2018-12-10 23:13:39.861 +07:00 [Information] Executing ObjectResult, writing value of type '"System.String[]"'.
+2018-12-10 23:13:39.920 +07:00 [Information] Executed action "TN.API.Controllers.ValuesController.Get (TN.API)" in 87.4573ms
+2018-12-10 23:13:39.931 +07:00 [Information] Request finished in 427.6026ms 200 application/json; charset=utf-8
+2018-12-10 23:13:48.899 +07:00 [Information] Request starting HTTP/1.1 POST http://127.0.0.1:21857/iisintegration  0
+2018-12-10 23:13:48.906 +07:00 [Information] Request finished in 6.9446ms 202 
+2018-12-10 23:13:59.222 +07:00 [Information] Request starting HTTP/1.1 GET http://192.168.1.118:44353/api/values  
+2018-12-10 23:13:59.222 +07:00 [Information] Request starting HTTP/1.1 DEBUG http://192.168.1.118:44353/  0
+2018-12-10 23:13:59.346 +07:00 [Information] Request finished in 156.5032ms 200 
+2018-12-10 23:13:59.476 +07:00 [Warning] Failed to determine the https port for redirect.
+2018-12-10 23:13:59.823 +07:00 [Information] Route matched with "{action = \"Get\", controller = \"Values\"}". Executing action "TN.API.Controllers.ValuesController.Get (TN.API)"
+2018-12-10 23:13:59.847 +07:00 [Information] Executing action method "TN.API.Controllers.ValuesController.Get (TN.API)" - Validation state: Valid
+2018-12-10 23:13:59.858 +07:00 [Information] Executed action method "TN.API.Controllers.ValuesController.Get (TN.API)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 0.5265ms.
+2018-12-10 23:13:59.878 +07:00 [Information] Executing ObjectResult, writing value of type '"System.String[]"'.
+2018-12-10 23:14:00.037 +07:00 [Information] Executed action "TN.API.Controllers.ValuesController.Get (TN.API)" in 163.8914ms
+2018-12-10 23:14:00.067 +07:00 [Information] Request finished in 871.5823ms 200 application/json; charset=utf-8
+2018-12-10 23:14:22.418 +07:00 [Information] Request starting HTTP/1.1 DEBUG http://192.168.1.118:44353/  0
+2018-12-10 23:14:22.418 +07:00 [Information] Request starting HTTP/1.1 GET http://192.168.1.118:44389/api/values  
+2018-12-10 23:14:22.579 +07:00 [Information] Request finished in 182.9075ms 200 
+2018-12-10 23:14:23.017 +07:00 [Information] Route matched with "{action = \"Get\", controller = \"Values\"}". Executing action "TN.API.Controllers.ValuesController.Get (TN.API)"
+2018-12-10 23:14:23.042 +07:00 [Information] Executing action method "TN.API.Controllers.ValuesController.Get (TN.API)" - Validation state: Valid
+2018-12-10 23:14:23.052 +07:00 [Information] Executed action method "TN.API.Controllers.ValuesController.Get (TN.API)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 0.4663ms.
+2018-12-10 23:14:23.069 +07:00 [Information] Executing ObjectResult, writing value of type '"System.String[]"'.
+2018-12-10 23:14:23.195 +07:00 [Information] Executed action "TN.API.Controllers.ValuesController.Get (TN.API)" in 145.2663ms
+2018-12-10 23:14:23.225 +07:00 [Information] Request finished in 825.5105ms 200 application/json; charset=utf-8
+2018-12-10 23:14:23.247 +07:00 [Information] Request starting HTTP/1.1 GET http://192.168.1.118:44389/favicon.ico  
+2018-12-10 23:14:23.256 +07:00 [Information] Request finished in 7.7032ms 404 
+2018-12-10 23:14:31.162 +07:00 [Information] Request starting HTTP/1.1 GET http://192.168.1.118:44389/api/table/get/2  
+2018-12-10 23:14:31.200 +07:00 [Information] Route matched with "{action = \"Get\", controller = \"Table\"}". Executing action "TN.API.Controllers.TableController.Get (TN.API)"
+2018-12-10 23:14:31.429 +07:00 [Information] Executing action method "TN.API.Controllers.TableController.Get (TN.API)" with arguments (["2"]) - Validation state: Valid
+2018-12-10 23:14:31.911 +07:00 [Information] Entity Framework Core "2.1.4-rtm-31024" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-12-10 23:14:32.308 +07:00 [Information] Executed DbCommand ("20"ms) [Parameters=["@__id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [x].[Id], [x].[Name], [x].[Note], [x].[Status]
+FROM [Table] AS [x]
+WHERE [x].[Id] = @__id_0"
+2018-12-10 23:14:32.398 +07:00 [Information] Executed action method "TN.API.Controllers.TableController.Get (TN.API)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 961.6921ms.
+2018-12-10 23:14:32.411 +07:00 [Information] Executing ObjectResult, writing value of type '"TN.API.Models.Data.ApiResponseData`1[[System.Object, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+2018-12-10 23:14:32.458 +07:00 [Information] Executed action "TN.API.Controllers.TableController.Get (TN.API)" in 1250.733ms
+2018-12-10 23:14:32.500 +07:00 [Information] Request finished in 1319.4121ms 200 application/json; charset=utf-8
+2018-12-10 23:19:06.797 +07:00 [Information] Request starting HTTP/1.1 GET http://192.168.1.118:44353/  
+2018-12-10 23:19:06.893 +07:00 [Warning] Failed to determine the https port for redirect.
+2018-12-10 23:19:07.057 +07:00 [Information] Request finished in 267.8825ms 404 
+2018-12-10 23:19:10.526 +07:00 [Information] Request starting HTTP/1.1 GET http://192.168.1.118:44353/  
+2018-12-10 23:19:10.527 +07:00 [Information] Request finished in 1.7594ms 404 
+2018-12-10 23:19:15.500 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44353/  
+2018-12-10 23:19:15.517 +07:00 [Information] Request finished in 19.3462ms 404 
+2018-12-10 23:20:56.729 +07:00 [Information] Request starting HTTP/1.1 DEBUG http://localhost:44353/  0
+2018-12-10 23:20:56.729 +07:00 [Information] Request starting HTTP/1.1 GET http://localhost:44353/api/values  
+2018-12-10 23:20:56.854 +07:00 [Information] Request finished in 134.0302ms 200 
+2018-12-10 23:20:57.010 +07:00 [Warning] Failed to determine the https port for redirect.
+2018-12-10 23:20:57.417 +07:00 [Information] Route matched with "{action = \"Get\", controller = \"Values\"}". Executing action "TN.API.Controllers.ValuesController.Get (TN.API)"
+2018-12-10 23:20:57.453 +07:00 [Information] Executing action method "TN.API.Controllers.ValuesController.Get (TN.API)" - Validation state: Valid
+2018-12-10 23:20:57.468 +07:00 [Information] Executed action method "TN.API.Controllers.ValuesController.Get (TN.API)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 0.6943ms.
+2018-12-10 23:20:57.491 +07:00 [Information] Executing ObjectResult, writing value of type '"System.String[]"'.
+2018-12-10 23:20:57.644 +07:00 [Information] Executed action "TN.API.Controllers.ValuesController.Get (TN.API)" in 203.5282ms
+2018-12-10 23:20:57.663 +07:00 [Information] Request finished in 945.0044ms 200 application/json; charset=utf-8
+2018-12-10 23:21:18.903 +07:00 [Information] Request starting HTTP/1.1 GET http://192.168.1.118:44353/  
+2018-12-10 23:21:18.970 +07:00 [Information] Request finished in 54.3529ms 404 
+2018-12-10 23:22:13.473 +07:00 [Information] Request starting HTTP/1.1 GET http://192.168.1.118:44353/  
+2018-12-10 23:22:13.595 +07:00 [Warning] Failed to determine the https port for redirect.
+2018-12-10 23:22:13.775 +07:00 [Information] Request finished in 311.1341ms 404 
+2018-12-10 23:22:26.682 +07:00 [Information] Request starting HTTP/1.1 GET http://192.168.1.118:44353/api/values  
+2018-12-10 23:22:26.810 +07:00 [Warning] Failed to determine the https port for redirect.
+2018-12-10 23:22:27.003 +07:00 [Information] Route matched with "{action = \"Get\", controller = \"Values\"}". Executing action "TN.API.Controllers.ValuesController.Get (TN.API)"
+2018-12-10 23:22:27.020 +07:00 [Information] Executing action method "TN.API.Controllers.ValuesController.Get (TN.API)" - Validation state: Valid
+2018-12-10 23:22:27.028 +07:00 [Information] Executed action method "TN.API.Controllers.ValuesController.Get (TN.API)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 0.2962ms.
+2018-12-10 23:22:27.039 +07:00 [Information] Executing ObjectResult, writing value of type '"System.String[]"'.
+2018-12-10 23:22:27.110 +07:00 [Information] Executed action "TN.API.Controllers.ValuesController.Get (TN.API)" in 96.2302ms
+2018-12-10 23:22:27.125 +07:00 [Information] Request finished in 450.3875ms 200 application/json; charset=utf-8
+2018-12-10 23:22:57.419 +07:00 [Information] Request starting HTTP/1.1 DEBUG http://192.168.1.118:44353/  0
+2018-12-10 23:22:57.419 +07:00 [Information] Request starting HTTP/1.1 GET http://192.168.1.118:44353/api/values  
+2018-12-10 23:22:57.537 +07:00 [Information] Request finished in 130.5041ms 200 
+2018-12-10 23:22:57.665 +07:00 [Warning] Failed to determine the https port for redirect.
+2018-12-10 23:22:57.958 +07:00 [Information] Route matched with "{action = \"Get\", controller = \"Values\"}". Executing action "TN.API.Controllers.ValuesController.Get (TN.API)"
+2018-12-10 23:22:57.977 +07:00 [Information] Executing action method "TN.API.Controllers.ValuesController.Get (TN.API)" - Validation state: Valid
+2018-12-10 23:22:57.990 +07:00 [Information] Executed action method "TN.API.Controllers.ValuesController.Get (TN.API)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 0.6577ms.
+2018-12-10 23:22:58.011 +07:00 [Information] Executing ObjectResult, writing value of type '"System.String[]"'.
+2018-12-10 23:22:58.146 +07:00 [Information] Executed action "TN.API.Controllers.ValuesController.Get (TN.API)" in 168.3671ms
+2018-12-10 23:22:58.177 +07:00 [Information] Request finished in 763.9804ms 200 application/json; charset=utf-8
+2018-12-10 23:23:09.438 +07:00 [Information] Request starting HTTP/1.1 GET http://192.168.1.118:44353/api/values  
+2018-12-10 23:23:09.536 +07:00 [Warning] Failed to determine the https port for redirect.
+2018-12-10 23:23:09.743 +07:00 [Information] Route matched with "{action = \"Get\", controller = \"Values\"}". Executing action "TN.API.Controllers.ValuesController.Get (TN.API)"
+2018-12-10 23:23:09.758 +07:00 [Information] Executing action method "TN.API.Controllers.ValuesController.Get (TN.API)" - Validation state: Valid
+2018-12-10 23:23:09.763 +07:00 [Information] Executed action method "TN.API.Controllers.ValuesController.Get (TN.API)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 0.2623ms.
+2018-12-10 23:23:09.774 +07:00 [Information] Executing ObjectResult, writing value of type '"System.String[]"'.
+2018-12-10 23:23:09.839 +07:00 [Information] Executed action "TN.API.Controllers.ValuesController.Get (TN.API)" in 86.6898ms
+2018-12-10 23:23:09.854 +07:00 [Information] Request finished in 424.7575ms 200 application/json; charset=utf-8
+2018-12-10 23:26:17.795 +07:00 [Information] Request starting HTTP/1.1 GET http://192.168.1.118:44353/api/table/get/2  
+2018-12-10 23:26:17.838 +07:00 [Information] Route matched with "{action = \"Get\", controller = \"Table\"}". Executing action "TN.API.Controllers.TableController.Get (TN.API)"
+2018-12-10 23:26:17.992 +07:00 [Information] Executing action method "TN.API.Controllers.TableController.Get (TN.API)" with arguments (["2"]) - Validation state: Valid
+2018-12-10 23:26:18.402 +07:00 [Information] Entity Framework Core "2.1.4-rtm-31024" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-12-10 23:26:18.676 +07:00 [Information] Executed DbCommand ("19"ms) [Parameters=["@__id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [x].[Id], [x].[Name], [x].[Note], [x].[Status]
+FROM [Table] AS [x]
+WHERE [x].[Id] = @__id_0"
+2018-12-10 23:26:18.766 +07:00 [Information] Executed action method "TN.API.Controllers.TableController.Get (TN.API)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 772.8024ms.
+2018-12-10 23:26:18.774 +07:00 [Information] Executing ObjectResult, writing value of type '"TN.API.Models.Data.ApiResponseData`1[[System.Object, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+2018-12-10 23:26:18.802 +07:00 [Information] Executed action "TN.API.Controllers.TableController.Get (TN.API)" in 960.1776ms
+2018-12-10 23:26:18.815 +07:00 [Information] Request finished in 1020.1816ms 200 application/json; charset=utf-8
+2018-12-10 23:38:48.678 +07:00 [Information] Request starting HTTP/1.1 POST http://127.0.0.1:38154/iisintegration  0
+2018-12-10 23:38:48.691 +07:00 [Information] Request finished in 13.8148ms 202 
+2018-12-10 23:39:22.850 +07:00 [Information] Request starting HTTP/1.1 GET http://192.168.1.118:44353/api/table/get/2  
+2018-12-10 23:39:22.850 +07:00 [Information] Request starting HTTP/1.1 GET http://192.168.1.118:44353/api/values  
+2018-12-10 23:39:22.850 +07:00 [Information] Request starting HTTP/1.1 DEBUG http://192.168.1.118:44353/  0
+2018-12-10 23:39:22.971 +07:00 [Information] Request finished in 152.0159ms 200 
+2018-12-10 23:39:23.112 +07:00 [Warning] Failed to determine the https port for redirect.
+2018-12-10 23:39:23.451 +07:00 [Information] Route matched with "{action = \"Get\", controller = \"Values\"}". Executing action "TN.API.Controllers.ValuesController.Get (TN.API)"
+2018-12-10 23:39:23.483 +07:00 [Information] Route matched with "{action = \"Get\", controller = \"Table\"}". Executing action "TN.API.Controllers.TableController.Get (TN.API)"
+2018-12-10 23:39:23.518 +07:00 [Information] Executing action method "TN.API.Controllers.ValuesController.Get (TN.API)" - Validation state: Valid
+2018-12-10 23:39:23.538 +07:00 [Information] Executed action method "TN.API.Controllers.ValuesController.Get (TN.API)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 0.6555ms.
+2018-12-10 23:39:23.576 +07:00 [Information] Executing ObjectResult, writing value of type '"System.String[]"'.
+2018-12-10 23:39:23.835 +07:00 [Information] Executed action "TN.API.Controllers.ValuesController.Get (TN.API)" in 339.2836ms
+2018-12-10 23:39:23.871 +07:00 [Information] Request finished in 1046.3734ms 200 application/json; charset=utf-8
+2018-12-10 23:39:23.994 +07:00 [Information] Executing action method "TN.API.Controllers.TableController.Get (TN.API)" with arguments (["2"]) - Validation state: Valid
+2018-12-10 23:39:24.574 +07:00 [Information] Entity Framework Core "2.1.4-rtm-31024" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-12-10 23:39:25.034 +07:00 [Information] Executed DbCommand ("44"ms) [Parameters=["@__id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [x].[Id], [x].[Name], [x].[Note], [x].[Status]
+FROM [Table] AS [x]
+WHERE [x].[Id] = @__id_0"
+2018-12-10 23:39:25.144 +07:00 [Information] Executed action method "TN.API.Controllers.TableController.Get (TN.API)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 1142.659ms.
+2018-12-10 23:39:25.157 +07:00 [Information] Executing ObjectResult, writing value of type '"TN.API.Models.Data.ApiResponseData`1[[System.Object, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+2018-12-10 23:39:25.196 +07:00 [Information] Executed action "TN.API.Controllers.TableController.Get (TN.API)" in 1697.0987ms
+2018-12-10 23:39:25.251 +07:00 [Information] Request finished in 2430.1225ms 200 application/json; charset=utf-8
+2018-12-10 23:39:30.949 +07:00 [Information] Request starting HTTP/1.1 GET http://192.168.1.118:44353/api/table/get/2  
+2018-12-10 23:39:30.969 +07:00 [Information] Route matched with "{action = \"Get\", controller = \"Table\"}". Executing action "TN.API.Controllers.TableController.Get (TN.API)"
+2018-12-10 23:39:30.984 +07:00 [Information] Executing action method "TN.API.Controllers.TableController.Get (TN.API)" with arguments (["2"]) - Validation state: Valid
+2018-12-10 23:39:31.012 +07:00 [Information] Entity Framework Core "2.1.4-rtm-31024" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-12-10 23:39:31.057 +07:00 [Information] Executed DbCommand ("17"ms) [Parameters=["@__id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [x].[Id], [x].[Name], [x].[Note], [x].[Status]
+FROM [Table] AS [x]
+WHERE [x].[Id] = @__id_0"
+2018-12-10 23:39:31.073 +07:00 [Information] Executed action method "TN.API.Controllers.TableController.Get (TN.API)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 78.3529ms.
+2018-12-10 23:39:31.085 +07:00 [Information] Executing ObjectResult, writing value of type '"TN.API.Models.Data.ApiResponseData`1[[System.Object, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+2018-12-10 23:39:31.102 +07:00 [Information] Executed action "TN.API.Controllers.TableController.Get (TN.API)" in 115.4376ms
+2018-12-10 23:39:31.113 +07:00 [Information] Request finished in 166.4443ms 200 application/json; charset=utf-8
+2018-12-10 23:46:52.182 +07:00 [Information] Request starting HTTP/1.1 GET http://192.168.1.118:44353/api/table/get/2  
+2018-12-10 23:46:52.290 +07:00 [Warning] Failed to determine the https port for redirect.
+2018-12-10 23:46:52.534 +07:00 [Information] Route matched with "{action = \"Get\", controller = \"Table\"}". Executing action "TN.API.Controllers.TableController.Get (TN.API)"
+2018-12-10 23:46:52.766 +07:00 [Information] Executing action method "TN.API.Controllers.TableController.Get (TN.API)" with arguments (["2"]) - Validation state: Valid
+2018-12-10 23:46:53.290 +07:00 [Information] Entity Framework Core "2.1.4-rtm-31024" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-12-10 23:46:53.604 +07:00 [Information] Executed DbCommand ("20"ms) [Parameters=["@__id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [x].[Id], [x].[Name], [x].[Note], [x].[Status]
+FROM [Table] AS [x]
+WHERE [x].[Id] = @__id_0"
+2018-12-10 23:46:53.691 +07:00 [Information] Executed action method "TN.API.Controllers.TableController.Get (TN.API)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 917.7336ms.
+2018-12-10 23:46:53.710 +07:00 [Information] Executing ObjectResult, writing value of type '"TN.API.Models.Data.ApiResponseData`1[[System.Object, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+2018-12-10 23:46:53.800 +07:00 [Information] Executed action "TN.API.Controllers.TableController.Get (TN.API)" in 1257.0025ms
+2018-12-10 23:46:53.819 +07:00 [Information] Request finished in 1646.9765ms 200 application/json; charset=utf-8
+2018-12-10 23:46:57.218 +07:00 [Information] Request starting HTTP/1.1 GET http://192.168.1.118:44353/api/table/get/1  
+2018-12-10 23:46:57.221 +07:00 [Information] Route matched with "{action = \"Get\", controller = \"Table\"}". Executing action "TN.API.Controllers.TableController.Get (TN.API)"
+2018-12-10 23:46:57.223 +07:00 [Information] Executing action method "TN.API.Controllers.TableController.Get (TN.API)" with arguments (["1"]) - Validation state: Valid
+2018-12-10 23:46:57.225 +07:00 [Information] Entity Framework Core "2.1.4-rtm-31024" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-12-10 23:46:57.238 +07:00 [Information] Executed DbCommand ("10"ms) [Parameters=["@__id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [x].[Id], [x].[Name], [x].[Note], [x].[Status]
+FROM [Table] AS [x]
+WHERE [x].[Id] = @__id_0"
+2018-12-10 23:46:57.247 +07:00 [Information] Executed action method "TN.API.Controllers.TableController.Get (TN.API)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 23.2253ms.
+2018-12-10 23:46:57.248 +07:00 [Information] Executing ObjectResult, writing value of type '"TN.API.Models.Data.ApiResponseData`1[[System.Object, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+2018-12-10 23:46:57.249 +07:00 [Information] Executed action "TN.API.Controllers.TableController.Get (TN.API)" in 27.9575ms
+2018-12-10 23:46:57.249 +07:00 [Information] Request finished in 31.5604ms 200 application/json; charset=utf-8
+2018-12-10 23:57:10.800 +07:00 [Information] Request starting HTTP/1.1 POST http://127.0.0.1:40258/iisintegration  0
+2018-12-10 23:57:10.804 +07:00 [Information] Request finished in 3.7675ms 202 
+2018-12-10 23:58:31.123 +07:00 [Information] Request starting HTTP/1.1 GET http://192.168.1.118:44353/table/get/2  
+2018-12-10 23:58:31.401 +07:00 [Warning] Failed to determine the https port for redirect.
+2018-12-10 23:58:32.082 +07:00 [Information] Request finished in 974.539ms 404 

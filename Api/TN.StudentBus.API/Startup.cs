@@ -95,9 +95,11 @@ namespace TN.API
 			services.AddScoped<ITableRepository, TableRepository>();
 			services.AddScoped<ITableSevice, TableSevice>();
 
-			//services.AddScoped<ITableStatusRespository, TableStatusRepository>();
-			//services.AddScoped<ITableStatusSevice, TableStatusSevice>();
+			services.AddScoped<IBillRepository, BillRepository>();
+			services.AddScoped<IBillService, BillService>();
 
+			services.AddScoped<IBillDetailRepository, BillDetailRepository>();
+			services.AddScoped<IBillDetailService, BillDetailService>();
 
 
 			services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);

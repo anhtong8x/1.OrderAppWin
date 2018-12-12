@@ -19,6 +19,8 @@ namespace TN.API
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
+                .UseKestrel()
+                .UseUrls("http://*:44353")
                 .UseStartup<Startup>();
     }
 }

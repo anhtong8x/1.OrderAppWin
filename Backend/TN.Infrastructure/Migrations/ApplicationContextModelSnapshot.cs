@@ -257,6 +257,68 @@ namespace TN.Infrastructure.Migrations
                     b.ToTable("Log","adm");
                 });
 
+            modelBuilder.Entity("TN.Domain.Model.Manager.Bill", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("CashierId");
+
+                    b.Property<string>("CashierName");
+
+                    b.Property<DateTime>("CreateDate");
+
+                    b.Property<float>("Money");
+
+                    b.Property<string>("Note");
+
+                    b.Property<bool>("Paid");
+
+                    b.Property<int>("TableId");
+
+                    b.Property<string>("WaiterName");
+
+                    b.Property<int>("WaitersId");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("TableId");
+
+                    b.ToTable("Bill");
+                });
+
+            modelBuilder.Entity("TN.Domain.Model.Manager.BillDetail", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("BillId");
+
+                    b.Property<int>("DishId");
+
+                    b.Property<string>("DishName");
+
+                    b.Property<string>("Note");
+
+                    b.Property<float>("Price");
+
+                    b.Property<int>("Quanity");
+
+                    b.Property<bool>("Status");
+
+                    b.Property<int>("UserId");
+
+                    b.Property<DateTime>("dateTime");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BillId");
+
+                    b.ToTable("BillDetail");
+                });
+
             modelBuilder.Entity("TN.Domain.Model.Manager.Dish", b =>
                 {
                     b.Property<int>("Id")
@@ -460,6 +522,22 @@ namespace TN.Infrastructure.Migrations
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("TN.Domain.Model.Manager.Bill", b =>
+                {
+                    b.HasOne("TN.Domain.Model.Manager.Table", "Table")
+                        .WithMany()
+                        .HasForeignKey("TableId")
+                        .OnDelete(DeleteBehavior.Restrict);
+                });
+
+            modelBuilder.Entity("TN.Domain.Model.Manager.BillDetail", b =>
+                {
+                    b.HasOne("TN.Domain.Model.Manager.Bill", "Bill")
+                        .WithMany()
+                        .HasForeignKey("BillId")
+                        .OnDelete(DeleteBehavior.Restrict);
                 });
 
             modelBuilder.Entity("TN.Domain.Model.Manager.DishPrice", b =>

@@ -12,6 +12,36 @@ namespace TN.Infrastructure.Migrations
                 name: "adm");
 
             migrationBuilder.CreateTable(
+                name: "Dish",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    Name = table.Column<string>(nullable: true),
+                    Note = table.Column<string>(nullable: true),
+                    Status = table.Column<bool>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Dish", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Table",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    Name = table.Column<string>(nullable: true),
+                    Status = table.Column<int>(nullable: false),
+                    Note = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Table", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Log",
                 schema: "adm",
                 columns: table => new
@@ -126,6 +156,57 @@ namespace TN.Infrastructure.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_User", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "DishPrice",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    DishId = table.Column<int>(nullable: false),
+                    Name = table.Column<string>(nullable: true),
+                    Price = table.Column<float>(nullable: false),
+                    Note = table.Column<string>(nullable: true),
+                    Date = table.Column<DateTime>(nullable: false),
+                    Status = table.Column<bool>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_DishPrice", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_DishPrice_Dish_DishId",
+                        column: x => x.DishId,
+                        principalTable: "Dish",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Bill",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    CashierId = table.Column<int>(nullable: false),
+                    CashierName = table.Column<string>(nullable: true),
+                    WaitersId = table.Column<int>(nullable: false),
+                    WaiterName = table.Column<string>(nullable: true),
+                    Paid = table.Column<bool>(nullable: false),
+                    Money = table.Column<float>(nullable: false),
+                    CreateDate = table.Column<DateTime>(nullable: false),
+                    Note = table.Column<string>(nullable: true),
+                    TableId = table.Column<int>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Bill", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Bill_Table_TableId",
+                        column: x => x.TableId,
+                        principalTable: "Table",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -277,6 +358,33 @@ namespace TN.Infrastructure.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "BillDetail",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    UserId = table.Column<int>(nullable: false),
+                    DishId = table.Column<int>(nullable: false),
+                    DishName = table.Column<string>(nullable: true),
+                    Price = table.Column<float>(nullable: false),
+                    Quanity = table.Column<int>(nullable: false),
+                    dateTime = table.Column<DateTime>(nullable: false),
+                    Status = table.Column<bool>(nullable: false),
+                    Note = table.Column<string>(nullable: true),
+                    BillId = table.Column<int>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_BillDetail", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_BillDetail_Bill_BillId",
+                        column: x => x.BillId,
+                        principalTable: "Bill",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "RoleAction",
                 schema: "adm",
                 columns: table => new
@@ -327,6 +435,21 @@ namespace TN.Infrastructure.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                 });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Bill_TableId",
+                table: "Bill",
+                column: "TableId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_BillDetail_BillId",
+                table: "BillDetail",
+                column: "BillId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_DishPrice_DishId",
+                table: "DishPrice",
+                column: "DishId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Log_CreatedDate_Type_ObjectType_Action_SystemUser",
@@ -408,6 +531,12 @@ namespace TN.Infrastructure.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
+                name: "BillDetail");
+
+            migrationBuilder.DropTable(
+                name: "DishPrice");
+
+            migrationBuilder.DropTable(
                 name: "Log",
                 schema: "adm");
 
@@ -436,6 +565,12 @@ namespace TN.Infrastructure.Migrations
                 schema: "adm");
 
             migrationBuilder.DropTable(
+                name: "Bill");
+
+            migrationBuilder.DropTable(
+                name: "Dish");
+
+            migrationBuilder.DropTable(
                 name: "RoleAction",
                 schema: "adm");
 
@@ -446,6 +581,9 @@ namespace TN.Infrastructure.Migrations
             migrationBuilder.DropTable(
                 name: "User",
                 schema: "adm");
+
+            migrationBuilder.DropTable(
+                name: "Table");
 
             migrationBuilder.DropTable(
                 name: "RoleController",
