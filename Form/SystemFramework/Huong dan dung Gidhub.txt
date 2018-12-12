@@ -1,0 +1,20 @@
+﻿Hướng dẫn Pull và Push code lên Gidhub
+
+0. Vào trang github
+- Tạo 1 repository
+- copy cái link đó về
+
+1. Đẩy code Puhs:
+- Chuột phải vào project chọn add to source control
+- Mở teamview
+- Chọn syn
+- Dán cái link repository vào đây
+- sang tab soulotion/ chuot fai vao project chon comit
+- Nhập nội dung. chọn commit and syn
+
+2. Pull code về
+- Mở visual lên
+- vao tab team
+- chọn clone/ dán đường dẫn vào. chọn nơi lưu code
+- nhấn clone để tải code về
+

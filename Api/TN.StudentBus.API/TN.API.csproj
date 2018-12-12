@@ -8,6 +8,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Huong dan dung Gidhub.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="logs\" />
     <Folder Include="wwwroot\" />
   </ItemGroup>
