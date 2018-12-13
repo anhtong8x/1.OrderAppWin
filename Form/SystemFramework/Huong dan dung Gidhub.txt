@@ -1,5 +1,7 @@
 ﻿Hướng dẫn Pull và Push code lên Gidhub
 
+https://www.youtube.com/watch?v=qTu1C8Cnq5c
+
 0. Vào trang github
 - Tạo 1 repository
 - copy cái link đó về

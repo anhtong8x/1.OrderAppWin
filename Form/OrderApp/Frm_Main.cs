@@ -1,6 +1,4 @@
-﻿using DataBaseOrder.DAO;
-using DataBaseOrder.EF;
-using OrderApp.Extention;
+﻿using OrderApp.Extention;
 using OrderApp.Functions;
 using OrderApp.Systems;
 using System;

@@ -9,7 +9,7 @@ namespace OrderApp.Extention
 {
     public class AppSettings
     {
-        // 1. ip server api
+        // ip server api
         public static string ServerApi
         {
             get
@@ -18,7 +18,7 @@ namespace OrderApp.Extention
             }
         }
 
-        // 2. url login
+        // url login
         public static string LoginUrl
         {
             get
@@ -27,7 +27,7 @@ namespace OrderApp.Extention
             }
         }
 
-		// 3. url login
+		// url list table 
 		public static string ListOrderTableUrl
 		{
 			get
@@ -36,16 +36,16 @@ namespace OrderApp.Extention
 			}
 		}
 		
-		// Uurl login
-		public static string OrderTableByIdUrl
-		{
+		// Bill by id table
+		public static string BillByIdTableUrl
+        {
 			get
 			{
-				return ServerApi + ConfigurationManager.AppSettings["OrderTableByIdUrl"];
+				return ServerApi + ConfigurationManager.AppSettings["BillByIdTableUrl"];
 			}
 		}
 
-		// Uurl login
+		// List Detail Bill by idBill
 		public static string DetailBillByIdBillUrl
 		{
 			get
@@ -54,5 +54,22 @@ namespace OrderApp.Extention
 			}
 		}
 
-	}
+        // Update quanity Bill 
+        public static string UpdateQuanityBillUrl
+        {
+            get
+            {
+                return ServerApi + ConfigurationManager.AppSettings["UpdateQuanityBillUrl"];
+            }
+        }
+
+        // Update status table 
+        public static string UpdateStatusTableUrl
+        {
+            get
+            {
+                return ServerApi + ConfigurationManager.AppSettings["UpdateStatusTableUrl"];
+            }
+        }
+    }
 }

@@ -1,6 +1,4 @@
-﻿using DataBaseOrder.DAO;
-using DataBaseOrder.EF;
-using DevExpress.XtraReports.UI;
+﻿using DevExpress.XtraReports.UI;
 using OrderApp.Extention;
 using OrderApp.Model;
 using OrderApp.Reports;
@@ -20,9 +18,9 @@ namespace OrderApp.Functions
     {
         public UserInfoModel _UserInfoModel { get; set; }
 
-        private double _sumMoney = 0;
-        private int _Id_Bill_1 = 0;
-        private int _Id_Table = 0;
+        private float _sumMoney = 0;
+        private BillModel billModel;
+        private TableModel tableModel;
 
         #region "common"
         private void reset_Control()
@@ -36,13 +34,16 @@ namespace OrderApp.Functions
             txtTongCong.Text = "";
             txtTraLai.Text = "";
             lblMsg.Text = "";
+            lblMsg1.Text = "";
+            txtTienKM.Text = "";
             dtGrid_Bill.Rows.Clear();
 
-            _Id_Table = 0;
-            _Id_Bill_1 = 0;
+            tableModel = null;
+            billModel = null;
             _sumMoney = 0;
         }
 
+        // tao du lieu do vao grid ban
         private async void load_Grid_Table()
         {
             dtGrid_Table.Rows.Clear();
@@ -54,44 +55,83 @@ namespace OrderApp.Functions
 					   
 		}
 
+        // tao du lieu de do vao grid detailbill
 		private async void BindingGrid_Bill(int idTable) {			
-			var dl = await DALContext.GetBillByIdTable(idTable);
-			if (dl != null) {
-				var dl2 = await DALContext.GetsDetailBillByIdBill(dl.Id);
+			var dl = await DALContext.GetBillByIdTable(idTable); // lay ve idBill
+			if (dl != null) {                
+				var dl2 = await DALContext.GetsDetailBillByIdBill(dl.Id); // lay ve DetailBill theo idBill
 				if (dl2.Count > 0) {
-					BindingGrid_Bill(dl2);
-				}
-			}
+                    _sumMoney = 0;
+                    lbl_Id_Bill_1.Text = string.Format("BÀN SỐ {0} HÓA ĐƠN {1}", idTable, dl.Id);
+                    BindingGrid_Bill(dl2);
+
+                    string _str = string.Format("{0:0,0 vnđ}", _sumMoney);
+                    txtSumMoney.Text = _str.Replace(",", ".");
+                    txtHoaDon.Text = string.Format("{0:0,0}", _sumMoney).Replace(",", ".");
+                }
+
+                // luu lai bill de cap nhat hoa don khi thanh toan
+                billModel = dl;
+            }
 
 		}
 
-		private void BindingGrid_Bill(List<BillDetailModel> lst)
+        // cap nhat hoa don bill 1 da thanh toan. tong tien, paid = true
+        private async void Update_Bill(BillModel _billModel)
+        {
+            var dl = await DALContext.UpdateBill(_UserInfoModel.Token, _billModel);
+            if(dl == 1)
+            {
+                lblMsg.Text = "Lưu hóa đơn thành công";
+            }
+            else
+            {
+                lblMsg.Text = "Lưu hóa đơn thất bại";
+            }
+        }
+
+        // cap nhat ban da thanh toan status = 1
+        private async void Update_Table(TableModel _tableModel)
+        {
+            var dl = await DALContext.UpdateTable(_UserInfoModel.Token, _tableModel);
+            if (dl == 1)
+            {
+                lblMsg.Text = "Cập nhật bản thành công";
+            }
+            else
+            {
+                lblMsg.Text = "Cập nhật bàn thất bại";
+            }
+        }
+
+        // do du lieu vao grid detailbill
+        private void BindingGrid_Bill(List<BillDetailModel> lst)
         {
             try
             {
                 dtGrid_Bill.Rows.Clear();
                 int pos = 1;
-                double _tt = 0;
+                float _tt = 0;
                 int _sl = 0;
-                double _dg = 0;
+                float _dg = 0;
                 foreach (BillDetailModel item in lst)
                 {
                     DataGridViewRow row = (DataGridViewRow)dtGrid_Bill.RowTemplate.Clone();
                     _sl = Int32.Parse(item.Quanity.ToString());
-                    _dg = Double.Parse(item.Price.ToString()) * 1000;
+                    _dg = float.Parse(item.Price.ToString()) * 1000;
                     _tt = _sl * _dg;
 
                     _sumMoney += _tt;
                     row.CreateCells(dtGrid_Bill,
                         pos,
-                        item.Id,
                         item.BillId,
+                        item.Id,                        
                         item.UserId,
-                        item.UserName,
+                        item.UseName,
                         item.DishId,
                         item.DishName,
-                        string.Format("{0:0,0}", _dg),
                         _sl,
+                        string.Format("{0:0,0}", _dg),                        
                         string.Format("{0:0,0}", _tt)
                         );
                     dtGrid_Bill.Rows.Add(row);
@@ -103,6 +143,7 @@ namespace OrderApp.Functions
             }
         }
 
+        // do du lieu vao grid ban
         private void BindingGrid_Table(List<TableModel> lst)
         {
             try
@@ -152,7 +193,7 @@ namespace OrderApp.Functions
             InitializeComponent();
         }
 
-		// chi nhap so
+        #region "chinhapso"
         private void txtKhuyenMai_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
@@ -164,22 +205,33 @@ namespace OrderApp.Functions
             }
         }
 
-		// chi nhap so
         private void txtKhachTra_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
                 e.Handled = true;
+            
+        }
+        
+        private void txtSoLuongMon_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+                e.Handled = true;
 
-            if (txtKhachTra.Text.ToString().Length > 12)
+            if (txtSoLuongMon.Text.ToString().Length > 5)
             {
                 e.Handled = true;
-            }            
+            }
         }
-
+        #endregion
+        
+        // tinh nham
         private void btnTamTinh_Click(object sender, EventArgs e)
         {
             try
             {
+                txtTraLai.Text = "";
+                txtTienKM.Text = "";
+
                 string _hdon = (txtHoaDon.Text.ToString().Trim()).Replace(".", "");            
                 if(_hdon.Length <= 0) { return; }
 
@@ -195,9 +247,11 @@ namespace OrderApp.Functions
                 double _KTra = Double.Parse(_ktra);
                 double _TLai = _KTra - _TCong;
 
+                txtTienKM.Text = string.Format("{0:0,0}", _KMai).Replace(",", ".");
                 txtTongCong.Text = string.Format("{0:0,0}", _TCong).Replace(",", ".");
                 txtKhachTra.Text = string.Format("{0:0,0}", _KTra).Replace(",", ".");
-                txtTraLai.Text = string.Format("{0:0,0}", _TLai).Replace(",", ".");
+                if (_TLai > 0)
+                { txtTraLai.Text = string.Format("{0:0,0}", _TLai).Replace(",", "."); }
 
                 lblMsg.Text = "Bạn đang tính nhẩm !";
 
@@ -208,6 +262,7 @@ namespace OrderApp.Functions
             }
         }
 
+        // luu hoa don
         private void btnThanhToan_Click(object sender, EventArgs e)
         {
             // tinh nham
@@ -218,63 +273,62 @@ namespace OrderApp.Functions
             {
                 string _hdon = (txtHoaDon.Text.ToString().Trim()).Replace(".", "");
                 if (_hdon.Length <= 0) { return; }
+
                 // cap nhat bill_1 da thanh toan
-                order_bill_1 _order_bill_1 = new order_bill_1()
+                if(billModel != null)
                 {
-                    id = _Id_Bill_1,
-                    is_paid = true,
-                    total_money = Decimal.Parse(_sumMoney.ToString()),
-                    //id_cashier = Employee.id,
-                    //name_cashier = Employee.display_name,
-                    create_date = DateTime.Now,
-                };
+                    billModel.Paid = true;
+                    billModel.Money = _sumMoney;
+                    billModel.CashierId = _UserInfoModel.Id;
+                    billModel.CashierName = _UserInfoModel.DisplayName;
 
-                Order_Bill_1 _obj = new Order_Bill_1();
-                if (_obj.Update(_order_bill_1))
-                {
-                    lblMsg.Text = "Bạn đã thanh toán xong !";
-                }
-
+                    Update_Bill(billModel);
+                }                
+                
                 // dua ban ve trang thai doi don ban
-                Order_Table _Order_table = new Order_Table();
-                var _order_table = new order_table() { id_bill_1 = 0, is_status = 5, id = _Id_Table };
-                _Order_table.Update_Id_Bill_1(_order_table);
+                if(tableModel != null)
+                {
+                    tableModel.Status = 1;
+                    Update_Table(tableModel);
+                }
 
                 // print report
-               
-                Order_Bill_2 _Order_Bill_2 = new Order_Bill_2();
-                List<ModelRow> lstRowRpt = new List<ModelRow>();
-                List<order_bill_2> lst = _Order_Bill_2.GetBill_ById_Bill_1_IsStatus(_Id_Bill_1);
-                int i = 1;
-                double _dg = 0;
-                
-                foreach(order_bill_2 r in lst)
-                {
-                    _dg = Double.Parse(r.dish_value.ToString()) * 1000;                    
 
-                    lstRowRpt.Add(new ModelRow() {
-                        STT = "" + i,
-                        TENMON = r.name_dish,
-                        SL = "" + r.quanity,
-                        GIA = string.Format("{0:0,0}", _dg).Replace(",", "."),
-                        TT = string.Format("{0:0,0}", r.quanity * _dg).Replace(",", ".")
-                    });
-                    i += 1;
-                }
+                //order_bill_2 _order_bill_2 = new order_bill_2();
+                //list<modelrow> lstrowrpt = new list<modelrow>();
+                //list<order_bill_2> lst = _order_bill_2.getbill_byid_bill_1_isstatus(_id_bill_1);
+                //int i = 1;
+                //double _dg = 0;
 
-                ModelBill_1 modelBill_1 = new ModelBill_1() {
-                    HD = "" + _Id_Bill_1,
-                    NGAY = DateTime.Now + "",
-                    BAN = "" + _Id_Table,
-                    THUNGAN = "Hanh",
-                    ROWDETAIL = lstRowRpt,
-                    TONGHD = txtHoaDon.Text,
-                    KM = string.Format("{0} %", txtKhuyenMai.Text),
-                    THANHTOAN = txtTongCong.Text
-                };
+                //foreach (order_bill_2 r in lst)
+                //{
+                //    _dg = double.parse(r.dish_value.tostring()) * 1000;
 
-                RptBill_1 rpt = new RptBill_1(modelBill_1);
-                rpt.showReport();
+                //    lstrowrpt.add(new modelrow()
+                //    {
+                //        stt = "" + i,
+                //        tenmon = r.name_dish,
+                //        sl = "" + r.quanity,
+                //        gia = string.format("{0:0,0}", _dg).replace(",", "."),
+                //        tt = string.format("{0:0,0}", r.quanity * _dg).replace(",", ".")
+                //    });
+                //    i += 1;
+                //}
+
+                //modelbill_1 modelbill_1 = new modelbill_1()
+                //{
+                //    hd = "" + _id_bill_1,
+                //    ngay = datetime.now + "",
+                //    ban = "" + _id_table,
+                //    thungan = "hanh",
+                //    rowdetail = lstrowrpt,
+                //    tonghd = txthoadon.text,
+                //    km = string.format("{0} %", txtkhuyenmai.text),
+                //    thanhtoan = txttongcong.text
+                //};
+
+                //rptbill_1 rpt = new rptbill_1(modelbill_1);
+                //rpt.showreport();
 
                 // refresh form
                 load_Grid_Table();
@@ -293,75 +347,42 @@ namespace OrderApp.Functions
             // grid_table
             load_Grid_Table();
 
-        }
-
-
-
-
-
-		//     private void dtGrid_Table_CellDoubleClick1(object sender, DataGridViewCellEventArgs e)
-		//     {
-		//         try
-		//         {
-
-
-		//	// reset defaul
-		//	//            reset_Control();
-
-		//	//            // get id_bill_1
-		//	//            int index = dtGrid_Table.Rows[e.RowIndex].Index;
-		//	//            DataGridViewRow _dataRow = dtGrid_Table.Rows[index];
-		//	//            _Id_Table = Int32.Parse(_dataRow.Cells[1].Value.ToString());
-		//	//            string _name_table = _dataRow.Cells[2].Value.ToString();
-
-		//	//// call api get bill => idBill. Call api BillDetail
-		//	//var dl = await DALContext.GetBillByIdTable(_Id_Table);
-
-
-		//	//int idBill = dl.Id;
-
-
-
-
-
-
-
-		//	//int idBill = 0;
-		//	//if (dl != null)
-		//	//{
-		//	//	idBill = dl.Id;
-
-		//	//	//BindingGrid_Table(dl);
-		//	//}
-
-
-
-		//	//// set text
-		//	////lbl_Id_Bill_1.Text = string.Format("{0} HÓA ĐƠN {1}", _name_table.ToUpper(), idBillDetail);
-
-		//	//            Order_Bill_2 _Order_Bill_2 = new Order_Bill_2();
-		//	//            BindingGrid_Bill(_Order_Bill_2.GetBill_ById_Bill_1_IsStatus(_Id_Bill_1));
-
-		//	//            string _str = string.Format("{0:0,0 vnđ}", _sumMoney);
-		//	//            txtSumMoney.Text = _str.Replace(",", ".");
-		//	//            txtHoaDon.Text = string.Format("{0:0,0}", _sumMoney).Replace(",", ".");load_Grid_Table();
-		//}
-		//catch (Exception)
-		//         {
-		//         }
-		//     }
-
-		#endregion
+        }      
 
 		private void dtGrid_Table_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
 		{
 			int index = dtGrid_Table.Rows[e.RowIndex].Index;
 			DataGridViewRow _dataRow = dtGrid_Table.Rows[index];
-			int IdBill = Int32.Parse(_dataRow.Cells[1].Value.ToString());
+			int _IdBill = Int32.Parse(_dataRow.Cells[1].Value.ToString());
+            int _StatusTable = Int32.Parse(_dataRow.Cells[3].Value.ToString());
 
-			BindingGrid_Bill(IdBill);
+            // neu dang co khach thi cho thanh toan
+            if(_StatusTable == 2)
+            {
+                reset_Control();
+                BindingGrid_Bill(_IdBill);
 
-			MessageBox.Show("ok" + IdBill);
+                // phuc vu cho update ban khi thanh toan
+                tableModel = new TableModel() {
+                    Id = 1,
+                    Name = "" + _dataRow.Cells[3].Value.ToString(),
+                    Note = "" + _dataRow.Cells[4].Value.ToString(),
+                    Status = _StatusTable,
+                };
+            }
+            else
+            {
+                dtGrid_Bill.Rows.Clear();
+            }
+            			
 		}
-	}
+
+        // load lai du lieu bang
+        private void btnLamMoi_Click(object sender, EventArgs e)
+        {
+            load_Grid_Table();
+        }
+
+        #endregion
+    }
 }

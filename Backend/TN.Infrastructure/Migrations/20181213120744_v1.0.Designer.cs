@@ -10,7 +10,7 @@ using TN.Infrastructure;
 namespace TN.Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    [Migration("20181213103545_v1.0")]
+    [Migration("20181213120744_v1.0")]
     partial class v10
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

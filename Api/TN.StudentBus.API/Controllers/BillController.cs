@@ -88,8 +88,8 @@ namespace TN.API.Controllers
         }
 
 		[AllowAnonymous]
-		[HttpGet("GetTable/{id}")]
-		public async Task<IActionResult> GetTable(int id)
+		[HttpGet("GetByIdTable/{id}")]
+		public async Task<IActionResult> GetByIdTable(int id)
 		{
 			try
 			{
@@ -101,7 +101,7 @@ namespace TN.API.Controllers
 						Message = Newtonsoft.Json.JsonConvert.SerializeObject(ModelState)
 					});
 				}
-				return Ok(await Service.GetTable(id));
+				return Ok(await Service.GetByIdTable(id));
 			}
 			catch (Exception)
 			{

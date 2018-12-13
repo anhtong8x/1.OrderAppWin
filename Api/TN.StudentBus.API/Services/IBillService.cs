@@ -22,7 +22,7 @@ namespace TN.API.Services
     public interface IBillService : IService<Bill>
     {
         Task<ApiResponseData<object>> GetAll();
-        Task<ApiResponseData<object>> GetTable(int id);
+        Task<ApiResponseData<object>> GetByIdTable(int id);
 		Task<ApiResponseData<object>> Get(int id);
 		Task<ApiResponseData<object>> Create(BillModel obj);
         Task<ApiResponseData<object>> Edit(BillModel obj);
@@ -91,13 +91,13 @@ namespace TN.API.Services
         }
         public async Task<ApiResponseData<object>> Get(int id)
         {
-            var data = await _iBillRepository.SearchOneAsync(x => x.Id == id && x.Paid);
+            var data = await _iBillRepository.SearchOneAsync(x => x.Id == id);
             return new ApiResponseData<object> { Output = 1, Data = data };
         }
 
-		public async Task<ApiResponseData<object>> GetTable(int id)
+		public async Task<ApiResponseData<object>> GetByIdTable(int id)
 		{
-			var data = await _iBillRepository.SearchOneAsync(x => x.TableId == id && x.Paid);
+			var data = await _iBillRepository.SearchOneAsync(x => x.TableId == id && x.Paid == false);
 			return new ApiResponseData<object> { Output = 1, Data = data };
 		}
 

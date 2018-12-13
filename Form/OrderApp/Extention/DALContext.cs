@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -11,7 +12,7 @@ namespace OrderApp.Extention
 {
     public class DALContext
     {
-        // 1. login
+        // login
         public static async Task<ApiResponseData<UserInfoModel>> LoginAsync(string username, string password)
         {
             using (var httpClient = new HttpClient())
@@ -31,7 +32,7 @@ namespace OrderApp.Extention
             }
         }
 
-		// 2. get all table
+		// get all table
 		public static async Task<List<TableModel>> GetAllOrderTable()
 		{
 
@@ -58,7 +59,7 @@ namespace OrderApp.Extention
 			}
 		}
 
-		// 3. get Bill by id tatabl
+		// get Bill by id tatabl
 		public static async Task<BillModel> GetBillByIdTable(int idTable)
 		{
 
@@ -71,7 +72,7 @@ namespace OrderApp.Extention
 
 				var json = JsonConvert.SerializeObject(new { });
 				var stringContent = new StringContent(json, UnicodeEncoding.UTF8, "application/json");
-				var t = await httpClient.GetAsync(AppSettings.OrderTableByIdUrl);
+				var t = await httpClient.GetAsync(string.Format(AppSettings.BillByIdTableUrl, idTable));
 				if (t.IsSuccessStatusCode)
 				{
 					var data = await t.Content.ReadAsStringAsync();
@@ -96,7 +97,7 @@ namespace OrderApp.Extention
 
 				var json = JsonConvert.SerializeObject(new { });
 				var stringContent = new StringContent(json, UnicodeEncoding.UTF8, "application/json");
-				var t = await httpClient.GetAsync(string.Format(AppSettings.ListOrderTableUrl,idBill));
+				var t = await httpClient.GetAsync(string.Format(AppSettings.DetailBillByIdBillUrl, idBill));
 				if (t.IsSuccessStatusCode)
 				{
 					var data = await t.Content.ReadAsStringAsync();
@@ -110,5 +111,65 @@ namespace OrderApp.Extention
 			}
 		}
 
-	}
+        // update bill
+        public static async Task<int> UpdateBill(string token, BillModel _billModel )
+        {
+            using (var httpClient = new HttpClient())
+            {
+                httpClient.BaseAddress = new Uri(AppSettings.ServerApi);
+                httpClient.DefaultRequestHeaders.Accept.Clear();
+                httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", $"{token}");
+                httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+                var json = JsonConvert.SerializeObject(new {
+                    _billModel.Id, _billModel.CashierId, _billModel.CashierName, _billModel.WaitersId, _billModel.WaiterName,
+                    _billModel.Paid, _billModel.Money, _billModel.CreateDate, _billModel.Note, _billModel.TableId
+                });
+                var stringContent = new StringContent(json, UnicodeEncoding.UTF8, "application/json");
+                var t = await httpClient.PostAsync(AppSettings.UpdateQuanityBillUrl, stringContent);
+                if (t.IsSuccessStatusCode)
+                {
+                    var data = await t.Content.ReadAsStringAsync();
+                    var dataO = JsonConvert.DeserializeObject<ApiResponseData<BillModel>>(data);
+                    return dataO.Output;
+                }
+                else
+                {
+                    return 0;
+                }
+            }
+        }
+
+        // update status table
+        public static async Task<int> UpdateTable(string token, TableModel _tableModel)
+        {
+            using (var httpClient = new HttpClient())
+            {
+                httpClient.BaseAddress = new Uri(AppSettings.ServerApi);
+                httpClient.DefaultRequestHeaders.Accept.Clear();
+                httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", $"{token}");
+                httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+                var json = JsonConvert.SerializeObject(new
+                {
+                    _tableModel.Id, 
+                    _tableModel.Name,
+                    _tableModel.Note,
+                    _tableModel.Status
+                });
+                var stringContent = new StringContent(json, UnicodeEncoding.UTF8, "application/json");
+                var t = await httpClient.PostAsync(AppSettings.UpdateQuanityBillUrl, stringContent);
+                if (t.IsSuccessStatusCode)
+                {
+                    var data = await t.Content.ReadAsStringAsync();
+                    var dataO = JsonConvert.DeserializeObject<ApiResponseData<BillModel>>(data);
+                    return dataO.Output;
+                }
+                else
+                {
+                    return 0;
+                }
+            }
+        }
+    }
 }

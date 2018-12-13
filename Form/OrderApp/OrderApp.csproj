@@ -94,18 +94,6 @@
     <Compile Include="Frm_Main.Designer.cs">
       <DependentUpon>Frm_Main.cs</DependentUpon>
     </Compile>
-    <Compile Include="Functions\Frm_All_Table.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Functions\Frm_All_Table.Designer.cs">
-      <DependentUpon>Frm_All_Table.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Functions\Frm_Pay_Detail.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Functions\Frm_Pay_Detail.Designer.cs">
-      <DependentUpon>Frm_Pay_Detail.cs</DependentUpon>
-    </Compile>
     <Compile Include="Functions\Frm_Sales.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,12 +117,6 @@
     </Compile>
     <EmbeddedResource Include="Frm_Main.resx">
       <DependentUpon>Frm_Main.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Functions\Frm_All_Table.resx">
-      <DependentUpon>Frm_All_Table.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Functions\Frm_Pay_Detail.resx">
-      <DependentUpon>Frm_Pay_Detail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Functions\Frm_Sales.resx">
       <DependentUpon>Frm_Sales.cs</DependentUpon>
