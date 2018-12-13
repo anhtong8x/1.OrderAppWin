@@ -308,6 +308,8 @@ namespace TN.Infrastructure.Migrations
 
                     b.Property<bool>("Status");
 
+                    b.Property<string>("UseName");
+
                     b.Property<int>("UserId");
 
                     b.Property<DateTime>("dateTime");

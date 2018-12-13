@@ -18,7 +18,8 @@ namespace OrderApp.Functions
 {
     public partial class Frm_Sales : Form
     {
-        public order_employee Employee { get; set; }
+        public UserInfoModel _UserInfoModel { get; set; }
+
         private double _sumMoney = 0;
         private int _Id_Bill_1 = 0;
         private int _Id_Table = 0;
@@ -45,12 +46,6 @@ namespace OrderApp.Functions
         private async void load_Grid_Table()
         {
             dtGrid_Table.Rows.Clear();
-			//Order_Table _Order_Table = new Order_Table();
-			//List<order_table> _lstTable = _Order_Table.GetByIsStatus();
-			//if (_lstTable.Count > 0)
-			//{
-			//    BindingGrid_Table(_lstTable);
-			//}
 
 			var dl = await DALContext.GetAllOrderTable();
 			if (dl.Count > 0) {
@@ -59,7 +54,18 @@ namespace OrderApp.Functions
 					   
 		}
 
-		private void BindingGrid_Bill(List<order_bill_2> lst)
+		private async void BindingGrid_Bill(int idTable) {			
+			var dl = await DALContext.GetBillByIdTable(idTable);
+			if (dl != null) {
+				var dl2 = await DALContext.GetsDetailBillByIdBill(dl.Id);
+				if (dl2.Count > 0) {
+					BindingGrid_Bill(dl2);
+				}
+			}
+
+		}
+
+		private void BindingGrid_Bill(List<BillDetailModel> lst)
         {
             try
             {
@@ -68,22 +74,22 @@ namespace OrderApp.Functions
                 double _tt = 0;
                 int _sl = 0;
                 double _dg = 0;
-                foreach (order_bill_2 item in lst)
+                foreach (BillDetailModel item in lst)
                 {
                     DataGridViewRow row = (DataGridViewRow)dtGrid_Bill.RowTemplate.Clone();
-                    _sl = Int32.Parse(item.quanity.ToString());
-                    _dg = Double.Parse(item.dish_value.ToString()) * 1000;
+                    _sl = Int32.Parse(item.Quanity.ToString());
+                    _dg = Double.Parse(item.Price.ToString()) * 1000;
                     _tt = _sl * _dg;
 
                     _sumMoney += _tt;
                     row.CreateCells(dtGrid_Bill,
                         pos,
-                        item.id,
-                        item.id_bill_1,
-                        item.id_waiter,
-                        item.name_waiter,
-                        item.id_dish,
-                        item.name_dish,
+                        item.Id,
+                        item.BillId,
+                        item.UserId,
+                        item.UserName,
+                        item.DishId,
+                        item.DishName,
                         string.Format("{0:0,0}", _dg),
                         _sl,
                         string.Format("{0:0,0}", _tt)
@@ -146,6 +152,7 @@ namespace OrderApp.Functions
             InitializeComponent();
         }
 
+		// chi nhap so
         private void txtKhuyenMai_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
@@ -157,6 +164,7 @@ namespace OrderApp.Functions
             }
         }
 
+		// chi nhap so
         private void txtKhachTra_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
@@ -216,8 +224,8 @@ namespace OrderApp.Functions
                     id = _Id_Bill_1,
                     is_paid = true,
                     total_money = Decimal.Parse(_sumMoney.ToString()),
-                    id_cashier = Employee.id,
-                    name_cashier = Employee.display_name,
+                    //id_cashier = Employee.id,
+                    //name_cashier = Employee.display_name,
                     create_date = DateTime.Now,
                 };
 
@@ -277,50 +285,83 @@ namespace OrderApp.Functions
             }
         }
 
+		// load form
         private void Frm_Sales_Load(object sender, EventArgs e)
         {            
-            // 
-            //reset_Control();
+            reset_Control();
 
             // grid_table
             load_Grid_Table();
 
         }
 
-        private void dtGrid_Table_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            try
-            {
-                // reset defaul
-                reset_Control();
 
-                // get id_bill_1
-                int index = dtGrid_Table.Rows[e.RowIndex].Index;
-                DataGridViewRow _dataRow = dtGrid_Table.Rows[index];
-                _Id_Bill_1 = Int32.Parse(_dataRow.Cells[5].Value.ToString());
-                _Id_Table = Int32.Parse(_dataRow.Cells[1].Value.ToString());
 
-                string _name_table = _dataRow.Cells[2].Value.ToString();
-                lbl_Id_Bill_1.Text = string.Format("{0} HÓA ĐƠN {1}", _name_table.ToUpper(), _Id_Bill_1);
 
-                Order_Bill_2 _Order_Bill_2 = new Order_Bill_2();
-                BindingGrid_Bill(_Order_Bill_2.GetBill_ById_Bill_1_IsStatus(_Id_Bill_1));
 
-                string _str = string.Format("{0:0,0 vnđ}", _sumMoney);
-                txtSumMoney.Text = _str.Replace(",", ".");
-                txtHoaDon.Text = string.Format("{0:0,0}", _sumMoney).Replace(",", ".");
-            }
-            catch (Exception)
-            {
-            }
-        }
+		//     private void dtGrid_Table_CellDoubleClick1(object sender, DataGridViewCellEventArgs e)
+		//     {
+		//         try
+		//         {
 
-        private void btnLamMoi_Click(object sender, EventArgs e)
-        {
-			load_Grid_Table();
-			//Frm_Sales_Load(sender, e);
-        }
+
+		//	// reset defaul
+		//	//            reset_Control();
+
+		//	//            // get id_bill_1
+		//	//            int index = dtGrid_Table.Rows[e.RowIndex].Index;
+		//	//            DataGridViewRow _dataRow = dtGrid_Table.Rows[index];
+		//	//            _Id_Table = Int32.Parse(_dataRow.Cells[1].Value.ToString());
+		//	//            string _name_table = _dataRow.Cells[2].Value.ToString();
+
+		//	//// call api get bill => idBill. Call api BillDetail
+		//	//var dl = await DALContext.GetBillByIdTable(_Id_Table);
+
+
+		//	//int idBill = dl.Id;
+
+
+
+
+
+
+
+		//	//int idBill = 0;
+		//	//if (dl != null)
+		//	//{
+		//	//	idBill = dl.Id;
+
+		//	//	//BindingGrid_Table(dl);
+		//	//}
+
+
+
+		//	//// set text
+		//	////lbl_Id_Bill_1.Text = string.Format("{0} HÓA ĐƠN {1}", _name_table.ToUpper(), idBillDetail);
+
+		//	//            Order_Bill_2 _Order_Bill_2 = new Order_Bill_2();
+		//	//            BindingGrid_Bill(_Order_Bill_2.GetBill_ById_Bill_1_IsStatus(_Id_Bill_1));
+
+		//	//            string _str = string.Format("{0:0,0 vnđ}", _sumMoney);
+		//	//            txtSumMoney.Text = _str.Replace(",", ".");
+		//	//            txtHoaDon.Text = string.Format("{0:0,0}", _sumMoney).Replace(",", ".");load_Grid_Table();
+		//}
+		//catch (Exception)
+		//         {
+		//         }
+		//     }
 
 		#endregion
+
+		private void dtGrid_Table_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+		{
+			int index = dtGrid_Table.Rows[e.RowIndex].Index;
+			DataGridViewRow _dataRow = dtGrid_Table.Rows[index];
+			int IdBill = Int32.Parse(_dataRow.Cells[1].Value.ToString());
+
+			BindingGrid_Bill(IdBill);
+
+			MessageBox.Show("ok" + IdBill);
+		}
 	}
 }

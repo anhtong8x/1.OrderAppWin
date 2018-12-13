@@ -58,7 +58,57 @@ namespace OrderApp.Extention
 			}
 		}
 
+		// 3. get Bill by id tatabl
+		public static async Task<BillModel> GetBillByIdTable(int idTable)
+		{
 
+			using (var httpClient = new HttpClient())
+			{
+				httpClient.BaseAddress = new Uri(AppSettings.ServerApi);
+				httpClient.DefaultRequestHeaders.Accept.Clear();
+				//httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", $"{token}");
+				//httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+				var json = JsonConvert.SerializeObject(new { });
+				var stringContent = new StringContent(json, UnicodeEncoding.UTF8, "application/json");
+				var t = await httpClient.GetAsync(AppSettings.OrderTableByIdUrl);
+				if (t.IsSuccessStatusCode)
+				{
+					var data = await t.Content.ReadAsStringAsync();
+					var dataO = JsonConvert.DeserializeObject<ApiResponseData<BillModel>>(data);
+					return dataO.Data;
+				}
+				else
+				{
+					return new BillModel();
+				}
+			}
+		}
+
+		// get list DetailBill by IdBill
+		public static async Task<List<BillDetailModel>> GetsDetailBillByIdBill(int idBill)
+		{
+
+			using (var httpClient = new HttpClient())
+			{
+				httpClient.BaseAddress = new Uri(AppSettings.ServerApi);
+				httpClient.DefaultRequestHeaders.Accept.Clear();
+
+				var json = JsonConvert.SerializeObject(new { });
+				var stringContent = new StringContent(json, UnicodeEncoding.UTF8, "application/json");
+				var t = await httpClient.GetAsync(string.Format(AppSettings.ListOrderTableUrl,idBill));
+				if (t.IsSuccessStatusCode)
+				{
+					var data = await t.Content.ReadAsStringAsync();
+					var dataO = JsonConvert.DeserializeObject<ApiResponseData<List<BillDetailModel>>>(data);
+					return dataO.Data;
+				}
+				else
+				{
+					return new List<BillDetailModel>();
+				}
+			}
+		}
 
 	}
 }

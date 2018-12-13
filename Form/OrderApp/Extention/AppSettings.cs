@@ -35,7 +35,24 @@ namespace OrderApp.Extention
 				return ServerApi + ConfigurationManager.AppSettings["ListOrderTableUrl"];
 			}
 		}
+		
+		// Uurl login
+		public static string OrderTableByIdUrl
+		{
+			get
+			{
+				return ServerApi + ConfigurationManager.AppSettings["OrderTableByIdUrl"];
+			}
+		}
 
+		// Uurl login
+		public static string DetailBillByIdBillUrl
+		{
+			get
+			{
+				return ServerApi + ConfigurationManager.AppSettings["DetailBillByIdBillUrl"];
+			}
+		}
 
 	}
 }

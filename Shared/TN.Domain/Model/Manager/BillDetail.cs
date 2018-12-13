@@ -10,6 +10,7 @@ namespace TN.Domain.Model.Manager
 	{
 		public int Id { get; set; }
 		public int UserId { get; set; }
+		public string UseName { get; set; }
 		public int DishId { get; set; }
 		public string DishName { get; set; }
 		public float Price { get; set; }
@@ -25,6 +26,7 @@ namespace TN.Domain.Model.Manager
 	public class BillDetailModel {
 		public int Id { get; set; }
 		public int UserId { get; set; }
+		public string UseName { get; set; }
 		public int DishId { get; set; }
 		public string DishName { get; set; }
 		public float Price { get; set; }

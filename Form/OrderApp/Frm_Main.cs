@@ -42,11 +42,11 @@ namespace OrderApp
                     this.Show();
                     toolStripStatusLabel1.Text = string.Format(SystemMessage.StatusInfo, _userInfoModel.DisplayName);
 
-                    // goi form ban hang
-                    //bánHàngToolStripMenuItem_Click(sender, e);
+					// goi form ban hang
+					báoCáoToolStripMenuItem_Click(sender, e);
 
-                }
-                else {
+				}
+				else {
                     SystemHelp.ClosedAllChild(this);
                     Application.Exit();
                 }
@@ -57,8 +57,23 @@ namespace OrderApp
                 Console.Write(ex + "");
             }
         }
+		
+		private void báoCáoToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			if (!SystemHelp.CheckExitForm("Frm_Sales", this))
+			{
+				Frm_Sales frm = new Frm_Sales();
+				frm._UserInfoModel = _userInfoModel;				
+				SystemHelp.ShowChildForm(frm, this);
+			}
+			else
+			{
+				SystemHelp.ActiveChildForm("Frm_Sales", this);
+			}
+		}
 
-        private void thanhToánToolStripMenuItem_Click(object sender, EventArgs e)
+		/*
+		         private void thanhToánToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (!SystemHelp.CheckExitForm("Frm_Pay", this))
             {
@@ -85,5 +100,7 @@ namespace OrderApp
                 SystemHelp.ActiveChildForm("Frm_Sales", this);
             }
         }
-    }
+		 */
+
+	}
 }

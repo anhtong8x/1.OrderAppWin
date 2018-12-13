@@ -23,6 +23,7 @@ namespace TN.API.Services
     {
         Task<ApiResponseData<object>> GetAll();
 		Task<ApiResponseData<object>> Get(int id);
+		Task<ApiResponseData<object>> GetsByIdBill(int id);
 		Task<ApiResponseData<object>> Create(BillDetailModel obj);
         Task<ApiResponseData<object>> Edit(BillDetailModel obj);
         Task<ApiResponseData<object>> Delete(int id);
@@ -88,24 +89,30 @@ namespace TN.API.Services
             var data = await _iBillDetailRepository.Search();
             return new ApiResponseData<object> { Output = 1, Data = data };
         }
-        public async Task<ApiResponseData<object>> Get(int id)
+
+		public async Task<ApiResponseData<object>> GetsByIdBill(int id)
+		{
+			var data = await _iBillDetailRepository.Search(x=>x.BillId == id);
+			return new ApiResponseData<object> { Output = 1, Data = data };
+		}
+
+		public async Task<ApiResponseData<object>> Get(int id)
         {
             var data = await _iBillDetailRepository.SearchOneAsync(x => x.Id == id);
             return new ApiResponseData<object> { Output = 1, Data = data };
-        }
-		
+        }			
 		public async Task<ApiResponseData<object>> Search(int page = 1, int limit = 10, string key = null)
         {
             limit = limit > 100 ? 10 : limit;
             var data = await _iBillDetailRepository.SearchPagedList(page, limit, x => (x.DishName.Contains(key) || key == null) && (x.Note.Contains(key) || key == null));
             return new ApiResponseData<object> { Data = data };
         }
-
         public async Task<ApiResponseData<object>> Create(BillDetailModel obj)
         {
 			var add = new BillDetail
 			{
 				UserId = obj.UserId,
+				UseName = obj.UseName,
 				DishId = obj.DishId,
 				DishName = obj.DishName,
 				Price = obj.Price,
@@ -125,6 +132,7 @@ namespace TN.API.Services
             if (data != null)
             {
 				data.UserId = obj.UserId;
+				data.UseName = obj.UseName;
 				data.DishId = obj.DishId;
 				data.DishName = obj.DishName;
 				data.Price = obj.Price;

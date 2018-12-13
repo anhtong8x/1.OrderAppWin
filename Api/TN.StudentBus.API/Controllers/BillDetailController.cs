@@ -65,7 +65,29 @@ namespace TN.API.Controllers
             }
         }
 
-        [AllowAnonymous]
+		[AllowAnonymous]
+		[HttpGet("GetsByIdBill/{id}")]
+		public async Task<IActionResult> GetsByIdBill(int id)
+		{
+			try
+			{
+				if (!ModelState.IsValid)
+				{
+					return Ok(new ApiResponseData<object>()
+					{
+						ErrorCode = ApiResponseErrorCode.FalseIsValid,
+						Message = Newtonsoft.Json.JsonConvert.SerializeObject(ModelState)
+					});
+				}
+				return Ok(await Service.GetsByIdBill(id));
+			}
+			catch (Exception)
+			{
+				return BadRequest(new ApiResponseData<object>() { Status = false, ErrorCode = ApiResponseErrorCode.ServerError });
+			}
+		}
+
+		[AllowAnonymous]
         [HttpGet("Get/{id}")]
         public async Task<IActionResult> Get(int id)
         {

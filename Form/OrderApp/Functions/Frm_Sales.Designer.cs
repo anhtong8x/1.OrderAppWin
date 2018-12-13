@@ -29,30 +29,25 @@
         private void InitializeComponent()
         {
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
-			this.btnLamMoi = new System.Windows.Forms.Button();
-			this.dtGrid_Table = new System.Windows.Forms.DataGridView();
-			this.groupBox2 = new System.Windows.Forms.GroupBox();
-			this.txtSumMoney = new System.Windows.Forms.TextBox();
-			this.label1 = new System.Windows.Forms.Label();
-			this.dtGrid_Bill = new System.Windows.Forms.DataGridView();
-			this.Col_TT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.Col_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.Col_id_waiter = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.Col_name_waiter = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.Col_id_dish = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.Col_name_dish = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.Col_dish_value = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.Col_quanity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.Col_Money = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.lbl_Id_Bill_1 = new System.Windows.Forms.Label();
+			this.groupBox4 = new System.Windows.Forms.GroupBox();
+			this.lblMsg1 = new System.Windows.Forms.Label();
+			this.txtTenMon = new System.Windows.Forms.TextBox();
+			this.btnCapNhatMon = new System.Windows.Forms.Button();
+			this.label11 = new System.Windows.Forms.Label();
+			this.txtSoLuongMon = new System.Windows.Forms.TextBox();
+			this.label10 = new System.Windows.Forms.Label();
+			this.lblMsg = new System.Windows.Forms.Label();
+			this.btnThanhToan = new System.Windows.Forms.Button();
+			this.btnTamTinh = new System.Windows.Forms.Button();
 			this.groupBox3 = new System.Windows.Forms.GroupBox();
+			this.label9 = new System.Windows.Forms.Label();
+			this.txtTienKM = new System.Windows.Forms.TextBox();
 			this.txtTraLai = new System.Windows.Forms.TextBox();
 			this.txtTongCong = new System.Windows.Forms.TextBox();
 			this.txtKhachTra = new System.Windows.Forms.TextBox();
@@ -64,238 +59,165 @@
 			this.label5 = new System.Windows.Forms.Label();
 			this.label4 = new System.Windows.Forms.Label();
 			this.label3 = new System.Windows.Forms.Label();
-			this.lblMsg = new System.Windows.Forms.Label();
-			this.btnTamTinh = new System.Windows.Forms.Button();
-			this.btnThanhToan = new System.Windows.Forms.Button();
+			this.groupBox2 = new System.Windows.Forms.GroupBox();
+			this.txtSumMoney = new System.Windows.Forms.TextBox();
+			this.label1 = new System.Windows.Forms.Label();
+			this.dtGrid_Bill = new System.Windows.Forms.DataGridView();
+			this.lbl_Id_Bill_1 = new System.Windows.Forms.Label();
+			this.groupBox5 = new System.Windows.Forms.GroupBox();
+			this.btnLamMoi = new System.Windows.Forms.Button();
+			this.dtGrid_Table = new System.Windows.Forms.DataGridView();
 			this.Col_Stt = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.Col_idTable = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.Col_name_table = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.Col_status = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.Col_note = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.txtTienKM = new System.Windows.Forms.TextBox();
-			this.label9 = new System.Windows.Forms.Label();
-			this.groupBox4 = new System.Windows.Forms.GroupBox();
-			this.label10 = new System.Windows.Forms.Label();
-			this.txtSoLuongMon = new System.Windows.Forms.TextBox();
-			this.label11 = new System.Windows.Forms.Label();
-			this.btnCapNhatMon = new System.Windows.Forms.Button();
-			this.txtTenMon = new System.Windows.Forms.TextBox();
-			this.lblMsg1 = new System.Windows.Forms.Label();
+			this.Col_TT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Col_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Col_id_waiter = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Col_name_waiter = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Col_id_dish = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Col_name_dish = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Col_dish_value = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Col_quanity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Col_Money = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.groupBox1.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.dtGrid_Table)).BeginInit();
+			this.groupBox4.SuspendLayout();
+			this.groupBox3.SuspendLayout();
 			this.groupBox2.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dtGrid_Bill)).BeginInit();
-			this.groupBox3.SuspendLayout();
-			this.groupBox4.SuspendLayout();
+			this.groupBox5.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.dtGrid_Table)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// groupBox1
 			// 
-			this.groupBox1.Controls.Add(this.btnLamMoi);
-			this.groupBox1.Controls.Add(this.dtGrid_Table);
+			this.groupBox1.Controls.Add(this.groupBox4);
+			this.groupBox1.Controls.Add(this.lblMsg);
+			this.groupBox1.Controls.Add(this.btnThanhToan);
+			this.groupBox1.Controls.Add(this.btnTamTinh);
+			this.groupBox1.Controls.Add(this.groupBox3);
+			this.groupBox1.Controls.Add(this.groupBox2);
+			this.groupBox1.Controls.Add(this.groupBox5);
 			this.groupBox1.Location = new System.Drawing.Point(12, 12);
 			this.groupBox1.Name = "groupBox1";
-			this.groupBox1.Size = new System.Drawing.Size(280, 480);
+			this.groupBox1.Size = new System.Drawing.Size(1304, 520);
 			this.groupBox1.TabIndex = 0;
 			this.groupBox1.TabStop = false;
-			this.groupBox1.Text = "Các bàn đang phục vụ";
 			// 
-			// btnLamMoi
+			// groupBox4
 			// 
-			this.btnLamMoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnLamMoi.Location = new System.Drawing.Point(6, 23);
-			this.btnLamMoi.Name = "btnLamMoi";
-			this.btnLamMoi.Size = new System.Drawing.Size(83, 28);
-			this.btnLamMoi.TabIndex = 20;
-			this.btnLamMoi.Text = "Làm mới";
-			this.btnLamMoi.UseVisualStyleBackColor = true;
-			this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
+			this.groupBox4.Controls.Add(this.lblMsg1);
+			this.groupBox4.Controls.Add(this.txtTenMon);
+			this.groupBox4.Controls.Add(this.btnCapNhatMon);
+			this.groupBox4.Controls.Add(this.label11);
+			this.groupBox4.Controls.Add(this.txtSoLuongMon);
+			this.groupBox4.Controls.Add(this.label10);
+			this.groupBox4.Location = new System.Drawing.Point(1003, 19);
+			this.groupBox4.Name = "groupBox4";
+			this.groupBox4.Size = new System.Drawing.Size(284, 152);
+			this.groupBox4.TabIndex = 27;
+			this.groupBox4.TabStop = false;
+			this.groupBox4.Text = "Sửa số lượng món";
 			// 
-			// dtGrid_Table
+			// lblMsg1
 			// 
-			this.dtGrid_Table.AllowUserToAddRows = false;
-			this.dtGrid_Table.AllowUserToDeleteRows = false;
-			this.dtGrid_Table.AllowUserToResizeRows = false;
-			this.dtGrid_Table.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-			this.dtGrid_Table.BorderStyle = System.Windows.Forms.BorderStyle.None;
-			dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-			dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.dtGrid_Table.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-			this.dtGrid_Table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dtGrid_Table.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Col_Stt,
-            this.Col_idTable,
-            this.Col_name_table,
-            this.Col_status,
-            this.Col_note});
-			this.dtGrid_Table.Location = new System.Drawing.Point(6, 61);
-			this.dtGrid_Table.Name = "dtGrid_Table";
-			this.dtGrid_Table.ReadOnly = true;
-			this.dtGrid_Table.RowHeadersVisible = false;
-			this.dtGrid_Table.Size = new System.Drawing.Size(263, 413);
-			this.dtGrid_Table.TabIndex = 1;
-			this.dtGrid_Table.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGrid_Table_CellDoubleClick);
+			this.lblMsg1.AutoSize = true;
+			this.lblMsg1.BackColor = System.Drawing.Color.Transparent;
+			this.lblMsg1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblMsg1.ForeColor = System.Drawing.Color.Red;
+			this.lblMsg1.Location = new System.Drawing.Point(20, 123);
+			this.lblMsg1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+			this.lblMsg1.Name = "lblMsg1";
+			this.lblMsg1.Size = new System.Drawing.Size(62, 16);
+			this.lblMsg1.TabIndex = 22;
+			this.lblMsg1.Text = "lblMsg1";
 			// 
-			// groupBox2
+			// txtTenMon
 			// 
-			this.groupBox2.Controls.Add(this.txtSumMoney);
-			this.groupBox2.Controls.Add(this.label1);
-			this.groupBox2.Controls.Add(this.dtGrid_Bill);
-			this.groupBox2.Controls.Add(this.lbl_Id_Bill_1);
-			this.groupBox2.Location = new System.Drawing.Point(298, 12);
-			this.groupBox2.Name = "groupBox2";
-			this.groupBox2.Size = new System.Drawing.Size(705, 480);
-			this.groupBox2.TabIndex = 1;
-			this.groupBox2.TabStop = false;
-			this.groupBox2.Text = "Thông tin hóa đơn";
+			this.txtTenMon.BackColor = System.Drawing.Color.White;
+			this.txtTenMon.Enabled = false;
+			this.txtTenMon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtTenMon.ForeColor = System.Drawing.Color.Red;
+			this.txtTenMon.Location = new System.Drawing.Point(80, 19);
+			this.txtTenMon.Name = "txtTenMon";
+			this.txtTenMon.ReadOnly = true;
+			this.txtTenMon.Size = new System.Drawing.Size(191, 26);
+			this.txtTenMon.TabIndex = 10;
+			this.txtTenMon.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
 			// 
-			// txtSumMoney
+			// btnCapNhatMon
 			// 
-			this.txtSumMoney.Enabled = false;
-			this.txtSumMoney.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtSumMoney.ForeColor = System.Drawing.Color.Red;
-			this.txtSumMoney.Location = new System.Drawing.Point(538, 451);
-			this.txtSumMoney.Name = "txtSumMoney";
-			this.txtSumMoney.ReadOnly = true;
-			this.txtSumMoney.Size = new System.Drawing.Size(161, 23);
-			this.txtSumMoney.TabIndex = 9;
-			this.txtSumMoney.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.btnCapNhatMon.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnCapNhatMon.Location = new System.Drawing.Point(163, 83);
+			this.btnCapNhatMon.Name = "btnCapNhatMon";
+			this.btnCapNhatMon.Size = new System.Drawing.Size(106, 33);
+			this.btnCapNhatMon.TabIndex = 21;
+			this.btnCapNhatMon.Text = "Cập nhật món";
+			this.btnCapNhatMon.UseVisualStyleBackColor = true;
 			// 
-			// label1
+			// label11
 			// 
-			this.label1.AutoSize = true;
-			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label1.Location = new System.Drawing.Point(481, 457);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(50, 17);
-			this.label1.TabIndex = 8;
-			this.label1.Text = "Tổng:";
+			this.label11.AutoSize = true;
+			this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label11.Location = new System.Drawing.Point(15, 57);
+			this.label11.Name = "label11";
+			this.label11.Size = new System.Drawing.Size(57, 13);
+			this.label11.TabIndex = 9;
+			this.label11.Text = "Số lượng";
 			// 
-			// dtGrid_Bill
+			// txtSoLuongMon
 			// 
-			this.dtGrid_Bill.AllowUserToAddRows = false;
-			this.dtGrid_Bill.AllowUserToDeleteRows = false;
-			this.dtGrid_Bill.AllowUserToResizeRows = false;
-			this.dtGrid_Bill.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-			this.dtGrid_Bill.BorderStyle = System.Windows.Forms.BorderStyle.None;
-			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-			dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.dtGrid_Bill.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-			this.dtGrid_Bill.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dtGrid_Bill.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Col_TT,
-            this.Col_id,
-            this.dataGridViewTextBoxColumn1,
-            this.Col_id_waiter,
-            this.Col_name_waiter,
-            this.Col_id_dish,
-            this.Col_name_dish,
-            this.Col_dish_value,
-            this.Col_quanity,
-            this.Col_Money});
-			this.dtGrid_Bill.Location = new System.Drawing.Point(6, 61);
-			this.dtGrid_Bill.Name = "dtGrid_Bill";
-			this.dtGrid_Bill.ReadOnly = true;
-			this.dtGrid_Bill.RowHeadersVisible = false;
-			this.dtGrid_Bill.Size = new System.Drawing.Size(693, 384);
-			this.dtGrid_Bill.TabIndex = 6;
+			this.txtSoLuongMon.BackColor = System.Drawing.Color.White;
+			this.txtSoLuongMon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtSoLuongMon.Location = new System.Drawing.Point(81, 51);
+			this.txtSoLuongMon.Name = "txtSoLuongMon";
+			this.txtSoLuongMon.Size = new System.Drawing.Size(190, 26);
+			this.txtSoLuongMon.TabIndex = 8;
+			this.txtSoLuongMon.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
 			// 
-			// Col_TT
+			// label10
 			// 
-			dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-			this.Col_TT.DefaultCellStyle = dataGridViewCellStyle3;
-			this.Col_TT.HeaderText = "TT";
-			this.Col_TT.Name = "Col_TT";
-			this.Col_TT.ReadOnly = true;
-			this.Col_TT.Width = 30;
+			this.label10.AutoSize = true;
+			this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label10.Location = new System.Drawing.Point(9, 22);
+			this.label10.Name = "label10";
+			this.label10.Size = new System.Drawing.Size(56, 13);
+			this.label10.TabIndex = 5;
+			this.label10.Text = "Tên món";
 			// 
-			// Col_id
+			// lblMsg
 			// 
-			this.Col_id.HeaderText = "id_bill_2";
-			this.Col_id.Name = "Col_id";
-			this.Col_id.ReadOnly = true;
-			this.Col_id.Visible = false;
+			this.lblMsg.AutoSize = true;
+			this.lblMsg.BackColor = System.Drawing.Color.Transparent;
+			this.lblMsg.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblMsg.ForeColor = System.Drawing.Color.Red;
+			this.lblMsg.Location = new System.Drawing.Point(1023, 462);
+			this.lblMsg.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+			this.lblMsg.Name = "lblMsg";
+			this.lblMsg.Size = new System.Drawing.Size(54, 16);
+			this.lblMsg.TabIndex = 26;
+			this.lblMsg.Text = "lblMsg";
 			// 
-			// dataGridViewTextBoxColumn1
+			// btnThanhToan
 			// 
-			this.dataGridViewTextBoxColumn1.HeaderText = "id_bill_1";
-			this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-			this.dataGridViewTextBoxColumn1.ReadOnly = true;
-			this.dataGridViewTextBoxColumn1.Visible = false;
+			this.btnThanhToan.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnThanhToan.Location = new System.Drawing.Point(1012, 409);
+			this.btnThanhToan.Name = "btnThanhToan";
+			this.btnThanhToan.Size = new System.Drawing.Size(106, 37);
+			this.btnThanhToan.TabIndex = 24;
+			this.btnThanhToan.Text = "Lưu hóa đơn";
+			this.btnThanhToan.UseVisualStyleBackColor = true;
 			// 
-			// Col_id_waiter
+			// btnTamTinh
 			// 
-			this.Col_id_waiter.HeaderText = "id_waiter";
-			this.Col_id_waiter.Name = "Col_id_waiter";
-			this.Col_id_waiter.ReadOnly = true;
-			this.Col_id_waiter.Visible = false;
-			// 
-			// Col_name_waiter
-			// 
-			this.Col_name_waiter.HeaderText = "Phục vụ bàn";
-			this.Col_name_waiter.Name = "Col_name_waiter";
-			this.Col_name_waiter.ReadOnly = true;
-			this.Col_name_waiter.Width = 150;
-			// 
-			// Col_id_dish
-			// 
-			this.Col_id_dish.HeaderText = "id_dish";
-			this.Col_id_dish.Name = "Col_id_dish";
-			this.Col_id_dish.ReadOnly = true;
-			this.Col_id_dish.Visible = false;
-			// 
-			// Col_name_dish
-			// 
-			this.Col_name_dish.HeaderText = "Tên món";
-			this.Col_name_dish.Name = "Col_name_dish";
-			this.Col_name_dish.ReadOnly = true;
-			this.Col_name_dish.Width = 200;
-			// 
-			// Col_dish_value
-			// 
-			dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-			this.Col_dish_value.DefaultCellStyle = dataGridViewCellStyle4;
-			this.Col_dish_value.HeaderText = "Đơn giá";
-			this.Col_dish_value.Name = "Col_dish_value";
-			this.Col_dish_value.ReadOnly = true;
-			// 
-			// Col_quanity
-			// 
-			dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-			this.Col_quanity.DefaultCellStyle = dataGridViewCellStyle5;
-			this.Col_quanity.HeaderText = "Số lượng";
-			this.Col_quanity.Name = "Col_quanity";
-			this.Col_quanity.ReadOnly = true;
-			this.Col_quanity.Width = 80;
-			// 
-			// Col_Money
-			// 
-			dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-			this.Col_Money.DefaultCellStyle = dataGridViewCellStyle6;
-			this.Col_Money.HeaderText = "Thành tiền";
-			this.Col_Money.Name = "Col_Money";
-			this.Col_Money.ReadOnly = true;
-			this.Col_Money.Width = 130;
-			// 
-			// lbl_Id_Bill_1
-			// 
-			this.lbl_Id_Bill_1.AutoSize = true;
-			this.lbl_Id_Bill_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lbl_Id_Bill_1.Location = new System.Drawing.Point(6, 19);
-			this.lbl_Id_Bill_1.Name = "lbl_Id_Bill_1";
-			this.lbl_Id_Bill_1.Size = new System.Drawing.Size(284, 25);
-			this.lbl_Id_Bill_1.TabIndex = 5;
-			this.lbl_Id_Bill_1.Text = "BÀN SỐ 000 HÓA ĐƠN 00000";
+			this.btnTamTinh.Location = new System.Drawing.Point(1171, 409);
+			this.btnTamTinh.Name = "btnTamTinh";
+			this.btnTamTinh.Size = new System.Drawing.Size(106, 37);
+			this.btnTamTinh.TabIndex = 25;
+			this.btnTamTinh.Text = "Tạm tính";
+			this.btnTamTinh.UseVisualStyleBackColor = true;
 			// 
 			// groupBox3
 			// 
@@ -312,12 +234,35 @@
 			this.groupBox3.Controls.Add(this.label5);
 			this.groupBox3.Controls.Add(this.label4);
 			this.groupBox3.Controls.Add(this.label3);
-			this.groupBox3.Location = new System.Drawing.Point(1009, 190);
+			this.groupBox3.Location = new System.Drawing.Point(1003, 188);
 			this.groupBox3.Name = "groupBox3";
 			this.groupBox3.Size = new System.Drawing.Size(284, 215);
-			this.groupBox3.TabIndex = 2;
+			this.groupBox3.TabIndex = 23;
 			this.groupBox3.TabStop = false;
 			this.groupBox3.Text = " ";
+			// 
+			// label9
+			// 
+			this.label9.AutoSize = true;
+			this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label9.Location = new System.Drawing.Point(129, 57);
+			this.label9.Name = "label9";
+			this.label9.Size = new System.Drawing.Size(16, 13);
+			this.label9.TabIndex = 9;
+			this.label9.Text = "%";
+			// 
+			// txtTienKM
+			// 
+			this.txtTienKM.BackColor = System.Drawing.Color.White;
+			this.txtTienKM.Enabled = false;
+			this.txtTienKM.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtTienKM.ForeColor = System.Drawing.Color.Red;
+			this.txtTienKM.Location = new System.Drawing.Point(151, 49);
+			this.txtTienKM.Name = "txtTienKM";
+			this.txtTienKM.ReadOnly = true;
+			this.txtTienKM.Size = new System.Drawing.Size(118, 26);
+			this.txtTienKM.TabIndex = 8;
+			this.txtTienKM.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
 			// 
 			// txtTraLai
 			// 
@@ -352,7 +297,6 @@
 			this.txtKhachTra.Size = new System.Drawing.Size(179, 26);
 			this.txtKhachTra.TabIndex = 7;
 			this.txtKhachTra.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-			this.txtKhachTra.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtKhachTra_KeyPress);
 			// 
 			// txtKhuyenMai
 			// 
@@ -363,7 +307,6 @@
 			this.txtKhuyenMai.Size = new System.Drawing.Size(33, 26);
 			this.txtKhuyenMai.TabIndex = 7;
 			this.txtKhuyenMai.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-			this.txtKhuyenMai.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtKhuyenMai_KeyPress);
 			// 
 			// label7
 			// 
@@ -439,39 +382,135 @@
 			this.label3.TabIndex = 4;
 			this.label3.Text = "Thành tiền";
 			// 
-			// lblMsg
+			// groupBox2
 			// 
-			this.lblMsg.AutoSize = true;
-			this.lblMsg.BackColor = System.Drawing.Color.Transparent;
-			this.lblMsg.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblMsg.ForeColor = System.Drawing.Color.Red;
-			this.lblMsg.Location = new System.Drawing.Point(1029, 464);
-			this.lblMsg.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-			this.lblMsg.Name = "lblMsg";
-			this.lblMsg.Size = new System.Drawing.Size(54, 16);
-			this.lblMsg.TabIndex = 19;
-			this.lblMsg.Text = "lblMsg";
+			this.groupBox2.Controls.Add(this.txtSumMoney);
+			this.groupBox2.Controls.Add(this.label1);
+			this.groupBox2.Controls.Add(this.dtGrid_Bill);
+			this.groupBox2.Controls.Add(this.lbl_Id_Bill_1);
+			this.groupBox2.Location = new System.Drawing.Point(292, 19);
+			this.groupBox2.Name = "groupBox2";
+			this.groupBox2.Size = new System.Drawing.Size(705, 480);
+			this.groupBox2.TabIndex = 22;
+			this.groupBox2.TabStop = false;
+			this.groupBox2.Text = "Thông tin hóa đơn";
 			// 
-			// btnTamTinh
+			// txtSumMoney
 			// 
-			this.btnTamTinh.Location = new System.Drawing.Point(1177, 411);
-			this.btnTamTinh.Name = "btnTamTinh";
-			this.btnTamTinh.Size = new System.Drawing.Size(106, 37);
-			this.btnTamTinh.TabIndex = 18;
-			this.btnTamTinh.Text = "Tạm tính";
-			this.btnTamTinh.UseVisualStyleBackColor = true;
-			this.btnTamTinh.Click += new System.EventHandler(this.btnTamTinh_Click);
+			this.txtSumMoney.Enabled = false;
+			this.txtSumMoney.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtSumMoney.ForeColor = System.Drawing.Color.Red;
+			this.txtSumMoney.Location = new System.Drawing.Point(538, 451);
+			this.txtSumMoney.Name = "txtSumMoney";
+			this.txtSumMoney.ReadOnly = true;
+			this.txtSumMoney.Size = new System.Drawing.Size(161, 23);
+			this.txtSumMoney.TabIndex = 9;
+			this.txtSumMoney.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
 			// 
-			// btnThanhToan
+			// label1
 			// 
-			this.btnThanhToan.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnThanhToan.Location = new System.Drawing.Point(1018, 411);
-			this.btnThanhToan.Name = "btnThanhToan";
-			this.btnThanhToan.Size = new System.Drawing.Size(106, 37);
-			this.btnThanhToan.TabIndex = 18;
-			this.btnThanhToan.Text = "Lưu hóa đơn";
-			this.btnThanhToan.UseVisualStyleBackColor = true;
-			this.btnThanhToan.Click += new System.EventHandler(this.btnThanhToan_Click);
+			this.label1.AutoSize = true;
+			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label1.Location = new System.Drawing.Point(481, 457);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(50, 17);
+			this.label1.TabIndex = 8;
+			this.label1.Text = "Tổng:";
+			// 
+			// dtGrid_Bill
+			// 
+			this.dtGrid_Bill.AllowUserToAddRows = false;
+			this.dtGrid_Bill.AllowUserToDeleteRows = false;
+			this.dtGrid_Bill.AllowUserToResizeRows = false;
+			this.dtGrid_Bill.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+			this.dtGrid_Bill.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+			dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.dtGrid_Bill.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+			this.dtGrid_Bill.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.dtGrid_Bill.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Col_TT,
+            this.dataGridViewTextBoxColumn1,
+            this.Col_id,
+            this.Col_id_waiter,
+            this.Col_name_waiter,
+            this.Col_id_dish,
+            this.Col_name_dish,
+            this.Col_dish_value,
+            this.Col_quanity,
+            this.Col_Money});
+			this.dtGrid_Bill.Location = new System.Drawing.Point(6, 61);
+			this.dtGrid_Bill.Name = "dtGrid_Bill";
+			this.dtGrid_Bill.ReadOnly = true;
+			this.dtGrid_Bill.RowHeadersVisible = false;
+			this.dtGrid_Bill.Size = new System.Drawing.Size(693, 384);
+			this.dtGrid_Bill.TabIndex = 6;
+			// 
+			// lbl_Id_Bill_1
+			// 
+			this.lbl_Id_Bill_1.AutoSize = true;
+			this.lbl_Id_Bill_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lbl_Id_Bill_1.Location = new System.Drawing.Point(6, 19);
+			this.lbl_Id_Bill_1.Name = "lbl_Id_Bill_1";
+			this.lbl_Id_Bill_1.Size = new System.Drawing.Size(284, 25);
+			this.lbl_Id_Bill_1.TabIndex = 5;
+			this.lbl_Id_Bill_1.Text = "BÀN SỐ 000 HÓA ĐƠN 00000";
+			// 
+			// groupBox5
+			// 
+			this.groupBox5.Controls.Add(this.btnLamMoi);
+			this.groupBox5.Controls.Add(this.dtGrid_Table);
+			this.groupBox5.Location = new System.Drawing.Point(6, 19);
+			this.groupBox5.Name = "groupBox5";
+			this.groupBox5.Size = new System.Drawing.Size(280, 480);
+			this.groupBox5.TabIndex = 21;
+			this.groupBox5.TabStop = false;
+			this.groupBox5.Text = "Các bàn đang phục vụ";
+			// 
+			// btnLamMoi
+			// 
+			this.btnLamMoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnLamMoi.Location = new System.Drawing.Point(6, 23);
+			this.btnLamMoi.Name = "btnLamMoi";
+			this.btnLamMoi.Size = new System.Drawing.Size(83, 28);
+			this.btnLamMoi.TabIndex = 20;
+			this.btnLamMoi.Text = "Làm mới";
+			this.btnLamMoi.UseVisualStyleBackColor = true;
+			// 
+			// dtGrid_Table
+			// 
+			this.dtGrid_Table.AllowUserToAddRows = false;
+			this.dtGrid_Table.AllowUserToDeleteRows = false;
+			this.dtGrid_Table.AllowUserToResizeRows = false;
+			this.dtGrid_Table.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+			this.dtGrid_Table.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+			dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.dtGrid_Table.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+			this.dtGrid_Table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.dtGrid_Table.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Col_Stt,
+            this.Col_idTable,
+            this.Col_name_table,
+            this.Col_status,
+            this.Col_note});
+			this.dtGrid_Table.Location = new System.Drawing.Point(6, 61);
+			this.dtGrid_Table.Name = "dtGrid_Table";
+			this.dtGrid_Table.ReadOnly = true;
+			this.dtGrid_Table.RowHeadersVisible = false;
+			this.dtGrid_Table.Size = new System.Drawing.Size(263, 413);
+			this.dtGrid_Table.TabIndex = 1;
+			this.dtGrid_Table.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGrid_Table_CellDoubleClick);
 			// 
 			// Col_Stt
 			// 
@@ -508,187 +547,156 @@
 			this.Col_note.ReadOnly = true;
 			this.Col_note.Visible = false;
 			// 
-			// txtTienKM
+			// Col_TT
 			// 
-			this.txtTienKM.BackColor = System.Drawing.Color.White;
-			this.txtTienKM.Enabled = false;
-			this.txtTienKM.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtTienKM.ForeColor = System.Drawing.Color.Red;
-			this.txtTienKM.Location = new System.Drawing.Point(151, 49);
-			this.txtTienKM.Name = "txtTienKM";
-			this.txtTienKM.ReadOnly = true;
-			this.txtTienKM.Size = new System.Drawing.Size(118, 26);
-			this.txtTienKM.TabIndex = 8;
-			this.txtTienKM.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+			this.Col_TT.DefaultCellStyle = dataGridViewCellStyle2;
+			this.Col_TT.HeaderText = "TT";
+			this.Col_TT.Name = "Col_TT";
+			this.Col_TT.ReadOnly = true;
+			this.Col_TT.Width = 30;
 			// 
-			// label9
+			// dataGridViewTextBoxColumn1
 			// 
-			this.label9.AutoSize = true;
-			this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label9.Location = new System.Drawing.Point(129, 57);
-			this.label9.Name = "label9";
-			this.label9.Size = new System.Drawing.Size(16, 13);
-			this.label9.TabIndex = 9;
-			this.label9.Text = "%";
+			this.dataGridViewTextBoxColumn1.HeaderText = "id_bill_1";
+			this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+			this.dataGridViewTextBoxColumn1.ReadOnly = true;
+			this.dataGridViewTextBoxColumn1.Visible = false;
 			// 
-			// groupBox4
+			// Col_id
 			// 
-			this.groupBox4.Controls.Add(this.lblMsg1);
-			this.groupBox4.Controls.Add(this.txtTenMon);
-			this.groupBox4.Controls.Add(this.btnCapNhatMon);
-			this.groupBox4.Controls.Add(this.label11);
-			this.groupBox4.Controls.Add(this.txtSoLuongMon);
-			this.groupBox4.Controls.Add(this.label10);
-			this.groupBox4.Location = new System.Drawing.Point(1009, 21);
-			this.groupBox4.Name = "groupBox4";
-			this.groupBox4.Size = new System.Drawing.Size(284, 152);
-			this.groupBox4.TabIndex = 20;
-			this.groupBox4.TabStop = false;
-			this.groupBox4.Text = "Sửa số lượng món";
+			this.Col_id.HeaderText = "id_bill_2";
+			this.Col_id.Name = "Col_id";
+			this.Col_id.ReadOnly = true;
+			this.Col_id.Visible = false;
 			// 
-			// label10
+			// Col_id_waiter
 			// 
-			this.label10.AutoSize = true;
-			this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label10.Location = new System.Drawing.Point(9, 22);
-			this.label10.Name = "label10";
-			this.label10.Size = new System.Drawing.Size(56, 13);
-			this.label10.TabIndex = 5;
-			this.label10.Text = "Tên món";
+			this.Col_id_waiter.HeaderText = "id_waiter";
+			this.Col_id_waiter.Name = "Col_id_waiter";
+			this.Col_id_waiter.ReadOnly = true;
+			this.Col_id_waiter.Visible = false;
 			// 
-			// txtSoLuongMon
+			// Col_name_waiter
 			// 
-			this.txtSoLuongMon.BackColor = System.Drawing.Color.White;
-			this.txtSoLuongMon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtSoLuongMon.Location = new System.Drawing.Point(81, 51);
-			this.txtSoLuongMon.Name = "txtSoLuongMon";
-			this.txtSoLuongMon.Size = new System.Drawing.Size(190, 26);
-			this.txtSoLuongMon.TabIndex = 8;
-			this.txtSoLuongMon.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.Col_name_waiter.HeaderText = "Phục vụ bàn";
+			this.Col_name_waiter.Name = "Col_name_waiter";
+			this.Col_name_waiter.ReadOnly = true;
+			this.Col_name_waiter.Width = 150;
 			// 
-			// label11
+			// Col_id_dish
 			// 
-			this.label11.AutoSize = true;
-			this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label11.Location = new System.Drawing.Point(15, 57);
-			this.label11.Name = "label11";
-			this.label11.Size = new System.Drawing.Size(57, 13);
-			this.label11.TabIndex = 9;
-			this.label11.Text = "Số lượng";
+			this.Col_id_dish.HeaderText = "id_dish";
+			this.Col_id_dish.Name = "Col_id_dish";
+			this.Col_id_dish.ReadOnly = true;
+			this.Col_id_dish.Visible = false;
 			// 
-			// btnCapNhatMon
+			// Col_name_dish
 			// 
-			this.btnCapNhatMon.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnCapNhatMon.Location = new System.Drawing.Point(163, 83);
-			this.btnCapNhatMon.Name = "btnCapNhatMon";
-			this.btnCapNhatMon.Size = new System.Drawing.Size(106, 33);
-			this.btnCapNhatMon.TabIndex = 21;
-			this.btnCapNhatMon.Text = "Cập nhật món";
-			this.btnCapNhatMon.UseVisualStyleBackColor = true;
+			this.Col_name_dish.HeaderText = "Tên món";
+			this.Col_name_dish.Name = "Col_name_dish";
+			this.Col_name_dish.ReadOnly = true;
+			this.Col_name_dish.Width = 200;
 			// 
-			// txtTenMon
+			// Col_dish_value
 			// 
-			this.txtTenMon.BackColor = System.Drawing.Color.White;
-			this.txtTenMon.Enabled = false;
-			this.txtTenMon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtTenMon.ForeColor = System.Drawing.Color.Red;
-			this.txtTenMon.Location = new System.Drawing.Point(80, 19);
-			this.txtTenMon.Name = "txtTenMon";
-			this.txtTenMon.ReadOnly = true;
-			this.txtTenMon.Size = new System.Drawing.Size(191, 26);
-			this.txtTenMon.TabIndex = 10;
-			this.txtTenMon.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+			this.Col_dish_value.DefaultCellStyle = dataGridViewCellStyle3;
+			this.Col_dish_value.HeaderText = "Đơn giá";
+			this.Col_dish_value.Name = "Col_dish_value";
+			this.Col_dish_value.ReadOnly = true;
 			// 
-			// lblMsg1
+			// Col_quanity
 			// 
-			this.lblMsg1.AutoSize = true;
-			this.lblMsg1.BackColor = System.Drawing.Color.Transparent;
-			this.lblMsg1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblMsg1.ForeColor = System.Drawing.Color.Red;
-			this.lblMsg1.Location = new System.Drawing.Point(20, 123);
-			this.lblMsg1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-			this.lblMsg1.Name = "lblMsg1";
-			this.lblMsg1.Size = new System.Drawing.Size(62, 16);
-			this.lblMsg1.TabIndex = 22;
-			this.lblMsg1.Text = "lblMsg1";
+			dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+			this.Col_quanity.DefaultCellStyle = dataGridViewCellStyle4;
+			this.Col_quanity.HeaderText = "Số lượng";
+			this.Col_quanity.Name = "Col_quanity";
+			this.Col_quanity.ReadOnly = true;
+			this.Col_quanity.Width = 80;
+			// 
+			// Col_Money
+			// 
+			dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+			this.Col_Money.DefaultCellStyle = dataGridViewCellStyle5;
+			this.Col_Money.HeaderText = "Thành tiền";
+			this.Col_Money.Name = "Col_Money";
+			this.Col_Money.ReadOnly = true;
+			this.Col_Money.Width = 130;
 			// 
 			// Frm_Sales
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(1318, 504);
-			this.Controls.Add(this.groupBox4);
-			this.Controls.Add(this.lblMsg);
-			this.Controls.Add(this.btnThanhToan);
-			this.Controls.Add(this.btnTamTinh);
-			this.Controls.Add(this.groupBox3);
-			this.Controls.Add(this.groupBox2);
+			this.ClientSize = new System.Drawing.Size(1333, 547);
 			this.Controls.Add(this.groupBox1);
 			this.Name = "Frm_Sales";
 			this.Text = "Bán hàng";
 			this.Load += new System.EventHandler(this.Frm_Sales_Load);
 			this.groupBox1.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize)(this.dtGrid_Table)).EndInit();
+			this.groupBox1.PerformLayout();
+			this.groupBox4.ResumeLayout(false);
+			this.groupBox4.PerformLayout();
+			this.groupBox3.ResumeLayout(false);
+			this.groupBox3.PerformLayout();
 			this.groupBox2.ResumeLayout(false);
 			this.groupBox2.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dtGrid_Bill)).EndInit();
-			this.groupBox3.ResumeLayout(false);
-			this.groupBox3.PerformLayout();
-			this.groupBox4.ResumeLayout(false);
-			this.groupBox4.PerformLayout();
+			this.groupBox5.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.dtGrid_Table)).EndInit();
 			this.ResumeLayout(false);
-			this.PerformLayout();
 
         }
 
-        #endregion
+		#endregion
 
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DataGridView dtGrid_Table;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label lbl_Id_Bill_1;
-        private System.Windows.Forms.DataGridView dtGrid_Bill;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Col_TT;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Col_id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Col_id_waiter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Col_name_waiter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Col_id_dish;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Col_name_dish;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Col_dish_value;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Col_quanity;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Col_Money;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtHoaDon;
-        private System.Windows.Forms.TextBox txtKhuyenMai;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtKhachTra;
-        private System.Windows.Forms.TextBox txtTongCong;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label lblMsg;
-        private System.Windows.Forms.Button btnTamTinh;
-        private System.Windows.Forms.Button btnThanhToan;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtTraLai;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtSumMoney;
-        private System.Windows.Forms.Button btnLamMoi;
+		private System.Windows.Forms.GroupBox groupBox1;
+		private System.Windows.Forms.GroupBox groupBox4;
+		private System.Windows.Forms.Label lblMsg1;
+		private System.Windows.Forms.TextBox txtTenMon;
+		private System.Windows.Forms.Button btnCapNhatMon;
+		private System.Windows.Forms.Label label11;
+		private System.Windows.Forms.TextBox txtSoLuongMon;
+		private System.Windows.Forms.Label label10;
+		private System.Windows.Forms.Label lblMsg;
+		private System.Windows.Forms.Button btnThanhToan;
+		private System.Windows.Forms.Button btnTamTinh;
+		private System.Windows.Forms.GroupBox groupBox3;
+		private System.Windows.Forms.Label label9;
+		private System.Windows.Forms.TextBox txtTienKM;
+		private System.Windows.Forms.TextBox txtTraLai;
+		private System.Windows.Forms.TextBox txtTongCong;
+		private System.Windows.Forms.TextBox txtKhachTra;
+		private System.Windows.Forms.TextBox txtKhuyenMai;
+		private System.Windows.Forms.Label label7;
+		private System.Windows.Forms.TextBox txtHoaDon;
+		private System.Windows.Forms.Label label6;
+		private System.Windows.Forms.Label label8;
+		private System.Windows.Forms.Label label5;
+		private System.Windows.Forms.Label label4;
+		private System.Windows.Forms.Label label3;
+		private System.Windows.Forms.GroupBox groupBox2;
+		private System.Windows.Forms.TextBox txtSumMoney;
+		private System.Windows.Forms.Label label1;
+		private System.Windows.Forms.DataGridView dtGrid_Bill;
+		private System.Windows.Forms.Label lbl_Id_Bill_1;
+		private System.Windows.Forms.GroupBox groupBox5;
+		private System.Windows.Forms.Button btnLamMoi;
+		private System.Windows.Forms.DataGridView dtGrid_Table;
 		private System.Windows.Forms.DataGridViewTextBoxColumn Col_Stt;
 		private System.Windows.Forms.DataGridViewTextBoxColumn Col_idTable;
 		private System.Windows.Forms.DataGridViewTextBoxColumn Col_name_table;
 		private System.Windows.Forms.DataGridViewTextBoxColumn Col_status;
 		private System.Windows.Forms.DataGridViewTextBoxColumn Col_note;
-		private System.Windows.Forms.Label label9;
-		private System.Windows.Forms.TextBox txtTienKM;
-		private System.Windows.Forms.GroupBox groupBox4;
-		private System.Windows.Forms.TextBox txtTenMon;
-		private System.Windows.Forms.Label label11;
-		private System.Windows.Forms.TextBox txtSoLuongMon;
-		private System.Windows.Forms.Label label10;
-		private System.Windows.Forms.Button btnCapNhatMon;
-		private System.Windows.Forms.Label lblMsg1;
+		private System.Windows.Forms.DataGridViewTextBoxColumn Col_TT;
+		private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+		private System.Windows.Forms.DataGridViewTextBoxColumn Col_id;
+		private System.Windows.Forms.DataGridViewTextBoxColumn Col_id_waiter;
+		private System.Windows.Forms.DataGridViewTextBoxColumn Col_name_waiter;
+		private System.Windows.Forms.DataGridViewTextBoxColumn Col_id_dish;
+		private System.Windows.Forms.DataGridViewTextBoxColumn Col_name_dish;
+		private System.Windows.Forms.DataGridViewTextBoxColumn Col_dish_value;
+		private System.Windows.Forms.DataGridViewTextBoxColumn Col_quanity;
+		private System.Windows.Forms.DataGridViewTextBoxColumn Col_Money;
 	}
 }

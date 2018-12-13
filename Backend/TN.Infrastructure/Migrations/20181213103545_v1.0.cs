@@ -164,12 +164,12 @@ namespace TN.Infrastructure.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    DishId = table.Column<int>(nullable: false),
                     Name = table.Column<string>(nullable: true),
                     Price = table.Column<float>(nullable: false),
                     Note = table.Column<string>(nullable: true),
                     Date = table.Column<DateTime>(nullable: false),
-                    Status = table.Column<bool>(nullable: false)
+                    Status = table.Column<bool>(nullable: false),
+                    DishId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -364,6 +364,7 @@ namespace TN.Infrastructure.Migrations
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     UserId = table.Column<int>(nullable: false),
+                    UseName = table.Column<string>(nullable: true),
                     DishId = table.Column<int>(nullable: false),
                     DishName = table.Column<string>(nullable: true),
                     Price = table.Column<float>(nullable: false),
