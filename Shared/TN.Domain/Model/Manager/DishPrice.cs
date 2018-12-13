@@ -11,8 +11,6 @@ namespace TN.Domain.Model.Manager
     public class DishPrice : IAggregateRoot
     {
         public int Id { get; set; }
-        [ForeignKey("Dish")]
-        public int DishId { get; set; }
         public string Name { get; set; }
         public float Price { get; set; }
         public string Note { get; set; }
@@ -20,21 +18,19 @@ namespace TN.Domain.Model.Manager
         public DateTime Date { get; set; }
         [DefaultValue("false")]
         public bool Status { get; set; }
-        public virtual Dish Dish { get; set; }
+		[ForeignKey("Dish")]
+		public int DishId { get; set; }
+		public virtual Dish Dish { get; set; }
     }
 
     public class DishPriceModel
     {
         public int Id { get; set; }
-        [ForeignKey("Dish")]
         public int DishId { get; set; }
-        [Required]
-        [StringLength(200, MinimumLength = 1)]
         public string Name { get; set; }
         public float Price { get; set; }
         public string Note { get; set; }
         public DateTime Date { get; set; }
         public bool Status { get; set; }
-        public virtual Dish Dish { get; set; }
     }
 }

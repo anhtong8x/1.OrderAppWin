@@ -92,13 +92,13 @@ namespace TN.API.Services
         public async Task<ApiResponseData<object>> Get(int id)
         {
             var data = await _iBillRepository.SearchOneAsync(x => x.Id == id && x.Paid);
-            return new ApiResponseData<object> { Data = data };
+            return new ApiResponseData<object> { Output = 1, Data = data };
         }
 
 		public async Task<ApiResponseData<object>> GetTable(int id)
 		{
 			var data = await _iBillRepository.SearchOneAsync(x => x.TableId == id && x.Paid);
-			return new ApiResponseData<object> { Data = data };
+			return new ApiResponseData<object> { Output = 1, Data = data };
 		}
 
 		public async Task<ApiResponseData<object>> Search(int page = 1, int limit = 10, string key = null)

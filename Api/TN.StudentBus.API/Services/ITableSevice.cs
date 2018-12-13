@@ -91,7 +91,7 @@ namespace TN.API.Services
         public async Task<ApiResponseData<object>> Get(int id)
         {
             var data = await _iTableRepository.SearchOneAsync(x => x.Id == id);
-            return new ApiResponseData<object> { Data = data };
+            return new ApiResponseData<object> { Output = 1, Data = data };
         }
         public async Task<ApiResponseData<object>> Search(int page = 1, int limit = 10, string key = null)
         {

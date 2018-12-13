@@ -101,6 +101,11 @@ namespace TN.API
 			services.AddScoped<IBillDetailRepository, BillDetailRepository>();
 			services.AddScoped<IBillDetailService, BillDetailService>();
 
+			services.AddScoped<IDishRepository, DishRepository>();
+			services.AddScoped<IDishService, DishService>();
+
+			services.AddScoped<IDishPriceRepository, DishPriceRepository>();
+			services.AddScoped<IDishPriceService, DishPriceService>();
 
 			services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }

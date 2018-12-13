@@ -19,16 +19,16 @@ using TN.Infrastructure.Interfaces.Manager;
 
 namespace TN.API.Services
 {
-    public interface IBillDetailService : IService<BillDetail>
+    public interface IDishPriceService : IService<DishPrice>
     {
         Task<ApiResponseData<object>> GetAll();
 		Task<ApiResponseData<object>> Get(int id);
-		Task<ApiResponseData<object>> Create(BillDetailModel obj);
-        Task<ApiResponseData<object>> Edit(BillDetailModel obj);
+		Task<ApiResponseData<object>> Create(DishPriceModel obj);
+        Task<ApiResponseData<object>> Edit(DishPriceModel obj);
         Task<ApiResponseData<object>> Delete(int id);
         Task<ApiResponseData<object>> Search(int page = 1, int limit = 10, string key = null);
     }
-    public class BillDetailService : IBillDetailService
+    public class DishPriceService : IDishPriceService
 	{
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly RoleManager<ApplicationRole> _roleManager;
@@ -44,9 +44,9 @@ namespace TN.API.Services
         private readonly IOptions<EmailSettings> _emailSettings;
         private readonly IUserRepository _iUserRepository;
         private readonly SignInManager<ApplicationUser> _signInManager;
-        private readonly IBillDetailRepository _iBillDetailRepository;
+        private readonly IDishPriceRepository _iIDishPriceRepository;
 
-        public BillDetailService
+        public DishPriceService
 			(
                 ILogger<UserManagerSevice> logger,
                 IHostingEnvironment hostingEnvironment,
@@ -62,9 +62,9 @@ namespace TN.API.Services
                 IOptions<EmailSettings> emailSettings,
                 IUserRepository iUserRepository,
                 SignInManager<ApplicationUser> signInManager,
-                IBillDetailRepository iBillDetailRepository
+				IDishPriceRepository iIDishPriceRepository
 
-            )
+			)
         {
             _logger = logger;
             _hostingEnvironment = hostingEnvironment;
@@ -80,71 +80,65 @@ namespace TN.API.Services
             _emailSettings = emailSettings;
             _iUserRepository = iUserRepository;
             _signInManager = signInManager;
-			_iBillDetailRepository = iBillDetailRepository;
+			_iIDishPriceRepository = iIDishPriceRepository;
 
         }
         public async Task<ApiResponseData<object>> GetAll()
         {
-            var data = await _iBillDetailRepository.Search();
+            var data = await _iIDishPriceRepository.Search();
             return new ApiResponseData<object> { Output = 1, Data = data };
         }
         public async Task<ApiResponseData<object>> Get(int id)
         {
-            var data = await _iBillDetailRepository.SearchOneAsync(x => x.Id == id);
+            var data = await _iIDishPriceRepository.SearchOneAsync(x => x.Id == id);
             return new ApiResponseData<object> { Output = 1, Data = data };
         }
-		
+
 		public async Task<ApiResponseData<object>> Search(int page = 1, int limit = 10, string key = null)
         {
             limit = limit > 100 ? 10 : limit;
-            var data = await _iBillDetailRepository.SearchPagedList(page, limit, x => (x.DishName.Contains(key) || key == null) && (x.Note.Contains(key) || key == null));
+            var data = await _iIDishPriceRepository.SearchPagedList(page, limit, x => (x.Name.Contains(key) || key == null) && (x.Note.Contains(key) || key == null));
             return new ApiResponseData<object> { Data = data };
         }
 
-        public async Task<ApiResponseData<object>> Create(BillDetailModel obj)
+        public async Task<ApiResponseData<object>> Create(DishPriceModel obj)
         {
-			var add = new BillDetail
+			var add = new DishPrice
 			{
-				UserId = obj.UserId,
-				DishId = obj.DishId,
-				DishName = obj.DishName,
+				DishId = obj.DishId,				
+				Name = obj.Name,
 				Price = obj.Price,
-				Quanity = obj.Quanity,
-				dateTime = DateTime.Now,
-				Status = obj.Status,
+				Date = DateTime.Now,
 				Note = obj.Note,
-				BillId = obj.BillId
+				Status = obj.Status
             };
-            await _iBillDetailRepository.AddAsync(add);
-            await _iBillDetailRepository.Commit();
+            await _iIDishPriceRepository.AddAsync(add);
+            await _iIDishPriceRepository.Commit();
             return new ApiResponseData<object> { Output = 1, Data = add };
         }
-        public async Task<ApiResponseData<object>> Edit(BillDetailModel obj)
+        public async Task<ApiResponseData<object>> Edit(DishPriceModel obj)
         {
-            var data = await _iBillDetailRepository.SearchOneAsync(x => x.Id == obj.Id);
+            var data = await _iIDishPriceRepository.SearchOneAsync(x => x.Id == obj.Id);
             if (data != null)
             {
-				data.UserId = obj.UserId;
 				data.DishId = obj.DishId;
-				data.DishName = obj.DishName;
+				data.Name = obj.Name;
 				data.Price = obj.Price;
-				data.Quanity = obj.Quanity;
-				data.dateTime = obj.dateTime;
-				data.Status = obj.Status;
+				data.Date = DateTime.Now;
 				data.Note = obj.Note;
-				data.BillId = obj.BillId;
+				data.Status = obj.Status;
 
-				await _iBillDetailRepository.Commit();
+				await _iIDishPriceRepository.Commit();
             }
             return new ApiResponseData<object> { Output = 1, Data = data };
         }
         public async Task<ApiResponseData<object>> Delete(int id)
         {
-            var data = await _iBillDetailRepository.SearchOneAsync(x => x.Id == id);
+            var data = await _iIDishPriceRepository.SearchOneAsync(x => x.Id == id);
             if (data != null)
             {
-				_iBillDetailRepository.Delete(data);
-                await _iBillDetailRepository.Commit();
+				_iIDishPriceRepository.Delete(data);
+                await _iIDishPriceRepository.Commit();
             }
             return new ApiResponseData<object> { Output = 1, Data = data };
         }

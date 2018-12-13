@@ -1,0 +1,328 @@
+2018-12-13 08:45:14.133 +07:00 [Information] Request starting HTTP/1.1 POST http://192.168.1.112:44353/api/Account/Login application/json 58
+2018-12-13 08:45:14.182 +07:00 [Warning] Failed to determine the https port for redirect.
+2018-12-13 08:45:14.295 +07:00 [Information] Route matched with "{action = \"Login\", controller = \"Account\"}". Executing action "TN.API.Controllers.AccountController.Login (TN.API)"
+2018-12-13 08:45:14.467 +07:00 [Information] Executing action method "TN.API.Controllers.AccountController.Login (TN.API)" with arguments (["TN.API.Models.Command.LoginCommand"]) - Validation state: Valid
+2018-12-13 08:45:14.659 +07:00 [Information] Entity Framework Core "2.1.4-rtm-31024" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-12-13 08:45:14.865 +07:00 [Information] Executed DbCommand ("43"ms) [Parameters=["@__model_Username_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [m].[Id], [m].[AccessFailedCount], [m].[Avatar], [m].[ConcurrencyStamp], [m].[CreatedDate], [m].[CreatedUserId], [m].[DisplayName], [m].[Email], [m].[EmailConfirmed], [m].[IsLock], [m].[IsReLogin], [m].[IsSuperAdmin], [m].[LockoutEnabled], [m].[LockoutEnd], [m].[NormalizedEmail], [m].[NormalizedUserName], [m].[Note], [m].[NoteLock], [m].[PasswordHash], [m].[PhoneNumber], [m].[PhoneNumberConfirmed], [m].[RoleParents], [m].[RoleSchool], [m].[RoleTransportCompany], [m].[SecurityStamp], [m].[TwoFactorEnabled], [m].[UpdatedDate], [m].[UpdatedUserId], [m].[UserName]
+FROM [adm].[User] AS [m]
+WHERE [m].[UserName] = @__model_Username_0"
+2018-12-13 08:45:14.941 +07:00 [Information] Executed DbCommand ("2"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[Avatar], [u].[ConcurrencyStamp], [u].[CreatedDate], [u].[CreatedUserId], [u].[DisplayName], [u].[Email], [u].[EmailConfirmed], [u].[IsLock], [u].[IsReLogin], [u].[IsSuperAdmin], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[Note], [u].[NoteLock], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[RoleParents], [u].[RoleSchool], [u].[RoleTransportCompany], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UpdatedDate], [u].[UpdatedUserId], [u].[UserName]
+FROM [adm].[User] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0"
+2018-12-13 08:45:14.992 +07:00 [Information] Executed DbCommand ("2"ms) [Parameters=["@__user_Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [adm].[UserClaim] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0"
+2018-12-13 08:45:15.037 +07:00 [Information] Executed DbCommand ("16"ms) [Parameters=["@__userId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [role].[Name]
+FROM [adm].[UserRole] AS [userRole]
+INNER JOIN [adm].[Role] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0"
+2018-12-13 08:45:15.051 +07:00 [Information] AuthenticationScheme: "Identity.Application" signed in.
+2018-12-13 08:45:15.092 +07:00 [Information] Executed action method "TN.API.Controllers.AccountController.Login (TN.API)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 621.9717ms.
+2018-12-13 08:45:15.101 +07:00 [Information] Executing ObjectResult, writing value of type '"TN.API.Models.Data.ApiResponseData`1[[System.Object, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+2018-12-13 08:45:15.132 +07:00 [Information] Executed action "TN.API.Controllers.AccountController.Login (TN.API)" in 833.3727ms
+2018-12-13 08:45:15.140 +07:00 [Information] Request finished in 1011.2056ms 200 application/json; charset=utf-8
+2018-12-13 08:45:17.502 +07:00 [Information] Request starting HTTP/1.1 GET http://192.168.1.112:44353/api/BillDetail/Gets  
+2018-12-13 08:45:17.504 +07:00 [Information] Request finished in 1.745ms 404 
+2018-12-13 08:47:52.457 +07:00 [Information] Request starting HTTP/1.1 GET http://192.168.1.112:44353/api/BillDetail/Gets  
+2018-12-13 08:47:52.505 +07:00 [Warning] Failed to determine the https port for redirect.
+2018-12-13 08:47:52.580 +07:00 [Information] Request finished in 126.3483ms 404 
+2018-12-13 08:48:01.143 +07:00 [Information] Request starting HTTP/1.1 POST http://192.168.1.112:44353/api/Account/Login application/json 58
+2018-12-13 08:48:01.180 +07:00 [Information] Route matched with "{action = \"Login\", controller = \"Account\"}". Executing action "TN.API.Controllers.AccountController.Login (TN.API)"
+2018-12-13 08:48:01.342 +07:00 [Information] Executing action method "TN.API.Controllers.AccountController.Login (TN.API)" with arguments (["TN.API.Models.Command.LoginCommand"]) - Validation state: Valid
+2018-12-13 08:48:01.515 +07:00 [Information] Entity Framework Core "2.1.4-rtm-31024" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-12-13 08:48:01.632 +07:00 [Information] Executed DbCommand ("9"ms) [Parameters=["@__model_Username_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [m].[Id], [m].[AccessFailedCount], [m].[Avatar], [m].[ConcurrencyStamp], [m].[CreatedDate], [m].[CreatedUserId], [m].[DisplayName], [m].[Email], [m].[EmailConfirmed], [m].[IsLock], [m].[IsReLogin], [m].[IsSuperAdmin], [m].[LockoutEnabled], [m].[LockoutEnd], [m].[NormalizedEmail], [m].[NormalizedUserName], [m].[Note], [m].[NoteLock], [m].[PasswordHash], [m].[PhoneNumber], [m].[PhoneNumberConfirmed], [m].[RoleParents], [m].[RoleSchool], [m].[RoleTransportCompany], [m].[SecurityStamp], [m].[TwoFactorEnabled], [m].[UpdatedDate], [m].[UpdatedUserId], [m].[UserName]
+FROM [adm].[User] AS [m]
+WHERE [m].[UserName] = @__model_Username_0"
+2018-12-13 08:48:01.715 +07:00 [Information] Executed DbCommand ("3"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[Avatar], [u].[ConcurrencyStamp], [u].[CreatedDate], [u].[CreatedUserId], [u].[DisplayName], [u].[Email], [u].[EmailConfirmed], [u].[IsLock], [u].[IsReLogin], [u].[IsSuperAdmin], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[Note], [u].[NoteLock], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[RoleParents], [u].[RoleSchool], [u].[RoleTransportCompany], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UpdatedDate], [u].[UpdatedUserId], [u].[UserName]
+FROM [adm].[User] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0"
+2018-12-13 08:48:01.764 +07:00 [Information] Executed DbCommand ("1"ms) [Parameters=["@__user_Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [adm].[UserClaim] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0"
+2018-12-13 08:48:01.791 +07:00 [Information] Executed DbCommand ("2"ms) [Parameters=["@__userId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [role].[Name]
+FROM [adm].[UserRole] AS [userRole]
+INNER JOIN [adm].[Role] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0"
+2018-12-13 08:48:01.805 +07:00 [Information] AuthenticationScheme: "Identity.Application" signed in.
+2018-12-13 08:48:01.845 +07:00 [Information] Executed action method "TN.API.Controllers.AccountController.Login (TN.API)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 499.4318ms.
+2018-12-13 08:48:01.853 +07:00 [Information] Executing ObjectResult, writing value of type '"TN.API.Models.Data.ApiResponseData`1[[System.Object, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+2018-12-13 08:48:01.878 +07:00 [Information] Executed action "TN.API.Controllers.AccountController.Login (TN.API)" in 696.2095ms
+2018-12-13 08:48:01.882 +07:00 [Information] Request finished in 739.4011ms 200 application/json; charset=utf-8
+2018-12-13 08:48:16.963 +07:00 [Information] Request starting HTTP/1.1 GET http://192.168.1.112:44353/api/Bill/Get/1  
+2018-12-13 08:48:16.967 +07:00 [Information] Route matched with "{action = \"Get\", controller = \"Bill\"}". Executing action "TN.API.Controllers.BillController.Get (TN.API)"
+2018-12-13 08:48:16.969 +07:00 [Information] Executing action method "TN.API.Controllers.BillController.Get (TN.API)" with arguments (["1"]) - Validation state: Valid
+2018-12-13 08:48:16.972 +07:00 [Information] Entity Framework Core "2.1.4-rtm-31024" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-12-13 08:48:16.980 +07:00 [Information] Executed DbCommand ("1"ms) [Parameters=["@__id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [x].[Id], [x].[CashierId], [x].[CashierName], [x].[CreateDate], [x].[Money], [x].[Note], [x].[Paid], [x].[TableId], [x].[WaiterName], [x].[WaitersId]
+FROM [Bill] AS [x]
+WHERE ([x].[Id] = @__id_0) AND ([x].[Paid] = 1)"
+2018-12-13 08:48:16.998 +07:00 [Information] Executed action method "TN.API.Controllers.BillController.Get (TN.API)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 28.9708ms.
+2018-12-13 08:48:16.998 +07:00 [Information] Executing ObjectResult, writing value of type '"TN.API.Models.Data.ApiResponseData`1[[System.Object, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+2018-12-13 08:48:17.013 +07:00 [Information] Executed action "TN.API.Controllers.BillController.Get (TN.API)" in 46.1885ms
+2018-12-13 08:48:17.013 +07:00 [Information] Request finished in 50.1724ms 200 application/json; charset=utf-8
+2018-12-13 08:49:51.657 +07:00 [Information] Request starting HTTP/1.1 GET http://192.168.1.112:44353/api/BillDeatil/Gets  
+2018-12-13 08:49:51.661 +07:00 [Information] Route matched with "{action = \"Gets\", controller = \"BillDeatil\"}". Executing action "TN.API.Controllers.BillDeatilController.Gets (TN.API)"
+2018-12-13 08:49:51.664 +07:00 [Information] Executing action method "TN.API.Controllers.BillDeatilController.Gets (TN.API)" - Validation state: Valid
+2018-12-13 08:49:51.671 +07:00 [Information] Entity Framework Core "2.1.4-rtm-31024" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-12-13 08:49:51.693 +07:00 [Information] Executed DbCommand ("10"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [b].[Id], [b].[BillId], [b].[DishId], [b].[DishName], [b].[Note], [b].[Price], [b].[Quanity], [b].[Status], [b].[UserId], [b].[dateTime]
+FROM [BillDetail] AS [b]"
+2018-12-13 08:49:51.704 +07:00 [Information] Executed action method "TN.API.Controllers.BillDeatilController.Gets (TN.API)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 39.6357ms.
+2018-12-13 08:49:51.705 +07:00 [Information] Executing ObjectResult, writing value of type '"TN.API.Models.Data.ApiResponseData`1[[System.Object, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+2018-12-13 08:49:51.719 +07:00 [Information] Executed action "TN.API.Controllers.BillDeatilController.Gets (TN.API)" in 58.4201ms
+2018-12-13 08:49:51.720 +07:00 [Information] Request finished in 62.5943ms 200 application/json; charset=utf-8
+2018-12-13 09:01:07.624 +07:00 [Information] Request starting HTTP/1.1 GET http://192.168.1.112:44353/api/BillDetail/Get/1  
+2018-12-13 09:01:07.669 +07:00 [Warning] Failed to determine the https port for redirect.
+2018-12-13 09:01:07.773 +07:00 [Information] Route matched with "{action = \"Get\", controller = \"BillDetail\"}". Executing action "TN.API.Controllers.BillDetailController.Get (TN.API)"
+2018-12-13 09:01:07.849 +07:00 [Information] Executing action method "TN.API.Controllers.BillDetailController.Get (TN.API)" with arguments (["1"]) - Validation state: Valid
+2018-12-13 09:01:08.020 +07:00 [Information] Entity Framework Core "2.1.4-rtm-31024" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-12-13 09:01:08.136 +07:00 [Information] Executed DbCommand ("8"ms) [Parameters=["@__id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [x].[Id], [x].[BillId], [x].[DishId], [x].[DishName], [x].[Note], [x].[Price], [x].[Quanity], [x].[Status], [x].[UserId], [x].[dateTime]
+FROM [BillDetail] AS [x]
+WHERE [x].[Id] = @__id_0"
+2018-12-13 09:01:08.182 +07:00 [Information] Executed action method "TN.API.Controllers.BillDetailController.Get (TN.API)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 330.0153ms.
+2018-12-13 09:01:08.190 +07:00 [Information] Executing ObjectResult, writing value of type '"TN.API.Models.Data.ApiResponseData`1[[System.Object, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+2018-12-13 09:01:08.289 +07:00 [Information] Executed action "TN.API.Controllers.BillDetailController.Get (TN.API)" in 513.3618ms
+2018-12-13 09:01:08.294 +07:00 [Information] Request finished in 674.0164ms 200 application/json; charset=utf-8
+2018-12-13 09:01:25.860 +07:00 [Information] Request starting HTTP/1.1 POST http://192.168.1.112:44353/api/Account/Login application/json 58
+2018-12-13 09:01:25.864 +07:00 [Information] Route matched with "{action = \"Login\", controller = \"Account\"}". Executing action "TN.API.Controllers.AccountController.Login (TN.API)"
+2018-12-13 09:01:25.914 +07:00 [Information] Executing action method "TN.API.Controllers.AccountController.Login (TN.API)" with arguments (["TN.API.Models.Command.LoginCommand"]) - Validation state: Valid
+2018-12-13 09:01:25.918 +07:00 [Information] Entity Framework Core "2.1.4-rtm-31024" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-12-13 09:01:25.934 +07:00 [Information] Executed DbCommand ("3"ms) [Parameters=["@__model_Username_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [m].[Id], [m].[AccessFailedCount], [m].[Avatar], [m].[ConcurrencyStamp], [m].[CreatedDate], [m].[CreatedUserId], [m].[DisplayName], [m].[Email], [m].[EmailConfirmed], [m].[IsLock], [m].[IsReLogin], [m].[IsSuperAdmin], [m].[LockoutEnabled], [m].[LockoutEnd], [m].[NormalizedEmail], [m].[NormalizedUserName], [m].[Note], [m].[NoteLock], [m].[PasswordHash], [m].[PhoneNumber], [m].[PhoneNumberConfirmed], [m].[RoleParents], [m].[RoleSchool], [m].[RoleTransportCompany], [m].[SecurityStamp], [m].[TwoFactorEnabled], [m].[UpdatedDate], [m].[UpdatedUserId], [m].[UserName]
+FROM [adm].[User] AS [m]
+WHERE [m].[UserName] = @__model_Username_0"
+2018-12-13 09:01:25.974 +07:00 [Information] Executed DbCommand ("4"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[Avatar], [u].[ConcurrencyStamp], [u].[CreatedDate], [u].[CreatedUserId], [u].[DisplayName], [u].[Email], [u].[EmailConfirmed], [u].[IsLock], [u].[IsReLogin], [u].[IsSuperAdmin], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[Note], [u].[NoteLock], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[RoleParents], [u].[RoleSchool], [u].[RoleTransportCompany], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UpdatedDate], [u].[UpdatedUserId], [u].[UserName]
+FROM [adm].[User] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0"
+2018-12-13 09:01:26.023 +07:00 [Information] Executed DbCommand ("1"ms) [Parameters=["@__user_Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [adm].[UserClaim] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0"
+2018-12-13 09:01:26.051 +07:00 [Information] Executed DbCommand ("2"ms) [Parameters=["@__userId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [role].[Name]
+FROM [adm].[UserRole] AS [userRole]
+INNER JOIN [adm].[Role] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0"
+2018-12-13 09:01:26.064 +07:00 [Information] AuthenticationScheme: "Identity.Application" signed in.
+2018-12-13 09:01:26.079 +07:00 [Information] Executed action method "TN.API.Controllers.AccountController.Login (TN.API)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 164.5226ms.
+2018-12-13 09:01:26.079 +07:00 [Information] Executing ObjectResult, writing value of type '"TN.API.Models.Data.ApiResponseData`1[[System.Object, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+2018-12-13 09:01:26.088 +07:00 [Information] Executed action "TN.API.Controllers.AccountController.Login (TN.API)" in 224.2586ms
+2018-12-13 09:01:26.088 +07:00 [Information] Request finished in 228.8216ms 200 application/json; charset=utf-8
+2018-12-13 09:02:35.797 +07:00 [Information] Request starting HTTP/1.1 POST http://192.168.1.112:44353/api/BillDetail/Create application/json 271
+2018-12-13 09:02:35.806 +07:00 [Information] Successfully validated the token.
+2018-12-13 09:02:35.810 +07:00 [Information] Route matched with "{action = \"Create\", controller = \"BillDetail\"}". Executing action "TN.API.Controllers.BillDetailController.Create (TN.API)"
+2018-12-13 09:02:35.816 +07:00 [Information] Authorization was successful.
+2018-12-13 09:02:35.845 +07:00 [Information] Executing action method "TN.API.Controllers.BillDetailController.Create (TN.API)" with arguments (["TN.Domain.Model.Manager.BillDetailModel"]) - Validation state: Valid
+2018-12-13 09:02:35.850 +07:00 [Information] Entity Framework Core "2.1.4-rtm-31024" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-12-13 09:02:35.903 +07:00 [Information] Executed DbCommand ("2"ms) [Parameters=["@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (DbType = Single), @p5='?' (DbType = Int32), @p6='?' (DbType = Boolean), @p7='?' (DbType = Int32), @p8='?' (DbType = DateTime2)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [BillDetail] ([BillId], [DishId], [DishName], [Note], [Price], [Quanity], [Status], [UserId], [dateTime])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8);
+SELECT [Id]
+FROM [BillDetail]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();"
+2018-12-13 09:02:35.914 +07:00 [Information] Executed action method "TN.API.Controllers.BillDetailController.Create (TN.API)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 68.7588ms.
+2018-12-13 09:02:35.914 +07:00 [Information] Executing ObjectResult, writing value of type '"TN.API.Models.Data.ApiResponseData`1[[System.Object, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+2018-12-13 09:02:35.915 +07:00 [Information] Executed action "TN.API.Controllers.BillDetailController.Create (TN.API)" in 105.0264ms
+2018-12-13 09:02:35.915 +07:00 [Information] Request finished in 118.4843ms 200 application/json; charset=utf-8
+2018-12-13 12:20:58.232 +07:00 [Information] Request starting HTTP/1.1 GET http://192.168.1.112:44353/api/Dish/Get/1  
+2018-12-13 12:20:58.453 +07:00 [Warning] Failed to determine the https port for redirect.
+2018-12-13 12:20:59.403 +07:00 [Information] Request finished in 1176.7366ms 404 
+2018-12-13 12:21:51.076 +07:00 [Information] Request starting HTTP/1.1 POST http://192.168.1.112:44353/api/Account/Login application/json 58
+2018-12-13 12:21:51.117 +07:00 [Warning] Failed to determine the https port for redirect.
+2018-12-13 12:21:51.226 +07:00 [Information] Route matched with "{action = \"Login\", controller = \"Account\"}". Executing action "TN.API.Controllers.AccountController.Login (TN.API)"
+2018-12-13 12:21:51.747 +07:00 [Information] Executing action method "TN.API.Controllers.AccountController.Login (TN.API)" with arguments (["TN.API.Models.Command.LoginCommand"]) - Validation state: Valid
+2018-12-13 12:21:52.094 +07:00 [Information] Entity Framework Core "2.1.4-rtm-31024" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-12-13 12:21:52.465 +07:00 [Information] Executed DbCommand ("47"ms) [Parameters=["@__model_Username_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [m].[Id], [m].[AccessFailedCount], [m].[Avatar], [m].[ConcurrencyStamp], [m].[CreatedDate], [m].[CreatedUserId], [m].[DisplayName], [m].[Email], [m].[EmailConfirmed], [m].[IsLock], [m].[IsReLogin], [m].[IsSuperAdmin], [m].[LockoutEnabled], [m].[LockoutEnd], [m].[NormalizedEmail], [m].[NormalizedUserName], [m].[Note], [m].[NoteLock], [m].[PasswordHash], [m].[PhoneNumber], [m].[PhoneNumberConfirmed], [m].[RoleParents], [m].[RoleSchool], [m].[RoleTransportCompany], [m].[SecurityStamp], [m].[TwoFactorEnabled], [m].[UpdatedDate], [m].[UpdatedUserId], [m].[UserName]
+FROM [adm].[User] AS [m]
+WHERE [m].[UserName] = @__model_Username_0"
+2018-12-13 12:21:52.552 +07:00 [Information] Executed DbCommand ("5"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[Avatar], [u].[ConcurrencyStamp], [u].[CreatedDate], [u].[CreatedUserId], [u].[DisplayName], [u].[Email], [u].[EmailConfirmed], [u].[IsLock], [u].[IsReLogin], [u].[IsSuperAdmin], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[Note], [u].[NoteLock], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[RoleParents], [u].[RoleSchool], [u].[RoleTransportCompany], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UpdatedDate], [u].[UpdatedUserId], [u].[UserName]
+FROM [adm].[User] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0"
+2018-12-13 12:21:52.633 +07:00 [Information] Executed DbCommand ("2"ms) [Parameters=["@__user_Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [adm].[UserClaim] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0"
+2018-12-13 12:21:52.661 +07:00 [Information] Executed DbCommand ("2"ms) [Parameters=["@__userId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [role].[Name]
+FROM [adm].[UserRole] AS [userRole]
+INNER JOIN [adm].[Role] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0"
+2018-12-13 12:21:52.674 +07:00 [Information] AuthenticationScheme: "Identity.Application" signed in.
+2018-12-13 12:21:52.714 +07:00 [Information] Executed action method "TN.API.Controllers.AccountController.Login (TN.API)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 964.3324ms.
+2018-12-13 12:21:52.722 +07:00 [Information] Executing ObjectResult, writing value of type '"TN.API.Models.Data.ApiResponseData`1[[System.Object, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+2018-12-13 12:21:52.749 +07:00 [Information] Executed action "TN.API.Controllers.AccountController.Login (TN.API)" in 1519.4757ms
+2018-12-13 12:21:52.754 +07:00 [Information] Request finished in 1681.2961ms 200 application/json; charset=utf-8
+2018-12-13 12:22:08.146 +07:00 [Information] Request starting HTTP/1.1 GET http://192.168.1.112:44353/api/Dish/Gets  
+2018-12-13 12:22:08.148 +07:00 [Information] Request finished in 1.8372ms 404 
+2018-12-13 12:22:17.026 +07:00 [Information] Request starting HTTP/1.1 GET http://192.168.1.112:44353/api/DishPrice/Gets  
+2018-12-13 12:22:17.026 +07:00 [Information] Request finished in 0.4004ms 404 
+2018-12-13 12:26:14.498 +07:00 [Information] Request starting HTTP/1.1 GET http://192.168.1.112:44353/api/DishPrice/Gets  
+2018-12-13 12:26:14.544 +07:00 [Warning] Failed to determine the https port for redirect.
+2018-12-13 12:26:14.632 +07:00 [Information] Route matched with "{action = \"Gets\", controller = \"DishPrice\"}". Executing action "TN.API.Controllers.DishPriceController.Gets (TN.API)"
+2018-12-13 12:26:14.721 +07:00 [Information] Executing action method "TN.API.Controllers.DishPriceController.Gets (TN.API)" - Validation state: Valid
+2018-12-13 12:26:14.897 +07:00 [Information] Entity Framework Core "2.1.4-rtm-31024" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-12-13 12:26:15.000 +07:00 [Information] Executed DbCommand ("8"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [d].[Id], [d].[Date], [d].[DishId], [d].[Name], [d].[Note], [d].[Price], [d].[Status]
+FROM [DishPrice] AS [d]"
+2018-12-13 12:26:15.056 +07:00 [Information] Executed action method "TN.API.Controllers.DishPriceController.Gets (TN.API)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 331.1616ms.
+2018-12-13 12:26:15.064 +07:00 [Information] Executing ObjectResult, writing value of type '"TN.API.Models.Data.ApiResponseData`1[[System.Object, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+2018-12-13 12:26:15.169 +07:00 [Information] Executed action "TN.API.Controllers.DishPriceController.Gets (TN.API)" in 534.401ms
+2018-12-13 12:26:15.175 +07:00 [Information] Request finished in 680.1162ms 200 application/json; charset=utf-8
+2018-12-13 12:26:23.077 +07:00 [Information] Request starting HTTP/1.1 GET http://192.168.1.112:44353/api/Dish/Gets  
+2018-12-13 12:26:23.081 +07:00 [Information] Route matched with "{action = \"Gets\", controller = \"Dish\"}". Executing action "TN.API.Controllers.DishController.Gets (TN.API)"
+2018-12-13 12:26:23.082 +07:00 [Information] Executing action method "TN.API.Controllers.DishController.Gets (TN.API)" - Validation state: Valid
+2018-12-13 12:26:23.086 +07:00 [Information] Entity Framework Core "2.1.4-rtm-31024" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-12-13 12:26:23.095 +07:00 [Information] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [d].[Id], [d].[Name], [d].[Note], [d].[Status]
+FROM [Dish] AS [d]"
+2018-12-13 12:26:23.108 +07:00 [Information] Executed action method "TN.API.Controllers.DishController.Gets (TN.API)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 25.7648ms.
+2018-12-13 12:26:23.109 +07:00 [Information] Executing ObjectResult, writing value of type '"TN.API.Models.Data.ApiResponseData`1[[System.Object, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+2018-12-13 12:26:23.113 +07:00 [Information] Executed action "TN.API.Controllers.DishController.Gets (TN.API)" in 31.877ms
+2018-12-13 12:26:23.114 +07:00 [Information] Request finished in 36.5379ms 200 application/json; charset=utf-8
+2018-12-13 12:26:28.859 +07:00 [Information] Request starting HTTP/1.1 GET http://192.168.1.112:44353/api/Dish/Get/1  
+2018-12-13 12:26:28.872 +07:00 [Information] Route matched with "{action = \"Get\", controller = \"Dish\"}". Executing action "TN.API.Controllers.DishController.Get (TN.API)"
+2018-12-13 12:26:28.895 +07:00 [Information] Executing action method "TN.API.Controllers.DishController.Get (TN.API)" with arguments (["1"]) - Validation state: Valid
+2018-12-13 12:26:28.900 +07:00 [Information] Entity Framework Core "2.1.4-rtm-31024" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-12-13 12:26:28.923 +07:00 [Information] Executed DbCommand ("1"ms) [Parameters=["@__id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [x].[Id], [x].[Name], [x].[Note], [x].[Status]
+FROM [Dish] AS [x]
+WHERE [x].[Id] = @__id_0"
+2018-12-13 12:26:28.927 +07:00 [Information] Executed action method "TN.API.Controllers.DishController.Get (TN.API)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 31.741ms.
+2018-12-13 12:26:28.927 +07:00 [Information] Executing ObjectResult, writing value of type '"TN.API.Models.Data.ApiResponseData`1[[System.Object, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+2018-12-13 12:26:28.928 +07:00 [Information] Executed action "TN.API.Controllers.DishController.Get (TN.API)" in 55.2682ms
+2018-12-13 12:26:28.928 +07:00 [Information] Request finished in 68.4598ms 200 application/json; charset=utf-8
+2018-12-13 12:26:36.155 +07:00 [Information] Request starting HTTP/1.1 GET http://192.168.1.112:44353/api/DishPrice/Get/1  
+2018-12-13 12:26:36.159 +07:00 [Information] Route matched with "{action = \"Get\", controller = \"DishPrice\"}". Executing action "TN.API.Controllers.DishPriceController.Get (TN.API)"
+2018-12-13 12:26:36.160 +07:00 [Information] Executing action method "TN.API.Controllers.DishPriceController.Get (TN.API)" with arguments (["1"]) - Validation state: Valid
+2018-12-13 12:26:36.163 +07:00 [Information] Entity Framework Core "2.1.4-rtm-31024" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-12-13 12:26:36.172 +07:00 [Information] Executed DbCommand ("1"ms) [Parameters=["@__id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [x].[Id], [x].[Date], [x].[DishId], [x].[Name], [x].[Note], [x].[Price], [x].[Status]
+FROM [DishPrice] AS [x]
+WHERE [x].[Id] = @__id_0"
+2018-12-13 12:26:36.173 +07:00 [Information] Executed action method "TN.API.Controllers.DishPriceController.Get (TN.API)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 13.4029ms.
+2018-12-13 12:26:36.173 +07:00 [Information] Executing ObjectResult, writing value of type '"TN.API.Models.Data.ApiResponseData`1[[System.Object, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+2018-12-13 12:26:36.173 +07:00 [Information] Executed action "TN.API.Controllers.DishPriceController.Get (TN.API)" in 14.5154ms
+2018-12-13 12:26:36.173 +07:00 [Information] Request finished in 17.9608ms 200 application/json; charset=utf-8
+2018-12-13 12:28:06.670 +07:00 [Information] Request starting HTTP/1.1 POST http://192.168.1.112:44353/api/DishPrice/Create application/json 202
+2018-12-13 12:28:06.719 +07:00 [Information] Successfully validated the token.
+2018-12-13 12:28:06.722 +07:00 [Information] Route matched with "{action = \"Create\", controller = \"DishPrice\"}". Executing action "TN.API.Controllers.DishPriceController.Create (TN.API)"
+2018-12-13 12:28:06.726 +07:00 [Information] Authorization was successful.
+2018-12-13 12:28:06.761 +07:00 [Information] Executing action method "TN.API.Controllers.DishPriceController.Create (TN.API)" with arguments (["TN.Domain.Model.Manager.DishPriceModel"]) - Validation state: Valid
+2018-12-13 12:28:06.765 +07:00 [Information] Entity Framework Core "2.1.4-rtm-31024" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-12-13 12:28:06.875 +07:00 [Information] Executed DbCommand ("4"ms) [Parameters=["@p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (DbType = Single), @p5='?' (DbType = Boolean)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [DishPrice] ([Date], [DishId], [Name], [Note], [Price], [Status])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+SELECT [Id]
+FROM [DishPrice]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();"
+2018-12-13 12:28:06.895 +07:00 [Information] Executed action method "TN.API.Controllers.DishPriceController.Create (TN.API)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 133.9157ms.
+2018-12-13 12:28:06.896 +07:00 [Information] Executing ObjectResult, writing value of type '"TN.API.Models.Data.ApiResponseData`1[[System.Object, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+2018-12-13 12:28:06.896 +07:00 [Information] Executed action "TN.API.Controllers.DishPriceController.Create (TN.API)" in 173.9212ms
+2018-12-13 12:28:06.897 +07:00 [Information] Request finished in 226.5373ms 200 application/json; charset=utf-8
+2018-12-13 12:28:47.733 +07:00 [Information] Connection id ""0HLJ0NE022P6I"" bad request data: ""Invalid request line: '\x16\x03\x01\x01\x01\x01\x00\x00\xFD\x03\x03H\C\xBEm\x95\x91=\xCF\xCE\xDF\xDB\xAF\xD9o\x08G\xA0\xAEg\xA7\xC4\xEAK\x9CS\x0F\xA3\x95\xAFH\x87\x00\x00n\xC0/\xC0+\xC00\xC0,\x00\x9E\xC0'\x00g\xC0(\x00k\xC0$\xC0\x14\xC0\x0A'""
+Microsoft.AspNetCore.Server.Kestrel.Core.BadHttpRequestException: Invalid request line: '\x16\x03\x01\x01\x01\x01\x00\x00\xFD\x03\x03H\C\xBEm\x95\x91=\xCF\xCE\xDF\xDB\xAF\xD9o\x08G\xA0\xAEg\xA7\xC4\xEAK\x9CS\x0F\xA3\x95\xAFH\x87\x00\x00n\xC0/\xC0+\xC00\xC0,\x00\x9E\xC0'\x00g\xC0(\x00k\xC0$\xC0\x14\xC0\x0A'
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpParser`1.RejectRequestLine(Byte* requestLine, Int32 length)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpParser`1.GetUnknownMethod(Byte* data, Int32 length, Int32& methodLength)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpParser`1.ParseRequestLine(TRequestHandler handler, Byte* data, Int32 length)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpParser`1.ParseRequestLine(TRequestHandler handler, ReadOnlySequence`1& buffer, SequencePosition& consumed, SequencePosition& examined)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpParser`1.Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.IHttpParser<TRequestHandler>.ParseRequestLine(TRequestHandler handler, ReadOnlySequence`1& buffer, SequencePosition& consumed, SequencePosition& examined)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.Http1Connection.TakeStartLine(ReadOnlySequence`1 buffer, SequencePosition& consumed, SequencePosition& examined)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.Http1Connection.ParseRequest(ReadOnlySequence`1 buffer, SequencePosition& consumed, SequencePosition& examined)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.Http1Connection.TryParseRequest(ReadResult result, Boolean& endConnection)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequestsAsync[TContext](IHttpApplication`1 application)
+2018-12-13 12:29:05.811 +07:00 [Information] Request starting HTTP/1.1 PUT http://192.168.1.112:44353/api/DishPrice/Edit application/json 203
+2018-12-13 12:29:05.850 +07:00 [Information] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '12/08/2018 01:52:29', Current time: '12/13/2018 05:29:05'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2018-12-13 12:29:05.850 +07:00 [Information] "Bearer" was not authenticated. Failure message: "IDX10223: Lifetime validation failed. The token is expired. ValidTo: '12/08/2018 01:52:29', Current time: '12/13/2018 05:29:05'."
+2018-12-13 12:29:05.853 +07:00 [Information] Route matched with "{action = \"Edit\", controller = \"DishPrice\"}". Executing action "TN.API.Controllers.DishPriceController.Edit (TN.API)"
+2018-12-13 12:29:05.853 +07:00 [Information] Authorization failed.
+2018-12-13 12:29:05.853 +07:00 [Information] Authorization failed for the request at filter '"Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter"'.
+2018-12-13 12:29:05.870 +07:00 [Information] Executing ChallengeResult with authentication schemes ([]).
+2018-12-13 12:29:05.875 +07:00 [Information] AuthenticationScheme: "Bearer" was challenged.
+2018-12-13 12:29:05.875 +07:00 [Information] Executed action "TN.API.Controllers.DishPriceController.Edit (TN.API)" in 21.8557ms
+2018-12-13 12:29:05.875 +07:00 [Information] Request finished in 64.3348ms 401 
+2018-12-13 12:29:05.876 +07:00 [Information] Connection id ""0HLJ0NE022P6G"", Request id ""0HLJ0NE022P6G:00000006"": the application completed without reading the entire request body.
+2018-12-13 12:29:19.174 +07:00 [Information] Request starting HTTP/1.1 POST http://192.168.1.112:44353/api/Account/Login application/json 58
+2018-12-13 12:29:19.178 +07:00 [Information] Route matched with "{action = \"Login\", controller = \"Account\"}". Executing action "TN.API.Controllers.AccountController.Login (TN.API)"
+2018-12-13 12:29:19.182 +07:00 [Information] Executing action method "TN.API.Controllers.AccountController.Login (TN.API)" with arguments (["TN.API.Models.Command.LoginCommand"]) - Validation state: Valid
+2018-12-13 12:29:19.202 +07:00 [Information] Entity Framework Core "2.1.4-rtm-31024" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-12-13 12:29:19.219 +07:00 [Information] Executed DbCommand ("2"ms) [Parameters=["@__model_Username_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [m].[Id], [m].[AccessFailedCount], [m].[Avatar], [m].[ConcurrencyStamp], [m].[CreatedDate], [m].[CreatedUserId], [m].[DisplayName], [m].[Email], [m].[EmailConfirmed], [m].[IsLock], [m].[IsReLogin], [m].[IsSuperAdmin], [m].[LockoutEnabled], [m].[LockoutEnd], [m].[NormalizedEmail], [m].[NormalizedUserName], [m].[Note], [m].[NoteLock], [m].[PasswordHash], [m].[PhoneNumber], [m].[PhoneNumberConfirmed], [m].[RoleParents], [m].[RoleSchool], [m].[RoleTransportCompany], [m].[SecurityStamp], [m].[TwoFactorEnabled], [m].[UpdatedDate], [m].[UpdatedUserId], [m].[UserName]
+FROM [adm].[User] AS [m]
+WHERE [m].[UserName] = @__model_Username_0"
+2018-12-13 12:29:19.253 +07:00 [Information] Executed DbCommand ("2"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[Avatar], [u].[ConcurrencyStamp], [u].[CreatedDate], [u].[CreatedUserId], [u].[DisplayName], [u].[Email], [u].[EmailConfirmed], [u].[IsLock], [u].[IsReLogin], [u].[IsSuperAdmin], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[Note], [u].[NoteLock], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[RoleParents], [u].[RoleSchool], [u].[RoleTransportCompany], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UpdatedDate], [u].[UpdatedUserId], [u].[UserName]
+FROM [adm].[User] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0"
+2018-12-13 12:29:19.302 +07:00 [Information] Executed DbCommand ("1"ms) [Parameters=["@__user_Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [adm].[UserClaim] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0"
+2018-12-13 12:29:19.330 +07:00 [Information] Executed DbCommand ("2"ms) [Parameters=["@__userId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [role].[Name]
+FROM [adm].[UserRole] AS [userRole]
+INNER JOIN [adm].[Role] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0"
+2018-12-13 12:29:19.344 +07:00 [Information] AuthenticationScheme: "Identity.Application" signed in.
+2018-12-13 12:29:19.349 +07:00 [Information] Executed action method "TN.API.Controllers.AccountController.Login (TN.API)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 167.1873ms.
+2018-12-13 12:29:19.350 +07:00 [Information] Executing ObjectResult, writing value of type '"TN.API.Models.Data.ApiResponseData`1[[System.Object, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+2018-12-13 12:29:19.360 +07:00 [Information] Executed action "TN.API.Controllers.AccountController.Login (TN.API)" in 181.7471ms
+2018-12-13 12:29:19.360 +07:00 [Information] Request finished in 185.5956ms 200 application/json; charset=utf-8
+2018-12-13 12:29:46.868 +07:00 [Information] Request starting HTTP/1.1 PUT http://192.168.1.112:44353/api/DishPrice/Edit application/json 208
+2018-12-13 12:29:46.868 +07:00 [Information] Successfully validated the token.
+2018-12-13 12:29:46.869 +07:00 [Information] Route matched with "{action = \"Edit\", controller = \"DishPrice\"}". Executing action "TN.API.Controllers.DishPriceController.Edit (TN.API)"
+2018-12-13 12:29:46.869 +07:00 [Information] Authorization was successful.
+2018-12-13 12:29:46.870 +07:00 [Information] Executing action method "TN.API.Controllers.DishPriceController.Edit (TN.API)" with arguments (["TN.Domain.Model.Manager.DishPriceModel"]) - Validation state: Valid
+2018-12-13 12:29:46.873 +07:00 [Information] Entity Framework Core "2.1.4-rtm-31024" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-12-13 12:29:46.880 +07:00 [Information] Executed DbCommand ("1"ms) [Parameters=["@__obj_Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [x].[Id], [x].[Date], [x].[DishId], [x].[Name], [x].[Note], [x].[Price], [x].[Status]
+FROM [DishPrice] AS [x]
+WHERE [x].[Id] = @__obj_Id_0"
+2018-12-13 12:29:46.889 +07:00 [Information] Executed DbCommand ("3"ms) [Parameters=["@p3='?' (DbType = Int32), @p0='?' (DbType = DateTime2), @p1='?' (DbType = Single), @p2='?' (DbType = Boolean)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+UPDATE [DishPrice] SET [Date] = @p0, [Price] = @p1, [Status] = @p2
+WHERE [Id] = @p3;
+SELECT @@ROWCOUNT;"
+2018-12-13 12:29:46.891 +07:00 [Information] Executed action method "TN.API.Controllers.DishPriceController.Edit (TN.API)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 20.6932ms.
+2018-12-13 12:29:46.891 +07:00 [Information] Executing ObjectResult, writing value of type '"TN.API.Models.Data.ApiResponseData`1[[System.Object, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+2018-12-13 12:29:46.891 +07:00 [Information] Executed action "TN.API.Controllers.DishPriceController.Edit (TN.API)" in 22.5452ms
+2018-12-13 12:29:46.891 +07:00 [Information] Request finished in 23.8448ms 200 application/json; charset=utf-8
+2018-12-13 12:30:42.744 +07:00 [Information] Request starting HTTP/1.1 PUT http://192.168.1.112:44353/api/DishPrice/Edit application/json 224
+2018-12-13 12:30:42.744 +07:00 [Information] Successfully validated the token.
+2018-12-13 12:30:42.744 +07:00 [Information] Route matched with "{action = \"Edit\", controller = \"DishPrice\"}". Executing action "TN.API.Controllers.DishPriceController.Edit (TN.API)"
+2018-12-13 12:30:42.744 +07:00 [Information] Authorization was successful.
+2018-12-13 12:30:42.745 +07:00 [Information] Executing action method "TN.API.Controllers.DishPriceController.Edit (TN.API)" with arguments (["TN.Domain.Model.Manager.DishPriceModel"]) - Validation state: Valid
+2018-12-13 12:30:42.745 +07:00 [Information] Entity Framework Core "2.1.4-rtm-31024" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2018-12-13 12:30:42.748 +07:00 [Information] Executed DbCommand ("1"ms) [Parameters=["@__obj_Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [x].[Id], [x].[Date], [x].[DishId], [x].[Name], [x].[Note], [x].[Price], [x].[Status]
+FROM [DishPrice] AS [x]
+WHERE [x].[Id] = @__obj_Id_0"
+2018-12-13 12:30:42.762 +07:00 [Information] Executed DbCommand ("13"ms) [Parameters=["@p3='?' (DbType = Int32), @p0='?' (DbType = DateTime2), @p1='?' (Size = 4000), @p2='?' (DbType = Boolean)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+UPDATE [DishPrice] SET [Date] = @p0, [Name] = @p1, [Status] = @p2
+WHERE [Id] = @p3;
+SELECT @@ROWCOUNT;"
+2018-12-13 12:30:42.763 +07:00 [Information] Executed action method "TN.API.Controllers.DishPriceController.Edit (TN.API)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 17.865ms.
+2018-12-13 12:30:42.763 +07:00 [Information] Executing ObjectResult, writing value of type '"TN.API.Models.Data.ApiResponseData`1[[System.Object, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+2018-12-13 12:30:42.763 +07:00 [Information] Executed action "TN.API.Controllers.DishPriceController.Edit (TN.API)" in 19.0281ms
+2018-12-13 12:30:42.763 +07:00 [Information] Request finished in 19.843ms 200 application/json; charset=utf-8
