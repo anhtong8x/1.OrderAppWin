@@ -451,7 +451,7 @@ namespace OrderApp.Reports
             xrTableCell12.Name = "xrTableCell12";
             xrTableCell12.StylePriority.UseBorders = false;
             xrTableCell12.StylePriority.UseTextAlignment = false;
-            xrTableCell12.Text = "Khuyến mại %";
+            xrTableCell12.Text = String.Format("Khuyến mại {0} %", _modelBill_1.PHANTRAM);
             xrTableCell12.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             xrTableCell12.Weight = 4.4910961007481767D;
             // 
@@ -575,6 +575,7 @@ namespace OrderApp.Reports
         public string THUNGAN { get; set; }
         public List<ModelRow> ROWDETAIL { get; set; }
         public string TONGHD { get; set; }
+        public string PHANTRAM { get; set; }
         public string KM { get; set; }
         public string THANHTOAN{ get; set; }
     }
