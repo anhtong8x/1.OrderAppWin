@@ -121,12 +121,9 @@ namespace OrderApp.Extention
                 httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", $"{token}");
                 httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
-                var json = JsonConvert.SerializeObject(new {
-                    _billModel.Id, _billModel.CashierId, _billModel.CashierName, _billModel.WaitersId, _billModel.WaiterName,
-                    _billModel.Paid, _billModel.Money, _billModel.CreateDate, _billModel.Note, _billModel.TableId
-                });
+                var json = JsonConvert.SerializeObject(_billModel);
                 var stringContent = new StringContent(json, UnicodeEncoding.UTF8, "application/json");
-                var t = await httpClient.PostAsync(AppSettings.UpdateQuanityBillUrl, stringContent);
+                var t = await httpClient.PutAsync(AppSettings.UpdateQuanityBillUrl, stringContent);
                 if (t.IsSuccessStatusCode)
                 {
                     var data = await t.Content.ReadAsStringAsync();
@@ -150,13 +147,7 @@ namespace OrderApp.Extention
                 httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", $"{token}");
                 httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
-                var json = JsonConvert.SerializeObject(new
-                {
-                    _tableModel.Id, 
-                    _tableModel.Name,
-                    _tableModel.Note,
-                    _tableModel.Status
-                });
+                var json = JsonConvert.SerializeObject(_tableModel);
                 var stringContent = new StringContent(json, UnicodeEncoding.UTF8, "application/json");
                 var t = await httpClient.PostAsync(AppSettings.UpdateQuanityBillUrl, stringContent);
                 if (t.IsSuccessStatusCode)

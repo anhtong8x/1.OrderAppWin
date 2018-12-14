@@ -71,5 +71,15 @@ namespace OrderApp.Extention
                 return ServerApi + ConfigurationManager.AppSettings["UpdateStatusTableUrl"];
             }
         }
-    }
+
+		//UpdateQuanityBillDetailUrl
+		public static string UpdateQuanityBillDetailUrl
+		{
+			get
+			{
+				return ServerApi + ConfigurationManager.AppSettings["UpdateQuanityBillDetailUrl"];
+			}
+		}
+
+	}
 }

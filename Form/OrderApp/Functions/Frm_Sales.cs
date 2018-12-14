@@ -20,8 +20,11 @@ namespace OrderApp.Functions
 
         private float _sumMoney = 0;
         private BillModel billModel;
-        private TableModel tableModel;
-
+		private List<TableModel> lstTableModel;
+		private List<BillDetailModel> lstBillDetail;
+		private int posDetailBill = -1;
+		private int posTable = -1;
+		
         #region "common"
         private void reset_Control()
         {
@@ -36,10 +39,10 @@ namespace OrderApp.Functions
             lblMsg.Text = "";
             lblMsg1.Text = "";
             txtTienKM.Text = "";
-            dtGrid_Bill.Rows.Clear();
+			txtTenMon.Text = "";
+			txtSoLuongMon.Text = "";
 
-            tableModel = null;
-            billModel = null;
+            dtGrid_Bill.Rows.Clear();
             _sumMoney = 0;
         }
 
@@ -47,39 +50,37 @@ namespace OrderApp.Functions
         private async void load_Grid_Table()
         {
             dtGrid_Table.Rows.Clear();
-
-			var dl = await DALContext.GetAllOrderTable();
-			if (dl.Count > 0) {
-				BindingGrid_Table(dl);
+			lstTableModel = await HttpClientBase<TableModel>.Gets(AppSettings.ListOrderTableUrl);
+			if (lstTableModel.Count > 0) {
+				BindingGrid_Table(lstTableModel);
 			}
 					   
 		}
 
         // tao du lieu de do vao grid detailbill
-		private async void BindingGrid_Bill(int idTable) {			
-			var dl = await DALContext.GetBillByIdTable(idTable); // lay ve idBill
-			if (dl != null) {                
-				var dl2 = await DALContext.GetsDetailBillByIdBill(dl.Id); // lay ve DetailBill theo idBill
-				if (dl2.Count > 0) {
+		private async void BindingGrid_Bill(int idBill) {
+			string url = string.Format(AppSettings.BillByIdTableUrl, idBill);
+			billModel = await HttpClientBase<BillModel>.Get(url);
+			if (billModel != null) {				
+				url = string.Format(AppSettings.DetailBillByIdBillUrl, billModel.Id);
+				var lstBillDetail = await HttpClientBase<BillDetailModel>.Gets(url);
+				if (lstBillDetail.Count > 0) {
                     _sumMoney = 0;
-                    lbl_Id_Bill_1.Text = string.Format("BÀN SỐ {0} HÓA ĐƠN {1}", idTable, dl.Id);
-                    BindingGrid_Bill(dl2);
+                    lbl_Id_Bill_1.Text = string.Format("BÀN SỐ {0} HÓA ĐƠN {1}", idBill, billModel.Id);
+                    BindingGrid_Bill(lstBillDetail);
 
                     string _str = string.Format("{0:0,0 vnđ}", _sumMoney);
                     txtSumMoney.Text = _str.Replace(",", ".");
                     txtHoaDon.Text = string.Format("{0:0,0}", _sumMoney).Replace(",", ".");
                 }
-
-                // luu lai bill de cap nhat hoa don khi thanh toan
-                billModel = dl;
-            }
+			}
 
 		}
 
         // cap nhat hoa don bill 1 da thanh toan. tong tien, paid = true
         private async void Update_Bill(BillModel _billModel)
         {
-            var dl = await DALContext.UpdateBill(_UserInfoModel.Token, _billModel);
+			var dl = await HttpClientBase<BillModel>.Put(AppSettings.UpdateQuanityBillUrl, _billModel, _UserInfoModel.Token);
             if(dl == 1)
             {
                 lblMsg.Text = "Lưu hóa đơn thành công";
@@ -93,10 +94,11 @@ namespace OrderApp.Functions
         // cap nhat ban da thanh toan status = 1
         private async void Update_Table(TableModel _tableModel)
         {
-            var dl = await DALContext.UpdateTable(_UserInfoModel.Token, _tableModel);
-            if (dl == 1)
+			var dl = await HttpClientBase<TableModel>.Put(AppSettings.UpdateStatusTableUrl, _tableModel, _UserInfoModel.Token);
+
+			if (dl == 1)
             {
-                lblMsg.Text = "Cập nhật bản thành công";
+                lblMsg.Text = "Cập nhật bàn thành công";
             }
             else
             {
@@ -222,10 +224,53 @@ namespace OrderApp.Functions
                 e.Handled = true;
             }
         }
-        #endregion
-        
-        // tinh nham
-        private void btnTamTinh_Click(object sender, EventArgs e)
+		#endregion
+
+		// load form
+		private void Frm_Sales_Load(object sender, EventArgs e)
+		{
+			reset_Control();
+
+			load_Grid_Table();
+
+		}
+
+		// click grid table chon ban thanh toan
+		private void dtGrid_Table_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+		{
+			posTable = dtGrid_Table.Rows[e.RowIndex].Index;
+
+			// neu dang co khach thi cho thanh toan
+			if (lstTableModel[posTable].Status == 2)
+			{
+				reset_Control();
+				BindingGrid_Bill(lstTableModel[posTable].Id);
+			}
+			else
+			{
+				reset_Control(); // xoa neu cho dong k co khach co du lieu cu
+			}
+
+		}
+
+		// chon grid detail bill de sua so luong
+		private void dtGrid_Bill_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+		{
+			try
+			{
+				posDetailBill = dtGrid_Table.Rows[e.RowIndex].Index;
+				var detailBill = lstBillDetail[posDetailBill];
+				txtTenMon.Text = detailBill.DishName;
+				txtSoLuongMon.Text = "" + detailBill.Quanity;
+			}
+			catch (Exception)
+			{
+			}
+
+		}
+		
+		// tinh nham
+		private void btnTamTinh_Click(object sender, EventArgs e)
         {
             try
             {
@@ -286,10 +331,10 @@ namespace OrderApp.Functions
                 }                
                 
                 // dua ban ve trang thai doi don ban
-                if(tableModel != null)
+                if(posTable != -1)
                 {
-                    tableModel.Status = 1;
-                    Update_Table(tableModel);
+                    lstTableModel[posTable].Status = 1;
+                    Update_Table(lstTableModel[posTable]);
                 }
 
                 // print report
@@ -331,51 +376,13 @@ namespace OrderApp.Functions
                 //rpt.showreport();
 
                 // refresh form
-                load_Grid_Table();
                 reset_Control();
-            }
+				load_Grid_Table();
+			}
             catch (Exception)
             {
             }
         }
-
-		// load form
-        private void Frm_Sales_Load(object sender, EventArgs e)
-        {            
-            reset_Control();
-
-            // grid_table
-            load_Grid_Table();
-
-        }      
-
-		private void dtGrid_Table_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-		{
-			int index = dtGrid_Table.Rows[e.RowIndex].Index;
-			DataGridViewRow _dataRow = dtGrid_Table.Rows[index];
-			int _IdBill = Int32.Parse(_dataRow.Cells[1].Value.ToString());
-            int _StatusTable = Int32.Parse(_dataRow.Cells[3].Value.ToString());
-
-            // neu dang co khach thi cho thanh toan
-            if(_StatusTable == 2)
-            {
-                reset_Control();
-                BindingGrid_Bill(_IdBill);
-
-                // phuc vu cho update ban khi thanh toan
-                tableModel = new TableModel() {
-                    Id = 1,
-                    Name = "" + _dataRow.Cells[3].Value.ToString(),
-                    Note = "" + _dataRow.Cells[4].Value.ToString(),
-                    Status = _StatusTable,
-                };
-            }
-            else
-            {
-                dtGrid_Bill.Rows.Clear();
-            }
-            			
-		}
 
         // load lai du lieu bang
         private void btnLamMoi_Click(object sender, EventArgs e)
@@ -383,6 +390,45 @@ namespace OrderApp.Functions
             load_Grid_Table();
         }
 
-        #endregion
-    }
+		#endregion
+
+		
+
+		private async void btnCapNhatMon_Click(object sender, EventArgs e)
+		{
+			try
+			{
+				// check input edit
+				int sl = Int32.Parse(txtSoLuongMon.Text.ToString().Trim());
+
+
+				// da click sua so luong
+				if (posDetailBill != -1) {
+					var detailBill = lstBillDetail[posDetailBill];
+					int slOld = detailBill.Quanity;
+
+					if (sl != slOld) {
+						detailBill.Quanity = sl;
+
+						var dl = await HttpClientBase<BillDetailModel>.Put(AppSettings.UpdateQuanityBillDetailUrl, detailBill, _UserInfoModel.Token);
+						if (dl != 0)
+						{
+							lblMsg1.Text = "Cập nhật số lượng món thành công";
+							//BindingGrid_Bill(lstBillDetail);
+							BindingGrid_Bill(detailBill.BillId);
+						}
+						else {
+							lblMsg1.Text = "Cập nhật số lượng món thất bại";
+						}
+					}
+					
+				}
+			}
+			catch (Exception)
+			{
+
+				throw;
+			}
+		}
+	}
 }

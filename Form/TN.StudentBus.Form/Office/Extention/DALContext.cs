@@ -165,7 +165,7 @@ namespace TN.StudentBus.Office.Extention
         }
         public static async Task<int> StudentCreate(string token, StudentModel use)
         {
-            using (var httpClient = new HttpClient())
+			using (var httpClient = new HttpClient())
             {
                 httpClient.BaseAddress = new Uri(AppSettings.StudentCreate);
                 httpClient.DefaultRequestHeaders.Accept.Clear();

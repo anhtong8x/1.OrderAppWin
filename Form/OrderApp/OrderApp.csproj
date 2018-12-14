@@ -84,6 +84,7 @@
     <Compile Include="Extention\ApiResponseData.cs" />
     <Compile Include="Extention\AppSettings.cs" />
     <Compile Include="Extention\DALContext.cs" />
+    <Compile Include="Extention\HttpClientBase.cs" />
     <Compile Include="Model\BillDetailModel.cs" />
     <Compile Include="Model\BillModel.cs" />
     <Compile Include="Model\TableModel.cs" />
